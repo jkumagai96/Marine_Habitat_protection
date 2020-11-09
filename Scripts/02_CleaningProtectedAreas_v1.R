@@ -85,6 +85,8 @@ global_mpas <- st_transform(global_mpas, crs = eckert)
 global_mpas$constant <- 1 # for rasterization later
 
 ocean <- st_transform(ocean, crs = eckert)
+
+
 #### Filter based on MPA Status ####
 all_mpas <- global_mpas
 
@@ -124,7 +126,7 @@ managed <- global_mpas %>%
 r <- raster(ocean, res = 10000)
 all_mpasR <- rasterize(all_mpas, r, progress = "text", field = "constant")
 no_takeR <- rasterize(no_take, r, progress = "text", field = "constant")
-managedR <- rasterize(no_take, r, progress = "text", field = "constant")
+managedR <- rasterize(managed, r, progress = "text", field = "constant")
 
 
 #### Export ####
