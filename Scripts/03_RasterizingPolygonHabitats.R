@@ -1,31 +1,50 @@
 # Joy Kumagai
 # Date: Nov 2020
-# Raserizing Polygon Habitat Data
+# Raserizing Multiple Habitat Data
 # Marine Habitat Protection Indicator or Marine Protection Index (MPI)
-
 
 ##### Load Packages #####
 library(tidyverse)
 library(raster)
 library(sf)
+library(tools)
+library(fasterize)
 
 ##### Load Data #####
 ocean <- read_sf("Data/ocean/ne_110m_ocean.shp")
-habitat_poly <- read_sf("Data/seagrasses/version7/014_001_WCMC013-014_SeagrassPtPy2020_v7/01_Data/WCMC013014-Seagrasses-Py-v7.shp")
+shapefiles <- list.files("Data/habitats", pattern = "\\.shp$")
 
-##### Project Data #####
-crs(habitat_poly)
-
-# Chosen projection: World Eckert Iv (equal area)
-eckert <- "+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs"
-ocean <- st_transform(ocean, crs = eckert)
-habitat_poly <- st_transform(habitat_poly, crs = eckert)
-
-#### Rasterize #####
-r <- raster(ocean, res = 10000)
-habitat_poly$constant <- 1 # seagrasses
-habitatR <- rasterize(habitat_poly, r, progress = "text", field = "constant")
-
-
-#### Export ####
-writeRaster(habitatR, "Data/Temp/seagrasses_raster.tif")
+for (i in 1:length(shapefiles)) {
+  path <- paste0("Data/habitats/", shapefiles[i])
+  habitat_poly <- read_sf(path)
+  
+  ##### Project Data #####
+  crs(habitat_poly)
+  
+  # Chosen projection: World Eckert Iv (equal area)
+  eckert <- "+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs"
+  ocean <- st_transform(ocean, crs = eckert)
+  habitat_poly <- st_transform(habitat_poly, crs = eckert)
+  
+  #### Rasterize #####
+  r <- raster(ocean, res = 1000)
+  habitat_poly$constant <- 1 
+  
+  if (unique(st_geometry_type(habitat_poly)) == "MULTIPOINT") {
+    habitat_poly <- st_cast(habitat_poly, "POINT")
+    print("Converting Multipoints to points")
+    print("Attempting to convert to raster")
+    habitatR <- rasterize(habitat_poly, r, progress = "text", field = "constant")
+  } else if (unique(st_geometry_type(habitat_poly)) == "POINT"){
+    print("Attempting to convert to raster")
+    habitatR <- rasterize(habitat_poly, r, progress = "text", field = "constant")
+  } else {
+    print("Attempting to convert to raster")
+    habitatR <- fasterize(habitat_poly, r, field = "constant") 
+  }
+  
+  #### Export ####
+  exportpath <- paste0("Data/Temp/", file_path_sans_ext(shapefiles[i]), ".tif")
+  writeRaster(habitatR, exportpath, overwrite = TRUE)
+  print(paste0("Habitat Raster has been written to ", exportpath))
+}
