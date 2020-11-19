@@ -8,7 +8,7 @@
 library(tidyverse)
 library(raster)
 library(sf)
-library(wdpar)
+library(fasterize)
 
 #### Declare Functions ####
 clean <- function (x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0", 
@@ -61,17 +61,9 @@ global_pas3 <- read_sf("Data/mpas/WDPA_WDOECM_marine_shp2/WDPA_WDOECM_marine_shp
 
 #### Removing terrestrial areas, not implemented, and UNESCO reserves ####
 # Remove not implemented and UNESCO reserves
-global_pas1_clean <- clean(global_pas1)
-global_pas2_clean <- clean(global_pas2)
-global_pas3_clean <- clean(global_pas3)
-
-# Remove terrestrial areas 
-mpas1 <- global_pas1_clean %>% 
-  filter(MARINE == "1" | MARINE == "2")
-mpas2 <- global_pas2_clean %>% 
-  filter(MARINE == "1" | MARINE == "2")
-mpas3 <- global_pas3_clean %>% 
-  filter(MARINE == "1" | MARINE == "2")
+mpas1 <- clean(global_pas1)
+mpas2 <- clean(global_pas2)
+mpas3 <- clean(global_pas3)
 
 # Combine Data into one layer 
 global_mpas <- rbind(mpas1, mpas2, mpas3)
@@ -123,13 +115,13 @@ managed <- global_mpas %>%
 
 
 #### Rasterization ####
-r <- raster(ocean, res = 10000)
-all_mpasR <- rasterize(all_mpas, r, progress = "text", field = "constant")
-no_takeR <- rasterize(no_take, r, progress = "text", field = "constant")
-managedR <- rasterize(managed, r, progress = "text", field = "constant")
+r <- raster(ocean, res = 1000)
+all_mpasR <- fasterize(all_mpas, r, field = "constant")
+no_takeR <- fasterize(no_take, r, field = "constant")
+managedR <- fasterize(managed, r, field = "constant")
 
 
 #### Export ####
-writeRaster(no_takeR, "Data/Temp/MPAs_no_take_raster.tif")
-writeRaster(managedR, "Data/Temp/MPAs_managed_raster.tif")
-writeRaster(all_mpasR, "Data/Temp/MPAS_all_raster.tif")
+writeRaster(no_takeR, "Data/Temp_MPAs/No_take_mpas.tif")
+writeRaster(managedR, "Data/Temp_MPAs/Managed_mpas.tif")
+writeRaster(all_mpasR, "Data/Temp_MPAs/All_mpas.tif")

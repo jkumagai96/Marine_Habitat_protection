@@ -1,7 +1,7 @@
 # Joy Kumagai
 # Date: Nov 2020
 # Raserizing Multiple Habitat Data
-# Marine Habitat Protection Indicator or Marine Protection Index (MPI)
+# Marine Habitat Protection Indicator
 
 ##### Load Packages #####
 library(tidyverse)
