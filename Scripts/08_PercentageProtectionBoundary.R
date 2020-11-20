@@ -1,6 +1,6 @@
 # Joy Kumagai 
 # Date: 20/11/2020
-# Calculating Per Boundary Percentage Protection 
+# Calculating Per Boundary (EEZ/land) Percentage Protection 
 # Marine Habitat Protection Indicator
 
 #### Load Packages ####
