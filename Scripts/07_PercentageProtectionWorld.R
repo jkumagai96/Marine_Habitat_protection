@@ -23,9 +23,10 @@ for (i in 1:length(grids)) {
 colnames(df) <- c("Name", "pixel_counts", "ID")
 df[,3] <- rep(1:(length(df$ID)/4), each = 4)
 
-df %>% 
-  mutate()
+df <- df %>% 
+  mutate(area_km2 = pixel_counts) %>% 
   group_by(ID) %>% 
   mutate(percent_protected = (pixel_counts/(max(pixel_counts)))*100) %>% 
   ungroup()
-        
+
+write.csv(df, "Outputs/percent_protected_world.csv")
