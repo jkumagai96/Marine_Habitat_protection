@@ -29,4 +29,4 @@ df <- df %>%
   mutate(percent_protected = (pixel_counts/(max(pixel_counts)))*100) %>% 
   ungroup()
 
-write.csv(df, "data/percent_protected_world.csv")
+write.csv(df, "data/percent_protected_world.csv", row.names = F)
