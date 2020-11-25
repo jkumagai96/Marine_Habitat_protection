@@ -17,11 +17,11 @@ library(sf)
 
 # once all rasters are created in the "Temp" folder, we can source all the file names
 
-grids <- list.files("Data/Temp/", pattern = "*.tif$") #list files (in this case raster TIFFs)
+grids <- list.files("data/data/", pattern = "*.tif$") #list files (in this case raster TIFFs)
 
 # Then we read the polygon we want to use as zone
 
-poly <- read_sf("Data/eez_land/EEZ_land_test.shp") %>% 
+poly <- read_sf("data/data/EEZ_Land_test/EEZ_Land_test.shp") %>% 
   st_transform(., crs = "+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs") 
 
 poly <- as(poly, "Spatial") # we need this format to speed extract function
@@ -30,27 +30,26 @@ poly$ID <- 1:length(poly$UNION)
 
 
 ## create a raster stack (the stack will be formed by all the files in the Temp folders sourced by list.files)
-s <- stack(paste0("Data/Temp/", grids))
+s <- stack(paste0("data/data/", grids))
 
 
 # Zonal statistic ---------------------------------------------------------
 
 ## Now we will extract in parallel, uncomment below to activate the cluster parallelization
-beginCluster(n=3) # Parallel processing!! BE CAREFUL, Select your cores carefully usually one less than the one you have available
+#beginCluster(n=5) # Parallel processing!! BE CAREFUL, Select your cores carefully usually one less than the one you have available
 
 ex <- extract(s, poly, fun=sum, na.rm=TRUE, df=TRUE)
 
-endCluster() # this ends the cluster use of the cpu
+#endCluster() # this ends the cluster use of the cpu
 
 
 
 # Save output -------------------------------------------------------------
 
-write.csv(ex, file = "Data/Temp/habitat_area_2.csv")
+write.csv(ex, file = "data/data/habitat_area.csv")
 
 
 
 
 
 #### END OF SCRIPT #####
-

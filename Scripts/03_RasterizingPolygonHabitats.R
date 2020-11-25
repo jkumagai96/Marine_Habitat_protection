@@ -1,7 +1,7 @@
 # Joy Kumagai
 # Date: Nov 2020
 # Raserizing Multiple Habitat Data
-# Marine Habitat Protection Indicator
+# Marine Habitat Protection Indicator or Marine Protection Index (MPI)
 
 ##### Load Packages #####
 library(tidyverse)
@@ -11,11 +11,11 @@ library(tools)
 library(fasterize)
 
 ##### Load Data #####
-ocean <- read_sf("Data/ocean/ne_110m_ocean.shp")
-shapefiles <- list.files("Data/habitats", pattern = "\\.shp$")
+ocean <- read_sf("data/data/ocean/ne_110m_ocean.shp")
+shapefiles <- list.files("data/data/habitats", pattern = "\\.shp$")
 
 for (i in 1:length(shapefiles)) {
-  path <- paste0("Data/habitats/", shapefiles[i])
+  path <- paste0("data/data/habitats/", shapefiles[i])
   habitat_poly <- read_sf(path)
   
   ##### Project Data #####
@@ -44,7 +44,7 @@ for (i in 1:length(shapefiles)) {
   }
   
   #### Export ####
-  exportpath <- paste0("Data/Temp/", file_path_sans_ext(shapefiles[i]), ".tif")
+  exportpath <- paste0("data/data/", file_path_sans_ext(shapefiles[i]), ".tif")
   writeRaster(habitatR, exportpath, overwrite = TRUE)
   print(paste0("Habitat Raster has been written to ", exportpath))
 }

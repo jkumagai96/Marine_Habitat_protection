@@ -8,20 +8,22 @@ library(tidyverse)
 library(sf)
 
 #### Load and clean data ####
-poly <- read_sf("Data/eez_land/EEZ_land_test.shp") 
+poly <- read_sf("data/data/EEZ_Land_test/EEZ_Land_test.shp")
 
 area <- poly %>% 
   as.data.frame() %>% 
-  select(UNION, ISO_TER1, ISO_SOV1) %>% 
+  dplyr::select(UNION, ISO_TER1, ISO_SOV1) %>% 
   mutate(ID = 1:length(poly$UNION))
 
 
-data <- read.csv("Data/Temp/habitat_area_2.csv")
+data <- read.csv("data/data/habitat_area.csv")
 data <- data %>% 
   gather(key = "category", value = "pixel_counts", -ID , -X, na.rm = F) %>% 
-  select(-X)
+  dplyr::select(-X)
 
 #### Calculate Percent Protection ####
+n <- length(data$ID)
+
 data <- data %>% 
   arrange(ID, category) %>% 
   mutate(group = rep(1:(n/4), each = 4)) %>% 
@@ -34,4 +36,4 @@ data <- data %>%
   full_join(x = data, y = area, by = "ID")
 
 #### Export ####
-write.csv(data, "Outputs/percent_protected_boundaries.csv", row.names = F)
+write.csv(data, "data/percent_protected_boundaries.csv", row.names = F)

@@ -11,8 +11,8 @@ library(stringr)
 #### Declare Functions ####
 
 #### Load Data ####
-grids <- list.files("Data/Temp/", pattern = "*.tif$")
-s <- stack(paste0("Data/Temp/", grids))
+grids <- list.files("data/data/", pattern = "*.tif$")
+s <- stack(paste0("data/data/", grids))
 
 df <- data.frame(str_sub(grids, end = -5))
 df[,2:3] <- NA
@@ -29,4 +29,4 @@ df <- df %>%
   mutate(percent_protected = (pixel_counts/(max(pixel_counts)))*100) %>% 
   ungroup()
 
-write.csv(df, "Outputs/percent_protected_world.csv")
+write.csv(df, "data/percent_protected_world.csv")
