@@ -21,7 +21,7 @@ grids <- list.files("data/data/", pattern = "*.tif$") #list files (in this case 
 
 # Then we read the polygon we want to use as zone
 
-poly <- read_sf("data/data/EEZ_Land_test/EEZ_Land_test.shp") %>% 
+poly <- read_sf("data/data/EEZ_Land/EEZ_Land_v3_202030.shp") %>% 
   st_transform(., crs = "+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs") 
 
 poly <- as(poly, "Spatial") # we need this format to speed extract function
@@ -36,11 +36,11 @@ s <- stack(paste0("data/data/", grids))
 # Zonal statistic ---------------------------------------------------------
 
 ## Now we will extract in parallel, uncomment below to activate the cluster parallelization
-#beginCluster(n=5) # Parallel processing!! BE CAREFUL, Select your cores carefully usually one less than the one you have available
+beginCluster(n=5) # Parallel processing!! BE CAREFUL, Select your cores carefully usually one less than the one you have available
 
 ex <- extract(s, poly, fun=sum, na.rm=TRUE, df=TRUE)
 
-#endCluster() # this ends the cluster use of the cpu
+endCluster() # this ends the cluster use of the cpu
 
 
 

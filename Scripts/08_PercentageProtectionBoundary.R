@@ -8,7 +8,7 @@ library(tidyverse)
 library(sf)
 
 #### Load and clean data ####
-poly <- read_sf("data/data/EEZ_Land_test/EEZ_Land_test.shp")
+poly <- read_sf("data/data/EEZ_Land/EEZ_Land_v3_202030.shp")
 
 area <- poly %>% 
   as.data.frame() %>% 

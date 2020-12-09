@@ -54,12 +54,12 @@ ocean <- read_sf("data/data/ocean/ne_110m_ocean.shp")
 # Need to do this automatically in the future 
 # wdpa_latest_version() # states which version we are using -- not working anymore 
 # Points were not included 
-global_pas1 <- read_sf("data/data/mpas/WDPA_WDOECM_marine_shp0/WDPA_WDOECM_marine_shp-polygons.shp")
-global_pas2 <- read_sf("data/data/mpas/WDPA_WDOECM_marine_shp1/WDPA_WDOECM_marine_shp-polygons.shp")
-global_pas3 <- read_sf("data/data/mpas/WDPA_WDOECM_marine_shp2/WDPA_WDOECM_marine_shp-polygons.shp") 
+global_pas1 <- read_sf("data/data/mpas/WDPA_WDOECM_wdpa_shp0/WDPA_WDOECM_wdpa_shp-polygons.shp")
+global_pas2 <- read_sf("data/data/mpas/WDPA_WDOECM_wdpa_shp1/WDPA_WDOECM_wdpa_shp-polygons.shp")
+global_pas3 <- read_sf("data/data/mpas/WDPA_WDOECM_wdpa_shp2/WDPA_WDOECM_wdpa_shp-polygons.shp") 
 
 
-#### Removing terrestrial areas, not implemented, and UNESCO reserves ####
+#### Removing not implemented, and UNESCO reserves ####
 # Remove not implemented and UNESCO reserves
 mpas1 <- clean(global_pas1)
 mpas2 <- clean(global_pas2)
