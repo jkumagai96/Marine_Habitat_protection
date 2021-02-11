@@ -1,5 +1,13 @@
+
+# Loading libraries -------------------------------------------------------
+
 library(tidyverse)
 library(stringr)
+
+
+# Data loading ------------------------------------------------------------
+
+
 GDP <- read.csv('data/GDP.csv') %>% 
   select(ISO, GDP_last) %>% 
   rename(ISO_SOV1 = ISO)
