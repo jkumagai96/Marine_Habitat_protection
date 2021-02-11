@@ -12,6 +12,10 @@ GDP <- read.csv('data/GDP.csv') %>%
   select(ISO, GDP_last) %>% 
   rename(ISO_SOV1 = ISO)
 
+
+# Data loading ------------------------------------------------------------
+
+
 # landlocked countries
 landlocked <- read.csv('data/landlocked.csv') %>% 
   clean_names()
