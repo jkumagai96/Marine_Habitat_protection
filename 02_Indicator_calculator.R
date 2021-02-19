@@ -86,6 +86,7 @@ effort_table <- perc %>%
 effort_country <- effort_table %>% 
   group_by(ISO_SOV1) %>% 
   summarise(total_habitat_area = sum(total_area),
+            total_protected_area = sum(allmpa),
             GDP_last = mean(GDP_last, na.rm = T), 
             GDP_perc = mean(GDP_perc, na.rm = T),
             mpa_perc_m = mean(mpa_perc, na.rm = T))
@@ -106,7 +107,7 @@ effort_country %>%
 effort_country %>% 
   ggplot(aes(x = log1p(GDP_last), y = log1p(mpa_perc_m), label = ISO_SOV1)) +
   #geom_point() +
-  geom_text_repel(size = 3.5)
+  ggrepel::geom_text_repel(size = 3.5)
 
 
 
@@ -286,8 +287,50 @@ effort_table %>%
 
 
 
+# Joy's Exploration --------------------------------------------------------
+# Plot 1 compares total threatened habitat area per GDP index to understand how the threatened habitat area is distributed across GDP
+# It may be better to instead have this as a cumulative curve 
+plot1 <- effort_country_complete %>% 
+  ggplot(aes(x = GDP_index, y = total_habitat_area)) +
+  geom_point(size = 2) +
+  labs(y = "total habitat area (km2 pixels)") +
+  #geom_smooth(method = "lm") +
+  geom_point(size = 2, aes(color = GDP_breaks))
+
+# Hypothesis 1: Higher GDP countries have more threatened habitats 
+hy1 <- lm(effort_country_complete$total_habitat_area ~ effort_country_complete$GDP_index)
+summary(hy1)
+
+# Looked at total protection just for kicks and giggles / understanding
+plot2 <- effort_country_complete %>% 
+  ggplot(aes(x = GDP_index, y = total_protected_area, colour = GDP_breaks)) +
+  geom_point(size = 2) +
+  labs(y = "total habitat protected (km2 pixels)")
+
+# Plot 3 visualizes each countries mean threatened habitat protection along GDP (Figure 3b adds the effort gap goal)  
+data <- effort_country_complete %>% group_by(GDP_breaks) %>% summarise(mean_gdp = mean(GDP_index))
+
+plot3 <- effort_country_complete %>% 
+  ggplot(aes(x = GDP_index, y = mpa_perc_m, colour = GDP_breaks)) +
+  geom_point(size = 2) +
+  geom_hline(yintercept = 30, linetype = "dashed") +
+  geom_hline(data = data, aes(yintercept = mean_gdp, colour = GDP_breaks)) +
+  labs(y = "mean percent protected")
+plot3
+
+
+plot3b <-effort_country_complete %>% 
+  ggplot(aes(x = GDP_index, y = mpa_perc_m, colour = GDP_breaks)) +
+  geom_point(size = 2) +
+  geom_hline(yintercept = 30, linetype = "dashed") +
+  geom_segment(aes(x = 18, y = data$mean_gdp[1], yend = data$mean_gdp[1], xend = 21), color = "red") + # this is hard coded, can be improved but was the fastest way for me to code it
+  geom_segment(aes(x = 22, y = data$mean_gdp[2], yend = data$mean_gdp[2], xend = 25), color = "darkgreen") +
+  geom_segment(aes(x = 26, y = data$mean_gdp[3], yend = data$mean_gdp[3], xend = 29), color = "blue") +
+  geom_segment(aes(x = 30, y = data$mean_gdp[4], yend = data$mean_gdp[4], xend = 31), color = "purple") +
+  labs(y = "mean percent protected")
+plot3b
+
+plot1/plot3b
+ggsave("mean protection vs GDP.jpeg", dpi = 300, height = 6, width = 10)
+
 # END OF SCRIPT -----------------------------------------------------------
-
-
-
-
