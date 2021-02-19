@@ -5,10 +5,11 @@ library(tidyverse) # Easily Install and Load the 'Tidyverse'
 library(stringr) # Simple, Consistent Wrappers for Common String Operations
 library(janitor) # Simple Tools for Examining and Cleaning Dirty Data
 library(ggthemes) # Extra Themes, Scales and Geoms for 'ggplot2', CRAN v4.2.4
-library(ggrepel)
 
-
+library(patchwork) # The Composer of Plots, CRAN v1.1.1
 theme_set(theme_few())
+
+
 # Data loading ------------------------------------------------------------
 
 # GDP data
@@ -108,6 +109,132 @@ effort_country %>%
   geom_text_repel(size = 3.5)
 
 
+
+
+
+# Conceptualization -------------------------------------------------------
+
+
+#' We have how a country protect on average by %
+#' We have the GDP of the country
+#' We create intervals of GDP to contextualize countries
+#' We plot conservation % by each bin
+
+# We standardize the GDP and round the value
+
+effort_country_complete <- effort_country %>% 
+  filter(!is.na(GDP_last))
+
+effort_country_complete$GDP_index <- round(log1p(effort_country_complete$GDP_last), 0)
+
+# we check the full range
+range(effort_country_complete$GDP_index, na.rm = T)
+
+# creating GDP intervals
+effort_country_complete$GDP_breaks <- cut(effort_country_complete$GDP_index,
+                                 breaks = seq(min(effort_country_complete$GDP_index, na.rm = T), 
+                                              max(effort_country_complete$GDP_index, na.rm = T) + 4, 
+                                              by = 4), 
+                                 include.lowest = T, right = FALSE,
+                                 labels = c("low", "medium", "high", "very high"))
+
+# check the intervals (how many countries within intervals)
+summary(effort_country_complete$GDP_breaks)
+
+country_effort_gap <- effort_country_complete %>% 
+  select(ISO_SOV1, GDP_breaks, mpa_perc_m) %>% 
+  group_by(GDP_breaks) %>% 
+  mutate(mean_effort = mean(mpa_perc_m),
+         effort_gap = mpa_perc_m - mean_effort) %>% 
+  mutate(color = ifelse(effort_gap < 0, "under", "over"))
+
+country_effort_gap %>% 
+  select(ISO_SOV1, GDP_breaks, effort_gap, color) %>% 
+  arrange(GDP_breaks, effort_gap) %>% 
+  filter(ISO_SOV1 == "POL")
+
+# Plotting 
+country_effort_gap$effort_gap <- (round(country_effort_gap$effort_gap, digits = 1))
+
+
+(
+  p1 <- country_effort_gap %>%
+    filter(color == "over") %>%
+    ggplot(aes(
+      reorder(ISO_SOV1, -effort_gap),
+      effort_gap,
+      col = color,
+      label = round(effort_gap, 1)
+    )) +
+    geom_segment(aes(
+      x = reorder(ISO_SOV1, -effort_gap),
+      xend = reorder(ISO_SOV1, -effort_gap),
+      y = 0,
+      yend = effort_gap
+    )) +
+    #geom_point(size = 4) +
+    geom_text(aes(label = format(effort_gap,  nsmall = 1),
+                  hjust = ifelse(effort_gap >= 0, 0, 1), 
+                  vjust = .5), 
+              angle = 90) +
+    scale_color_manual(values = c("#83c5be", "#e29578")) +
+    scale_y_continuous(limits = c(-100, 100)) +
+    #coord_flip() +
+    geom_hline(yintercept = 0, col = "gray80") + 
+    labs(x = "ISO codes", y = "Effort gap %", subtitle = "Positive Gap") +
+    theme(legend.position = "", 
+          text = element_text(family = "serif"),
+          axis.text.y = element_text(size = 8), 
+          axis.text.x = element_text(angle = 90)
+    )
+)
+
+(
+  p2 <- country_effort_gap %>%
+    filter(color == "under") %>%
+    ggplot(aes(
+      reorder(ISO_SOV1, -effort_gap),
+      effort_gap,
+      col = color,
+      label = round(effort_gap, 1)
+    )) +
+    geom_segment(aes(
+      x = reorder(ISO_SOV1, -effort_gap),
+      xend = reorder(ISO_SOV1, -effort_gap),
+      y = 0,
+      yend = effort_gap
+    )) +
+    #geom_point(size = 4) +
+    geom_text(aes(label = format(effort_gap,  nsmall = 1),
+                  hjust = ifelse(effort_gap >= 0, 0, 1), 
+                  vjust = .5), 
+              angle = 90) +
+    scale_color_manual(values = c("#e29578")) +
+    scale_y_continuous(limits = c(-100, 100)) +
+    #coord_flip() +
+    geom_hline(yintercept = 0, col = "gray80") + 
+    labs(x = "ISO codes", y = "Effort gap %", subtitle = "Negative Gap") +
+    theme(legend.position = "", 
+          text = element_text(family = "serif"),
+          axis.text.y = element_text(size = 8), 
+          axis.text.x = element_text(angle = 90)
+    )
+)
+
+
+
+# Effort Gap Figure -------------------------------------------------------
+
+
+p1/p2
+
+
+# Saving (it is better to see the saved version)
+ggsave("effort_gap.jpeg", dpi = 300, height = 6, width = 12)
+
+
+
+
 # Effort by habitat -------------------------------------------------------
 
 ## Habitat effort 
@@ -160,6 +287,7 @@ effort_table %>%
 
 
 # END OF SCRIPT -----------------------------------------------------------
+
 
 
 
