@@ -72,11 +72,11 @@ global_mpas <- rbind(mpas1, mpas2, mpas3)
 #### Projecting Data ####
 crs(global_mpas)
 # Chosen projection: World Eckert Iv (equal area)
-eckert <- "+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs"
-global_mpas <- st_transform(global_mpas, crs = eckert)
+behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
+global_mpas <- st_transform(global_mpas, crs = behrmann)
 global_mpas$constant <- 1 # for rasterization later
 
-ocean <- st_transform(ocean, crs = eckert)
+ocean <- st_transform(ocean, crs = behrmann)
 
 
 #### Filter based on MPA Status ####

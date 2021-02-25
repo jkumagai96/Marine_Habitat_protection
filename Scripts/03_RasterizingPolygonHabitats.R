@@ -22,9 +22,9 @@ for (i in 1:length(shapefiles)) {
   crs(habitat_poly)
   
   # Chosen projection: World Eckert Iv (equal area)
-  eckert <- "+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs"
-  ocean <- st_transform(ocean, crs = eckert)
-  habitat_poly <- st_transform(habitat_poly, crs = eckert)
+  behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
+  ocean <- st_transform(ocean, crs = behrmann)
+  habitat_poly <- st_transform(habitat_poly, crs = behrmann)
   
   #### Rasterize #####
   r <- raster(ocean, res = 1000)

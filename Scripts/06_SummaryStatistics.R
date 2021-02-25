@@ -20,9 +20,9 @@ library(sf)
 grids <- list.files("data/data/", pattern = "*.tif$") #list files (in this case raster TIFFs)
 
 # Then we read the polygon we want to use as zone
-
+behrmann.crs <- CRS('+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs')
 poly <- read_sf("data/data/EEZ_Land/EEZ_Land_v3_202030.shp") %>% 
-  st_transform(., crs = "+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs") 
+  st_transform(., crs = behrmann.crs) 
 
 poly <- as(poly, "Spatial") # we need this format to speed extract function
 poly$ID <- 1:length(poly$UNION)
