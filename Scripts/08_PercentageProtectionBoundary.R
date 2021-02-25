@@ -8,6 +8,7 @@ library(tidyverse)
 library(sf)
 
 #### Load and clean data ####
+data <- read.csv("data/data/habitat_area.csv")
 poly <- read_sf("data/data/EEZ_Land/EEZ_Land_v3_202030.shp")
 
 area <- poly %>% 
@@ -15,25 +16,42 @@ area <- poly %>%
   dplyr::select(UNION, ISO_TER1, ISO_SOV1) %>% 
   mutate(ID = 1:length(poly$UNION))
 
+column_names <- c("ID", "all_mpas", "managed", "no_take", "total", "habitat")
 
-data <- read.csv("data/data/habitat_area.csv")
-data <- data %>% 
-  gather(key = "category", value = "pixel_counts", -ID , -X, na.rm = F) %>% 
-  dplyr::select(-X)
+coldcorals <- data %>% 
+  select(ID, starts_with("ColdCorals")) %>% 
+  mutate(hab = "coldcorals")
+colnames(coldcorals) <- column_names 
 
-#### Calculate Percent Protection ####
-n <- length(data$ID)
+coralreefs <- data %>% 
+  select(ID, starts_with("CoralReef")) %>% 
+  mutate(hab = "coralreefs")
+colnames(coralreefs) <- column_names 
 
-data <- data %>% 
-  arrange(ID, category) %>% 
-  mutate(group = rep(1:(n/4), each = 4)) %>% 
-  group_by(group) %>% 
-  mutate(percent_protected = (pixel_counts/(max(pixel_counts)))*100) %>% 
-  ungroup()
+mangroves <- data %>% 
+  select(ID, starts_with("Mangroves")) %>% 
+  mutate(hab = "mangroves")
+colnames(mangroves) <- column_names 
 
-# Join with Area Name/ISO's 
-data <- data %>% 
-  full_join(x = data, y = area, by = "ID")
+saltmarshes <- data %>% 
+  select(ID, starts_with("Saltmarshes")) %>% 
+  mutate(hab = "saltmarshes")
+colnames(saltmarshes) <- column_names 
+
+seagrasses <- data %>% 
+  select(ID, starts_with("Seagrasses")) %>% 
+  mutate(hab = "seagrasses")
+colnames(seagrasses) <- column_names 
+
+
+df <- rbind(coldcorals, coralreefs, mangroves, saltmarshes, seagrasses) %>% 
+  select(habitat, total, all_mpas, managed, no_take, ID)
+df <- full_join(area, df, by = "ID")
+
+###### Calculate Percent protected  #####
+df <- df %>% mutate(pp_all_mpas = (all_mpas/total)*100, 
+              pp_managed = (managed/total)*100, 
+              pp_no_take = (no_take/total)*100)
 
 #### Export ####
-write.csv(data, "data/percent_protected_boundaries.csv", row.names = F)
+write.csv(df, "data/percent_protected_boundaries_new.csv", row.names = F)

@@ -1,0 +1,1616 @@
+"UNION","ISO_TER1","ISO_SOV1","ID","habitat","total","all_mpas","managed","no_take","pp_all_mpas","pp_managed","pp_no_take"
+"Estonia","EST","EST",1,"coldcorals",0,0,0,0,NA,NA,NA
+"Estonia","EST","EST",1,"coralreefs",0,0,0,0,NA,NA,NA
+"Estonia","EST","EST",1,"mangroves",0,0,0,0,NA,NA,NA
+"Estonia","EST","EST",1,"saltmarshes",6,6,6,0,100,100,0
+"Estonia","EST","EST",1,"seagrasses",0,0,0,0,NA,NA,NA
+"Mayotte","MYT","FRA",2,"coldcorals",2,2,0,0,100,0,0
+"Mayotte","MYT","FRA",2,"coralreefs",314,312,0,0,99.3630573248408,0,0
+"Mayotte","MYT","FRA",2,"mangroves",6,6,0,0,100,0,0
+"Mayotte","MYT","FRA",2,"saltmarshes",0,0,0,0,NA,NA,NA
+"Mayotte","MYT","FRA",2,"seagrasses",1499,1486,1,0,99.1327551701134,0.066711140760507,0
+"Overlapping claim Qatar / Saudi Arabia / United Arab Emirates","QAT","QAT",3,"coldcorals",0,0,0,0,NA,NA,NA
+"Overlapping claim Qatar / Saudi Arabia / United Arab Emirates","QAT","QAT",3,"coralreefs",0,0,0,0,NA,NA,NA
+"Overlapping claim Qatar / Saudi Arabia / United Arab Emirates","QAT","QAT",3,"mangroves",0,0,0,0,NA,NA,NA
+"Overlapping claim Qatar / Saudi Arabia / United Arab Emirates","QAT","QAT",3,"saltmarshes",0,0,0,0,NA,NA,NA
+"Overlapping claim Qatar / Saudi Arabia / United Arab Emirates","QAT","QAT",3,"seagrasses",0,0,0,0,NA,NA,NA
+"Cameroon","CMR","CMR",4,"coldcorals",0,0,0,0,NA,NA,NA
+"Cameroon","CMR","CMR",4,"coralreefs",0,0,0,0,NA,NA,NA
+"Cameroon","CMR","CMR",4,"mangroves",1899,1451,1,0,76.4086361242759,0.0526592943654555,0
+"Cameroon","CMR","CMR",4,"saltmarshes",0,0,0,0,NA,NA,NA
+"Cameroon","CMR","CMR",4,"seagrasses",0,0,0,0,NA,NA,NA
+"Finland","FIN","FIN",5,"coldcorals",0,0,0,0,NA,NA,NA
+"Finland","FIN","FIN",5,"coralreefs",0,0,0,0,NA,NA,NA
+"Finland","FIN","FIN",5,"mangroves",0,0,0,0,NA,NA,NA
+"Finland","FIN","FIN",5,"saltmarshes",129,85,20,0,65.8914728682171,15.5038759689922,0
+"Finland","FIN","FIN",5,"seagrasses",0,0,0,0,NA,NA,NA
+"Bassas da India","ATF","FRA",6,"coldcorals",0,0,0,0,NA,NA,NA
+"Bassas da India","ATF","FRA",6,"coralreefs",34,0,0,0,0,0,0
+"Bassas da India","ATF","FRA",6,"mangroves",0,0,0,0,NA,NA,NA
+"Bassas da India","ATF","FRA",6,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bassas da India","ATF","FRA",6,"seagrasses",0,0,0,0,NA,NA,NA
+"Faeroe","FRO","DNK",7,"coldcorals",273,0,0,0,0,0,0
+"Faeroe","FRO","DNK",7,"coralreefs",0,0,0,0,NA,NA,NA
+"Faeroe","FRO","DNK",7,"mangroves",0,0,0,0,NA,NA,NA
+"Faeroe","FRO","DNK",7,"saltmarshes",0,0,0,0,NA,NA,NA
+"Faeroe","FRO","DNK",7,"seagrasses",0,0,0,0,NA,NA,NA
+"Gilbert Islands","KIR","KIR",8,"coldcorals",1,0,0,0,0,0,0
+"Gilbert Islands","KIR","KIR",8,"coralreefs",1702,0,0,0,0,0,0
+"Gilbert Islands","KIR","KIR",8,"mangroves",0,0,0,0,NA,NA,NA
+"Gilbert Islands","KIR","KIR",8,"saltmarshes",0,0,0,0,NA,NA,NA
+"Gilbert Islands","KIR","KIR",8,"seagrasses",494,0,0,0,0,0,0
+"Overlapping claim: Venezuela / Colombia / Dominican Republic","COL","COL",9,"coldcorals",0,0,0,0,NA,NA,NA
+"Overlapping claim: Venezuela / Colombia / Dominican Republic","COL","COL",9,"coralreefs",0,0,0,0,NA,NA,NA
+"Overlapping claim: Venezuela / Colombia / Dominican Republic","COL","COL",9,"mangroves",0,0,0,0,NA,NA,NA
+"Overlapping claim: Venezuela / Colombia / Dominican Republic","COL","COL",9,"saltmarshes",0,0,0,0,NA,NA,NA
+"Overlapping claim: Venezuela / Colombia / Dominican Republic","COL","COL",9,"seagrasses",0,0,0,0,NA,NA,NA
+"Nigeria","NGA","NGA",10,"coldcorals",9,0,0,0,0,0,0
+"Nigeria","NGA","NGA",10,"coralreefs",0,0,0,0,NA,NA,NA
+"Nigeria","NGA","NGA",10,"mangroves",6931,386,0,0,5.56918193622854,0,0
+"Nigeria","NGA","NGA",10,"saltmarshes",0,0,0,0,NA,NA,NA
+"Nigeria","NGA","NGA",10,"seagrasses",8873,2,0,0,0.0225402907697509,0,0
+"Pakistan","PAK","PAK",11,"coldcorals",0,0,0,0,NA,NA,NA
+"Pakistan","PAK","PAK",11,"coralreefs",0,0,0,0,NA,NA,NA
+"Pakistan","PAK","PAK",11,"mangroves",626,230,0,0,36.741214057508,0,0
+"Pakistan","PAK","PAK",11,"saltmarshes",0,0,0,0,NA,NA,NA
+"Pakistan","PAK","PAK",11,"seagrasses",0,0,0,0,NA,NA,NA
+"Syria","SYR","SYR",12,"coldcorals",0,0,0,0,NA,NA,NA
+"Syria","SYR","SYR",12,"coralreefs",0,0,0,0,NA,NA,NA
+"Syria","SYR","SYR",12,"mangroves",0,0,0,0,NA,NA,NA
+"Syria","SYR","SYR",12,"saltmarshes",0,0,0,0,NA,NA,NA
+"Syria","SYR","SYR",12,"seagrasses",0,0,0,0,NA,NA,NA
+"Overlapping claim: Kenya / Somalia","KEN","KEN",13,"coldcorals",0,0,0,0,NA,NA,NA
+"Overlapping claim: Kenya / Somalia","KEN","KEN",13,"coralreefs",0,0,0,0,NA,NA,NA
+"Overlapping claim: Kenya / Somalia","KEN","KEN",13,"mangroves",0,0,0,0,NA,NA,NA
+"Overlapping claim: Kenya / Somalia","KEN","KEN",13,"saltmarshes",0,0,0,0,NA,NA,NA
+"Overlapping claim: Kenya / Somalia","KEN","KEN",13,"seagrasses",0,0,0,0,NA,NA,NA
+"Philippines","PHL","PHL",14,"coldcorals",172,0,0,0,0,0,0
+"Philippines","PHL","PHL",14,"coralreefs",13559,867,0,8,6.39427686407552,0,0.0590014012832805
+"Philippines","PHL","PHL",14,"mangroves",2692,505,1,0,18.7592867756315,0.037147102526003,0
+"Philippines","PHL","PHL",14,"saltmarshes",0,0,0,0,NA,NA,NA
+"Philippines","PHL","PHL",14,"seagrasses",15020,2838,11,14,18.8948069241012,0.0732356857523302,0.0932090545938748
+"Bahrain","BHR","BHR",15,"coldcorals",0,0,0,0,NA,NA,NA
+"Bahrain","BHR","BHR",15,"coralreefs",211,0,0,0,0,0,0
+"Bahrain","BHR","BHR",15,"mangroves",0,0,0,0,NA,NA,NA
+"Bahrain","BHR","BHR",15,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bahrain","BHR","BHR",15,"seagrasses",526,0,0,0,0,0,0
+"British Virgin Islands","VGB","GBR",16,"coldcorals",8,0,0,0,0,0,0
+"British Virgin Islands","VGB","GBR",16,"coralreefs",139,0,0,0,0,0,0
+"British Virgin Islands","VGB","GBR",16,"mangroves",1,0,0,0,0,0,0
+"British Virgin Islands","VGB","GBR",16,"saltmarshes",0,0,0,0,NA,NA,NA
+"British Virgin Islands","VGB","GBR",16,"seagrasses",44,0,0,0,0,0,0
+"Cuba","CUB","CUB",17,"coldcorals",58,0,0,0,0,0,0
+"Cuba","CUB","CUB",17,"coralreefs",2633,753,737,0,28.5985567793392,27.990884922142,0
+"Cuba","CUB","CUB",17,"mangroves",3373,1739,1577,0,51.5564779128372,46.7536317817966,0
+"Cuba","CUB","CUB",17,"saltmarshes",0,0,0,0,NA,NA,NA
+"Cuba","CUB","CUB",17,"seagrasses",13963,6054,5874,0,43.3574446752131,42.0683234261978,0
+"Johnston Atoll","UMI","USA",18,"coldcorals",8,8,0,0,100,0,0
+"Johnston Atoll","UMI","USA",18,"coralreefs",75,75,0,0,100,0,0
+"Johnston Atoll","UMI","USA",18,"mangroves",0,0,0,0,NA,NA,NA
+"Johnston Atoll","UMI","USA",18,"saltmarshes",0,0,0,0,NA,NA,NA
+"Johnston Atoll","UMI","USA",18,"seagrasses",0,0,0,0,NA,NA,NA
+"Guyana","GUY","GUY",19,"coldcorals",15,0,0,0,0,0,0
+"Guyana","GUY","GUY",19,"coralreefs",0,0,0,0,NA,NA,NA
+"Guyana","GUY","GUY",19,"mangroves",257,139,139,0,54.0856031128405,54.0856031128405,0
+"Guyana","GUY","GUY",19,"saltmarshes",0,0,0,0,NA,NA,NA
+"Guyana","GUY","GUY",19,"seagrasses",0,0,0,0,NA,NA,NA
+"Seychelles","SYC","SYC",20,"coldcorals",3,0,0,0,0,0,0
+"Seychelles","SYC","SYC",20,"coralreefs",1498,1403,0,150,93.6582109479306,0,10.0133511348465
+"Seychelles","SYC","SYC",20,"mangroves",0,0,0,0,NA,NA,NA
+"Seychelles","SYC","SYC",20,"saltmarshes",0,0,0,0,NA,NA,NA
+"Seychelles","SYC","SYC",20,"seagrasses",0,0,0,0,NA,NA,NA
+"Phoenix Group","KIR","KIR",21,"coldcorals",0,0,0,0,NA,NA,NA
+"Phoenix Group","KIR","KIR",21,"coralreefs",79,79,0,0,100,0,0
+"Phoenix Group","KIR","KIR",21,"mangroves",0,0,0,0,NA,NA,NA
+"Phoenix Group","KIR","KIR",21,"saltmarshes",0,0,0,0,NA,NA,NA
+"Phoenix Group","KIR","KIR",21,"seagrasses",0,0,0,0,NA,NA,NA
+"Overlapping claim South China Sea","CHN","CHN",22,"coldcorals",2,0,0,0,0,0,0
+"Overlapping claim South China Sea","CHN","CHN",22,"coralreefs",562,0,0,0,0,0,0
+"Overlapping claim South China Sea","CHN","CHN",22,"mangroves",0,0,0,0,NA,NA,NA
+"Overlapping claim South China Sea","CHN","CHN",22,"saltmarshes",0,0,0,0,NA,NA,NA
+"Overlapping claim South China Sea","CHN","CHN",22,"seagrasses",0,0,0,0,NA,NA,NA
+"Equatorial Guinea","GNQ","GNQ",23,"coldcorals",4,3,0,0,75,0,0
+"Equatorial Guinea","GNQ","GNQ",23,"coralreefs",0,0,0,0,NA,NA,NA
+"Equatorial Guinea","GNQ","GNQ",23,"mangroves",262,202,9,0,77.0992366412214,3.43511450381679,0
+"Equatorial Guinea","GNQ","GNQ",23,"saltmarshes",0,0,0,0,NA,NA,NA
+"Equatorial Guinea","GNQ","GNQ",23,"seagrasses",0,0,0,0,NA,NA,NA
+"Vietnam","VNM","VNM",24,"coldcorals",1,0,0,0,0,0,0
+"Vietnam","VNM","VNM",24,"coralreefs",466,111,0,0,23.8197424892704,0,0
+"Vietnam","VNM","VNM",24,"mangroves",1569,106,0,0,6.75589547482473,0,0
+"Vietnam","VNM","VNM",24,"saltmarshes",4,0,0,0,0,0,0
+"Vietnam","VNM","VNM",24,"seagrasses",235,25,0,0,10.6382978723404,0,0
+"Matthew and Hunter Islands",NA,"FRA",25,"coldcorals",0,0,0,0,NA,NA,NA
+"Matthew and Hunter Islands",NA,"FRA",25,"coralreefs",0,0,0,0,NA,NA,NA
+"Matthew and Hunter Islands",NA,"FRA",25,"mangroves",0,0,0,0,NA,NA,NA
+"Matthew and Hunter Islands",NA,"FRA",25,"saltmarshes",0,0,0,0,NA,NA,NA
+"Matthew and Hunter Islands",NA,"FRA",25,"seagrasses",0,0,0,0,NA,NA,NA
+"Panama","PAN","PAN",26,"coldcorals",33,0,0,0,0,0,0
+"Panama","PAN","PAN",26,"coralreefs",634,31,0,0,4.88958990536278,0,0
+"Panama","PAN","PAN",26,"mangroves",1525,286,170,0,18.7540983606557,11.1475409836066,0
+"Panama","PAN","PAN",26,"saltmarshes",0,0,0,0,NA,NA,NA
+"Panama","PAN","PAN",26,"seagrasses",1797,67,0,0,3.72843628269338,0,0
+"Tromelin Island",NA,"FRA",27,"coldcorals",0,0,0,0,NA,NA,NA
+"Tromelin Island",NA,"FRA",27,"coralreefs",5,0,0,0,0,0,0
+"Tromelin Island",NA,"FRA",27,"mangroves",0,0,0,0,NA,NA,NA
+"Tromelin Island",NA,"FRA",27,"saltmarshes",0,0,0,0,NA,NA,NA
+"Tromelin Island",NA,"FRA",27,"seagrasses",0,0,0,0,NA,NA,NA
+"Gabon","GAB","GAB",28,"coldcorals",0,0,0,0,NA,NA,NA
+"Gabon","GAB","GAB",28,"coralreefs",0,0,0,0,NA,NA,NA
+"Gabon","GAB","GAB",28,"mangroves",1795,944,29,0,52.5905292479109,1.61559888579387,0
+"Gabon","GAB","GAB",28,"saltmarshes",0,0,0,0,NA,NA,NA
+"Gabon","GAB","GAB",28,"seagrasses",0,0,0,0,NA,NA,NA
+"Sao Tome and Principe","STP","STP",29,"coldcorals",1,0,0,0,0,0,0
+"Sao Tome and Principe","STP","STP",29,"coralreefs",0,0,0,0,NA,NA,NA
+"Sao Tome and Principe","STP","STP",29,"mangroves",0,0,0,0,NA,NA,NA
+"Sao Tome and Principe","STP","STP",29,"saltmarshes",0,0,0,0,NA,NA,NA
+"Sao Tome and Principe","STP","STP",29,"seagrasses",0,0,0,0,NA,NA,NA
+"North Korea","PRK","PRK",30,"coldcorals",0,0,0,0,NA,NA,NA
+"North Korea","PRK","PRK",30,"coralreefs",0,0,0,0,NA,NA,NA
+"North Korea","PRK","PRK",30,"mangroves",0,0,0,0,NA,NA,NA
+"North Korea","PRK","PRK",30,"saltmarshes",6,0,0,0,0,0,0
+"North Korea","PRK","PRK",30,"seagrasses",0,0,0,0,NA,NA,NA
+"Saba","BES","NLD",31,"coldcorals",8,8,0,0,100,0,0
+"Saba","BES","NLD",31,"coralreefs",167,167,0,0,100,0,0
+"Saba","BES","NLD",31,"mangroves",0,0,0,0,NA,NA,NA
+"Saba","BES","NLD",31,"saltmarshes",0,0,0,0,NA,NA,NA
+"Saba","BES","NLD",31,"seagrasses",1,1,0,0,100,0,0
+"Northern Mariana Islands","MNP","USA",32,"coldcorals",0,0,0,0,NA,NA,NA
+"Northern Mariana Islands","MNP","USA",32,"coralreefs",89,10,0,0,11.2359550561798,0,0
+"Northern Mariana Islands","MNP","USA",32,"mangroves",0,0,0,0,NA,NA,NA
+"Northern Mariana Islands","MNP","USA",32,"saltmarshes",0,0,0,0,NA,NA,NA
+"Northern Mariana Islands","MNP","USA",32,"seagrasses",0,0,0,0,NA,NA,NA
+"Kuril Islands",NA,"JPN",33,"coldcorals",1,0,0,0,0,0,0
+"Kuril Islands",NA,"JPN",33,"coralreefs",0,0,0,0,NA,NA,NA
+"Kuril Islands",NA,"JPN",33,"mangroves",0,0,0,0,NA,NA,NA
+"Kuril Islands",NA,"JPN",33,"saltmarshes",0,0,0,0,NA,NA,NA
+"Kuril Islands",NA,"JPN",33,"seagrasses",0,0,0,0,NA,NA,NA
+"Senegal","SEN","SEN",34,"coldcorals",5,0,0,0,0,0,0
+"Senegal","SEN","SEN",34,"coralreefs",0,0,0,0,NA,NA,NA
+"Senegal","SEN","SEN",34,"mangroves",1259,693,669,0,55.0436854646545,53.1374106433678,0
+"Senegal","SEN","SEN",34,"saltmarshes",0,0,0,0,NA,NA,NA
+"Senegal","SEN","SEN",34,"seagrasses",1492,148,45,0,9.91957104557641,3.01608579088472,0
+"Jordan","JOR","JOR",35,"coldcorals",0,0,0,0,NA,NA,NA
+"Jordan","JOR","JOR",35,"coralreefs",3,0,0,0,0,0,0
+"Jordan","JOR","JOR",35,"mangroves",0,0,0,0,NA,NA,NA
+"Jordan","JOR","JOR",35,"saltmarshes",0,0,0,0,NA,NA,NA
+"Jordan","JOR","JOR",35,"seagrasses",1,0,0,0,0,0,0
+"Palestine","PSE","PSE",36,"coldcorals",0,0,0,0,NA,NA,NA
+"Palestine","PSE","PSE",36,"coralreefs",0,0,0,0,NA,NA,NA
+"Palestine","PSE","PSE",36,"mangroves",0,0,0,0,NA,NA,NA
+"Palestine","PSE","PSE",36,"saltmarshes",0,0,0,0,NA,NA,NA
+"Palestine","PSE","PSE",36,"seagrasses",0,0,0,0,NA,NA,NA
+"Saudi Arabia","SAU","SAU",37,"coldcorals",7,0,0,0,0,0,0
+"Saudi Arabia","SAU","SAU",37,"coralreefs",3447,446,0,0,12.93878735132,0,0
+"Saudi Arabia","SAU","SAU",37,"mangroves",51,3,0,0,5.88235294117647,0,0
+"Saudi Arabia","SAU","SAU",37,"saltmarshes",0,0,0,0,NA,NA,NA
+"Saudi Arabia","SAU","SAU",37,"seagrasses",21107,335,0,0,1.5871511820723,0,0
+"Serranilla Bank",NA,"COL",38,"coldcorals",0,0,0,0,NA,NA,NA
+"Serranilla Bank",NA,"COL",38,"coralreefs",0,0,0,0,NA,NA,NA
+"Serranilla Bank",NA,"COL",38,"mangroves",0,0,0,0,NA,NA,NA
+"Serranilla Bank",NA,"COL",38,"saltmarshes",0,0,0,0,NA,NA,NA
+"Serranilla Bank",NA,"COL",38,"seagrasses",0,0,0,0,NA,NA,NA
+"French Guiana","GUF","FRA",39,"coldcorals",6,0,0,0,0,0,0
+"French Guiana","GUF","FRA",39,"coralreefs",0,0,0,0,NA,NA,NA
+"French Guiana","GUF","FRA",39,"mangroves",498,357,215,0,71.6867469879518,43.1726907630522,0
+"French Guiana","GUF","FRA",39,"saltmarshes",0,0,0,0,NA,NA,NA
+"French Guiana","GUF","FRA",39,"seagrasses",0,0,0,0,NA,NA,NA
+"Senkaku Islands",NA,"TWN",40,"coldcorals",0,0,0,0,NA,NA,NA
+"Senkaku Islands",NA,"TWN",40,"coralreefs",7,0,0,0,0,0,0
+"Senkaku Islands",NA,"TWN",40,"mangroves",0,0,0,0,NA,NA,NA
+"Senkaku Islands",NA,"TWN",40,"saltmarshes",0,0,0,0,NA,NA,NA
+"Senkaku Islands",NA,"TWN",40,"seagrasses",0,0,0,0,NA,NA,NA
+"Hawaii",NA,"USA",41,"coldcorals",449,208,0,0,46.3251670378619,0,0
+"Hawaii",NA,"USA",41,"coralreefs",3347,3108,0,0,92.8592769644458,0,0
+"Hawaii",NA,"USA",41,"mangroves",3,1,0,0,33.3333333333333,0,0
+"Hawaii",NA,"USA",41,"saltmarshes",3,1,0,0,33.3333333333333,0,0
+"Hawaii",NA,"USA",41,"seagrasses",596,79,0,0,13.255033557047,0,0
+"Iran","IRN","IRN",42,"coldcorals",0,0,0,0,NA,NA,NA
+"Iran","IRN","IRN",42,"coralreefs",111,3,0,0,2.7027027027027,0,0
+"Iran","IRN","IRN",42,"mangroves",85,85,0,0,100,0,0
+"Iran","IRN","IRN",42,"saltmarshes",0,0,0,0,NA,NA,NA
+"Iran","IRN","IRN",42,"seagrasses",2712,292,0,0,10.7669616519174,0,0
+"Crozet Islands","ATF","FRA",43,"coldcorals",4,4,0,2,100,0,50
+"Crozet Islands","ATF","FRA",43,"coralreefs",0,0,0,0,NA,NA,NA
+"Crozet Islands","ATF","FRA",43,"mangroves",0,0,0,0,NA,NA,NA
+"Crozet Islands","ATF","FRA",43,"saltmarshes",0,0,0,0,NA,NA,NA
+"Crozet Islands","ATF","FRA",43,"seagrasses",0,0,0,0,NA,NA,NA
+"Georgia","GEO","GEO",44,"coldcorals",0,0,0,0,NA,NA,NA
+"Georgia","GEO","GEO",44,"coralreefs",0,0,0,0,NA,NA,NA
+"Georgia","GEO","GEO",44,"mangroves",0,0,0,0,NA,NA,NA
+"Georgia","GEO","GEO",44,"saltmarshes",0,0,0,0,NA,NA,NA
+"Georgia","GEO","GEO",44,"seagrasses",0,0,0,0,NA,NA,NA
+"Guinea-Bissau","GNB","GNB",45,"coldcorals",1,0,0,0,0,0,0
+"Guinea-Bissau","GNB","GNB",45,"coralreefs",0,0,0,0,NA,NA,NA
+"Guinea-Bissau","GNB","GNB",45,"mangroves",2641,1002,386,0,37.9401741764483,14.6156758803484,0
+"Guinea-Bissau","GNB","GNB",45,"saltmarshes",0,0,0,0,NA,NA,NA
+"Guinea-Bissau","GNB","GNB",45,"seagrasses",15408,2351,52,0,15.2583073727934,0.33748701973001,0
+"Turks and Caicos Islands","TCA","GBR",46,"coldcorals",3,0,0,0,0,0,0
+"Turks and Caicos Islands","TCA","GBR",46,"coralreefs",190,10,0,0,5.26315789473684,0,0
+"Turks and Caicos Islands","TCA","GBR",46,"mangroves",116,88,0,0,75.8620689655172,0,0
+"Turks and Caicos Islands","TCA","GBR",46,"saltmarshes",0,0,0,0,NA,NA,NA
+"Turks and Caicos Islands","TCA","GBR",46,"seagrasses",963,60,0,0,6.23052959501558,0,0
+"Mauritania","MRT","MRT",47,"coldcorals",42,0,0,0,0,0,0
+"Mauritania","MRT","MRT",47,"coralreefs",0,0,0,0,NA,NA,NA
+"Mauritania","MRT","MRT",47,"mangroves",1,0,0,0,0,0,0
+"Mauritania","MRT","MRT",47,"saltmarshes",0,0,0,0,NA,NA,NA
+"Mauritania","MRT","MRT",47,"seagrasses",0,0,0,0,NA,NA,NA
+"Micronesia","FSM","FSM",48,"coldcorals",2,0,0,0,0,0,0
+"Micronesia","FSM","FSM",48,"coralreefs",3168,50,0,0,1.57828282828283,0,0
+"Micronesia","FSM","FSM",48,"mangroves",80,0,0,0,0,0,0
+"Micronesia","FSM","FSM",48,"saltmarshes",0,0,0,0,NA,NA,NA
+"Micronesia","FSM","FSM",48,"seagrasses",1601,0,0,0,0,0,0
+"New Caledonia","NCL","FRA",49,"coldcorals",70,62,57,0,88.5714285714286,81.4285714285714,0
+"New Caledonia","NCL","FRA",49,"coralreefs",4608,3629,1728,114,78.7543402777778,37.5,2.47395833333333
+"New Caledonia","NCL","FRA",49,"mangroves",293,96,0,0,32.7645051194539,0,0
+"New Caledonia","NCL","FRA",49,"saltmarshes",0,0,0,0,NA,NA,NA
+"New Caledonia","NCL","FRA",49,"seagrasses",1483,1175,0,9,79.2312879298719,0,0.606877950101146
+"Mexico","MEX","MEX",50,"coldcorals",119,47,8,0,39.4957983193277,6.72268907563025,0
+"Mexico","MEX","MEX",50,"coralreefs",949,816,667,0,85.9852476290832,70.2845100105374,0
+"Mexico","MEX","MEX",50,"mangroves",9669,7302,4893,0,75.5197021408625,50.6050263729445,0
+"Mexico","MEX","MEX",50,"saltmarshes",2738,2697,2674,0,98.5025566106647,97.6625273922571,0
+"Mexico","MEX","MEX",50,"seagrasses",9807,5944,3490,0,60.6097685326807,35.5868257367187,0
+"Portugal","PRT","PRT",51,"coldcorals",124,45,0,0,36.2903225806452,0,0
+"Portugal","PRT","PRT",51,"coralreefs",0,0,0,0,NA,NA,NA
+"Portugal","PRT","PRT",51,"mangroves",0,0,0,0,NA,NA,NA
+"Portugal","PRT","PRT",51,"saltmarshes",203,191,3,0,94.0886699507389,1.47783251231527,0
+"Portugal","PRT","PRT",51,"seagrasses",0,0,0,0,NA,NA,NA
+"Wallis and Futuna","WLF","FRA",52,"coldcorals",31,0,0,0,0,0,0
+"Wallis and Futuna","WLF","FRA",52,"coralreefs",414,0,0,0,0,0,0
+"Wallis and Futuna","WLF","FRA",52,"mangroves",0,0,0,0,NA,NA,NA
+"Wallis and Futuna","WLF","FRA",52,"saltmarshes",0,0,0,0,NA,NA,NA
+"Wallis and Futuna","WLF","FRA",52,"seagrasses",0,0,0,0,NA,NA,NA
+"Macquarie Island",NA,"AUS",53,"coldcorals",42,12,6,6,28.5714285714286,14.2857142857143,14.2857142857143
+"Macquarie Island",NA,"AUS",53,"coralreefs",0,0,0,0,NA,NA,NA
+"Macquarie Island",NA,"AUS",53,"mangroves",0,0,0,0,NA,NA,NA
+"Macquarie Island",NA,"AUS",53,"saltmarshes",0,0,0,0,NA,NA,NA
+"Macquarie Island",NA,"AUS",53,"seagrasses",0,0,0,0,NA,NA,NA
+"Saint Kitts and Nevis","KNA","KNA",54,"coldcorals",7,0,0,0,0,0,0
+"Saint Kitts and Nevis","KNA","KNA",54,"coralreefs",37,36,0,0,97.2972972972973,0,0
+"Saint Kitts and Nevis","KNA","KNA",54,"mangroves",0,0,0,0,NA,NA,NA
+"Saint Kitts and Nevis","KNA","KNA",54,"saltmarshes",0,0,0,0,NA,NA,NA
+"Saint Kitts and Nevis","KNA","KNA",54,"seagrasses",65,58,0,0,89.2307692307692,0,0
+"United Arab Emirates","ARE","ARE",55,"coldcorals",0,0,0,0,NA,NA,NA
+"United Arab Emirates","ARE","ARE",55,"coralreefs",120,52,0,15,43.3333333333333,0,12.5
+"United Arab Emirates","ARE","ARE",55,"mangroves",70,11,0,9,15.7142857142857,0,12.8571428571429
+"United Arab Emirates","ARE","ARE",55,"saltmarshes",47,9,0,5,19.1489361702128,0,10.6382978723404
+"United Arab Emirates","ARE","ARE",55,"seagrasses",1012,441,0,32,43.5770750988142,0,3.16205533596838
+"Saint Helena","SHN","GBR",56,"coldcorals",1,0,0,0,0,0,0
+"Saint Helena","SHN","GBR",56,"coralreefs",0,0,0,0,NA,NA,NA
+"Saint Helena","SHN","GBR",56,"mangroves",0,0,0,0,NA,NA,NA
+"Saint Helena","SHN","GBR",56,"saltmarshes",0,0,0,0,NA,NA,NA
+"Saint Helena","SHN","GBR",56,"seagrasses",0,0,0,0,NA,NA,NA
+"Doumeira Islands",NA,"ERI",57,"coldcorals",0,0,0,0,NA,NA,NA
+"Doumeira Islands",NA,"ERI",57,"coralreefs",0,0,0,0,NA,NA,NA
+"Doumeira Islands",NA,"ERI",57,"mangroves",0,0,0,0,NA,NA,NA
+"Doumeira Islands",NA,"ERI",57,"saltmarshes",0,0,0,0,NA,NA,NA
+"Doumeira Islands",NA,"ERI",57,"seagrasses",0,0,0,0,NA,NA,NA
+"United Kingdom","GBR","GBR",58,"coldcorals",344,191,157,0,55.5232558139535,45.6395348837209,0
+"United Kingdom","GBR","GBR",58,"coralreefs",0,0,0,0,NA,NA,NA
+"United Kingdom","GBR","GBR",58,"mangroves",0,0,0,0,NA,NA,NA
+"United Kingdom","GBR","GBR",58,"saltmarshes",559,523,440,0,93.5599284436494,78.7119856887299,0
+"United Kingdom","GBR","GBR",58,"seagrasses",136,108,104,0,79.4117647058823,76.4705882352941,0
+"Uruguay","URY","URY",59,"coldcorals",22,0,0,0,0,0,0
+"Uruguay","URY","URY",59,"coralreefs",0,0,0,0,NA,NA,NA
+"Uruguay","URY","URY",59,"mangroves",0,0,0,0,NA,NA,NA
+"Uruguay","URY","URY",59,"saltmarshes",24,0,0,0,0,0,0
+"Uruguay","URY","URY",59,"seagrasses",0,0,0,0,NA,NA,NA
+"Thailand","THA","THA",60,"coldcorals",4,0,0,0,0,0,0
+"Thailand","THA","THA",60,"coralreefs",196,61,61,8,31.1224489795918,31.1224489795918,4.08163265306122
+"Thailand","THA","THA",60,"mangroves",2279,242,134,0,10.6186924089513,5.87977182974989,0
+"Thailand","THA","THA",60,"saltmarshes",0,0,0,0,NA,NA,NA
+"Thailand","THA","THA",60,"seagrasses",1842,575,360,0,31.2160694896851,19.5439739413681,0
+"Latvia","LVA","LVA",61,"coldcorals",0,0,0,0,NA,NA,NA
+"Latvia","LVA","LVA",61,"coralreefs",0,0,0,0,NA,NA,NA
+"Latvia","LVA","LVA",61,"mangroves",0,0,0,0,NA,NA,NA
+"Latvia","LVA","LVA",61,"saltmarshes",0,0,0,0,NA,NA,NA
+"Latvia","LVA","LVA",61,"seagrasses",0,0,0,0,NA,NA,NA
+"Bulgaria","BGR","BGR",62,"coldcorals",0,0,0,0,NA,NA,NA
+"Bulgaria","BGR","BGR",62,"coralreefs",0,0,0,0,NA,NA,NA
+"Bulgaria","BGR","BGR",62,"mangroves",0,0,0,0,NA,NA,NA
+"Bulgaria","BGR","BGR",62,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bulgaria","BGR","BGR",62,"seagrasses",0,0,0,0,NA,NA,NA
+"Suriname","SUR","SUR",63,"coldcorals",35,0,0,0,0,0,0
+"Suriname","SUR","SUR",63,"coralreefs",0,0,0,0,NA,NA,NA
+"Suriname","SUR","SUR",63,"mangroves",758,532,0,0,70.1846965699208,0,0
+"Suriname","SUR","SUR",63,"saltmarshes",0,0,0,0,NA,NA,NA
+"Suriname","SUR","SUR",63,"seagrasses",0,0,0,0,NA,NA,NA
+"Sudan","SDN","SDN",64,"coldcorals",0,0,0,0,NA,NA,NA
+"Sudan","SDN","SDN",64,"coralreefs",620,114,0,0,18.3870967741935,0,0
+"Sudan","SDN","SDN",64,"mangroves",4,0,0,0,0,0,0
+"Sudan","SDN","SDN",64,"saltmarshes",0,0,0,0,NA,NA,NA
+"Sudan","SDN","SDN",64,"seagrasses",4463,0,0,0,0,0,0
+"Overlapping claim: Trinidad and Tobago / Venezuela / Guyana","GUY","GUY",65,"coldcorals",0,0,0,0,NA,NA,NA
+"Overlapping claim: Trinidad and Tobago / Venezuela / Guyana","GUY","GUY",65,"coralreefs",0,0,0,0,NA,NA,NA
+"Overlapping claim: Trinidad and Tobago / Venezuela / Guyana","GUY","GUY",65,"mangroves",0,0,0,0,NA,NA,NA
+"Overlapping claim: Trinidad and Tobago / Venezuela / Guyana","GUY","GUY",65,"saltmarshes",0,0,0,0,NA,NA,NA
+"Overlapping claim: Trinidad and Tobago / Venezuela / Guyana","GUY","GUY",65,"seagrasses",0,0,0,0,NA,NA,NA
+"Overlapping claim Liancourt Rocks: Japan / South Korea",NA,"JPN",66,"coldcorals",0,0,0,0,NA,NA,NA
+"Overlapping claim Liancourt Rocks: Japan / South Korea",NA,"JPN",66,"coralreefs",0,0,0,0,NA,NA,NA
+"Overlapping claim Liancourt Rocks: Japan / South Korea",NA,"JPN",66,"mangroves",0,0,0,0,NA,NA,NA
+"Overlapping claim Liancourt Rocks: Japan / South Korea",NA,"JPN",66,"saltmarshes",0,0,0,0,NA,NA,NA
+"Overlapping claim Liancourt Rocks: Japan / South Korea",NA,"JPN",66,"seagrasses",0,0,0,0,NA,NA,NA
+"Togo","TGO","TGO",67,"coldcorals",0,0,0,0,NA,NA,NA
+"Togo","TGO","TGO",67,"coralreefs",0,0,0,0,NA,NA,NA
+"Togo","TGO","TGO",67,"mangroves",0,0,0,0,NA,NA,NA
+"Togo","TGO","TGO",67,"saltmarshes",0,0,0,0,NA,NA,NA
+"Togo","TGO","TGO",67,"seagrasses",195,0,0,0,0,0,0
+"Cape Verde","CPV","CPV",68,"coldcorals",33,0,0,0,0,0,0
+"Cape Verde","CPV","CPV",68,"coralreefs",0,0,0,0,NA,NA,NA
+"Cape Verde","CPV","CPV",68,"mangroves",0,0,0,0,NA,NA,NA
+"Cape Verde","CPV","CPV",68,"saltmarshes",0,0,0,0,NA,NA,NA
+"Cape Verde","CPV","CPV",68,"seagrasses",0,0,0,0,NA,NA,NA
+"Kenya","KEN","KEN",69,"coldcorals",4,0,0,0,0,0,0
+"Kenya","KEN","KEN",69,"coralreefs",389,117,0,10,30.0771208226221,0,2.5706940874036
+"Kenya","KEN","KEN",69,"mangroves",542,82,0,0,15.1291512915129,0,0
+"Kenya","KEN","KEN",69,"saltmarshes",0,0,0,0,NA,NA,NA
+"Kenya","KEN","KEN",69,"seagrasses",121,75,0,0,61.9834710743802,0,0
+"Angola","AGO","AGO",70,"coldcorals",4,0,0,0,0,0,0
+"Angola","AGO","AGO",70,"coralreefs",0,0,0,0,NA,NA,NA
+"Angola","AGO","AGO",70,"mangroves",395,1,0,0,0.253164556962025,0,0
+"Angola","AGO","AGO",70,"saltmarshes",0,0,0,0,NA,NA,NA
+"Angola","AGO","AGO",70,"seagrasses",599,0,0,0,0,0,0
+"Easter Island",NA,"CHL",71,"coldcorals",0,0,0,0,NA,NA,NA
+"Easter Island",NA,"CHL",71,"coralreefs",0,0,0,0,NA,NA,NA
+"Easter Island",NA,"CHL",71,"mangroves",0,0,0,0,NA,NA,NA
+"Easter Island",NA,"CHL",71,"saltmarshes",0,0,0,0,NA,NA,NA
+"Easter Island",NA,"CHL",71,"seagrasses",0,0,0,0,NA,NA,NA
+"Réunion","REU","FRA",72,"coldcorals",0,0,0,0,NA,NA,NA
+"Réunion","REU","FRA",72,"coralreefs",11,8,0,0,72.7272727272727,0,0
+"Réunion","REU","FRA",72,"mangroves",0,0,0,0,NA,NA,NA
+"Réunion","REU","FRA",72,"saltmarshes",0,0,0,0,NA,NA,NA
+"Réunion","REU","FRA",72,"seagrasses",0,0,0,0,NA,NA,NA
+"Tuvalu","TUV","TUV",73,"coldcorals",1,0,0,0,0,0,0
+"Tuvalu","TUV","TUV",73,"coralreefs",862,56,18,28,6.49651972157773,2.08816705336427,3.24825986078886
+"Tuvalu","TUV","TUV",73,"mangroves",0,0,0,0,NA,NA,NA
+"Tuvalu","TUV","TUV",73,"saltmarshes",0,0,0,0,NA,NA,NA
+"Tuvalu","TUV","TUV",73,"seagrasses",0,0,0,0,NA,NA,NA
+"Norway","NOR","NOR",74,"coldcorals",1266,233,219,0,18.4044233807267,17.2985781990521,0
+"Norway","NOR","NOR",74,"coralreefs",0,0,0,0,NA,NA,NA
+"Norway","NOR","NOR",74,"mangroves",0,0,0,0,NA,NA,NA
+"Norway","NOR","NOR",74,"saltmarshes",0,0,0,0,NA,NA,NA
+"Norway","NOR","NOR",74,"seagrasses",65,11,1,0,16.9230769230769,1.53846153846154,0
+"Puerto Rico","PRI","USA",75,"coldcorals",34,6,0,0,17.6470588235294,0,0
+"Puerto Rico","PRI","USA",75,"coralreefs",157,27,0,0,17.1974522292994,0,0
+"Puerto Rico","PRI","USA",75,"mangroves",88,47,0,0,53.4090909090909,0,0
+"Puerto Rico","PRI","USA",75,"saltmarshes",52,9,0,0,17.3076923076923,0,0
+"Puerto Rico","PRI","USA",75,"seagrasses",601,128,0,0,21.2978369384359,0,0
+"Jamaica","JAM","JAM",76,"coldcorals",19,1,0,0,5.26315789473684,0,0
+"Jamaica","JAM","JAM",76,"coralreefs",425,73,2,0,17.1764705882353,0.470588235294118,0
+"Jamaica","JAM","JAM",76,"mangroves",104,65,47,0,62.5,45.1923076923077,0
+"Jamaica","JAM","JAM",76,"saltmarshes",0,0,0,0,NA,NA,NA
+"Jamaica","JAM","JAM",76,"seagrasses",794,138,0,0,17.3803526448363,0,0
+"East Timor","TLS","TLS",77,"coldcorals",7,0,0,0,0,0,0
+"East Timor","TLS","TLS",77,"coralreefs",34,6,1,0,17.6470588235294,2.94117647058824,0
+"East Timor","TLS","TLS",77,"mangroves",8,2,0,0,25,0,0
+"East Timor","TLS","TLS",77,"saltmarshes",0,0,0,0,NA,NA,NA
+"East Timor","TLS","TLS",77,"seagrasses",337,3,0,0,0.890207715133531,0,0
+"Andaman and Nicobar",NA,"IND",78,"coldcorals",4,0,0,0,0,0,0
+"Andaman and Nicobar",NA,"IND",78,"coralreefs",793,50,0,50,6.30517023959647,0,6.30517023959647
+"Andaman and Nicobar",NA,"IND",78,"mangroves",587,10,0,10,1.70357751277683,0,1.70357751277683
+"Andaman and Nicobar",NA,"IND",78,"saltmarshes",0,0,0,0,NA,NA,NA
+"Andaman and Nicobar",NA,"IND",78,"seagrasses",1661,143,0,143,8.60927152317881,0,8.60927152317881
+"Azores",NA,"PRT",79,"coldcorals",201,40,16,0,19.9004975124378,7.96019900497512,0
+"Azores",NA,"PRT",79,"coralreefs",0,0,0,0,NA,NA,NA
+"Azores",NA,"PRT",79,"mangroves",0,0,0,0,NA,NA,NA
+"Azores",NA,"PRT",79,"saltmarshes",0,0,0,0,NA,NA,NA
+"Azores",NA,"PRT",79,"seagrasses",0,0,0,0,NA,NA,NA
+"Myanmar","MMR","MMR",80,"coldcorals",6,0,0,0,0,0,0
+"Myanmar","MMR","MMR",80,"coralreefs",621,48,47,0,7.72946859903382,7.56843800322061,0
+"Myanmar","MMR","MMR",80,"mangroves",5066,150,126,0,2.96091590998816,2.48716936439005,0
+"Myanmar","MMR","MMR",80,"saltmarshes",0,0,0,0,NA,NA,NA
+"Myanmar","MMR","MMR",80,"seagrasses",2932,2,0,0,0.0682128240109141,0,0
+"Federal Republic of Somalia","SOM","SOM",81,"coldcorals",9,0,0,0,0,0,0
+"Federal Republic of Somalia","SOM","SOM",81,"coralreefs",406,0,0,0,0,0,0
+"Federal Republic of Somalia","SOM","SOM",81,"mangroves",20,0,0,0,0,0,0
+"Federal Republic of Somalia","SOM","SOM",81,"saltmarshes",0,0,0,0,NA,NA,NA
+"Federal Republic of Somalia","SOM","SOM",81,"seagrasses",0,0,0,0,NA,NA,NA
+"Romania","ROU","ROU",82,"coldcorals",0,0,0,0,NA,NA,NA
+"Romania","ROU","ROU",82,"coralreefs",0,0,0,0,NA,NA,NA
+"Romania","ROU","ROU",82,"mangroves",0,0,0,0,NA,NA,NA
+"Romania","ROU","ROU",82,"saltmarshes",58,58,58,0,100,100,0
+"Romania","ROU","ROU",82,"seagrasses",0,0,0,0,NA,NA,NA
+"Canada","CAN","CAN",83,"coldcorals",205,11,10,0,5.36585365853659,4.8780487804878,0
+"Canada","CAN","CAN",83,"coralreefs",0,0,0,0,NA,NA,NA
+"Canada","CAN","CAN",83,"mangroves",0,0,0,0,NA,NA,NA
+"Canada","CAN","CAN",83,"saltmarshes",1109,264,255,0,23.8052299368801,22.9936880072137,0
+"Canada","CAN","CAN",83,"seagrasses",290,70,70,0,24.1379310344828,24.1379310344828,0
+"Algeria","DZA","DZA",84,"coldcorals",2,0,0,0,0,0,0
+"Algeria","DZA","DZA",84,"coralreefs",0,0,0,0,NA,NA,NA
+"Algeria","DZA","DZA",84,"mangroves",0,0,0,0,NA,NA,NA
+"Algeria","DZA","DZA",84,"saltmarshes",0,0,0,0,NA,NA,NA
+"Algeria","DZA","DZA",84,"seagrasses",38,0,0,0,0,0,0
+"South Africa","ZAF","ZAF",85,"coldcorals",39,19,0,0,48.7179487179487,0,0
+"South Africa","ZAF","ZAF",85,"coralreefs",1,1,0,0,100,0,0
+"South Africa","ZAF","ZAF",85,"mangroves",26,10,0,0,38.4615384615385,0,0
+"South Africa","ZAF","ZAF",85,"saltmarshes",62,11,0,0,17.741935483871,0,0
+"South Africa","ZAF","ZAF",85,"seagrasses",406,406,0,0,100,0,0
+"Tonga","TON","TON",86,"coldcorals",2,0,0,0,0,0,0
+"Tonga","TON","TON",86,"coralreefs",1009,164,0,0,16.2537165510406,0,0
+"Tonga","TON","TON",86,"mangroves",9,1,0,0,11.1111111111111,0,0
+"Tonga","TON","TON",86,"saltmarshes",0,0,0,0,NA,NA,NA
+"Tonga","TON","TON",86,"seagrasses",3699,189,0,0,5.10948905109489,0,0
+"Djibouti","DJI","DJI",87,"coldcorals",0,0,0,0,NA,NA,NA
+"Djibouti","DJI","DJI",87,"coralreefs",239,0,0,0,0,0,0
+"Djibouti","DJI","DJI",87,"mangroves",6,0,0,0,0,0,0
+"Djibouti","DJI","DJI",87,"saltmarshes",0,0,0,0,NA,NA,NA
+"Djibouti","DJI","DJI",87,"seagrasses",0,0,0,0,NA,NA,NA
+"Sint-Maarten","SXM","NLD",88,"coldcorals",0,0,0,0,NA,NA,NA
+"Sint-Maarten","SXM","NLD",88,"coralreefs",2,0,0,0,0,0,0
+"Sint-Maarten","SXM","NLD",88,"mangroves",0,0,0,0,NA,NA,NA
+"Sint-Maarten","SXM","NLD",88,"saltmarshes",0,0,0,0,NA,NA,NA
+"Sint-Maarten","SXM","NLD",88,"seagrasses",22,1,1,0,4.54545454545455,4.54545454545455,0
+"Greece","GRC","GRC",89,"coldcorals",17,1,0,0,5.88235294117647,0,0
+"Greece","GRC","GRC",89,"coralreefs",0,0,0,0,NA,NA,NA
+"Greece","GRC","GRC",89,"mangroves",0,0,0,0,NA,NA,NA
+"Greece","GRC","GRC",89,"saltmarshes",0,0,0,0,NA,NA,NA
+"Greece","GRC","GRC",89,"seagrasses",629,568,59,0,90.302066772655,9.37996820349762,0
+"Slovenia","SVN","SVN",90,"coldcorals",0,0,0,0,NA,NA,NA
+"Slovenia","SVN","SVN",90,"coralreefs",0,0,0,0,NA,NA,NA
+"Slovenia","SVN","SVN",90,"mangroves",0,0,0,0,NA,NA,NA
+"Slovenia","SVN","SVN",90,"saltmarshes",2,1,1,0,50,50,0
+"Slovenia","SVN","SVN",90,"seagrasses",0,0,0,0,NA,NA,NA
+"Colombia","COL","COL",91,"coldcorals",51,6,6,0,11.7647058823529,11.7647058823529,0
+"Colombia","COL","COL",91,"coralreefs",534,424,423,0,79.4007490636704,79.2134831460674,0
+"Colombia","COL","COL",91,"mangroves",2338,1086,664,0,46.4499572284003,28.4003421727973,0
+"Colombia","COL","COL",91,"saltmarshes",0,0,0,0,NA,NA,NA
+"Colombia","COL","COL",91,"seagrasses",424,184,51,0,43.3962264150943,12.0283018867925,0
+"Nicaragua","NIC","NIC",92,"coldcorals",5,0,0,0,0,0,0
+"Nicaragua","NIC","NIC",92,"coralreefs",510,334,52,0,65.4901960784314,10.1960784313725,0
+"Nicaragua","NIC","NIC",92,"mangroves",727,573,0,0,78.8170563961486,0,0
+"Nicaragua","NIC","NIC",92,"saltmarshes",0,0,0,0,NA,NA,NA
+"Nicaragua","NIC","NIC",92,"seagrasses",5567,926,0,0,16.6337345069158,0,0
+"Turkey","TUR","TUR",93,"coldcorals",0,0,0,0,NA,NA,NA
+"Turkey","TUR","TUR",93,"coralreefs",0,0,0,0,NA,NA,NA
+"Turkey","TUR","TUR",93,"mangroves",0,0,0,0,NA,NA,NA
+"Turkey","TUR","TUR",93,"saltmarshes",255,145,0,0,56.8627450980392,0,0
+"Turkey","TUR","TUR",93,"seagrasses",0,0,0,0,NA,NA,NA
+"Sri Lanka","LKA","LKA",94,"coldcorals",4,0,0,0,0,0,0
+"Sri Lanka","LKA","LKA",94,"coralreefs",110,2,0,0,1.81818181818182,0,0
+"Sri Lanka","LKA","LKA",94,"mangroves",191,9,0,0,4.71204188481675,0,0
+"Sri Lanka","LKA","LKA",94,"saltmarshes",0,0,0,0,NA,NA,NA
+"Sri Lanka","LKA","LKA",94,"seagrasses",2878,4,0,0,0.138985406532314,0,0
+"New Zealand","NZL","NZL",95,"coldcorals",557,102,0,51,18.3123877917415,0,9.15619389587074
+"New Zealand","NZL","NZL",95,"coralreefs",0,0,0,0,NA,NA,NA
+"New Zealand","NZL","NZL",95,"mangroves",310,29,0,2,9.35483870967742,0,0.645161290322581
+"New Zealand","NZL","NZL",95,"saltmarshes",206,48,0,0,23.3009708737864,0,0
+"New Zealand","NZL","NZL",95,"seagrasses",0,0,0,0,NA,NA,NA
+"Cook Islands","COK","NZL",96,"coldcorals",3,3,0,0,100,0,0
+"Cook Islands","COK","NZL",96,"coralreefs",266,124,0,0,46.6165413533835,0,0
+"Cook Islands","COK","NZL",96,"mangroves",0,0,0,0,NA,NA,NA
+"Cook Islands","COK","NZL",96,"saltmarshes",0,0,0,0,NA,NA,NA
+"Cook Islands","COK","NZL",96,"seagrasses",0,0,0,0,NA,NA,NA
+"Brunei","BRN","BRN",97,"coldcorals",0,0,0,0,NA,NA,NA
+"Brunei","BRN","BRN",97,"coralreefs",60,0,0,0,0,0,0
+"Brunei","BRN","BRN",97,"mangroves",112,67,0,0,59.8214285714286,0,0
+"Brunei","BRN","BRN",97,"saltmarshes",0,0,0,0,NA,NA,NA
+"Brunei","BRN","BRN",97,"seagrasses",0,0,0,0,NA,NA,NA
+"Abu musa, Greater and Lesser Tunb","ARE","ARE",98,"coldcorals",0,0,0,0,NA,NA,NA
+"Abu musa, Greater and Lesser Tunb","ARE","ARE",98,"coralreefs",0,0,0,0,NA,NA,NA
+"Abu musa, Greater and Lesser Tunb","ARE","ARE",98,"mangroves",0,0,0,0,NA,NA,NA
+"Abu musa, Greater and Lesser Tunb","ARE","ARE",98,"saltmarshes",0,0,0,0,NA,NA,NA
+"Abu musa, Greater and Lesser Tunb","ARE","ARE",98,"seagrasses",0,0,0,0,NA,NA,NA
+"Jersey","JEY","GBR",99,"coldcorals",0,0,0,0,NA,NA,NA
+"Jersey","JEY","GBR",99,"coralreefs",0,0,0,0,NA,NA,NA
+"Jersey","JEY","GBR",99,"mangroves",0,0,0,0,NA,NA,NA
+"Jersey","JEY","GBR",99,"saltmarshes",0,0,0,0,NA,NA,NA
+"Jersey","JEY","GBR",99,"seagrasses",0,0,0,0,NA,NA,NA
+"China","CHN","CHN",100,"coldcorals",1,0,0,0,0,0,0
+"China","CHN","CHN",100,"coralreefs",578,0,0,0,0,0,0
+"China","CHN","CHN",100,"mangroves",160,11,0,0,6.875,0,0
+"China","CHN","CHN",100,"saltmarshes",5421,242,85,0,4.4641210108836,1.56797638812027,0
+"China","CHN","CHN",100,"seagrasses",8137,7,0,0,0.0860267912006882,0,0
+"Amsterdam and Saint Paul Islands","ATF","FRA",101,"coldcorals",10,10,0,9,100,0,90
+"Amsterdam and Saint Paul Islands","ATF","FRA",101,"coralreefs",0,0,0,0,NA,NA,NA
+"Amsterdam and Saint Paul Islands","ATF","FRA",101,"mangroves",0,0,0,0,NA,NA,NA
+"Amsterdam and Saint Paul Islands","ATF","FRA",101,"saltmarshes",0,0,0,0,NA,NA,NA
+"Amsterdam and Saint Paul Islands","ATF","FRA",101,"seagrasses",0,0,0,0,NA,NA,NA
+"Croatia","HRV","HRV",102,"coldcorals",72,1,0,0,1.38888888888889,0,0
+"Croatia","HRV","HRV",102,"coralreefs",0,0,0,0,NA,NA,NA
+"Croatia","HRV","HRV",102,"mangroves",0,0,0,0,NA,NA,NA
+"Croatia","HRV","HRV",102,"saltmarshes",7,6,0,0,85.7142857142857,0,0
+"Croatia","HRV","HRV",102,"seagrasses",314,167,0,0,53.1847133757962,0,0
+"Iraq","IRQ","IRQ",103,"coldcorals",0,0,0,0,NA,NA,NA
+"Iraq","IRQ","IRQ",103,"coralreefs",0,0,0,0,NA,NA,NA
+"Iraq","IRQ","IRQ",103,"mangroves",0,0,0,0,NA,NA,NA
+"Iraq","IRQ","IRQ",103,"saltmarshes",0,0,0,0,NA,NA,NA
+"Iraq","IRQ","IRQ",103,"seagrasses",72,0,0,0,0,0,0
+"Chile","CHL","CHL",104,"coldcorals",87,43,5,22,49.4252873563218,5.74712643678161,25.2873563218391
+"Chile","CHL","CHL",104,"coralreefs",0,0,0,0,NA,NA,NA
+"Chile","CHL","CHL",104,"mangroves",0,0,0,0,NA,NA,NA
+"Chile","CHL","CHL",104,"saltmarshes",10,4,0,0,40,0,0
+"Chile","CHL","CHL",104,"seagrasses",0,0,0,0,NA,NA,NA
+"Netherlands","NLD","NLD",105,"coldcorals",0,0,0,0,NA,NA,NA
+"Netherlands","NLD","NLD",105,"coralreefs",0,0,0,0,NA,NA,NA
+"Netherlands","NLD","NLD",105,"mangroves",0,0,0,0,NA,NA,NA
+"Netherlands","NLD","NLD",105,"saltmarshes",147,142,142,0,96.5986394557823,96.5986394557823,0
+"Netherlands","NLD","NLD",105,"seagrasses",1,1,1,0,100,100,0
+"Ivory Coast","CIV","CIV",106,"coldcorals",10,0,0,0,0,0,0
+"Ivory Coast","CIV","CIV",106,"coralreefs",0,0,0,0,NA,NA,NA
+"Ivory Coast","CIV","CIV",106,"mangroves",70,5,2,0,7.14285714285714,2.85714285714286,0
+"Ivory Coast","CIV","CIV",106,"saltmarshes",0,0,0,0,NA,NA,NA
+"Ivory Coast","CIV","CIV",106,"seagrasses",0,0,0,0,NA,NA,NA
+"Grenada","GRD","GRD",107,"coldcorals",15,0,0,0,0,0,0
+"Grenada","GRD","GRD",107,"coralreefs",51,3,0,0,5.88235294117647,0,0
+"Grenada","GRD","GRD",107,"mangroves",2,0,0,0,0,0,0
+"Grenada","GRD","GRD",107,"saltmarshes",0,0,0,0,NA,NA,NA
+"Grenada","GRD","GRD",107,"seagrasses",9,1,0,0,11.1111111111111,0,0
+"Falkland Islands","FLK","GBR",108,"coldcorals",23,7,0,0,30.4347826086957,0,0
+"Falkland Islands","FLK","GBR",108,"coralreefs",0,0,0,0,NA,NA,NA
+"Falkland Islands","FLK","GBR",108,"mangroves",0,0,0,0,NA,NA,NA
+"Falkland Islands","FLK","GBR",108,"saltmarshes",0,0,0,0,NA,NA,NA
+"Falkland Islands","FLK","GBR",108,"seagrasses",0,0,0,0,NA,NA,NA
+"Norfolk Island","NFK","AUS",109,"coldcorals",43,43,42,4,100,97.6744186046512,9.30232558139535
+"Norfolk Island","NFK","AUS",109,"coralreefs",0,0,0,0,NA,NA,NA
+"Norfolk Island","NFK","AUS",109,"mangroves",0,0,0,0,NA,NA,NA
+"Norfolk Island","NFK","AUS",109,"saltmarshes",0,0,0,0,NA,NA,NA
+"Norfolk Island","NFK","AUS",109,"seagrasses",0,0,0,0,NA,NA,NA
+"Guadeloupe","GLP","FRA",110,"coldcorals",10,10,10,0,100,100,0
+"Guadeloupe","GLP","FRA",110,"coralreefs",109,109,108,0,100,99.0825688073395,0
+"Guadeloupe","GLP","FRA",110,"mangroves",36,34,33,0,94.4444444444444,91.6666666666667,0
+"Guadeloupe","GLP","FRA",110,"saltmarshes",0,0,0,0,NA,NA,NA
+"Guadeloupe","GLP","FRA",110,"seagrasses",776,756,752,0,97.4226804123711,96.9072164948454,0
+"Bahamas","BHS","BHS",111,"coldcorals",411,32,2,0,7.78588807785888,0.48661800486618,0
+"Bahamas","BHS","BHS",111,"coralreefs",2246,393,97,27,17.4977738201247,4.31878895814782,1.20213713268032
+"Bahamas","BHS","BHS",111,"mangroves",973,626,407,0,64.3371017471737,41.8293936279548,0
+"Bahamas","BHS","BHS",111,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bahamas","BHS","BHS",111,"seagrasses",2251,66,55,9,2.93203020879609,2.44335850733008,0.399822301199467
+"Qatar","QAT","QAT",112,"coldcorals",0,0,0,0,NA,NA,NA
+"Qatar","QAT","QAT",112,"coralreefs",142,0,0,0,0,0,0
+"Qatar","QAT","QAT",112,"mangroves",5,5,0,0,100,0,0
+"Qatar","QAT","QAT",112,"saltmarshes",0,0,0,0,NA,NA,NA
+"Qatar","QAT","QAT",112,"seagrasses",1156,86,0,0,7.43944636678201,0,0
+"United States","USA","USA",113,"coldcorals",1428,183,14,2,12.8151260504202,0.980392156862745,0.140056022408964
+"United States","USA","USA",113,"coralreefs",761,574,542,0,75.4270696452037,71.2220762155059,0
+"United States","USA","USA",113,"mangroves",1909,1705,1117,1,89.3137768465165,58.5123101100052,0.0523834468308015
+"United States","USA","USA",113,"saltmarshes",17125,5354,936,5,31.2642335766423,5.46569343065693,0.0291970802919708
+"United States","USA","USA",113,"seagrasses",13195,8313,5277,4,63.0011367942402,39.9924213717317,0.0303145130731338
+"Brazil","BRA","BRA",114,"coldcorals",231,1,0,0,0.432900432900433,0,0
+"Brazil","BRA","BRA",114,"coralreefs",721,588,6,5,81.5533980582524,0.832177531206657,0.693481276005548
+"Brazil","BRA","BRA",114,"mangroves",10912,9418,195,0,86.308651026393,1.78702346041056,0
+"Brazil","BRA","BRA",114,"saltmarshes",56,0,0,0,0,0,0
+"Brazil","BRA","BRA",114,"seagrasses",434,1,0,0,0.230414746543779,0,0
+"South Korea","KOR","KOR",115,"coldcorals",0,0,0,0,NA,NA,NA
+"South Korea","KOR","KOR",115,"coralreefs",0,0,0,0,NA,NA,NA
+"South Korea","KOR","KOR",115,"mangroves",0,0,0,0,NA,NA,NA
+"South Korea","KOR","KOR",115,"saltmarshes",0,0,0,0,NA,NA,NA
+"South Korea","KOR","KOR",115,"seagrasses",0,0,0,0,NA,NA,NA
+"Heard and McDonald Islands","HMD","AUS",116,"coldcorals",2,1,1,1,50,50,50
+"Heard and McDonald Islands","HMD","AUS",116,"coralreefs",0,0,0,0,NA,NA,NA
+"Heard and McDonald Islands","HMD","AUS",116,"mangroves",0,0,0,0,NA,NA,NA
+"Heard and McDonald Islands","HMD","AUS",116,"saltmarshes",0,0,0,0,NA,NA,NA
+"Heard and McDonald Islands","HMD","AUS",116,"seagrasses",0,0,0,0,NA,NA,NA
+"Trinidade",NA,"BRA",117,"coldcorals",2,1,0,0,50,0,0
+"Trinidade",NA,"BRA",117,"coralreefs",14,13,0,13,92.8571428571429,0,92.8571428571429
+"Trinidade",NA,"BRA",117,"mangroves",0,0,0,0,NA,NA,NA
+"Trinidade",NA,"BRA",117,"saltmarshes",0,0,0,0,NA,NA,NA
+"Trinidade",NA,"BRA",117,"seagrasses",0,0,0,0,NA,NA,NA
+"Wake Island","UMI","USA",118,"coldcorals",0,0,0,0,NA,NA,NA
+"Wake Island","UMI","USA",118,"coralreefs",16,16,0,0,100,0,0
+"Wake Island","UMI","USA",118,"mangroves",0,0,0,0,NA,NA,NA
+"Wake Island","UMI","USA",118,"saltmarshes",0,0,0,0,NA,NA,NA
+"Wake Island","UMI","USA",118,"seagrasses",0,0,0,0,NA,NA,NA
+"Western Sahara","ESH","ESH",119,"coldcorals",18,0,0,0,0,0,0
+"Western Sahara","ESH","ESH",119,"coralreefs",0,0,0,0,NA,NA,NA
+"Western Sahara","ESH","ESH",119,"mangroves",0,0,0,0,NA,NA,NA
+"Western Sahara","ESH","ESH",119,"saltmarshes",0,0,0,0,NA,NA,NA
+"Western Sahara","ESH","ESH",119,"seagrasses",0,0,0,0,NA,NA,NA
+"Greenland","GRL","DNK",120,"coldcorals",18,0,0,0,0,0,0
+"Greenland","GRL","DNK",120,"coralreefs",0,0,0,0,NA,NA,NA
+"Greenland","GRL","DNK",120,"mangroves",0,0,0,0,NA,NA,NA
+"Greenland","GRL","DNK",120,"saltmarshes",0,0,0,0,NA,NA,NA
+"Greenland","GRL","DNK",120,"seagrasses",0,0,0,0,NA,NA,NA
+"Galapagos",NA,"ECU",121,"coldcorals",51,51,51,0,100,100,0
+"Galapagos",NA,"ECU",121,"coralreefs",115,115,115,0,100,100,0
+"Galapagos",NA,"ECU",121,"mangroves",26,26,26,0,100,100,0
+"Galapagos",NA,"ECU",121,"saltmarshes",0,0,0,0,NA,NA,NA
+"Galapagos",NA,"ECU",121,"seagrasses",0,0,0,0,NA,NA,NA
+"Haiti","HTI","HTI",122,"coldcorals",4,0,0,0,0,0,0
+"Haiti","HTI","HTI",122,"coralreefs",324,113,0,0,34.8765432098765,0,0
+"Haiti","HTI","HTI",122,"mangroves",142,63,0,0,44.3661971830986,0,0
+"Haiti","HTI","HTI",122,"saltmarshes",0,0,0,0,NA,NA,NA
+"Haiti","HTI","HTI",122,"seagrasses",759,0,0,0,0,0,0
+"Howland and Baker islands","UMI","USA",123,"coldcorals",1,1,0,0,100,0,0
+"Howland and Baker islands","UMI","USA",123,"coralreefs",8,8,0,0,100,0,0
+"Howland and Baker islands","UMI","USA",123,"mangroves",0,0,0,0,NA,NA,NA
+"Howland and Baker islands","UMI","USA",123,"saltmarshes",0,0,0,0,NA,NA,NA
+"Howland and Baker islands","UMI","USA",123,"seagrasses",0,0,0,0,NA,NA,NA
+"Papua New Guinea","PNG","PNG",124,"coldcorals",2,0,0,0,0,0,0
+"Papua New Guinea","PNG","PNG",124,"coralreefs",7342,298,2,0,4.05883955325524,0.0272405339144647,0
+"Papua New Guinea","PNG","PNG",124,"mangroves",4692,215,0,0,4.58226768968457,0,0
+"Papua New Guinea","PNG","PNG",124,"saltmarshes",0,0,0,0,NA,NA,NA
+"Papua New Guinea","PNG","PNG",124,"seagrasses",9312,1114,0,0,11.963058419244,0,0
+"Alaska",NA,"USA",125,"coldcorals",244,1,0,0,0.409836065573771,0,0
+"Alaska",NA,"USA",125,"coralreefs",0,0,0,0,NA,NA,NA
+"Alaska",NA,"USA",125,"mangroves",0,0,0,0,NA,NA,NA
+"Alaska",NA,"USA",125,"saltmarshes",1613,616,0,0,38.189708617483,0,0
+"Alaska",NA,"USA",125,"seagrasses",156,156,156,0,100,100,0
+"Saint-Barthélemy","BLM","FRA",126,"coldcorals",1,1,1,0,100,100,0
+"Saint-Barthélemy","BLM","FRA",126,"coralreefs",9,9,9,0,100,100,0
+"Saint-Barthélemy","BLM","FRA",126,"mangroves",0,0,0,0,NA,NA,NA
+"Saint-Barthélemy","BLM","FRA",126,"saltmarshes",0,0,0,0,NA,NA,NA
+"Saint-Barthélemy","BLM","FRA",126,"seagrasses",18,16,16,0,88.8888888888889,88.8888888888889,0
+"Tanzania","TZA","TZA",127,"coldcorals",0,0,0,0,NA,NA,NA
+"Tanzania","TZA","TZA",127,"coralreefs",1815,844,0,16,46.5013774104683,0,0.881542699724518
+"Tanzania","TZA","TZA",127,"mangroves",1116,930,0,0,83.3333333333333,0,0
+"Tanzania","TZA","TZA",127,"saltmarshes",0,0,0,0,NA,NA,NA
+"Tanzania","TZA","TZA",127,"seagrasses",44,1,0,0,2.27272727272727,0,0
+"Sierra Leone","SLE","SLE",128,"coldcorals",0,0,0,0,NA,NA,NA
+"Sierra Leone","SLE","SLE",128,"coralreefs",0,0,0,0,NA,NA,NA
+"Sierra Leone","SLE","SLE",128,"mangroves",1273,0,0,0,0,0,0
+"Sierra Leone","SLE","SLE",128,"saltmarshes",0,0,0,0,NA,NA,NA
+"Sierra Leone","SLE","SLE",128,"seagrasses",4448,1,0,0,0.0224820143884892,0,0
+"Bangladesh","BGD","BGD",129,"coldcorals",0,0,0,0,NA,NA,NA
+"Bangladesh","BGD","BGD",129,"coralreefs",4,0,0,0,0,0,0
+"Bangladesh","BGD","BGD",129,"mangroves",4108,3767,0,866,91.699123661149,0,21.080817916261
+"Bangladesh","BGD","BGD",129,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bangladesh","BGD","BGD",129,"seagrasses",0,0,0,0,NA,NA,NA
+"Fiji","FJI","FJI",130,"coldcorals",3,0,0,0,0,0,0
+"Fiji","FJI","FJI",130,"coralreefs",3417,1205,159,0,35.2648522095405,4.65320456540825,0
+"Fiji","FJI","FJI",130,"mangroves",494,163,45,0,32.9959514170041,9.10931174089069,0
+"Fiji","FJI","FJI",130,"saltmarshes",0,0,0,0,NA,NA,NA
+"Fiji","FJI","FJI",130,"seagrasses",1750,290,0,0,16.5714285714286,0,0
+"Israel","ISR","ISR",131,"coldcorals",0,0,0,0,NA,NA,NA
+"Israel","ISR","ISR",131,"coralreefs",1,0,0,0,0,0,0
+"Israel","ISR","ISR",131,"mangroves",0,0,0,0,NA,NA,NA
+"Israel","ISR","ISR",131,"saltmarshes",0,0,0,0,NA,NA,NA
+"Israel","ISR","ISR",131,"seagrasses",14,1,0,0,7.14285714285714,0,0
+"El Salvador","SLV","SLV",132,"coldcorals",0,0,0,0,NA,NA,NA
+"El Salvador","SLV","SLV",132,"coralreefs",0,0,0,0,NA,NA,NA
+"El Salvador","SLV","SLV",132,"mangroves",381,291,86,0,76.3779527559055,22.5721784776903,0
+"El Salvador","SLV","SLV",132,"saltmarshes",0,0,0,0,NA,NA,NA
+"El Salvador","SLV","SLV",132,"seagrasses",0,0,0,0,NA,NA,NA
+"French Polynesia","PYF","FRA",133,"coldcorals",0,0,0,0,NA,NA,NA
+"French Polynesia","PYF","FRA",133,"coralreefs",3028,0,0,0,0,0,0
+"French Polynesia","PYF","FRA",133,"mangroves",0,0,0,0,NA,NA,NA
+"French Polynesia","PYF","FRA",133,"saltmarshes",0,0,0,0,NA,NA,NA
+"French Polynesia","PYF","FRA",133,"seagrasses",792,0,0,0,0,0,0
+"Cayman Islands","CYM","GBR",134,"coldcorals",2,0,0,0,0,0,0
+"Cayman Islands","CYM","GBR",134,"coralreefs",147,53,0,12,36.0544217687075,0,8.16326530612245
+"Cayman Islands","CYM","GBR",134,"mangroves",47,9,0,7,19.1489361702128,0,14.8936170212766
+"Cayman Islands","CYM","GBR",134,"saltmarshes",0,0,0,0,NA,NA,NA
+"Cayman Islands","CYM","GBR",134,"seagrasses",46,4,0,0,8.69565217391304,0,0
+"Maldives","MDV","MDV",135,"coldcorals",0,0,0,0,NA,NA,NA
+"Maldives","MDV","MDV",135,"coralreefs",2707,109,1,73,4.02659770964167,0.036941263391208,2.69671222755818
+"Maldives","MDV","MDV",135,"mangroves",0,0,0,0,NA,NA,NA
+"Maldives","MDV","MDV",135,"saltmarshes",0,0,0,0,NA,NA,NA
+"Maldives","MDV","MDV",135,"seagrasses",2414,24,0,24,0.994200497100249,0,0.994200497100249
+"Tunisia","TUN","TUN",136,"coldcorals",11,0,0,0,0,0,0
+"Tunisia","TUN","TUN",136,"coralreefs",0,0,0,0,NA,NA,NA
+"Tunisia","TUN","TUN",136,"mangroves",0,0,0,0,NA,NA,NA
+"Tunisia","TUN","TUN",136,"saltmarshes",0,0,0,0,NA,NA,NA
+"Tunisia","TUN","TUN",136,"seagrasses",4982,120,0,0,2.40867121637896,0,0
+"Nauru","NRU","NRU",137,"coldcorals",0,0,0,0,NA,NA,NA
+"Nauru","NRU","NRU",137,"coralreefs",8,0,0,0,0,0,0
+"Nauru","NRU","NRU",137,"mangroves",0,0,0,0,NA,NA,NA
+"Nauru","NRU","NRU",137,"saltmarshes",0,0,0,0,NA,NA,NA
+"Nauru","NRU","NRU",137,"seagrasses",0,0,0,0,NA,NA,NA
+"Trinidad and Tobago","TTO","TTO",138,"coldcorals",14,0,0,0,0,0,0
+"Trinidad and Tobago","TTO","TTO",138,"coralreefs",34,4,0,0,11.7647058823529,0,0
+"Trinidad and Tobago","TTO","TTO",138,"mangroves",54,20,0,0,37.037037037037,0,0
+"Trinidad and Tobago","TTO","TTO",138,"saltmarshes",0,0,0,0,NA,NA,NA
+"Trinidad and Tobago","TTO","TTO",138,"seagrasses",3,1,0,0,33.3333333333333,0,0
+"Overlapping claim: Canada / USA","CAN","CAN",139,"coldcorals",0,0,0,0,NA,NA,NA
+"Overlapping claim: Canada / USA","CAN","CAN",139,"coralreefs",0,0,0,0,NA,NA,NA
+"Overlapping claim: Canada / USA","CAN","CAN",139,"mangroves",0,0,0,0,NA,NA,NA
+"Overlapping claim: Canada / USA","CAN","CAN",139,"saltmarshes",0,0,0,0,NA,NA,NA
+"Overlapping claim: Canada / USA","CAN","CAN",139,"seagrasses",0,0,0,0,NA,NA,NA
+"Cocos Islands","CCK","AUS",140,"coldcorals",0,0,0,0,NA,NA,NA
+"Cocos Islands","CCK","AUS",140,"coralreefs",117,8,0,8,6.83760683760684,0,6.83760683760684
+"Cocos Islands","CCK","AUS",140,"mangroves",0,0,0,0,NA,NA,NA
+"Cocos Islands","CCK","AUS",140,"saltmarshes",0,0,0,0,NA,NA,NA
+"Cocos Islands","CCK","AUS",140,"seagrasses",215,0,0,0,0,0,0
+"Martinique","MTQ","FRA",141,"coldcorals",6,6,6,0,100,100,0
+"Martinique","MTQ","FRA",141,"coralreefs",79,78,77,0,98.7341772151899,97.4683544303797,0
+"Martinique","MTQ","FRA",141,"mangroves",19,19,15,0,100,78.9473684210526,0
+"Martinique","MTQ","FRA",141,"saltmarshes",0,0,0,0,NA,NA,NA
+"Martinique","MTQ","FRA",141,"seagrasses",555,547,523,0,98.5585585585586,94.2342342342342,0
+"Costa Rica","CRI","CRI",142,"coldcorals",9,3,0,0,33.3333333333333,0,0
+"Costa Rica","CRI","CRI",142,"coralreefs",63,24,3,0,38.0952380952381,4.76190476190476,0
+"Costa Rica","CRI","CRI",142,"mangroves",368,187,6,0,50.8152173913043,1.6304347826087,0
+"Costa Rica","CRI","CRI",142,"saltmarshes",0,0,0,0,NA,NA,NA
+"Costa Rica","CRI","CRI",142,"seagrasses",0,0,0,0,NA,NA,NA
+"Kuwait","KWT","KWT",143,"coldcorals",0,0,0,0,NA,NA,NA
+"Kuwait","KWT","KWT",143,"coralreefs",73,0,0,0,0,0,0
+"Kuwait","KWT","KWT",143,"mangroves",0,0,0,0,NA,NA,NA
+"Kuwait","KWT","KWT",143,"saltmarshes",0,0,0,0,NA,NA,NA
+"Kuwait","KWT","KWT",143,"seagrasses",1609,207,190,0,12.8651336233686,11.8085767557489,0
+"South Georgia and the South Sandwich Islands","SGS","GBR",144,"coldcorals",169,169,169,0,100,100,0
+"South Georgia and the South Sandwich Islands","SGS","GBR",144,"coralreefs",0,0,0,0,NA,NA,NA
+"South Georgia and the South Sandwich Islands","SGS","GBR",144,"mangroves",0,0,0,0,NA,NA,NA
+"South Georgia and the South Sandwich Islands","SGS","GBR",144,"saltmarshes",0,0,0,0,NA,NA,NA
+"South Georgia and the South Sandwich Islands","SGS","GBR",144,"seagrasses",0,0,0,0,NA,NA,NA
+"Kazakhstan","KAZ","KAZ",145,"coldcorals",0,0,0,0,NA,NA,NA
+"Kazakhstan","KAZ","KAZ",145,"coralreefs",0,0,0,0,NA,NA,NA
+"Kazakhstan","KAZ","KAZ",145,"mangroves",0,0,0,0,NA,NA,NA
+"Kazakhstan","KAZ","KAZ",145,"saltmarshes",0,0,0,0,NA,NA,NA
+"Kazakhstan","KAZ","KAZ",145,"seagrasses",0,0,0,0,NA,NA,NA
+"Guernsey","GGY","GBR",146,"coldcorals",0,0,0,0,NA,NA,NA
+"Guernsey","GGY","GBR",146,"coralreefs",0,0,0,0,NA,NA,NA
+"Guernsey","GGY","GBR",146,"mangroves",0,0,0,0,NA,NA,NA
+"Guernsey","GGY","GBR",146,"saltmarshes",0,0,0,0,NA,NA,NA
+"Guernsey","GGY","GBR",146,"seagrasses",0,0,0,0,NA,NA,NA
+"Indonesia","IDN","IDN",147,"coldcorals",144,4,0,0,2.77777777777778,0,0
+"Indonesia","IDN","IDN",147,"coralreefs",20379,6930,0,0,34.0055939938172,0,0
+"Indonesia","IDN","IDN",147,"mangroves",26536,6472,0,0,24.3895085921013,0,0
+"Indonesia","IDN","IDN",147,"saltmarshes",0,0,0,0,NA,NA,NA
+"Indonesia","IDN","IDN",147,"seagrasses",17703,3598,0,0,20.3242388295769,0,0
+"Ireland","IRL","IRL",148,"coldcorals",251,82,80,0,32.6693227091633,31.8725099601594,0
+"Ireland","IRL","IRL",148,"coralreefs",0,0,0,0,NA,NA,NA
+"Ireland","IRL","IRL",148,"mangroves",0,0,0,0,NA,NA,NA
+"Ireland","IRL","IRL",148,"saltmarshes",92,80,24,0,86.9565217391304,26.0869565217391,0
+"Ireland","IRL","IRL",148,"seagrasses",3,3,3,0,100,100,0
+"Marshall Islands","MHL","MHL",149,"coldcorals",9,0,0,0,0,0,0
+"Marshall Islands","MHL","MHL",149,"coralreefs",2043,372,148,241,18.208516886931,7.24424865394028,11.796377875673
+"Marshall Islands","MHL","MHL",149,"mangroves",0,0,0,0,NA,NA,NA
+"Marshall Islands","MHL","MHL",149,"saltmarshes",0,0,0,0,NA,NA,NA
+"Marshall Islands","MHL","MHL",149,"seagrasses",527,3,3,0,0.569259962049336,0.569259962049336,0
+"Antarctica","ATA","ATA",150,"coldcorals",354,93,87,93,26.271186440678,24.5762711864407,26.271186440678
+"Antarctica","ATA","ATA",150,"coralreefs",0,0,0,0,NA,NA,NA
+"Antarctica","ATA","ATA",150,"mangroves",0,0,0,0,NA,NA,NA
+"Antarctica","ATA","ATA",150,"saltmarshes",0,0,0,0,NA,NA,NA
+"Antarctica","ATA","ATA",150,"seagrasses",0,0,0,0,NA,NA,NA
+"Malta","MLT","MLT",151,"coldcorals",4,3,0,0,75,0,0
+"Malta","MLT","MLT",151,"coralreefs",0,0,0,0,NA,NA,NA
+"Malta","MLT","MLT",151,"mangroves",0,0,0,0,NA,NA,NA
+"Malta","MLT","MLT",151,"saltmarshes",0,0,0,0,NA,NA,NA
+"Malta","MLT","MLT",151,"seagrasses",72,64,4,0,88.8888888888889,5.55555555555556,0
+"Glorioso Islands",NA,"MDG",152,"coldcorals",0,0,0,0,NA,NA,NA
+"Glorioso Islands",NA,"MDG",152,"coralreefs",165,165,0,0,100,0,0
+"Glorioso Islands",NA,"MDG",152,"mangroves",0,0,0,0,NA,NA,NA
+"Glorioso Islands",NA,"MDG",152,"saltmarshes",0,0,0,0,NA,NA,NA
+"Glorioso Islands",NA,"MDG",152,"seagrasses",0,0,0,0,NA,NA,NA
+"Cambodia","KHM","KHM",153,"coldcorals",0,0,0,0,NA,NA,NA
+"Cambodia","KHM","KHM",153,"coralreefs",49,6,0,0,12.2448979591837,0,0
+"Cambodia","KHM","KHM",153,"mangroves",586,398,0,0,67.9180887372014,0,0
+"Cambodia","KHM","KHM",153,"saltmarshes",0,0,0,0,NA,NA,NA
+"Cambodia","KHM","KHM",153,"seagrasses",0,0,0,0,NA,NA,NA
+"Republic of Mauritius","MUS","MUS",154,"coldcorals",1,0,0,0,0,0,0
+"Republic of Mauritius","MUS","MUS",154,"coralreefs",755,31,4,2,4.10596026490066,0.529801324503311,0.264900662251656
+"Republic of Mauritius","MUS","MUS",154,"mangroves",5,1,1,0,20,20,0
+"Republic of Mauritius","MUS","MUS",154,"saltmarshes",0,0,0,0,NA,NA,NA
+"Republic of Mauritius","MUS","MUS",154,"seagrasses",121,0,0,0,0,0,0
+"Guam","GUM","USA",155,"coldcorals",0,0,0,0,NA,NA,NA
+"Guam","GUM","USA",155,"coralreefs",143,9,0,0,6.29370629370629,0,0
+"Guam","GUM","USA",155,"mangroves",0,0,0,0,NA,NA,NA
+"Guam","GUM","USA",155,"saltmarshes",1,0,0,0,0,0,0
+"Guam","GUM","USA",155,"seagrasses",482,39,0,0,8.09128630705394,0,0
+"Saint Lucia","LCA","LCA",156,"coldcorals",12,2,0,0,16.6666666666667,0,0
+"Saint Lucia","LCA","LCA",156,"coralreefs",31,2,0,0,6.45161290322581,0,0
+"Saint Lucia","LCA","LCA",156,"mangroves",1,1,0,0,100,0,0
+"Saint Lucia","LCA","LCA",156,"saltmarshes",0,0,0,0,NA,NA,NA
+"Saint Lucia","LCA","LCA",156,"seagrasses",8,3,0,0,37.5,0,0
+"Overlapping claim: Puerto Rico / Dominican Republic","PRI","USA",157,"coldcorals",0,0,0,0,NA,NA,NA
+"Overlapping claim: Puerto Rico / Dominican Republic","PRI","USA",157,"coralreefs",0,0,0,0,NA,NA,NA
+"Overlapping claim: Puerto Rico / Dominican Republic","PRI","USA",157,"mangroves",0,0,0,0,NA,NA,NA
+"Overlapping claim: Puerto Rico / Dominican Republic","PRI","USA",157,"saltmarshes",0,0,0,0,NA,NA,NA
+"Overlapping claim: Puerto Rico / Dominican Republic","PRI","USA",157,"seagrasses",0,0,0,0,NA,NA,NA
+"Solomon Islands","SLB","SLB",158,"coldcorals",0,0,0,0,NA,NA,NA
+"Solomon Islands","SLB","SLB",158,"coralreefs",2807,145,7,20,5.16565728535803,0.249376558603491,0.712504453152832
+"Solomon Islands","SLB","SLB",158,"mangroves",495,50,0,0,10.1010101010101,0,0
+"Solomon Islands","SLB","SLB",158,"saltmarshes",0,0,0,0,NA,NA,NA
+"Solomon Islands","SLB","SLB",158,"seagrasses",1268,172,0,0,13.5646687697161,0,0
+"Eritrea","ERI","ERI",159,"coldcorals",3,0,0,0,0,0,0
+"Eritrea","ERI","ERI",159,"coralreefs",1604,0,0,0,0,0,0
+"Eritrea","ERI","ERI",159,"mangroves",67,0,0,0,0,0,0
+"Eritrea","ERI","ERI",159,"saltmarshes",0,0,0,0,NA,NA,NA
+"Eritrea","ERI","ERI",159,"seagrasses",15,0,0,0,0,0,0
+"Ecuador","ECU","ECU",160,"coldcorals",3,0,0,0,0,0,0
+"Ecuador","ECU","ECU",160,"coralreefs",0,0,0,0,NA,NA,NA
+"Ecuador","ECU","ECU",160,"mangroves",1358,639,639,0,47.0544918998527,47.0544918998527,0
+"Ecuador","ECU","ECU",160,"saltmarshes",0,0,0,0,NA,NA,NA
+"Ecuador","ECU","ECU",160,"seagrasses",0,0,0,0,NA,NA,NA
+"Morocco","MAR","MAR",161,"coldcorals",149,0,0,0,0,0,0
+"Morocco","MAR","MAR",161,"coralreefs",0,0,0,0,NA,NA,NA
+"Morocco","MAR","MAR",161,"mangroves",0,0,0,0,NA,NA,NA
+"Morocco","MAR","MAR",161,"saltmarshes",0,0,0,0,NA,NA,NA
+"Morocco","MAR","MAR",161,"seagrasses",0,0,0,0,NA,NA,NA
+"Comores","COM","COM",162,"coldcorals",0,0,0,0,NA,NA,NA
+"Comores","COM","COM",162,"coralreefs",221,124,124,0,56.1085972850679,56.1085972850679,0
+"Comores","COM","COM",162,"mangroves",2,2,2,0,100,100,0
+"Comores","COM","COM",162,"saltmarshes",0,0,0,0,NA,NA,NA
+"Comores","COM","COM",162,"seagrasses",1270,54,54,0,4.25196850393701,4.25196850393701,0
+"Jan Mayen","SJM","NOR",163,"coldcorals",0,0,0,0,NA,NA,NA
+"Jan Mayen","SJM","NOR",163,"coralreefs",0,0,0,0,NA,NA,NA
+"Jan Mayen","SJM","NOR",163,"mangroves",0,0,0,0,NA,NA,NA
+"Jan Mayen","SJM","NOR",163,"saltmarshes",0,0,0,0,NA,NA,NA
+"Jan Mayen","SJM","NOR",163,"seagrasses",0,0,0,0,NA,NA,NA
+"Malaysia","MYS","MYS",164,"coldcorals",8,0,0,0,0,0,0
+"Malaysia","MYS","MYS",164,"coralreefs",2167,58,6,37,2.67651130595293,0.276880479926165,1.70742962621135
+"Malaysia","MYS","MYS",164,"mangroves",5120,103,0,2,2.01171875,0,0.0390625
+"Malaysia","MYS","MYS",164,"saltmarshes",0,0,0,0,NA,NA,NA
+"Malaysia","MYS","MYS",164,"seagrasses",541,99,0,99,18.2994454713494,0,18.2994454713494
+"Prince Edward Islands",NA,"ZAF",165,"coldcorals",5,5,0,0,100,0,0
+"Prince Edward Islands",NA,"ZAF",165,"coralreefs",0,0,0,0,NA,NA,NA
+"Prince Edward Islands",NA,"ZAF",165,"mangroves",0,0,0,0,NA,NA,NA
+"Prince Edward Islands",NA,"ZAF",165,"saltmarshes",0,0,0,0,NA,NA,NA
+"Prince Edward Islands",NA,"ZAF",165,"seagrasses",0,0,0,0,NA,NA,NA
+"Madeira",NA,"PRT",166,"coldcorals",46,21,0,0,45.6521739130435,0,0
+"Madeira",NA,"PRT",166,"coralreefs",0,0,0,0,NA,NA,NA
+"Madeira",NA,"PRT",166,"mangroves",0,0,0,0,NA,NA,NA
+"Madeira",NA,"PRT",166,"saltmarshes",0,0,0,0,NA,NA,NA
+"Madeira",NA,"PRT",166,"seagrasses",0,0,0,0,NA,NA,NA
+"France","FRA","FRA",167,"coldcorals",242,174,2,0,71.900826446281,0.826446280991736,0
+"France","FRA","FRA",167,"coralreefs",0,0,0,0,NA,NA,NA
+"France","FRA","FRA",167,"mangroves",0,0,0,0,NA,NA,NA
+"France","FRA","FRA",167,"saltmarshes",780,751,611,0,96.2820512820513,78.3333333333333,0
+"France","FRA","FRA",167,"seagrasses",1112,969,379,0,87.1402877697842,34.0827338129496,0
+"Europa Island","ATF","FRA",168,"coldcorals",0,0,0,0,NA,NA,NA
+"Europa Island","ATF","FRA",168,"coralreefs",14,14,14,0,100,100,0
+"Europa Island","ATF","FRA",168,"mangroves",0,0,0,0,NA,NA,NA
+"Europa Island","ATF","FRA",168,"saltmarshes",0,0,0,0,NA,NA,NA
+"Europa Island","ATF","FRA",168,"seagrasses",0,0,0,0,NA,NA,NA
+"Guinea","GIN","GIN",169,"coldcorals",1,1,0,0,100,0,0
+"Guinea","GIN","GIN",169,"coralreefs",0,0,0,0,NA,NA,NA
+"Guinea","GIN","GIN",169,"mangroves",2182,553,0,0,25.3437213565536,0,0
+"Guinea","GIN","GIN",169,"saltmarshes",0,0,0,0,NA,NA,NA
+"Guinea","GIN","GIN",169,"seagrasses",12899,537,0,0,4.16311341964493,0,0
+"Dominican Republic","DOM","DOM",170,"coldcorals",21,17,5,0,80.9523809523809,23.8095238095238,0
+"Dominican Republic","DOM","DOM",170,"coralreefs",362,236,134,0,65.1933701657459,37.0165745856354,0
+"Dominican Republic","DOM","DOM",170,"mangroves",186,156,96,0,83.8709677419355,51.6129032258064,0
+"Dominican Republic","DOM","DOM",170,"saltmarshes",0,0,0,0,NA,NA,NA
+"Dominican Republic","DOM","DOM",170,"seagrasses",348,86,10,0,24.7126436781609,2.8735632183908,0
+"Bermuda","BMU","GBR",171,"coldcorals",26,0,0,0,0,0,0
+"Bermuda","BMU","GBR",171,"coralreefs",537,0,0,0,0,0,0
+"Bermuda","BMU","GBR",171,"mangroves",0,0,0,0,NA,NA,NA
+"Bermuda","BMU","GBR",171,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bermuda","BMU","GBR",171,"seagrasses",0,0,0,0,NA,NA,NA
+"Antigua and Barbuda","ATG","ATG",172,"coldcorals",1,0,0,0,0,0,0
+"Antigua and Barbuda","ATG","ATG",172,"coralreefs",59,36,0,18,61.0169491525424,0,30.5084745762712
+"Antigua and Barbuda","ATG","ATG",172,"mangroves",6,4,0,0,66.6666666666667,0,0
+"Antigua and Barbuda","ATG","ATG",172,"saltmarshes",0,0,0,0,NA,NA,NA
+"Antigua and Barbuda","ATG","ATG",172,"seagrasses",254,56,0,53,22.0472440944882,0,20.8661417322835
+"Svalbard","SJM","NOR",173,"coldcorals",3,0,0,0,0,0,0
+"Svalbard","SJM","NOR",173,"coralreefs",0,0,0,0,NA,NA,NA
+"Svalbard","SJM","NOR",173,"mangroves",0,0,0,0,NA,NA,NA
+"Svalbard","SJM","NOR",173,"saltmarshes",0,0,0,0,NA,NA,NA
+"Svalbard","SJM","NOR",173,"seagrasses",0,0,0,0,NA,NA,NA
+"Yemen","YEM","YEM",174,"coldcorals",1,0,0,0,0,0,0
+"Yemen","YEM","YEM",174,"coralreefs",672,2,0,0,0.297619047619048,0,0
+"Yemen","YEM","YEM",174,"mangroves",19,3,0,0,15.7894736842105,0,0
+"Yemen","YEM","YEM",174,"saltmarshes",0,0,0,0,NA,NA,NA
+"Yemen","YEM","YEM",174,"seagrasses",5496,0,0,0,0,0,0
+"Mozambique","MOZ","MOZ",175,"coldcorals",12,0,0,0,0,0,0
+"Mozambique","MOZ","MOZ",175,"coralreefs",1654,166,20,0,10.0362756952842,1.20918984280532,0
+"Mozambique","MOZ","MOZ",175,"mangroves",2992,1618,186,0,54.0775401069519,6.21657754010695,0
+"Mozambique","MOZ","MOZ",175,"saltmarshes",0,0,0,0,NA,NA,NA
+"Mozambique","MOZ","MOZ",175,"seagrasses",691,357,11,0,51.6642547033285,1.59189580318379,0
+"Collectivity of Saint Martin","MAF","FRA",176,"coldcorals",0,0,0,0,NA,NA,NA
+"Collectivity of Saint Martin","MAF","FRA",176,"coralreefs",6,6,6,0,100,100,0
+"Collectivity of Saint Martin","MAF","FRA",176,"mangroves",0,0,0,0,NA,NA,NA
+"Collectivity of Saint Martin","MAF","FRA",176,"saltmarshes",0,0,0,0,NA,NA,NA
+"Collectivity of Saint Martin","MAF","FRA",176,"seagrasses",47,45,45,0,95.7446808510638,95.7446808510638,0
+"Saint Vincent and the Grenadines","VCT","VCT",177,"coldcorals",9,0,0,0,0,0,0
+"Saint Vincent and the Grenadines","VCT","VCT",177,"coralreefs",37,20,9,0,54.0540540540541,24.3243243243243,0
+"Saint Vincent and the Grenadines","VCT","VCT",177,"mangroves",0,0,0,0,NA,NA,NA
+"Saint Vincent and the Grenadines","VCT","VCT",177,"saltmarshes",0,0,0,0,NA,NA,NA
+"Saint Vincent and the Grenadines","VCT","VCT",177,"seagrasses",0,0,0,0,NA,NA,NA
+"Jarvis Island","UMI","USA",178,"coldcorals",0,0,0,0,NA,NA,NA
+"Jarvis Island","UMI","USA",178,"coralreefs",2,2,0,0,100,0,0
+"Jarvis Island","UMI","USA",178,"mangroves",0,0,0,0,NA,NA,NA
+"Jarvis Island","UMI","USA",178,"saltmarshes",0,0,0,0,NA,NA,NA
+"Jarvis Island","UMI","USA",178,"seagrasses",0,0,0,0,NA,NA,NA
+"Kerguélen","ATF","FRA",179,"coldcorals",1,1,0,0,100,0,0
+"Kerguélen","ATF","FRA",179,"coralreefs",0,0,0,0,NA,NA,NA
+"Kerguélen","ATF","FRA",179,"mangroves",0,0,0,0,NA,NA,NA
+"Kerguélen","ATF","FRA",179,"saltmarshes",0,0,0,0,NA,NA,NA
+"Kerguélen","ATF","FRA",179,"seagrasses",0,0,0,0,NA,NA,NA
+"Liberia","LBR","LBR",180,"coldcorals",7,0,0,0,0,0,0
+"Liberia","LBR","LBR",180,"coralreefs",0,0,0,0,NA,NA,NA
+"Liberia","LBR","LBR",180,"mangroves",187,22,0,0,11.7647058823529,0,0
+"Liberia","LBR","LBR",180,"saltmarshes",0,0,0,0,NA,NA,NA
+"Liberia","LBR","LBR",180,"seagrasses",0,0,0,0,NA,NA,NA
+"Venezuela","VEN","VEN",181,"coldcorals",68,1,0,0,1.47058823529412,0,0
+"Venezuela","VEN","VEN",181,"coralreefs",348,182,0,0,52.2988505747126,0,0
+"Venezuela","VEN","VEN",181,"mangroves",2809,1436,49,0,51.1213955144179,1.74439302242791,0
+"Venezuela","VEN","VEN",181,"saltmarshes",0,0,0,0,NA,NA,NA
+"Venezuela","VEN","VEN",181,"seagrasses",1297,34,0,0,2.62143407864302,0,0
+"Dominica","DMA","DMA",182,"coldcorals",7,0,0,0,0,0,0
+"Dominica","DMA","DMA",182,"coralreefs",19,1,0,0,5.26315789473684,0,0
+"Dominica","DMA","DMA",182,"mangroves",0,0,0,0,NA,NA,NA
+"Dominica","DMA","DMA",182,"saltmarshes",0,0,0,0,NA,NA,NA
+"Dominica","DMA","DMA",182,"seagrasses",508,7,0,0,1.37795275590551,0,0
+"Christmas Island","CXR","AUS",183,"coldcorals",0,0,0,0,NA,NA,NA
+"Christmas Island","CXR","AUS",183,"coralreefs",11,0,0,0,0,0,0
+"Christmas Island","CXR","AUS",183,"mangroves",0,0,0,0,NA,NA,NA
+"Christmas Island","CXR","AUS",183,"saltmarshes",0,0,0,0,NA,NA,NA
+"Christmas Island","CXR","AUS",183,"seagrasses",158,10,0,0,6.32911392405063,0,0
+"United States Virgin Islands","VIR","USA",184,"coldcorals",8,0,0,0,0,0,0
+"United States Virgin Islands","VIR","USA",184,"coralreefs",25,11,0,0,44,0,0
+"United States Virgin Islands","VIR","USA",184,"mangroves",0,0,0,0,NA,NA,NA
+"United States Virgin Islands","VIR","USA",184,"saltmarshes",0,0,0,0,NA,NA,NA
+"United States Virgin Islands","VIR","USA",184,"seagrasses",77,24,0,0,31.1688311688312,0,0
+"Navassa Island",NA,"HTI",185,"coldcorals",6,5,0,0,83.3333333333333,0,0
+"Navassa Island",NA,"HTI",185,"coralreefs",24,2,0,0,8.33333333333333,0,0
+"Navassa Island",NA,"HTI",185,"mangroves",0,0,0,0,NA,NA,NA
+"Navassa Island",NA,"HTI",185,"saltmarshes",0,0,0,0,NA,NA,NA
+"Navassa Island",NA,"HTI",185,"seagrasses",0,0,0,0,NA,NA,NA
+"Lithuania","LTU","LTU",186,"coldcorals",0,0,0,0,NA,NA,NA
+"Lithuania","LTU","LTU",186,"coralreefs",0,0,0,0,NA,NA,NA
+"Lithuania","LTU","LTU",186,"mangroves",0,0,0,0,NA,NA,NA
+"Lithuania","LTU","LTU",186,"saltmarshes",0,0,0,0,NA,NA,NA
+"Lithuania","LTU","LTU",186,"seagrasses",0,0,0,0,NA,NA,NA
+"Azerbaijan","AZE","AZE",187,"coldcorals",0,0,0,0,NA,NA,NA
+"Azerbaijan","AZE","AZE",187,"coralreefs",0,0,0,0,NA,NA,NA
+"Azerbaijan","AZE","AZE",187,"mangroves",0,0,0,0,NA,NA,NA
+"Azerbaijan","AZE","AZE",187,"saltmarshes",0,0,0,0,NA,NA,NA
+"Azerbaijan","AZE","AZE",187,"seagrasses",0,0,0,0,NA,NA,NA
+"Republic of the Congo","COG","COG",188,"coldcorals",0,0,0,0,NA,NA,NA
+"Republic of the Congo","COG","COG",188,"coralreefs",0,0,0,0,NA,NA,NA
+"Republic of the Congo","COG","COG",188,"mangroves",0,0,0,0,NA,NA,NA
+"Republic of the Congo","COG","COG",188,"saltmarshes",0,0,0,0,NA,NA,NA
+"Republic of the Congo","COG","COG",188,"seagrasses",0,0,0,0,NA,NA,NA
+"Taiwan","TWN","TWN",189,"coldcorals",4,0,0,0,0,0,0
+"Taiwan","TWN","TWN",189,"coralreefs",377,195,195,0,51.7241379310345,51.7241379310345,0
+"Taiwan","TWN","TWN",189,"mangroves",4,4,1,0,100,25,0
+"Taiwan","TWN","TWN",189,"saltmarshes",43,1,0,0,2.32558139534884,0,0
+"Taiwan","TWN","TWN",189,"seagrasses",1243,133,133,0,10.6999195494771,10.6999195494771,0
+"Sint-Eustatius","BES","NLD",190,"coldcorals",0,0,0,0,NA,NA,NA
+"Sint-Eustatius","BES","NLD",190,"coralreefs",12,12,0,0,100,0,0
+"Sint-Eustatius","BES","NLD",190,"mangroves",0,0,0,0,NA,NA,NA
+"Sint-Eustatius","BES","NLD",190,"saltmarshes",0,0,0,0,NA,NA,NA
+"Sint-Eustatius","BES","NLD",190,"seagrasses",1,1,0,0,100,0,0
+"Montenegro","MNE","MNE",191,"coldcorals",2,0,0,0,0,0,0
+"Montenegro","MNE","MNE",191,"coralreefs",0,0,0,0,NA,NA,NA
+"Montenegro","MNE","MNE",191,"mangroves",0,0,0,0,NA,NA,NA
+"Montenegro","MNE","MNE",191,"saltmarshes",2,2,0,0,100,0,0
+"Montenegro","MNE","MNE",191,"seagrasses",0,0,0,0,NA,NA,NA
+"Denmark","DNK","DNK",192,"coldcorals",3,0,0,0,0,0,0
+"Denmark","DNK","DNK",192,"coralreefs",0,0,0,0,NA,NA,NA
+"Denmark","DNK","DNK",192,"mangroves",0,0,0,0,NA,NA,NA
+"Denmark","DNK","DNK",192,"saltmarshes",312,307,272,0,98.3974358974359,87.1794871794872,0
+"Denmark","DNK","DNK",192,"seagrasses",1148,594,566,0,51.7421602787456,49.3031358885017,0
+"Overlapping claim: Venezuela / Aruba / Dominican Republic","VEN","VEN",193,"coldcorals",0,0,0,0,NA,NA,NA
+"Overlapping claim: Venezuela / Aruba / Dominican Republic","VEN","VEN",193,"coralreefs",0,0,0,0,NA,NA,NA
+"Overlapping claim: Venezuela / Aruba / Dominican Republic","VEN","VEN",193,"mangroves",0,0,0,0,NA,NA,NA
+"Overlapping claim: Venezuela / Aruba / Dominican Republic","VEN","VEN",193,"saltmarshes",0,0,0,0,NA,NA,NA
+"Overlapping claim: Venezuela / Aruba / Dominican Republic","VEN","VEN",193,"seagrasses",0,0,0,0,NA,NA,NA
+"Palau","PLW","PLW",194,"coldcorals",3,3,0,0,100,0,0
+"Palau","PLW","PLW",194,"coralreefs",489,489,0,73,100,0,14.9284253578732
+"Palau","PLW","PLW",194,"mangroves",56,48,0,0,85.7142857142857,0,0
+"Palau","PLW","PLW",194,"saltmarshes",0,0,0,0,NA,NA,NA
+"Palau","PLW","PLW",194,"seagrasses",735,727,0,48,98.9115646258503,0,6.53061224489796
+"Chagos Archipelago",NA,"MUS",195,"coldcorals",0,0,0,0,NA,NA,NA
+"Chagos Archipelago",NA,"MUS",195,"coralreefs",1836,1836,0,1836,100,0,100
+"Chagos Archipelago",NA,"MUS",195,"mangroves",0,0,0,0,NA,NA,NA
+"Chagos Archipelago",NA,"MUS",195,"saltmarshes",0,0,0,0,NA,NA,NA
+"Chagos Archipelago",NA,"MUS",195,"seagrasses",0,0,0,0,NA,NA,NA
+"Juan de Nova Island","ATF","FRA",196,"coldcorals",0,0,0,0,NA,NA,NA
+"Juan de Nova Island","ATF","FRA",196,"coralreefs",56,0,0,0,0,0,0
+"Juan de Nova Island","ATF","FRA",196,"mangroves",0,0,0,0,NA,NA,NA
+"Juan de Nova Island","ATF","FRA",196,"saltmarshes",0,0,0,0,NA,NA,NA
+"Juan de Nova Island","ATF","FRA",196,"seagrasses",0,0,0,0,NA,NA,NA
+"Benin","BEN","BEN",197,"coldcorals",1,0,0,0,0,0,0
+"Benin","BEN","BEN",197,"coralreefs",0,0,0,0,NA,NA,NA
+"Benin","BEN","BEN",197,"mangroves",3,0,0,0,0,0,0
+"Benin","BEN","BEN",197,"saltmarshes",0,0,0,0,NA,NA,NA
+"Benin","BEN","BEN",197,"seagrasses",1353,0,0,0,0,0,0
+"Vanuatu","VUT","VUT",198,"coldcorals",19,0,0,0,0,0,0
+"Vanuatu","VUT","VUT",198,"coralreefs",716,1,0,0,0.139664804469274,0,0
+"Vanuatu","VUT","VUT",198,"mangroves",11,0,0,0,0,0,0
+"Vanuatu","VUT","VUT",198,"saltmarshes",0,0,0,0,NA,NA,NA
+"Vanuatu","VUT","VUT",198,"seagrasses",1244,2,0,0,0.160771704180064,0,0
+"Tristan Da Cunha","SHN","GBR",199,"coldcorals",6,1,0,0,16.6666666666667,0,0
+"Tristan Da Cunha","SHN","GBR",199,"coralreefs",0,0,0,0,NA,NA,NA
+"Tristan Da Cunha","SHN","GBR",199,"mangroves",0,0,0,0,NA,NA,NA
+"Tristan Da Cunha","SHN","GBR",199,"saltmarshes",0,0,0,0,NA,NA,NA
+"Tristan Da Cunha","SHN","GBR",199,"seagrasses",0,0,0,0,NA,NA,NA
+"Lebanon","LBN","LBN",200,"coldcorals",0,0,0,0,NA,NA,NA
+"Lebanon","LBN","LBN",200,"coralreefs",0,0,0,0,NA,NA,NA
+"Lebanon","LBN","LBN",200,"mangroves",0,0,0,0,NA,NA,NA
+"Lebanon","LBN","LBN",200,"saltmarshes",0,0,0,0,NA,NA,NA
+"Lebanon","LBN","LBN",200,"seagrasses",0,0,0,0,NA,NA,NA
+"Ukraine","UKR","UKR",201,"coldcorals",0,0,0,0,NA,NA,NA
+"Ukraine","UKR","UKR",201,"coralreefs",0,0,0,0,NA,NA,NA
+"Ukraine","UKR","UKR",201,"mangroves",0,0,0,0,NA,NA,NA
+"Ukraine","UKR","UKR",201,"saltmarshes",0,0,0,0,NA,NA,NA
+"Ukraine","UKR","UKR",201,"seagrasses",5973,1006,0,0,16.8424577264356,0,0
+"Niue","NIU","NZL",202,"coldcorals",0,0,0,0,NA,NA,NA
+"Niue","NIU","NZL",202,"coralreefs",16,1,0,0,6.25,0,0
+"Niue","NIU","NZL",202,"mangroves",0,0,0,0,NA,NA,NA
+"Niue","NIU","NZL",202,"saltmarshes",0,0,0,0,NA,NA,NA
+"Niue","NIU","NZL",202,"seagrasses",0,0,0,0,NA,NA,NA
+"Line Group","KIR","KIR",203,"coldcorals",1,0,0,0,0,0,0
+"Line Group","KIR","KIR",203,"coralreefs",189,0,0,0,0,0,0
+"Line Group","KIR","KIR",203,"mangroves",0,0,0,0,NA,NA,NA
+"Line Group","KIR","KIR",203,"saltmarshes",0,0,0,0,NA,NA,NA
+"Line Group","KIR","KIR",203,"seagrasses",0,0,0,0,NA,NA,NA
+"India","IND","IND",204,"coldcorals",7,0,0,0,0,0,0
+"India","IND","IND",204,"coralreefs",1238,70,0,70,5.65428109854604,0,5.65428109854604
+"India","IND","IND",204,"mangroves",2920,1402,0,1352,48.013698630137,0,46.3013698630137
+"India","IND","IND",204,"saltmarshes",0,0,0,0,NA,NA,NA
+"India","IND","IND",204,"seagrasses",2598,123,0,123,4.73441108545035,0,4.73441108545035
+"Poland","POL","POL",205,"coldcorals",0,0,0,0,NA,NA,NA
+"Poland","POL","POL",205,"coralreefs",0,0,0,0,NA,NA,NA
+"Poland","POL","POL",205,"mangroves",0,0,0,0,NA,NA,NA
+"Poland","POL","POL",205,"saltmarshes",0,0,0,0,NA,NA,NA
+"Poland","POL","POL",205,"seagrasses",4,4,0,0,100,0,0
+"Germany","DEU","DEU",206,"coldcorals",0,0,0,0,NA,NA,NA
+"Germany","DEU","DEU",206,"coralreefs",0,0,0,0,NA,NA,NA
+"Germany","DEU","DEU",206,"mangroves",0,0,0,0,NA,NA,NA
+"Germany","DEU","DEU",206,"saltmarshes",192,188,171,0,97.9166666666667,89.0625,0
+"Germany","DEU","DEU",206,"seagrasses",316,316,316,0,100,100,0
+"Argentina","ARG","ARG",207,"coldcorals",62,7,0,0,11.2903225806452,0,0
+"Argentina","ARG","ARG",207,"coralreefs",0,0,0,0,NA,NA,NA
+"Argentina","ARG","ARG",207,"mangroves",0,0,0,0,NA,NA,NA
+"Argentina","ARG","ARG",207,"saltmarshes",1167,970,0,0,83.1191088260497,0,0
+"Argentina","ARG","ARG",207,"seagrasses",0,0,0,0,NA,NA,NA
+"Hala'ib Triangle","SDN","SDN",208,"coldcorals",0,0,0,0,NA,NA,NA
+"Hala'ib Triangle","SDN","SDN",208,"coralreefs",1057,924,0,0,87.4172185430464,0,0
+"Hala'ib Triangle","SDN","SDN",208,"mangroves",1,1,0,0,100,0,0
+"Hala'ib Triangle","SDN","SDN",208,"saltmarshes",0,0,0,0,NA,NA,NA
+"Hala'ib Triangle","SDN","SDN",208,"seagrasses",0,0,0,0,NA,NA,NA
+"Singapore","SGP","SGP",209,"coldcorals",0,0,0,0,NA,NA,NA
+"Singapore","SGP","SGP",209,"coralreefs",4,0,0,0,0,0,0
+"Singapore","SGP","SGP",209,"mangroves",7,0,0,0,0,0,0
+"Singapore","SGP","SGP",209,"saltmarshes",0,0,0,0,NA,NA,NA
+"Singapore","SGP","SGP",209,"seagrasses",127,0,0,0,0,0,0
+"Cyprus","CYP","CYP",210,"coldcorals",1,0,0,0,0,0,0
+"Cyprus","CYP","CYP",210,"coralreefs",0,0,0,0,NA,NA,NA
+"Cyprus","CYP","CYP",210,"mangroves",0,0,0,0,NA,NA,NA
+"Cyprus","CYP","CYP",210,"saltmarshes",19,18,7,0,94.7368421052632,36.8421052631579,0
+"Cyprus","CYP","CYP",210,"seagrasses",69,43,42,0,62.3188405797101,60.8695652173913,0
+"Ascension","SHN","GBR",211,"coldcorals",7,7,0,0,100,0,0
+"Ascension","SHN","GBR",211,"coralreefs",0,0,0,0,NA,NA,NA
+"Ascension","SHN","GBR",211,"mangroves",0,0,0,0,NA,NA,NA
+"Ascension","SHN","GBR",211,"saltmarshes",0,0,0,0,NA,NA,NA
+"Ascension","SHN","GBR",211,"seagrasses",0,0,0,0,NA,NA,NA
+"Belize","BLZ","BLZ",212,"coldcorals",3,2,0,0,66.6666666666667,0,0
+"Belize","BLZ","BLZ",212,"coralreefs",863,351,96,12,40.6720741599073,11.1239860950174,1.39049826187717
+"Belize","BLZ","BLZ",212,"mangroves",489,164,16,14,33.5378323108384,3.2719836400818,2.86298568507157
+"Belize","BLZ","BLZ",212,"saltmarshes",0,0,0,0,NA,NA,NA
+"Belize","BLZ","BLZ",212,"seagrasses",4917,2138,627,54,43.481797844214,12.751677852349,1.09823062843197
+"Montserrat","MSR","GBR",213,"coldcorals",7,0,0,0,0,0,0
+"Montserrat","MSR","GBR",213,"coralreefs",0,0,0,0,NA,NA,NA
+"Montserrat","MSR","GBR",213,"mangroves",0,0,0,0,NA,NA,NA
+"Montserrat","MSR","GBR",213,"saltmarshes",0,0,0,0,NA,NA,NA
+"Montserrat","MSR","GBR",213,"seagrasses",14,0,0,0,0,0,0
+"Japan","JPN","JPN",214,"coldcorals",95,11,0,0,11.5789473684211,0,0
+"Japan","JPN","JPN",214,"coralreefs",1076,774,48,3,71.9330855018587,4.46096654275093,0.278810408921933
+"Japan","JPN","JPN",214,"mangroves",9,9,0,0,100,0,0
+"Japan","JPN","JPN",214,"saltmarshes",0,0,0,0,NA,NA,NA
+"Japan","JPN","JPN",214,"seagrasses",455,385,0,0,84.6153846153846,0,0
+"Aruba","ABW","NLD",215,"coldcorals",4,0,0,0,0,0,0
+"Aruba","ABW","NLD",215,"coralreefs",64,0,0,0,0,0,0
+"Aruba","ABW","NLD",215,"mangroves",0,0,0,0,NA,NA,NA
+"Aruba","ABW","NLD",215,"saltmarshes",0,0,0,0,NA,NA,NA
+"Aruba","ABW","NLD",215,"seagrasses",32,0,0,0,0,0,0
+"Honduras","HND","HND",216,"coldcorals",12,1,0,0,8.33333333333333,0,0
+"Honduras","HND","HND",216,"coralreefs",699,211,204,0,30.1859799713877,29.1845493562232,0
+"Honduras","HND","HND",216,"mangroves",565,388,358,0,68.6725663716814,63.3628318584071,0
+"Honduras","HND","HND",216,"saltmarshes",0,0,0,0,NA,NA,NA
+"Honduras","HND","HND",216,"seagrasses",2758,737,717,0,26.7222625090645,25.9970993473532,0
+"Canary Islands",NA,"ESP",217,"coldcorals",28,11,0,0,39.2857142857143,0,0
+"Canary Islands",NA,"ESP",217,"coralreefs",0,0,0,0,NA,NA,NA
+"Canary Islands",NA,"ESP",217,"mangroves",0,0,0,0,NA,NA,NA
+"Canary Islands",NA,"ESP",217,"saltmarshes",0,0,0,0,NA,NA,NA
+"Canary Islands",NA,"ESP",217,"seagrasses",2078,1211,493,0,58.2771896053898,23.7247353224254,0
+"Samoa","WSM","WSM",218,"coldcorals",2,0,0,0,0,0,0
+"Samoa","WSM","WSM",218,"coralreefs",201,21,0,0,10.4477611940298,0,0
+"Samoa","WSM","WSM",218,"mangroves",3,1,0,0,33.3333333333333,0,0
+"Samoa","WSM","WSM",218,"saltmarshes",0,0,0,0,NA,NA,NA
+"Samoa","WSM","WSM",218,"seagrasses",993,49,0,0,4.93454179254783,0,0
+"Tokelau","TKL","NZL",219,"coldcorals",0,0,0,0,NA,NA,NA
+"Tokelau","TKL","NZL",219,"coralreefs",102,0,0,0,0,0,0
+"Tokelau","TKL","NZL",219,"mangroves",0,0,0,0,NA,NA,NA
+"Tokelau","TKL","NZL",219,"saltmarshes",0,0,0,0,NA,NA,NA
+"Tokelau","TKL","NZL",219,"seagrasses",0,0,0,0,NA,NA,NA
+"Curaçao","CUW","NLD",220,"coldcorals",5,0,0,0,0,0,0
+"Curaçao","CUW","NLD",220,"coralreefs",45,2,0,0,4.44444444444444,0,0
+"Curaçao","CUW","NLD",220,"mangroves",0,0,0,0,NA,NA,NA
+"Curaçao","CUW","NLD",220,"saltmarshes",0,0,0,0,NA,NA,NA
+"Curaçao","CUW","NLD",220,"seagrasses",0,0,0,0,NA,NA,NA
+"Namibia","NAM","NAM",221,"coldcorals",2,0,0,0,0,0,0
+"Namibia","NAM","NAM",221,"coralreefs",0,0,0,0,NA,NA,NA
+"Namibia","NAM","NAM",221,"mangroves",0,0,0,0,NA,NA,NA
+"Namibia","NAM","NAM",221,"saltmarshes",0,0,0,0,NA,NA,NA
+"Namibia","NAM","NAM",221,"seagrasses",0,0,0,0,NA,NA,NA
+"Barbados","BRB","BRB",222,"coldcorals",6,0,0,0,0,0,0
+"Barbados","BRB","BRB",222,"coralreefs",35,0,0,0,0,0,0
+"Barbados","BRB","BRB",222,"mangroves",0,0,0,0,NA,NA,NA
+"Barbados","BRB","BRB",222,"saltmarshes",0,0,0,0,NA,NA,NA
+"Barbados","BRB","BRB",222,"seagrasses",87,0,0,0,0,0,0
+"Peru","PER","PER",223,"coldcorals",9,1,1,0,11.1111111111111,11.1111111111111,0
+"Peru","PER","PER",223,"coralreefs",0,0,0,0,NA,NA,NA
+"Peru","PER","PER",223,"mangroves",37,16,16,0,43.2432432432432,43.2432432432432,0
+"Peru","PER","PER",223,"saltmarshes",291,51,38,0,17.5257731958763,13.0584192439863,0
+"Peru","PER","PER",223,"seagrasses",0,0,0,0,NA,NA,NA
+"Sweden","SWE","SWE",224,"coldcorals",30,18,17,0,60,56.6666666666667,0
+"Sweden","SWE","SWE",224,"coralreefs",0,0,0,0,NA,NA,NA
+"Sweden","SWE","SWE",224,"mangroves",0,0,0,0,NA,NA,NA
+"Sweden","SWE","SWE",224,"saltmarshes",55,13,11,0,23.6363636363636,20,0
+"Sweden","SWE","SWE",224,"seagrasses",37,22,18,0,59.4594594594595,48.6486486486487,0
+"Egypt","EGY","EGY",225,"coldcorals",0,0,0,0,NA,NA,NA
+"Egypt","EGY","EGY",225,"coralreefs",2223,1169,0,0,52.5865946918578,0,0
+"Egypt","EGY","EGY",225,"mangroves",0,0,0,0,NA,NA,NA
+"Egypt","EGY","EGY",225,"saltmarshes",0,0,0,0,NA,NA,NA
+"Egypt","EGY","EGY",225,"seagrasses",2450,478,0,0,19.5102040816327,0,0
+"American Samoa","ASM","USA",226,"coldcorals",1,0,0,0,0,0,0
+"American Samoa","ASM","USA",226,"coralreefs",46,13,0,0,28.2608695652174,0,0
+"American Samoa","ASM","USA",226,"mangroves",0,0,0,0,NA,NA,NA
+"American Samoa","ASM","USA",226,"saltmarshes",0,0,0,0,NA,NA,NA
+"American Samoa","ASM","USA",226,"seagrasses",467,16,0,0,3.42612419700214,0,0
+"Russia","RUS","RUS",227,"coldcorals",18,2,0,0,11.1111111111111,0,0
+"Russia","RUS","RUS",227,"coralreefs",0,0,0,0,NA,NA,NA
+"Russia","RUS","RUS",227,"mangroves",0,0,0,0,NA,NA,NA
+"Russia","RUS","RUS",227,"saltmarshes",6990,4019,0,0,57.4964234620887,0,0
+"Russia","RUS","RUS",227,"seagrasses",683,11,0,0,1.61054172767204,0,0
+"Palmyra Atoll","UMI","USA",228,"coldcorals",0,0,0,0,NA,NA,NA
+"Palmyra Atoll","UMI","USA",228,"coralreefs",77,77,0,0,100,0,0
+"Palmyra Atoll","UMI","USA",228,"mangroves",0,0,0,0,NA,NA,NA
+"Palmyra Atoll","UMI","USA",228,"saltmarshes",0,0,0,0,NA,NA,NA
+"Palmyra Atoll","UMI","USA",228,"seagrasses",0,0,0,0,NA,NA,NA
+"Madagascar","MDG","MDG",229,"coldcorals",9,1,0,0,11.1111111111111,0,0
+"Madagascar","MDG","MDG",229,"coralreefs",2417,817,81,0,33.8022341745966,3.35126189491105,0
+"Madagascar","MDG","MDG",229,"mangroves",2548,461,237,0,18.0926216640502,9.30141287284144,0
+"Madagascar","MDG","MDG",229,"saltmarshes",60,39,17,0,65,28.3333333333333,0
+"Madagascar","MDG","MDG",229,"seagrasses",5807,1191,0,0,20.5097296366454,0,0
+"Bonaire","BES","NLD",230,"coldcorals",2,2,0,0,100,0,0
+"Bonaire","BES","NLD",230,"coralreefs",20,20,0,0,100,0,0
+"Bonaire","BES","NLD",230,"mangroves",2,2,0,0,100,0,0
+"Bonaire","BES","NLD",230,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bonaire","BES","NLD",230,"seagrasses",2,2,0,0,100,0,0
+"Albania","ALB","ALB",231,"coldcorals",6,0,0,0,0,0,0
+"Albania","ALB","ALB",231,"coralreefs",0,0,0,0,NA,NA,NA
+"Albania","ALB","ALB",231,"mangroves",0,0,0,0,NA,NA,NA
+"Albania","ALB","ALB",231,"saltmarshes",45,41,7,0,91.1111111111111,15.5555555555556,0
+"Albania","ALB","ALB",231,"seagrasses",44,3,0,0,6.81818181818182,0,0
+"Guatemala","GTM","GTM",232,"coldcorals",1,0,0,0,0,0,0
+"Guatemala","GTM","GTM",232,"coralreefs",0,0,0,0,NA,NA,NA
+"Guatemala","GTM","GTM",232,"mangroves",255,114,0,0,44.7058823529412,0,0
+"Guatemala","GTM","GTM",232,"saltmarshes",0,0,0,0,NA,NA,NA
+"Guatemala","GTM","GTM",232,"seagrasses",0,0,0,0,NA,NA,NA
+"Clipperton Island",NA,"FRA",233,"coldcorals",0,0,0,0,NA,NA,NA
+"Clipperton Island",NA,"FRA",233,"coralreefs",5,4,0,0,80,0,0
+"Clipperton Island",NA,"FRA",233,"mangroves",0,0,0,0,NA,NA,NA
+"Clipperton Island",NA,"FRA",233,"saltmarshes",0,0,0,0,NA,NA,NA
+"Clipperton Island",NA,"FRA",233,"seagrasses",0,0,0,0,NA,NA,NA
+"Gambia","GMB","GMB",234,"coldcorals",0,0,0,0,NA,NA,NA
+"Gambia","GMB","GMB",234,"coralreefs",0,0,0,0,NA,NA,NA
+"Gambia","GMB","GMB",234,"mangroves",603,267,245,0,44.2786069651741,40.6301824212272,0
+"Gambia","GMB","GMB",234,"saltmarshes",0,0,0,0,NA,NA,NA
+"Gambia","GMB","GMB",234,"seagrasses",0,0,0,0,NA,NA,NA
+"Democratic Republic of the Congo","COD","COD",235,"coldcorals",0,0,0,0,NA,NA,NA
+"Democratic Republic of the Congo","COD","COD",235,"coralreefs",0,0,0,0,NA,NA,NA
+"Democratic Republic of the Congo","COD","COD",235,"mangroves",252,245,0,0,97.2222222222222,0,0
+"Democratic Republic of the Congo","COD","COD",235,"saltmarshes",0,0,0,0,NA,NA,NA
+"Democratic Republic of the Congo","COD","COD",235,"seagrasses",0,0,0,0,NA,NA,NA
+"Iceland","ISL","ISL",236,"coldcorals",136,20,20,0,14.7058823529412,14.7058823529412,0
+"Iceland","ISL","ISL",236,"coralreefs",0,0,0,0,NA,NA,NA
+"Iceland","ISL","ISL",236,"mangroves",0,0,0,0,NA,NA,NA
+"Iceland","ISL","ISL",236,"saltmarshes",25,0,0,0,0,0,0
+"Iceland","ISL","ISL",236,"seagrasses",0,0,0,0,NA,NA,NA
+"Pitcairn","PCN","GBR",237,"coldcorals",0,0,0,0,NA,NA,NA
+"Pitcairn","PCN","GBR",237,"coralreefs",43,36,31,0,83.7209302325581,72.0930232558139,0
+"Pitcairn","PCN","GBR",237,"mangroves",0,0,0,0,NA,NA,NA
+"Pitcairn","PCN","GBR",237,"saltmarshes",0,0,0,0,NA,NA,NA
+"Pitcairn","PCN","GBR",237,"seagrasses",0,0,0,0,NA,NA,NA
+"Ghana","GHA","GHA",238,"coldcorals",7,0,0,0,0,0,0
+"Ghana","GHA","GHA",238,"coralreefs",0,0,0,0,NA,NA,NA
+"Ghana","GHA","GHA",238,"mangroves",203,106,106,0,52.2167487684729,52.2167487684729,0
+"Ghana","GHA","GHA",238,"saltmarshes",0,0,0,0,NA,NA,NA
+"Ghana","GHA","GHA",238,"seagrasses",2731,0,0,0,0,0,0
+"Anguilla","AIA","GBR",239,"coldcorals",3,0,0,0,0,0,0
+"Anguilla","AIA","GBR",239,"coralreefs",25,6,0,0,24,0,0
+"Anguilla","AIA","GBR",239,"mangroves",0,0,0,0,NA,NA,NA
+"Anguilla","AIA","GBR",239,"saltmarshes",0,0,0,0,NA,NA,NA
+"Anguilla","AIA","GBR",239,"seagrasses",15,1,0,0,6.66666666666667,0,0
+"Libya","LBY","LBY",240,"coldcorals",0,0,0,0,NA,NA,NA
+"Libya","LBY","LBY",240,"coralreefs",0,0,0,0,NA,NA,NA
+"Libya","LBY","LBY",240,"mangroves",0,0,0,0,NA,NA,NA
+"Libya","LBY","LBY",240,"saltmarshes",0,0,0,0,NA,NA,NA
+"Libya","LBY","LBY",240,"seagrasses",16,0,0,0,0,0,0
+"Islas San Félix and San Ambrosio","CHL","CHL",241,"coldcorals",0,0,0,0,NA,NA,NA
+"Islas San Félix and San Ambrosio","CHL","CHL",241,"coralreefs",0,0,0,0,NA,NA,NA
+"Islas San Félix and San Ambrosio","CHL","CHL",241,"mangroves",0,0,0,0,NA,NA,NA
+"Islas San Félix and San Ambrosio","CHL","CHL",241,"saltmarshes",0,0,0,0,NA,NA,NA
+"Islas San Félix and San Ambrosio","CHL","CHL",241,"seagrasses",0,0,0,0,NA,NA,NA
+"Belarus","BLR","BLR",242,"coldcorals",0,0,0,0,NA,NA,NA
+"Belarus","BLR","BLR",242,"coralreefs",0,0,0,0,NA,NA,NA
+"Belarus","BLR","BLR",242,"mangroves",0,0,0,0,NA,NA,NA
+"Belarus","BLR","BLR",242,"saltmarshes",0,0,0,0,NA,NA,NA
+"Belarus","BLR","BLR",242,"seagrasses",0,0,0,0,NA,NA,NA
+"Hungary","HUN","HUN",243,"coldcorals",0,0,0,0,NA,NA,NA
+"Hungary","HUN","HUN",243,"coralreefs",0,0,0,0,NA,NA,NA
+"Hungary","HUN","HUN",243,"mangroves",0,0,0,0,NA,NA,NA
+"Hungary","HUN","HUN",243,"saltmarshes",0,0,0,0,NA,NA,NA
+"Hungary","HUN","HUN",243,"seagrasses",0,0,0,0,NA,NA,NA
+"Tajikistan","TJK","TJK",244,"coldcorals",0,0,0,0,NA,NA,NA
+"Tajikistan","TJK","TJK",244,"coralreefs",0,0,0,0,NA,NA,NA
+"Tajikistan","TJK","TJK",244,"mangroves",0,0,0,0,NA,NA,NA
+"Tajikistan","TJK","TJK",244,"saltmarshes",0,0,0,0,NA,NA,NA
+"Tajikistan","TJK","TJK",244,"seagrasses",0,0,0,0,NA,NA,NA
+"Burkina Faso","BFA","BFA",245,"coldcorals",0,0,0,0,NA,NA,NA
+"Burkina Faso","BFA","BFA",245,"coralreefs",0,0,0,0,NA,NA,NA
+"Burkina Faso","BFA","BFA",245,"mangroves",0,0,0,0,NA,NA,NA
+"Burkina Faso","BFA","BFA",245,"saltmarshes",0,0,0,0,NA,NA,NA
+"Burkina Faso","BFA","BFA",245,"seagrasses",0,0,0,0,NA,NA,NA
+"Rwanda","RWA","RWA",246,"coldcorals",0,0,0,0,NA,NA,NA
+"Rwanda","RWA","RWA",246,"coralreefs",0,0,0,0,NA,NA,NA
+"Rwanda","RWA","RWA",246,"mangroves",0,0,0,0,NA,NA,NA
+"Rwanda","RWA","RWA",246,"saltmarshes",0,0,0,0,NA,NA,NA
+"Rwanda","RWA","RWA",246,"seagrasses",0,0,0,0,NA,NA,NA
+"Mongolia","MNG","MNG",247,"coldcorals",0,0,0,0,NA,NA,NA
+"Mongolia","MNG","MNG",247,"coralreefs",0,0,0,0,NA,NA,NA
+"Mongolia","MNG","MNG",247,"mangroves",0,0,0,0,NA,NA,NA
+"Mongolia","MNG","MNG",247,"saltmarshes",0,0,0,0,NA,NA,NA
+"Mongolia","MNG","MNG",247,"seagrasses",0,0,0,0,NA,NA,NA
+"Zambia","ZMB","ZMB",248,"coldcorals",0,0,0,0,NA,NA,NA
+"Zambia","ZMB","ZMB",248,"coralreefs",0,0,0,0,NA,NA,NA
+"Zambia","ZMB","ZMB",248,"mangroves",0,0,0,0,NA,NA,NA
+"Zambia","ZMB","ZMB",248,"saltmarshes",0,0,0,0,NA,NA,NA
+"Zambia","ZMB","ZMB",248,"seagrasses",0,0,0,0,NA,NA,NA
+"Swaziland","SWZ","SWZ",249,"coldcorals",0,0,0,0,NA,NA,NA
+"Swaziland","SWZ","SWZ",249,"coralreefs",0,0,0,0,NA,NA,NA
+"Swaziland","SWZ","SWZ",249,"mangroves",0,0,0,0,NA,NA,NA
+"Swaziland","SWZ","SWZ",249,"saltmarshes",0,0,0,0,NA,NA,NA
+"Swaziland","SWZ","SWZ",249,"seagrasses",0,0,0,0,NA,NA,NA
+"Laos","LAO","LAO",250,"coldcorals",0,0,0,0,NA,NA,NA
+"Laos","LAO","LAO",250,"coralreefs",0,0,0,0,NA,NA,NA
+"Laos","LAO","LAO",250,"mangroves",0,0,0,0,NA,NA,NA
+"Laos","LAO","LAO",250,"saltmarshes",0,0,0,0,NA,NA,NA
+"Laos","LAO","LAO",250,"seagrasses",0,0,0,0,NA,NA,NA
+"Moldova","MDA","MDA",251,"coldcorals",0,0,0,0,NA,NA,NA
+"Moldova","MDA","MDA",251,"coralreefs",0,0,0,0,NA,NA,NA
+"Moldova","MDA","MDA",251,"mangroves",0,0,0,0,NA,NA,NA
+"Moldova","MDA","MDA",251,"saltmarshes",0,0,0,0,NA,NA,NA
+"Moldova","MDA","MDA",251,"seagrasses",0,0,0,0,NA,NA,NA
+"Bhutan","BTN","BTN",252,"coldcorals",0,0,0,0,NA,NA,NA
+"Bhutan","BTN","BTN",252,"coralreefs",0,0,0,0,NA,NA,NA
+"Bhutan","BTN","BTN",252,"mangroves",0,0,0,0,NA,NA,NA
+"Bhutan","BTN","BTN",252,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bhutan","BTN","BTN",252,"seagrasses",0,0,0,0,NA,NA,NA
+"South Sudan","SSD","SSD",253,"coldcorals",0,0,0,0,NA,NA,NA
+"South Sudan","SSD","SSD",253,"coralreefs",0,0,0,0,NA,NA,NA
+"South Sudan","SSD","SSD",253,"mangroves",0,0,0,0,NA,NA,NA
+"South Sudan","SSD","SSD",253,"saltmarshes",0,0,0,0,NA,NA,NA
+"South Sudan","SSD","SSD",253,"seagrasses",0,0,0,0,NA,NA,NA
+"Kyrgyzstan","KGZ","KGZ",254,"coldcorals",0,0,0,0,NA,NA,NA
+"Kyrgyzstan","KGZ","KGZ",254,"coralreefs",0,0,0,0,NA,NA,NA
+"Kyrgyzstan","KGZ","KGZ",254,"mangroves",0,0,0,0,NA,NA,NA
+"Kyrgyzstan","KGZ","KGZ",254,"saltmarshes",0,0,0,0,NA,NA,NA
+"Kyrgyzstan","KGZ","KGZ",254,"seagrasses",0,0,0,0,NA,NA,NA
+"Liechtenstein","LIE","LIE",255,"coldcorals",0,0,0,0,NA,NA,NA
+"Liechtenstein","LIE","LIE",255,"coralreefs",0,0,0,0,NA,NA,NA
+"Liechtenstein","LIE","LIE",255,"mangroves",0,0,0,0,NA,NA,NA
+"Liechtenstein","LIE","LIE",255,"saltmarshes",0,0,0,0,NA,NA,NA
+"Liechtenstein","LIE","LIE",255,"seagrasses",0,0,0,0,NA,NA,NA
+"Switzerland","CHE","CHE",256,"coldcorals",0,0,0,0,NA,NA,NA
+"Switzerland","CHE","CHE",256,"coralreefs",0,0,0,0,NA,NA,NA
+"Switzerland","CHE","CHE",256,"mangroves",0,0,0,0,NA,NA,NA
+"Switzerland","CHE","CHE",256,"saltmarshes",0,0,0,0,NA,NA,NA
+"Switzerland","CHE","CHE",256,"seagrasses",0,0,0,0,NA,NA,NA
+"Central African Republic","CAF","CAF",257,"coldcorals",0,0,0,0,NA,NA,NA
+"Central African Republic","CAF","CAF",257,"coralreefs",0,0,0,0,NA,NA,NA
+"Central African Republic","CAF","CAF",257,"mangroves",0,0,0,0,NA,NA,NA
+"Central African Republic","CAF","CAF",257,"saltmarshes",0,0,0,0,NA,NA,NA
+"Central African Republic","CAF","CAF",257,"seagrasses",0,0,0,0,NA,NA,NA
+"Mali","MLI","MLI",258,"coldcorals",0,0,0,0,NA,NA,NA
+"Mali","MLI","MLI",258,"coralreefs",0,0,0,0,NA,NA,NA
+"Mali","MLI","MLI",258,"mangroves",0,0,0,0,NA,NA,NA
+"Mali","MLI","MLI",258,"saltmarshes",0,0,0,0,NA,NA,NA
+"Mali","MLI","MLI",258,"seagrasses",0,0,0,0,NA,NA,NA
+"Czech Republic","CZE","CZE",259,"coldcorals",0,0,0,0,NA,NA,NA
+"Czech Republic","CZE","CZE",259,"coralreefs",0,0,0,0,NA,NA,NA
+"Czech Republic","CZE","CZE",259,"mangroves",0,0,0,0,NA,NA,NA
+"Czech Republic","CZE","CZE",259,"saltmarshes",0,0,0,0,NA,NA,NA
+"Czech Republic","CZE","CZE",259,"seagrasses",0,0,0,0,NA,NA,NA
+"Bouvet","BVT","NOR",260,"coldcorals",0,0,0,0,NA,NA,NA
+"Bouvet","BVT","NOR",260,"coralreefs",0,0,0,0,NA,NA,NA
+"Bouvet","BVT","NOR",260,"mangroves",0,0,0,0,NA,NA,NA
+"Bouvet","BVT","NOR",260,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bouvet","BVT","NOR",260,"seagrasses",0,0,0,0,NA,NA,NA
+"Paraguay","PRY","PRY",261,"coldcorals",0,0,0,0,NA,NA,NA
+"Paraguay","PRY","PRY",261,"coralreefs",0,0,0,0,NA,NA,NA
+"Paraguay","PRY","PRY",261,"mangroves",0,0,0,0,NA,NA,NA
+"Paraguay","PRY","PRY",261,"saltmarshes",0,0,0,0,NA,NA,NA
+"Paraguay","PRY","PRY",261,"seagrasses",0,0,0,0,NA,NA,NA
+"Slovakia","SVK","SVK",262,"coldcorals",0,0,0,0,NA,NA,NA
+"Slovakia","SVK","SVK",262,"coralreefs",0,0,0,0,NA,NA,NA
+"Slovakia","SVK","SVK",262,"mangroves",0,0,0,0,NA,NA,NA
+"Slovakia","SVK","SVK",262,"saltmarshes",0,0,0,0,NA,NA,NA
+"Slovakia","SVK","SVK",262,"seagrasses",0,0,0,0,NA,NA,NA
+"Macedonia","MKD","MKD",263,"coldcorals",0,0,0,0,NA,NA,NA
+"Macedonia","MKD","MKD",263,"coralreefs",0,0,0,0,NA,NA,NA
+"Macedonia","MKD","MKD",263,"mangroves",0,0,0,0,NA,NA,NA
+"Macedonia","MKD","MKD",263,"saltmarshes",0,0,0,0,NA,NA,NA
+"Macedonia","MKD","MKD",263,"seagrasses",0,0,0,0,NA,NA,NA
+"Ethiopia","ETH","ETH",264,"coldcorals",0,0,0,0,NA,NA,NA
+"Ethiopia","ETH","ETH",264,"coralreefs",0,0,0,0,NA,NA,NA
+"Ethiopia","ETH","ETH",264,"mangroves",0,0,0,0,NA,NA,NA
+"Ethiopia","ETH","ETH",264,"saltmarshes",0,0,0,0,NA,NA,NA
+"Ethiopia","ETH","ETH",264,"seagrasses",0,0,0,0,NA,NA,NA
+"Uganda","UGA","UGA",265,"coldcorals",0,0,0,0,NA,NA,NA
+"Uganda","UGA","UGA",265,"coralreefs",0,0,0,0,NA,NA,NA
+"Uganda","UGA","UGA",265,"mangroves",0,0,0,0,NA,NA,NA
+"Uganda","UGA","UGA",265,"saltmarshes",0,0,0,0,NA,NA,NA
+"Uganda","UGA","UGA",265,"seagrasses",0,0,0,0,NA,NA,NA
+"Andorra","AND","AND",266,"coldcorals",0,0,0,0,NA,NA,NA
+"Andorra","AND","AND",266,"coralreefs",0,0,0,0,NA,NA,NA
+"Andorra","AND","AND",266,"mangroves",0,0,0,0,NA,NA,NA
+"Andorra","AND","AND",266,"saltmarshes",0,0,0,0,NA,NA,NA
+"Andorra","AND","AND",266,"seagrasses",0,0,0,0,NA,NA,NA
+"Bolivia","BOL","BOL",267,"coldcorals",0,0,0,0,NA,NA,NA
+"Bolivia","BOL","BOL",267,"coralreefs",0,0,0,0,NA,NA,NA
+"Bolivia","BOL","BOL",267,"mangroves",0,0,0,0,NA,NA,NA
+"Bolivia","BOL","BOL",267,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bolivia","BOL","BOL",267,"seagrasses",0,0,0,0,NA,NA,NA
+"Austria","AUT","AUT",268,"coldcorals",0,0,0,0,NA,NA,NA
+"Austria","AUT","AUT",268,"coralreefs",0,0,0,0,NA,NA,NA
+"Austria","AUT","AUT",268,"mangroves",0,0,0,0,NA,NA,NA
+"Austria","AUT","AUT",268,"saltmarshes",0,0,0,0,NA,NA,NA
+"Austria","AUT","AUT",268,"seagrasses",0,0,0,0,NA,NA,NA
+"Afghanistan","AFG","AFG",269,"coldcorals",0,0,0,0,NA,NA,NA
+"Afghanistan","AFG","AFG",269,"coralreefs",0,0,0,0,NA,NA,NA
+"Afghanistan","AFG","AFG",269,"mangroves",0,0,0,0,NA,NA,NA
+"Afghanistan","AFG","AFG",269,"saltmarshes",0,0,0,0,NA,NA,NA
+"Afghanistan","AFG","AFG",269,"seagrasses",0,0,0,0,NA,NA,NA
+"Burundi","BDI","BDI",270,"coldcorals",0,0,0,0,NA,NA,NA
+"Burundi","BDI","BDI",270,"coralreefs",0,0,0,0,NA,NA,NA
+"Burundi","BDI","BDI",270,"mangroves",0,0,0,0,NA,NA,NA
+"Burundi","BDI","BDI",270,"saltmarshes",0,0,0,0,NA,NA,NA
+"Burundi","BDI","BDI",270,"seagrasses",0,0,0,0,NA,NA,NA
+"Botswana","BWA","BWA",271,"coldcorals",0,0,0,0,NA,NA,NA
+"Botswana","BWA","BWA",271,"coralreefs",0,0,0,0,NA,NA,NA
+"Botswana","BWA","BWA",271,"mangroves",0,0,0,0,NA,NA,NA
+"Botswana","BWA","BWA",271,"saltmarshes",0,0,0,0,NA,NA,NA
+"Botswana","BWA","BWA",271,"seagrasses",0,0,0,0,NA,NA,NA
+"Grand Duchy of Luxembourg","LUX","LUX",272,"coldcorals",0,0,0,0,NA,NA,NA
+"Grand Duchy of Luxembourg","LUX","LUX",272,"coralreefs",0,0,0,0,NA,NA,NA
+"Grand Duchy of Luxembourg","LUX","LUX",272,"mangroves",0,0,0,0,NA,NA,NA
+"Grand Duchy of Luxembourg","LUX","LUX",272,"saltmarshes",0,0,0,0,NA,NA,NA
+"Grand Duchy of Luxembourg","LUX","LUX",272,"seagrasses",0,0,0,0,NA,NA,NA
+"Nepal","NPL","NPL",273,"coldcorals",0,0,0,0,NA,NA,NA
+"Nepal","NPL","NPL",273,"coralreefs",0,0,0,0,NA,NA,NA
+"Nepal","NPL","NPL",273,"mangroves",0,0,0,0,NA,NA,NA
+"Nepal","NPL","NPL",273,"saltmarshes",0,0,0,0,NA,NA,NA
+"Nepal","NPL","NPL",273,"seagrasses",0,0,0,0,NA,NA,NA
+"Chad","TCD","TCD",274,"coldcorals",0,0,0,0,NA,NA,NA
+"Chad","TCD","TCD",274,"coralreefs",0,0,0,0,NA,NA,NA
+"Chad","TCD","TCD",274,"mangroves",0,0,0,0,NA,NA,NA
+"Chad","TCD","TCD",274,"saltmarshes",0,0,0,0,NA,NA,NA
+"Chad","TCD","TCD",274,"seagrasses",0,0,0,0,NA,NA,NA
+"Uzbekistan","UZB","UZB",275,"coldcorals",0,0,0,0,NA,NA,NA
+"Uzbekistan","UZB","UZB",275,"coralreefs",0,0,0,0,NA,NA,NA
+"Uzbekistan","UZB","UZB",275,"mangroves",0,0,0,0,NA,NA,NA
+"Uzbekistan","UZB","UZB",275,"saltmarshes",0,0,0,0,NA,NA,NA
+"Uzbekistan","UZB","UZB",275,"seagrasses",0,0,0,0,NA,NA,NA
+"Niger","NER","NER",276,"coldcorals",0,0,0,0,NA,NA,NA
+"Niger","NER","NER",276,"coralreefs",0,0,0,0,NA,NA,NA
+"Niger","NER","NER",276,"mangroves",0,0,0,0,NA,NA,NA
+"Niger","NER","NER",276,"saltmarshes",0,0,0,0,NA,NA,NA
+"Niger","NER","NER",276,"seagrasses",0,0,0,0,NA,NA,NA
+"Serbia","SRB","SRB",277,"coldcorals",0,0,0,0,NA,NA,NA
+"Serbia","SRB","SRB",277,"coralreefs",0,0,0,0,NA,NA,NA
+"Serbia","SRB","SRB",277,"mangroves",0,0,0,0,NA,NA,NA
+"Serbia","SRB","SRB",277,"saltmarshes",0,0,0,0,NA,NA,NA
+"Serbia","SRB","SRB",277,"seagrasses",0,0,0,0,NA,NA,NA
+"Zimbabwe","ZWE","ZWE",278,"coldcorals",0,0,0,0,NA,NA,NA
+"Zimbabwe","ZWE","ZWE",278,"coralreefs",0,0,0,0,NA,NA,NA
+"Zimbabwe","ZWE","ZWE",278,"mangroves",0,0,0,0,NA,NA,NA
+"Zimbabwe","ZWE","ZWE",278,"saltmarshes",0,0,0,0,NA,NA,NA
+"Zimbabwe","ZWE","ZWE",278,"seagrasses",0,0,0,0,NA,NA,NA
+"Spain","ESP","ESP",279,"coldcorals",309,107,46,0,34.6278317152104,14.8867313915858,0
+"Spain","ESP","ESP",279,"coralreefs",0,0,0,0,NA,NA,NA
+"Spain","ESP","ESP",279,"mangroves",0,0,0,0,NA,NA,NA
+"Spain","ESP","ESP",279,"saltmarshes",900,867,794,0,96.3333333333333,88.2222222222222,0
+"Spain","ESP","ESP",279,"seagrasses",1035,839,248,0,81.0628019323672,23.9613526570048,0
+"Colombian Exclusive Economic Zone (Quitasueño)",NA,"COL",280,"coldcorals",1,1,1,0,100,100,0
+"Colombian Exclusive Economic Zone (Quitasueño)",NA,"COL",280,"coralreefs",252,252,252,0,100,100,0
+"Colombian Exclusive Economic Zone (Quitasueño)",NA,"COL",280,"mangroves",0,0,0,0,NA,NA,NA
+"Colombian Exclusive Economic Zone (Quitasueño)",NA,"COL",280,"saltmarshes",0,0,0,0,NA,NA,NA
+"Colombian Exclusive Economic Zone (Quitasueño)",NA,"COL",280,"seagrasses",0,0,0,0,NA,NA,NA
+"Chafarinas Islands",NA,"ESP",281,"coldcorals",0,0,0,0,NA,NA,NA
+"Chafarinas Islands",NA,"ESP",281,"coralreefs",0,0,0,0,NA,NA,NA
+"Chafarinas Islands",NA,"ESP",281,"mangroves",0,0,0,0,NA,NA,NA
+"Chafarinas Islands",NA,"ESP",281,"saltmarshes",0,0,0,0,NA,NA,NA
+"Chafarinas Islands",NA,"ESP",281,"seagrasses",0,0,0,0,NA,NA,NA
+"Ceuta",NA,"ESP",282,"coldcorals",0,0,0,0,NA,NA,NA
+"Ceuta",NA,"ESP",282,"coralreefs",0,0,0,0,NA,NA,NA
+"Ceuta",NA,"ESP",282,"mangroves",0,0,0,0,NA,NA,NA
+"Ceuta",NA,"ESP",282,"saltmarshes",0,0,0,0,NA,NA,NA
+"Ceuta",NA,"ESP",282,"seagrasses",0,0,0,0,NA,NA,NA
+"Saint-Pierre and Miquelon","SPM","FRA",283,"coldcorals",3,0,0,0,0,0,0
+"Saint-Pierre and Miquelon","SPM","FRA",283,"coralreefs",0,0,0,0,NA,NA,NA
+"Saint-Pierre and Miquelon","SPM","FRA",283,"mangroves",0,0,0,0,NA,NA,NA
+"Saint-Pierre and Miquelon","SPM","FRA",283,"saltmarshes",0,0,0,0,NA,NA,NA
+"Saint-Pierre and Miquelon","SPM","FRA",283,"seagrasses",0,0,0,0,NA,NA,NA
+"Serrana Bank",NA,"COL",284,"coldcorals",4,4,4,0,100,100,0
+"Serrana Bank",NA,"COL",284,"coralreefs",151,151,151,0,100,100,0
+"Serrana Bank",NA,"COL",284,"mangroves",0,0,0,0,NA,NA,NA
+"Serrana Bank",NA,"COL",284,"saltmarshes",0,0,0,0,NA,NA,NA
+"Serrana Bank",NA,"COL",284,"seagrasses",0,0,0,0,NA,NA,NA
+"Italy","ITA","ITA",285,"coldcorals",167,27,0,0,16.1676646706587,0,0
+"Italy","ITA","ITA",285,"coralreefs",0,0,0,0,NA,NA,NA
+"Italy","ITA","ITA",285,"mangroves",0,0,0,0,NA,NA,NA
+"Italy","ITA","ITA",285,"saltmarshes",441,418,70,0,94.7845804988662,15.8730158730159,0
+"Italy","ITA","ITA",285,"seagrasses",3718,1695,427,0,45.5890263582571,11.4846691769769,0
+"Melilla",NA,"ESP",286,"coldcorals",0,0,0,0,NA,NA,NA
+"Melilla",NA,"ESP",286,"coralreefs",0,0,0,0,NA,NA,NA
+"Melilla",NA,"ESP",286,"mangroves",0,0,0,0,NA,NA,NA
+"Melilla",NA,"ESP",286,"saltmarshes",0,0,0,0,NA,NA,NA
+"Melilla",NA,"ESP",286,"seagrasses",0,0,0,0,NA,NA,NA
+"Belgium","BEL","BEL",287,"coldcorals",0,0,0,0,NA,NA,NA
+"Belgium","BEL","BEL",287,"coralreefs",0,0,0,0,NA,NA,NA
+"Belgium","BEL","BEL",287,"mangroves",0,0,0,0,NA,NA,NA
+"Belgium","BEL","BEL",287,"saltmarshes",5,4,0,0,80,0,0
+"Belgium","BEL","BEL",287,"seagrasses",0,0,0,0,NA,NA,NA
+"Oman","OMN","OMN",288,"coldcorals",5,0,0,0,0,0,0
+"Oman","OMN","OMN",288,"coralreefs",265,30,0,0,11.3207547169811,0,0
+"Oman","OMN","OMN",288,"mangroves",1,1,0,0,100,0,0
+"Oman","OMN","OMN",288,"saltmarshes",0,0,0,0,NA,NA,NA
+"Oman","OMN","OMN",288,"seagrasses",0,0,0,0,NA,NA,NA
+"Monaco","MCO","MCO",289,"coldcorals",0,0,0,0,NA,NA,NA
+"Monaco","MCO","MCO",289,"coralreefs",0,0,0,0,NA,NA,NA
+"Monaco","MCO","MCO",289,"mangroves",0,0,0,0,NA,NA,NA
+"Monaco","MCO","MCO",289,"saltmarshes",0,0,0,0,NA,NA,NA
+"Monaco","MCO","MCO",289,"seagrasses",0,0,0,0,NA,NA,NA
+"Bosnia and Herzegovina","BIH","BIH",290,"coldcorals",0,0,0,0,NA,NA,NA
+"Bosnia and Herzegovina","BIH","BIH",290,"coralreefs",0,0,0,0,NA,NA,NA
+"Bosnia and Herzegovina","BIH","BIH",290,"mangroves",0,0,0,0,NA,NA,NA
+"Bosnia and Herzegovina","BIH","BIH",290,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bosnia and Herzegovina","BIH","BIH",290,"seagrasses",0,0,0,0,NA,NA,NA
+"Peñón de Vélez de la Gomera",NA,"ESP",291,"coldcorals",0,0,0,0,NA,NA,NA
+"Peñón de Vélez de la Gomera",NA,"ESP",291,"coralreefs",0,0,0,0,NA,NA,NA
+"Peñón de Vélez de la Gomera",NA,"ESP",291,"mangroves",0,0,0,0,NA,NA,NA
+"Peñón de Vélez de la Gomera",NA,"ESP",291,"saltmarshes",0,0,0,0,NA,NA,NA
+"Peñón de Vélez de la Gomera",NA,"ESP",291,"seagrasses",0,0,0,0,NA,NA,NA
+"Perejil Island",NA,"ESP",292,"coldcorals",0,0,0,0,NA,NA,NA
+"Perejil Island",NA,"ESP",292,"coralreefs",0,0,0,0,NA,NA,NA
+"Perejil Island",NA,"ESP",292,"mangroves",0,0,0,0,NA,NA,NA
+"Perejil Island",NA,"ESP",292,"saltmarshes",0,0,0,0,NA,NA,NA
+"Perejil Island",NA,"ESP",292,"seagrasses",0,0,0,0,NA,NA,NA
+"Bajo Nuevo Bank",NA,"COL",293,"coldcorals",0,0,0,0,NA,NA,NA
+"Bajo Nuevo Bank",NA,"COL",293,"coralreefs",0,0,0,0,NA,NA,NA
+"Bajo Nuevo Bank",NA,"COL",293,"mangroves",0,0,0,0,NA,NA,NA
+"Bajo Nuevo Bank",NA,"COL",293,"saltmarshes",0,0,0,0,NA,NA,NA
+"Bajo Nuevo Bank",NA,"COL",293,"seagrasses",0,0,0,0,NA,NA,NA
+"Alhucemas Islands",NA,"ESP",294,"coldcorals",0,0,0,0,NA,NA,NA
+"Alhucemas Islands",NA,"ESP",294,"coralreefs",0,0,0,0,NA,NA,NA
+"Alhucemas Islands",NA,"ESP",294,"mangroves",0,0,0,0,NA,NA,NA
+"Alhucemas Islands",NA,"ESP",294,"saltmarshes",0,0,0,0,NA,NA,NA
+"Alhucemas Islands",NA,"ESP",294,"seagrasses",0,0,0,0,NA,NA,NA
+"Oecusse",NA,"TLS",295,"coldcorals",0,0,0,0,NA,NA,NA
+"Oecusse",NA,"TLS",295,"coralreefs",3,0,0,0,0,0,0
+"Oecusse",NA,"TLS",295,"mangroves",0,0,0,0,NA,NA,NA
+"Oecusse",NA,"TLS",295,"saltmarshes",0,0,0,0,NA,NA,NA
+"Oecusse",NA,"TLS",295,"seagrasses",0,0,0,0,NA,NA,NA
+"Malawi","MWI","MWI",296,"coldcorals",0,0,0,0,NA,NA,NA
+"Malawi","MWI","MWI",296,"coralreefs",0,0,0,0,NA,NA,NA
+"Malawi","MWI","MWI",296,"mangroves",0,0,0,0,NA,NA,NA
+"Malawi","MWI","MWI",296,"saltmarshes",0,0,0,0,NA,NA,NA
+"Malawi","MWI","MWI",296,"seagrasses",0,0,0,0,NA,NA,NA
+"Lesotho","LSO","LSO",297,"coldcorals",0,0,0,0,NA,NA,NA
+"Lesotho","LSO","LSO",297,"coralreefs",0,0,0,0,NA,NA,NA
+"Lesotho","LSO","LSO",297,"mangroves",0,0,0,0,NA,NA,NA
+"Lesotho","LSO","LSO",297,"saltmarshes",0,0,0,0,NA,NA,NA
+"Lesotho","LSO","LSO",297,"seagrasses",0,0,0,0,NA,NA,NA
+"Armenia","ARM","ARM",298,"coldcorals",0,0,0,0,NA,NA,NA
+"Armenia","ARM","ARM",298,"coralreefs",0,0,0,0,NA,NA,NA
+"Armenia","ARM","ARM",298,"mangroves",0,0,0,0,NA,NA,NA
+"Armenia","ARM","ARM",298,"saltmarshes",0,0,0,0,NA,NA,NA
+"Armenia","ARM","ARM",298,"seagrasses",0,0,0,0,NA,NA,NA
+"Gibraltar","GIB","GIB",299,"coldcorals",0,0,0,0,NA,NA,NA
+"Gibraltar","GIB","GIB",299,"coralreefs",0,0,0,0,NA,NA,NA
+"Gibraltar","GIB","GIB",299,"mangroves",0,0,0,0,NA,NA,NA
+"Gibraltar","GIB","GIB",299,"saltmarshes",0,0,0,0,NA,NA,NA
+"Gibraltar","GIB","GIB",299,"seagrasses",0,0,0,0,NA,NA,NA
+"San Marino","SMR","SMR",300,"coldcorals",0,0,0,0,NA,NA,NA
+"San Marino","SMR","SMR",300,"coralreefs",0,0,0,0,NA,NA,NA
+"San Marino","SMR","SMR",300,"mangroves",0,0,0,0,NA,NA,NA
+"San Marino","SMR","SMR",300,"saltmarshes",0,0,0,0,NA,NA,NA
+"San Marino","SMR","SMR",300,"seagrasses",0,0,0,0,NA,NA,NA
+"Vatican City","VAT","VAT",301,"coldcorals",0,0,0,0,NA,NA,NA
+"Vatican City","VAT","VAT",301,"coralreefs",0,0,0,0,NA,NA,NA
+"Vatican City","VAT","VAT",301,"mangroves",0,0,0,0,NA,NA,NA
+"Vatican City","VAT","VAT",301,"saltmarshes",0,0,0,0,NA,NA,NA
+"Vatican City","VAT","VAT",301,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Argentina / Uruguay","URY","URY",302,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Argentina / Uruguay","URY","URY",302,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Argentina / Uruguay","URY","URY",302,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Argentina / Uruguay","URY","URY",302,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Argentina / Uruguay","URY","URY",302,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Peru / Ecuador","PER","PER",303,"coldcorals",1,0,0,0,0,0,0
+"Joint regime area Peru / Ecuador","PER","PER",303,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Peru / Ecuador","PER","PER",303,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Peru / Ecuador","PER","PER",303,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Peru / Ecuador","PER","PER",303,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Senegal / Guinea Bissau","SEN","SEN",304,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Senegal / Guinea Bissau","SEN","SEN",304,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Senegal / Guinea Bissau","SEN","SEN",304,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Senegal / Guinea Bissau","SEN","SEN",304,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Senegal / Guinea Bissau","SEN","SEN",304,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Spain / France","FRA","FRA",305,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Spain / France","FRA","FRA",305,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Spain / France","FRA","FRA",305,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Spain / France","FRA","FRA",305,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Spain / France","FRA","FRA",305,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area United Kingdom / Denmark (Faeroe Islands)","GBR","GBR",306,"coldcorals",7,4,4,0,57.1428571428571,57.1428571428571,0
+"Joint regime area United Kingdom / Denmark (Faeroe Islands)","GBR","GBR",306,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area United Kingdom / Denmark (Faeroe Islands)","GBR","GBR",306,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area United Kingdom / Denmark (Faeroe Islands)","GBR","GBR",306,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area United Kingdom / Denmark (Faeroe Islands)","GBR","GBR",306,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Costa Rica / Ecuador (Galapagos)","CRI","CRI",307,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Costa Rica / Ecuador (Galapagos)","CRI","CRI",307,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Costa Rica / Ecuador (Galapagos)","CRI","CRI",307,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Costa Rica / Ecuador (Galapagos)","CRI","CRI",307,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Costa Rica / Ecuador (Galapagos)","CRI","CRI",307,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Guyana / Barbados","BRB","BRB",308,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Guyana / Barbados","BRB","BRB",308,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Guyana / Barbados","BRB","BRB",308,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Guyana / Barbados","BRB","BRB",308,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Guyana / Barbados","BRB","BRB",308,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Colombia / Dominican Republic","DOM","DOM",309,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Colombia / Dominican Republic","DOM","DOM",309,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Colombia / Dominican Republic","DOM","DOM",309,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Colombia / Dominican Republic","DOM","DOM",309,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Colombia / Dominican Republic","DOM","DOM",309,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Colombia / Jamaica","JAM","JAM",310,"coldcorals",1,0,0,0,0,0,0
+"Joint regime area Colombia / Jamaica","JAM","JAM",310,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Colombia / Jamaica","JAM","JAM",310,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Colombia / Jamaica","JAM","JAM",310,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Colombia / Jamaica","JAM","JAM",310,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Honduras / Cayman Islands","HND","HND",311,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Honduras / Cayman Islands","HND","HND",311,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Honduras / Cayman Islands","HND","HND",311,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Honduras / Cayman Islands","HND","HND",311,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Honduras / Cayman Islands","HND","HND",311,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Denmark (Faeroe Islands)","FRO","DNK",312,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Denmark (Faeroe Islands)","FRO","DNK",312,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Denmark (Faeroe Islands)","FRO","DNK",312,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Denmark (Faeroe Islands)","FRO","DNK",312,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Denmark (Faeroe Islands)","FRO","DNK",312,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Ecuador / Colombia","ECU","ECU",313,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Ecuador / Colombia","ECU","ECU",313,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Ecuador / Colombia","ECU","ECU",313,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Ecuador / Colombia","ECU","ECU",313,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Ecuador / Colombia","ECU","ECU",313,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Norway (Jan Mayen)","ISL","ISL",314,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Norway (Jan Mayen)","ISL","ISL",314,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Norway (Jan Mayen)","ISL","ISL",314,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Norway (Jan Mayen)","ISL","ISL",314,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Iceland / Norway (Jan Mayen)","ISL","ISL",314,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Nigeria / Sao Tome and Principe","STP","STP",315,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Nigeria / Sao Tome and Principe","STP","STP",315,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Nigeria / Sao Tome and Principe","STP","STP",315,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Nigeria / Sao Tome and Principe","STP","STP",315,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Nigeria / Sao Tome and Principe","STP","STP",315,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Italy / France","FRA","FRA",316,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Italy / France","FRA","FRA",316,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Italy / France","FRA","FRA",316,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Italy / France","FRA","FRA",316,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Italy / France","FRA","FRA",316,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Japan / Korea","KOR","KOR",317,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Japan / Korea","KOR","KOR",317,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Japan / Korea","KOR","KOR",317,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Japan / Korea","KOR","KOR",317,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Japan / Korea","KOR","KOR",317,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Sweden / Norway","NOR","NOR",318,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Sweden / Norway","NOR","NOR",318,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Sweden / Norway","NOR","NOR",318,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Sweden / Norway","NOR","NOR",318,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Sweden / Norway","NOR","NOR",318,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area Croatia / Slovenia","HRV","HRV",319,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area Croatia / Slovenia","HRV","HRV",319,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area Croatia / Slovenia","HRV","HRV",319,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area Croatia / Slovenia","HRV","HRV",319,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area Croatia / Slovenia","HRV","HRV",319,"seagrasses",0,0,0,0,NA,NA,NA
+"Joint regime area United States / Russia","USA","USA",320,"coldcorals",0,0,0,0,NA,NA,NA
+"Joint regime area United States / Russia","USA","USA",320,"coralreefs",0,0,0,0,NA,NA,NA
+"Joint regime area United States / Russia","USA","USA",320,"mangroves",0,0,0,0,NA,NA,NA
+"Joint regime area United States / Russia","USA","USA",320,"saltmarshes",0,0,0,0,NA,NA,NA
+"Joint regime area United States / Russia","USA","USA",320,"seagrasses",0,0,0,0,NA,NA,NA
+"Australia","AUS","AUS",321,"coldcorals",295,108,104,4,36.6101694915254,35.2542372881356,1.35593220338983
+"Australia","AUS","AUS",321,"coralreefs",31868,27593,2283,8654,86.5852893184386,7.16392619555667,27.1557675411071
+"Australia","AUS","AUS",321,"mangroves",9748,4868,947,201,49.9384489125975,9.71481329503488,2.06196142798523
+"Australia","AUS","AUS",321,"saltmarshes",13293,4289,1306,88,32.2651019333484,9.82471977732641,0.662002557737155
+"Australia","AUS","AUS",321,"seagrasses",41194,16283,1789,4350,39.5276011069573,4.34286546584454,10.5597902607176
+"Protected Zone established under the Torres Strait Treaty","PNG","PNG",322,"coldcorals",0,0,0,0,NA,NA,NA
+"Protected Zone established under the Torres Strait Treaty","PNG","PNG",322,"coralreefs",44,0,0,0,0,0,0
+"Protected Zone established under the Torres Strait Treaty","PNG","PNG",322,"mangroves",109,0,0,0,0,0,0
+"Protected Zone established under the Torres Strait Treaty","PNG","PNG",322,"saltmarshes",0,0,0,0,NA,NA,NA
+"Protected Zone established under the Torres Strait Treaty","PNG","PNG",322,"seagrasses",62,0,0,0,0,0,0
+"Turkmenistan","TKM","TKM",323,"coldcorals",0,0,0,0,NA,NA,NA
+"Turkmenistan","TKM","TKM",323,"coralreefs",0,0,0,0,NA,NA,NA
+"Turkmenistan","TKM","TKM",323,"mangroves",0,0,0,0,NA,NA,NA
+"Turkmenistan","TKM","TKM",323,"saltmarshes",0,0,0,0,NA,NA,NA
+"Turkmenistan","TKM","TKM",323,"seagrasses",0,0,0,0,NA,NA,NA
