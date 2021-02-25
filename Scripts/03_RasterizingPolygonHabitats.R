@@ -11,7 +11,7 @@ library(tools)
 library(fasterize)
 
 ##### Load Data #####
-ocean <- read_sf("data/data/ocean/ne_110m_ocean.shp")
+r <- raster("data/data/ocean_grid.tif")
 shapefiles <- list.files("data/data/habitats", pattern = "\\.shp$")
 
 for (i in 1:length(shapefiles)) {
@@ -23,11 +23,9 @@ for (i in 1:length(shapefiles)) {
   
   # Chosen projection: World Eckert Iv (equal area)
   behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
-  ocean <- st_transform(ocean, crs = behrmann)
   habitat_poly <- st_transform(habitat_poly, crs = behrmann)
   
   #### Rasterize #####
-  r <- raster(ocean, res = 1000)
   habitat_poly$constant <- 1 
   
   if (unique(st_geometry_type(habitat_poly)) == "MULTIPOINT") {

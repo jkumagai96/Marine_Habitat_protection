@@ -122,6 +122,7 @@ managedR <- fasterize(managed, r, field = "constant")
 
 
 #### Export ####
+writeRaster(r, "data/data/ocean_grid.tif")
 writeRaster(no_takeR, "data/data/mpas/No_take_mpas.tif")
 writeRaster(managedR, "data/data/mpas/Managed_mpas.tif")
 writeRaster(all_mpasR, "data/data/mpas/All_mpas.tif")
