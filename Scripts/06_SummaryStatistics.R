@@ -17,7 +17,7 @@ library(sf)
 
 # once all rasters are created in the "Temp" folder, we can source all the file names
 
-grids <- list.files("data/data/", pattern = "*habitat.tif$") #list files (in this case raster TIFFs)
+grids <- list.files("Data_processed/", pattern = "*habitat.tif$") #list files (in this case raster TIFFs)
 
 # Then we call the polygon we want to use as zone
 poly
@@ -28,7 +28,7 @@ poly$ID <- 1:length(poly$UNION)
 
 
 ## create a raster stack (the stack will be formed by all the files in the Temp folders sourced by list.files)
-s <- stack(paste0("data/data/", grids))
+s <- stack(paste0("Data_processed/", grids))
 
 
 # Zonal statistic ---------------------------------------------------------
@@ -36,7 +36,7 @@ s <- stack(paste0("data/data/", grids))
 ## Now we will extract in parallel, uncomment below to activate the cluster parallelization
 beginCluster(n=5) # Parallel processing!! BE CAREFUL, Select your cores carefully usually one less than the one you have available
 
-ex <- extract(s, poly, fun=sum, na.rm=TRUE, df=TRUE)
+ex <- raster::extract(s, poly, fun=sum, na.rm=TRUE, df=TRUE)
 
 endCluster() # this ends the cluster use of the cpu
 
@@ -48,6 +48,9 @@ write.csv(ex, file = "Data_processed/habitat_area.csv")
 
 
 
+
+
+#### END OF SCRIPT #####
 
 
 #### END OF SCRIPT #####

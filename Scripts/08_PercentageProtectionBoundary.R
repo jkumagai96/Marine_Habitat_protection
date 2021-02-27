@@ -1,5 +1,5 @@
 # Joy Kumagai 
-# Date: 20/11/2020
+# Date: Feb 2021
 # Calculating Per Boundary (EEZ/Land) Percentage Protection 
 # Marine Habitat Protection Indicator
 
@@ -8,8 +8,8 @@ library(tidyverse)
 library(sf)
 
 #### Load and clean data ####
-data <- read.csv("data/data/habitat_area.csv")
-poly <- read_sf("data/data/EEZ_Land/EEZ_Land_v3_202030.shp")
+data <- read.csv("Data_processed/habitat_area.csv")
+poly 
 
 area <- poly %>% 
   as.data.frame() %>% 
@@ -50,8 +50,8 @@ df <- full_join(area, df, by = "ID")
 
 ###### Calculate Percent protected  #####
 df <- df %>% mutate(pp_all_mpas = (all_mpas/total)*100, 
-              pp_managed = (managed/total)*100, 
-              pp_no_take = (no_take/total)*100)
+                    pp_managed = (managed/total)*100, 
+                    pp_no_take = (no_take/total)*100)
 
 #### Export ####
-write.csv(df, "data/percent_protected_boundaries_new.csv", row.names = F)
+write.csv(df, "Data_final/percent_protected_boundaries.csv", row.names = F)

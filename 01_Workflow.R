@@ -19,7 +19,7 @@ library(raster)
 ### Regions of interest (Union of EEZ and Land polygons from marineregions.org version 3)
 
 behrmann.crs <- CRS('+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs')
-poly <- read_sf("Data_original/eez_land/EEZ_Land_test.shp") %>% 
+poly <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp") %>%
   st_transform(., crs = behrmann.crs) 
 
 ### ocean is the file we create the reference grid from (Ocean 110m from marineregions.org)

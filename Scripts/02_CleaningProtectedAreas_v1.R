@@ -1,5 +1,5 @@
 # Joy Kumagai
-# Date: Nov 2020
+# Date: Feb 2021
 # Cleaning Protected Areas - version 1
 # Marine Habitat Protection Indicator
 
@@ -58,7 +58,7 @@ global_mpas <- rbind(mpas1, mpas2, mpas3)
 
 #### Projecting Data ####
 crs(global_mpas)
-# Chosen projection: World Eckert Iv (equal area)
+# Chosen projection:Behrmann (equal area) 
 behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
 global_mpas <- st_transform(global_mpas, crs = behrmann)
 global_mpas$constant <- 1 # for rasterization later
