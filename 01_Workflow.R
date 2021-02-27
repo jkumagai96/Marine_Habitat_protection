@@ -1,19 +1,34 @@
 # Joy Kumagai and Fabio Favorreto 
 # Date: Nov 2020
-# Final Workflow with Google Drive Download
+# Final Workflow specifying inputs 
 # Marine Habitat Protection Indicator
 
-
-library(googledrive)
 library(sf)
+library(raster)
 
-#### File downloads ####
-# Habitats 
-temp <- tempfile(fileext = ".zip")
-dl <- drive_download(as_id("1VnAK8ATBbXkFFb-UvwahNpBu1L_-_-cg"), 
-                     path = temp, overwrite = TRUE)
-out <- unzip(temp, exdir = "data/")
-test <- list.files("data/", pattern = "*.shp", full.names = T) 
+#### Inputs to Workflow ####
+
+# All processed data is added into a folder called Data_processed within the scripts
+# Final CSV is added into a folder called Data_final within the scripts
+
+### Habitats 
+# For the habitats to process correctly in the second script (RaterizingPolygonHabitats) the habitat data needs to be in this file format: 
+# "Data_Original/habitats/"
+# Please add all habitats into that folder that you would like to use 
+
+### Regions of interest (Union of EEZ and Land polygons from marineregions.org version 3)
+
+behrmann.crs <- CRS('+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs')
+poly <- read_sf("data/data/EEZ_Land/EEZ_Land_v3_202030.shp") %>% 
+  st_transform(., crs = behrmann.crs) 
+
+### ocean is the file we create the reference grid from (Ocean 110m from marineregions.org)
+ocean <- read_sf("Data_original/ocean/ne_110m_ocean.shp") #  version 4.1.0
+
+### MPAS February 2021 Protected Planet Public Download
+global_pas1 <- read_sf("Data_original/mpas/WDPA_Feb2021_Public_shp_0/WDPA_Feb2021_Public_shp-polygons.shp") # Points were not included 
+global_pas2 <- read_sf("Data_original/mpas/WDPA_Feb2021_Public_shp_1/WDPA_Feb2021_Public_shp-polygons.shp") # Points were not included 
+global_pas3 <- read_sf("Data_original/mpas/WDPA_Feb2021_Public_shp_2/WDPA_Feb2021_Public_shp-polygons.shp") # Points were not included 
 
 
 #### Workflow ####
@@ -33,4 +48,4 @@ source("Scripts/06_SummaryStatistics.R")
 # Step 5: Summarizing Final Outputs 
 source("Scripts/07_PercentageProtectionWorld.R")
 
-source("Scripts/08_PercentageProtectionBoundary.R")
+source("Scripts/08_PercentageProtectionBoundary.R") # Please adjust this step with the habitats you are using 

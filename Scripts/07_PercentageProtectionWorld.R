@@ -8,11 +8,9 @@ library(tidyverse)
 library(raster)
 library(stringr)
 
-#### Declare Functions ####
-
 #### Load Data ####
-grids <- list.files("data/data/", pattern = "*.tif$")
-s <- stack(paste0("data/data/", grids))
+grids <- list.files("Data_processed/", pattern = "*habitat.tif$")
+s <- stack(paste0("Data_processed/", grids))
 
 df <- data.frame(str_sub(grids, end = -5))
 df[,2:3] <- NA
@@ -29,4 +27,4 @@ df <- df %>%
   mutate(percent_protected = (pixel_counts/(max(pixel_counts)))*100) %>% 
   ungroup()
 
-write.csv(df, "data/percent_protected_world.csv", row.names = F)
+write.csv(df, "Data_final/percent_protected_world.csv", row.names = F)

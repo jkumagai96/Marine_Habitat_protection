@@ -11,11 +11,11 @@ library(tools)
 library(fasterize)
 
 ##### Load Data #####
-r <- raster("data/data/ocean_grid.tif")
-shapefiles <- list.files("data/data/habitats", pattern = "\\.shp$")
+r <- raster("Data_processed/ocean_grid.tif")
+shapefiles <- list.files("Data_original/habitats", pattern = "\\.shp$")
 
 for (i in 1:length(shapefiles)) {
-  path <- paste0("data/data/habitats/", shapefiles[i])
+  path <- paste0("Data_original/habitats/", shapefiles[i])
   habitat_poly <- read_sf(path)
   
   ##### Project Data #####
@@ -42,7 +42,7 @@ for (i in 1:length(shapefiles)) {
   }
   
   #### Export ####
-  exportpath <- paste0("data/data/", file_path_sans_ext(shapefiles[i]), ".tif")
+  exportpath <- paste0("Data_processed/", file_path_sans_ext(shapefiles[i]), "habitat.tif")
   writeRaster(habitatR, exportpath, overwrite = TRUE)
   print(paste0("Habitat Raster has been written to ", exportpath))
 }

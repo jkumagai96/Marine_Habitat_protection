@@ -17,12 +17,10 @@ library(sf)
 
 # once all rasters are created in the "Temp" folder, we can source all the file names
 
-grids <- list.files("data/data/", pattern = "*.tif$") #list files (in this case raster TIFFs)
+grids <- list.files("data/data/", pattern = "*habitat.tif$") #list files (in this case raster TIFFs)
 
-# Then we read the polygon we want to use as zone
-behrmann.crs <- CRS('+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs')
-poly <- read_sf("data/data/EEZ_Land/EEZ_Land_v3_202030.shp") %>% 
-  st_transform(., crs = behrmann.crs) 
+# Then we call the polygon we want to use as zone
+poly
 
 poly <- as(poly, "Spatial") # we need this format to speed extract function
 poly$ID <- 1:length(poly$UNION)
@@ -46,7 +44,7 @@ endCluster() # this ends the cluster use of the cpu
 
 # Save output -------------------------------------------------------------
 
-write.csv(ex, file = "data/data/habitat_area.csv")
+write.csv(ex, file = "Data_processed/habitat_area.csv")
 
 
 

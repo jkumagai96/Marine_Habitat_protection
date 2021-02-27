@@ -46,19 +46,6 @@ clean <- function (x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0",
   return(x)
 }
 
-##### Load Data #####
-ocean <- read_sf("data/data/ocean/ne_110m_ocean.shp")
-
-#### Download Data #### 
-
-# Need to do this automatically in the future 
-# wdpa_latest_version() # states which version we are using -- not working anymore 
-# Points were not included 
-global_pas1 <- read_sf("data/data/mpas/WDPA_WDOECM_wdpa_shp0/WDPA_WDOECM_wdpa_shp-polygons.shp")
-global_pas2 <- read_sf("data/data/mpas/WDPA_WDOECM_wdpa_shp1/WDPA_WDOECM_wdpa_shp-polygons.shp")
-global_pas3 <- read_sf("data/data/mpas/WDPA_WDOECM_wdpa_shp2/WDPA_WDOECM_wdpa_shp-polygons.shp") 
-
-
 #### Removing not implemented, and UNESCO reserves ####
 # Remove not implemented and UNESCO reserves
 mpas1 <- clean(global_pas1)
@@ -122,7 +109,7 @@ managedR <- fasterize(managed, r, field = "constant")
 
 
 #### Export ####
-writeRaster(r, "data/data/ocean_grid.tif")
-writeRaster(no_takeR, "data/data/mpas/No_take_mpas.tif")
-writeRaster(managedR, "data/data/mpas/Managed_mpas.tif")
-writeRaster(all_mpasR, "data/data/mpas/All_mpas.tif")
+writeRaster(r, "Data_processed/ocean_grid.tif")
+writeRaster(no_takeR, "Data_processed/No_take_mpas.tif")
+writeRaster(managedR, "Data_processed/Managed_mpas.tif")
+writeRaster(all_mpasR, "Data_processed/All_mpas.tif")
