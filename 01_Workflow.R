@@ -22,7 +22,7 @@ behrmann.crs <- CRS('+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +e
 poly <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp") %>%
   st_transform(., crs = behrmann.crs) 
 
-### ocean is the file we create the reference grid from (Ocean 110m from marineregions.org)
+### ocean is the file we create the reference grid from (Ocean 110m from https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-ocean/)
 ocean <- read_sf("Data_original/ocean/ne_110m_ocean.shp") #  version 4.1.0
 
 ### MPAS February 2021 Protected Planet Public Download
