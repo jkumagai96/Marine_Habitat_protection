@@ -28,8 +28,8 @@ poly$ID <- 1:length(poly$UNION)
 
 
 ## create a raster stack (the stack will be formed by all the files in the Temp folders sourced by list.files)
-s <- stack(paste0("Data_processed/", grids))
-
+tempwd <- "Temp/"
+s <- raster::writeRaster(x = stack(paste0("Data_processed/", grids)), paste0(tempwd, "stacked"), overwrite = TRUE)
 
 # Zonal statistic ---------------------------------------------------------
 

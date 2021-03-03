@@ -36,7 +36,7 @@ clean <- function (x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0",
             cli::symbol$tick)
   }
   if (verbose) 
-    message("removing UNESCO reserves: ", cli::symbol$continue, 
+    message("removing UNESCO-MAB Biosphere Reserve: ", cli::symbol$continue, 
             "\r", appendLF = FALSE)
   x <- x[x$DESIG_ENG != "UNESCO-MAB Biosphere Reserve", ]
   if (verbose) {
