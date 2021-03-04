@@ -6,6 +6,7 @@
 #### Load Packages ####
 library(tidyverse)
 library(sf)
+library(janitor)
 
 #### Load and clean data ####
 data <- read.csv("Data_processed/habitat_area.csv")
@@ -48,10 +49,29 @@ df <- rbind(coldcorals, coralreefs, mangroves, saltmarshes, seagrasses) %>%
   dplyr::select(habitat, total, all_mpas, managed, no_take, ID)
 df <- full_join(area, df, by = "ID")
 
+# landlocked countries
+landlocked <- read.csv('Data_original/landlocked.csv') %>% 
+  clean_names()
+
 ###### Calculate Percent protected  #####
 df <- df %>% mutate(pp_all_mpas = (all_mpas/total)*100, 
                     pp_managed = (managed/total)*100, 
-                    pp_no_take = (no_take/total)*100)
+                    pp_no_take = (no_take/total)*100) 
+df <- df %>% 
+  group_by(UNION) %>% 
+  mutate(pp_mean_all = mean(pp_all_mpas, na.rm = TRUE), # average over all habitats considered
+         pp_mean_notake = mean(pp_no_take, na.rm = TRUE)) # average over all habitats considered within no-take MPAs
+
+##### Filtering countries #####
+landlocked <- landlocked$country # creates a vector of countries to eliminate that are landlocked
+
+# filtering out landlocked countries
+df <- df %>% 
+  filter(!UNION %in% landlocked)
+
+df <- df %>% 
+  filter(!grepl("Joint regime", UNION)) %>% # filtering out joint regime countries
+  filter(!grepl("Overlapping claim", UNION)) # filtering out overlapping claims 
 
 #### Export ####
 write.csv(df, "Data_final/percent_protected_boundaries.csv", row.names = F)
