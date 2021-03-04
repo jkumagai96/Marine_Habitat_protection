@@ -10,7 +10,7 @@ library(stringr)
 
 #### Load Data ####
 grids <- list.files("Data_processed/", pattern = "*habitat.tif$")
-s <- stack(paste0("Data_processed/", grids))
+s 
 
 df <- data.frame(str_sub(grids, end = -5))
 df[,2:3] <- NA
