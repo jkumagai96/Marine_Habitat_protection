@@ -3,8 +3,18 @@
 # Final Workflow specifying inputs 
 # Marine Habitat Protection Indicator
 
-library(sf)
-library(raster)
+###### All packages used ##### 
+library(tidyverse) # to easily load and use the "tidyverse"
+library(sf) # For handling spatial vector data
+library(raster) # For handling spatial raster data
+library(fasterize) # For a faster function to rasterize the habitat data
+library(tools) 
+library(stringr) # to easily sort some datasets 
+library(janitor) # to clean some datasetes
+
+# packages for parallel processing
+library(parallel)
+library(snow)
 
 #### Inputs to Workflow ####
 
@@ -22,7 +32,7 @@ behrmann.crs <- CRS('+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +e
 poly <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp") %>%
   st_transform(., crs = behrmann.crs) 
 
-### ocean is the file we create the reference grid from (Ocean 110m from https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-ocean/)
+### ocean is the file we create the reference grid from (Ocean 110m from marineregions.org)
 ocean <- read_sf("Data_original/ocean/ne_110m_ocean.shp") #  version 4.1.0
 
 ### MPAS February 2021 Protected Planet Public Download
@@ -39,13 +49,13 @@ source("Scripts/02_CleaningProtectedAreas_v1.R")
 source("Scripts/03_RasterizingPolygonHabitats.R")
 
 # Step 3: Raster intersections with protected areas
-source("Scripts/05_CombiningHabitatsandMPAs.R")
+source("Scripts/04_CombiningHabitatsandMPAs.R")
 
 # Step 4: Summarizing habitat information per boundary 
 # Be careful! This involves parallel processing
-source("Scripts/06_SummaryStatistics.R")
+source("Scripts/05_SummaryStatistics.R")
 
 # Step 5: Summarizing Final Outputs 
-source("Scripts/07_PercentageProtectionWorld.R")
+source("Scripts/06_PercentageProtectionWorld.R")
 
-source("Scripts/08_PercentageProtectionBoundary.R") # Please adjust this step with the habitats you are using 
+source("Scripts/07_PercentageProtectionBoundary.R") # Please adjust this step with the habitats you are using 
