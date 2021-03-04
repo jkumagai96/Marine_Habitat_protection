@@ -19,33 +19,33 @@ area <- poly %>%
 column_names <- c("ID", "all_mpas", "managed", "no_take", "total", "habitat")
 
 coldcorals <- data %>% 
-  select(ID, starts_with("ColdCorals")) %>% 
+  dplyr::select(ID, starts_with("ColdCorals")) %>% 
   mutate(hab = "coldcorals")
 colnames(coldcorals) <- column_names 
 
 coralreefs <- data %>% 
-  select(ID, starts_with("CoralReef")) %>% 
+  dplyr::select(ID, starts_with("CoralReef")) %>% 
   mutate(hab = "coralreefs")
 colnames(coralreefs) <- column_names 
 
 mangroves <- data %>% 
-  select(ID, starts_with("Mangroves")) %>% 
+  dplyr::select(ID, starts_with("Mangroves")) %>% 
   mutate(hab = "mangroves")
 colnames(mangroves) <- column_names 
 
 saltmarshes <- data %>% 
-  select(ID, starts_with("Saltmarshes")) %>% 
+  dplyr::select(ID, starts_with("Saltmarshes")) %>% 
   mutate(hab = "saltmarshes")
 colnames(saltmarshes) <- column_names 
 
 seagrasses <- data %>% 
-  select(ID, starts_with("Seagrasses")) %>% 
+  dplyr::select(ID, starts_with("Seagrasses")) %>% 
   mutate(hab = "seagrasses")
 colnames(seagrasses) <- column_names 
 
 
 df <- rbind(coldcorals, coralreefs, mangroves, saltmarshes, seagrasses) %>% 
-  select(habitat, total, all_mpas, managed, no_take, ID)
+  dplyr::select(habitat, total, all_mpas, managed, no_take, ID)
 df <- full_join(area, df, by = "ID")
 
 ###### Calculate Percent protected  #####
