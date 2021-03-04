@@ -53,4 +53,4 @@ write.csv(ex, file = "Data_processed/habitat_area.csv")
 #### END OF SCRIPT #####
 
 
-#### END OF SCRIPT #####
+
