@@ -3,18 +3,31 @@
 # Combining Habitats and MPAs
 # Marine Habitat Protection Indicator or Marine Protection Index (MPI)
 
-# Purpose is to create the files with intersections of each MPA layer and each habitat, so we can summarize by boundaries in the next script
+# Purpose is to create the files with intersections of each MPA layer and each 
+# habitat, so we can summarize by boundaries in the next script
 
-#### Load Packages ####
+# Loading packages --------------------------------------------------------
+
 library(tidyverse)
 library(raster)
 library(stringr)
+library(foreach)
+library(doParallel)
 
-#### Load Data ####
+# Loading data ------------------------------------------------------------
+
+
 mpas_files <- list.files("Data_processed/", pattern = "*mpas.tif$") #list files (in this case raster TIFFs)
 habitat_files <- list.files("Data_processed/", pattern = "*habitat.tif$") #list files (in this case raster TIFFs)
 
-for (i in habitat_files) {
+
+#setup parallel backend to use many processors
+cores = detectCores()
+cl <- makeCluster(cores[1] - 1) #not to overload your computer
+registerDoParallel(cl)
+
+
+foreach(i = habitat_files) %dopar% {
   habitat <- str_sub(i, end = -5)
   r1 <- raster(paste0("Data_processed/", i))
   for (ii in mpas_files) {
