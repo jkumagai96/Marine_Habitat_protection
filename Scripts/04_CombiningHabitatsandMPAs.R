@@ -27,10 +27,10 @@ cl <- makeCluster(cores[1] - 1) #not to overload your computer
 registerDoParallel(cl)
 
 
-foreach(i = habitat_files) %dopar% {
+foreach(i = habitat_files) %:% {
   habitat <- str_sub(i, end = -5)
   r1 <- raster(paste0("Data_processed/", i))
-  for (ii in mpas_files) {
+  foreach (ii = mpas_files) %dopar% {
     r2 <- raster(paste0("Data_processed/", ii))
     r3 <- r1*r2 
     mpa_type <- str_sub(ii, end = -5)
