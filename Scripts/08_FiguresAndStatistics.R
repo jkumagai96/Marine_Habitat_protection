@@ -1,5 +1,5 @@
 # Joy Kumagai 
-# Date: March 2021
+# Date: Narch 2021
 # Figures 
 # Marine Habitat Protection Indicator
 
@@ -17,7 +17,6 @@ eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp")
 land <- ne_countries(scale = 110, returnclass = "sf")
 
 ##### Formating Data #####
-
 data <- data %>% 
   dplyr::select(UNION, pp_mean_all, pp_mean_notake) %>% 
   unique()
@@ -44,7 +43,7 @@ no_take <- data_world %>%
 all <- data_world %>% 
   dplyr::select(Name, percent_protected) %>% 
   filter(grepl("All", Name)) %>% 
-  mutate(type = "All") %>% 
+  mutate(type = "All")%>% 
   mutate(habitat = habitats)
 
 data2 <- rbind(no_take, all) %>% 
@@ -67,22 +66,22 @@ lines <- graticule::graticule(lons = long, lats = lat, proj = robin) # graticule
 # Create classes to show the data for all MPAs
 classes <- c('0-10%','10-30%', '30-50%', '50-75%', '75-100%')
 eez_land$pp_mean_groups <- NA
-eez_land$pp_mean_groups[eez_land$pp_mean_all <= 10] <- 1
-eez_land$pp_mean_groups[eez_land$pp_mean_all > 10 & eez_land$pp_mean_all <= 30] <- 2 
-eez_land$pp_mean_groups[eez_land$pp_mean_all > 30 & eez_land$pp_mean_all <= 50] <- 3 
-eez_land$pp_mean_groups[eez_land$pp_mean_all > 50 & eez_land$pp_mean_all <= 75] <- 4 
-eez_land$pp_mean_groups[eez_land$pp_mean_all > 75 & eez_land$pp_mean_all <= 100] <- 5 
+eez_land$pp_mean_groups[eez_land$pp_mean_all <=10] <-1
+eez_land$pp_mean_groups[eez_land$pp_mean_all > 10 & eez_land$pp_mean_all <= 30] <-2 
+eez_land$pp_mean_groups[eez_land$pp_mean_all > 30 & eez_land$pp_mean_all <= 50] <-3 
+eez_land$pp_mean_groups[eez_land$pp_mean_all > 50 & eez_land$pp_mean_all <= 75] <-4 
+eez_land$pp_mean_groups[eez_land$pp_mean_all > 75 & eez_land$pp_mean_all <= 100] <-5 
 
 eez_land$cols <- c("#D1EAF0", "#92E1F7","#3AD0F9","#2195B6","#034B60")[eez_land$pp_mean_groups]
 
 # Create classes to show the data for just no-take MPAs
 classes2 <- c('0%','<2%', '2-5%', '5-10%', '>10%')
 eez_land$pp_mean_notake_groups <- NA
-eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake == 0] <- 1
-eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake > 0 & eez_land$pp_mean_notake <= 2] <- 2 
-eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake > 2 & eez_land$pp_mean_notake <= 5] <- 3 
-eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake > 5 & eez_land$pp_mean_notake <= 10] <- 4 
-eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake > 10] <- 5 
+eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake ==0] <-1
+eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake > 0 & eez_land$pp_mean_notake <= 2] <-2 
+eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake > 2 & eez_land$pp_mean_notake <= 5] <-3 
+eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake > 5 & eez_land$pp_mean_notake <= 10] <-4 
+eez_land$pp_mean_notake_groups[eez_land$pp_mean_notake > 10] <-5 
 
 # plotting 
 
