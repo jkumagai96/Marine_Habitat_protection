@@ -9,107 +9,50 @@ library(tidyverse)
 library(raster)
 library(sf)
 library(fasterize)
+require(future.apply)
 
-#### Declare Functions ####
-clean <- function (x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0", 
-                                  "+y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs"), snap_tolerance = 1, 
-                   simplify_tolerance = 0, geometry_precision = 1500, erase_overlaps = TRUE, 
-                   verbose = interactive()) 
-{
-  assertthat::assert_that(inherits(x, "sf"), nrow(x) > 0, 
-                          all(assertthat::has_name(x, c("ISO3", "STATUS", "DESIG_ENG", 
-                                                        "REP_AREA", "MARINE"))), assertthat::is.string(crs) || 
-                            assertthat::is.count(crs), assertthat::is.number(snap_tolerance), 
-                          isTRUE(snap_tolerance >= 0), assertthat::is.number(simplify_tolerance), 
-                          isTRUE(simplify_tolerance >= 0), assertthat::is.count(geometry_precision), 
-                          assertthat::is.flag(erase_overlaps), assertthat::is.flag(verbose))
-  assertthat::assert_that(sf::st_crs(x) == sf::st_crs(4326), 
-                          msg = "argument to x is not longitude/latitude (i.e. EPSG:4326)")
-  if (verbose) 
-    message("removing areas that are not implemented: ", 
-            cli::symbol$continue, "\r", appendLF = FALSE)
-  x <- x[x$STATUS %in% c("Designated", "Inscribed", "Established"), 
-  ]
-  if (verbose) {
-    utils::flush.console()
-    message("removing areas that are not implemented: ", 
-            cli::symbol$tick)
-  }
-  if (verbose) 
-    message("removing UNESCO-MAB Biosphere Reserve: ", cli::symbol$continue, 
-            "\r", appendLF = FALSE)
-  x <- x[x$DESIG_ENG != "UNESCO-MAB Biosphere Reserve", ]
-  if (verbose) {
-    utils::flush.console()
-    message("removing UNESCO reserves: ", cli::symbol$tick)
-  }
-  return(x)
+# Creating output directory -----------------------------------------------
+
+dir.create(path = "Data_processed", showWarnings = FALSE)
+
+# Ocean rasterizing and saving --------------------------------------------
+
+r <- raster(st_transform(read_sf("Data_original/ocean/ne_110m_ocean.shp"), crs = behrmann), res = 1000)
+
+writeRaster(r, "Data_processed/ocean_grid.tif", overwrite = TRUE)
+
+# MPA layers --------------------------------------------------------------
+
+nworkers <- detectCores() 
+plan(multisession, gc = TRUE, workers = nworkers - 1)
+mpas <- future_lapply(mpa_files, FUN = clean, future.seed = TRUE)
+ntz <- future_lapply(mpa_files, FUN = clean_NTZ, future.seed = TRUE)
+managed <- future_lapply(mpa_files, FUN = clean_managed, future.seed = TRUE)
+gc()
+
+
+# Checking projection
+
+if(!st_crs(mpas[[1]])$proj4string == st_crs(behrmann.crs)$proj4string) {
+        stop()
 }
 
-#### Removing not implemented, and UNESCO reserves ####
-# Remove not implemented and UNESCO reserves
-mpas1 <- clean(global_pas1)
-mpas2 <- clean(global_pas2)
-mpas3 <- clean(global_pas3)
 
-# Combine Data into one layer 
-global_mpas <- rbind(mpas1, mpas2, mpas3)
+#### Rasterization and Export ####
 
+all_mpas <- future_lapply(mpas, FUN = function(mpas) fasterize(mpas, r, field = "constant"), future.seed = TRUE)
 
-#### Projecting Data ####
-crs(global_mpas)
-# Chosen projection:Behrmann (equal area) 
-behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
-global_mpas <- st_transform(global_mpas, crs = behrmann)
-global_mpas$constant <- 1 # for rasterization later
+save_raster(all_mpas, "Data_processed/All_mpas.tif")
 
-ocean <- st_transform(ocean, crs = behrmann)
+ntz_mpas <- future_lapply(ntz, FUN = function(ntz) fasterize(ntz, r, field = "constant"), future.seed = TRUE)
+
+save_raster(ntz_mpas, "Data_processed/No_take_mpas.tif")
+
+managed_mpas <- future_lapply(managed, FUN = function(managed) fasterize(managed, r, field = "constant"), future.seed = TRUE)
+
+save_raster(all_mpas, "Data_processed/Managed_mpas.tif")
 
 
-#### Filter based on MPA Status ####
-all_mpas <- global_mpas
-
-# global_mpas %>% filter(NO_TAKE == "Part")
-# what do we do with those that are partially no-take?????? # for now we are not going to include it 
-
-no_take <- global_mpas %>% 
-  filter(NO_TAKE == "All")
-
-managed <- global_mpas %>% 
-  filter(MANG_PLAN != "In process" &
-           MANG_PLAN != "In progress" &
-           MANG_PLAN !=  "Management plan not implemented and not available" &
-           MANG_PLAN != "Management plan in preparation" &
-           MANG_PLAN != "Management plan available but not implemented" &
-           MANG_PLAN != "TBD" &
-           MANG_PLAN != "Under review" &
-           MANG_PLAN != "In development" &
-           MANG_PLAN != "Draft" &
-           MANG_PLAN != "http://" &
-           MANG_PLAN != "In Development" &
-           MANG_PLAN != "Currently being developed" &
-           MANG_PLAN != "Not Available" &
-           MANG_PLAN != "Management plan is available but not implemented" &
-           MANG_PLAN != "Management Plan is ImplentedNot Available" &
-           MANG_PLAN != "Management plan is not implented and not available" &
-           MANG_PLAN != "Management plan is not implented but is available" &
-           MANG_PLAN != "None" &
-           MANG_PLAN != "Management plan is not implemented and not available" &
-           MANG_PLAN !=  "In preparation" &
-           MANG_PLAN != "Not Existing" &
-           MANG_PLAN != "No" &
-           MANG_PLAN != "Not Reported")
+rm(list = ls()[ls() %in% c("all_mpas", "managed", "managed_mpas", "mpas", "ntz")])
 
 
-#### Rasterization ####
-r <- raster(ocean, res = 1000)
-all_mpasR <- fasterize(all_mpas, r, field = "constant")
-no_takeR <- fasterize(no_take, r, field = "constant")
-managedR <- fasterize(managed, r, field = "constant")
-
-
-#### Export ####
-writeRaster(r, "Data_processed/ocean_grid.tif")
-writeRaster(no_takeR, "Data_processed/No_take_mpas.tif")
-writeRaster(managedR, "Data_processed/Managed_mpas.tif")
-writeRaster(all_mpasR, "Data_processed/All_mpas.tif")

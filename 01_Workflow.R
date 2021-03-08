@@ -1,4 +1,4 @@
-# Joy Kumagai and Fabio Favorreto 
+# Joy Kumagai and Fabio Favoretto 
 # Date: Feb 2021
 # Final Workflow specifying inputs 
 # Marine Habitat Protection Indicator
@@ -16,29 +16,16 @@ library(janitor) # to clean some datasetes
 library(parallel)
 library(snow)
 
-#### Inputs to Workflow ####
-
-# All processed data is added into a folder called Data_processed within the scripts
-# Final CSV is added into a folder called Data_final within the scripts
-
-### Habitats 
-# For the habitats to process correctly in the second script (RaterizingPolygonHabitats) the habitat data needs to be in this file format: 
-# "Data_Original/habitats/"
-# Please add all habitats into that folder that you would like to use 
+source("Functions/R_custom_functions.R")
 
 ### Regions of interest (Union of EEZ and Land polygons from marineregions.org version 3)
 
 behrmann.crs <- CRS('+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs')
-poly <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp") %>%
-  st_transform(., crs = behrmann.crs) 
+behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
 
-### ocean is the file we create the reference grid from (Ocean 110m from marineregions.org)
-ocean <- read_sf("Data_original/ocean/ne_110m_ocean.shp") #  version 4.1.0
 
 ### MPAS February 2021 Protected Planet Public Download
-global_pas1 <- read_sf("Data_original/mpas/WDPA_Feb2021_Public_shp_0/WDPA_Feb2021_Public_shp-polygons.shp") # Points were not included 
-global_pas2 <- read_sf("Data_original/mpas/WDPA_Feb2021_Public_shp_1/WDPA_Feb2021_Public_shp-polygons.shp") # Points were not included 
-global_pas3 <- read_sf("Data_original/mpas/WDPA_Feb2021_Public_shp_2/WDPA_Feb2021_Public_shp-polygons.shp") # Points were not included 
+mpa_files <- list.files("Data_original/mpas/", pattern = "\\.shp$", recursive = T, full.names = T)
 
 
 #### Workflow ####
