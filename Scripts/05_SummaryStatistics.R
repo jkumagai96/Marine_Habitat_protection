@@ -36,9 +36,8 @@ s <- raster::writeRaster(x = stack(paste0("Data_processed/", grids)),
 # Zonal statistic ---------------------------------------------------------
 
 ## Now we will extract in parallel, uncomment below to activate the cluster parallelization
-cores = detectCores()
 
-beginCluster(n = cores - 1) 
+beginCluster(n = cores) 
 
 ex <- raster::extract(s, poly, fun = sum, na.rm = TRUE, df = TRUE)
 

@@ -23,8 +23,8 @@ writeRaster(r, "Data_processed/ocean_grid.tif", overwrite = TRUE)
 
 # MPA layers --------------------------------------------------------------
 
-nworkers <- detectCores() 
-plan(multisession, gc = TRUE, workers = nworkers - 1)
+
+plan(multisession, gc = TRUE, workers = cores)
 mpas <- future_lapply(mpa_files, FUN = clean, future.seed = TRUE)
 ntz <- future_lapply(mpa_files, FUN = clean_NTZ, future.seed = TRUE)
 managed <- future_lapply(mpa_files, FUN = clean_managed, future.seed = TRUE)
