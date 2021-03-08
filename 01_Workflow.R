@@ -13,6 +13,7 @@ library(stringr) # to easily sort some datasets
 library(janitor) # to clean some datasetes
 
 # packages for parallel processing
+library(doParallel)
 library(parallel)
 library(snow)
 

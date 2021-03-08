@@ -158,15 +158,3 @@ clean_managed <- function(x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0",
 }
 
 
-
-## Binding and saving
-
-save_raster <- function(x, path){
-        
-        full <- docall(merge, x[1:length(x)])
-        
-        writeRaster(full, path, overwrite = T)
-
-}
-
-
