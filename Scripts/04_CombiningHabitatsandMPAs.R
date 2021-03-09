@@ -21,14 +21,10 @@ mpas_files <- list.files("Data_processed/", pattern = "*mpas.tif$") #list files 
 habitat_files <- list.files("Data_processed/", pattern = "*habitat.tif$") #list files (in this case raster TIFFs)
 
 
-cl <- makeCluster(cores)
-registerDoParallel(cl)
-
-
-foreach(i = 1:length(habitat_files)) %:% {
+for (i in habitat_files) {
   habitat <- str_sub(i, end = -5)
   r1 <- raster(paste0("Data_processed/", i))
-  foreach(ii = 1:length(mpas_files)) %dopar% {
+  for (ii in mpas_files) {
     r2 <- raster(paste0("Data_processed/", ii))
     r3 <- r1*r2 
     mpa_type <- str_sub(ii, end = -5)
@@ -38,3 +34,5 @@ foreach(i = 1:length(habitat_files)) %:% {
   }
   
 }
+
+
