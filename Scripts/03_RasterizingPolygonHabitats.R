@@ -21,9 +21,8 @@ r <- raster("Data_processed/ocean_grid.tif")
 
 shapefiles <- list.files("Data_original/habitats/", pattern = "\\.shp$")
 
-#setup parallel backend to use many processors
-cores = detectCores()
-cl <- makeCluster(cores[1] - 1) #not to overload your computer
+
+cl <- makeCluster(cores) 
 registerDoParallel(cl)
 
 

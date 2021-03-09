@@ -19,6 +19,11 @@ library(snow)
 
 source("Functions/R_custom_functions.R")
 
+
+## SELECT NUMBER OF CORES FOR PARALLEL PROCESSING
+
+cores <- 5
+
 ### Regions of interest (Union of EEZ and Land polygons from marineregions.org version 3)
 
 behrmann.crs <- CRS('+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs')
