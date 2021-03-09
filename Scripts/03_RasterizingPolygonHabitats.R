@@ -1,22 +1,24 @@
-# Joy Kumagai
+# Joy Kumagai and Fabio
 # Date: Feb 2021
 # Raserizing Multiple Habitat Data
 # Marine Habitat Protection Indicator or Marine Protection Index (MPI)
 
-##### Load Packages #####
+
+# Loading packages --------------------------------------------------------
+
+
 library(tidyverse)
 library(raster)
 library(sf)
 library(tools)
 library(fasterize)
+library(foreach)
+library(doParallel)
 
-##### Load Data #####
+# Loading data ------------------------------------------------------------
+
 r <- raster("Data_processed/ocean_grid.tif")
-shapefiles <- list.files("Data_original/habitats", pattern = "\\.shp$")
 
-<<<<<<< HEAD
-for (i in 1:length(shapefiles)) {
-=======
 shapefiles <- list.files("Data_original/habitats/", pattern = "\\.shp$")
 
 
@@ -25,7 +27,6 @@ registerDoParallel(cl)
 
 
 foreach(i = 1:length(shapefiles)) %dopar% {
->>>>>>> 4126495cf57c4b05f027832050b97a403a4bfff1
   path <- paste0("Data_original/habitats/", shapefiles[i])
   habitat_poly <- read_sf(path)
   
@@ -44,7 +45,7 @@ foreach(i = 1:length(shapefiles)) %dopar% {
     print("Converting Multipoints to points")
     print("Attempting to convert to raster")
     habitatR <- rasterize(habitat_poly, r, progress = "text", field = "constant")
-  } else if (unique(st_geometry_type(habitat_poly)) == "POINT"){
+  } else if (unique(st_geometry_type(habitat_poly)) == "POINT") {
     print("Attempting to convert to raster")
     habitatR <- rasterize(habitat_poly, r, progress = "text", field = "constant")
   } else {
@@ -57,3 +58,6 @@ foreach(i = 1:length(shapefiles)) %dopar% {
   writeRaster(habitatR, exportpath, overwrite = TRUE)
   print(paste0("Habitat Raster has been written to ", exportpath))
 }
+
+#stop cluster
+stopCluster(cl)
