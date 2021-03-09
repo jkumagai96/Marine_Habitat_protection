@@ -1,4 +1,4 @@
-# Joy Kumagai
+# Joy Kumagai and Fabio Favoretto 
 # Date: Feb 2021
 # Combining Habitats and MPAs
 # Marine Habitat Protection Indicator or Marine Protection Index (MPI)
@@ -21,18 +21,24 @@ mpas_files <- list.files("Data_processed/", pattern = "*mpas.tif$") #list files 
 habitat_files <- list.files("Data_processed/", pattern = "*habitat.tif$") #list files (in this case raster TIFFs)
 
 
-for (i in habitat_files) {
-  habitat <- str_sub(i, end = -5)
-  r1 <- raster(paste0("Data_processed/", i))
-  for (ii in mpas_files) {
-    r2 <- raster(paste0("Data_processed/", ii))
+cl <- makeCluster(cores)
+registerDoParallel(cl)
+
+
+for (i in 1:length(habitat_files)) {
+  habitat <- stringr::str_sub(habitat_files[i], end = -5)
+  r1 <- raster(paste0("Data_processed/", habitat_files[i]))
+  print(i)
+  foreach(ii = mpas_files) %dopar% {
+    r2 <- raster::raster(paste0("Data_processed/", ii))
     r3 <- r1*r2 
-    mpa_type <- str_sub(ii, end = -5)
+    mpa_type <- stringr::str_sub(ii, end = -5)
     path <- paste0("Data_processed/", habitat, "_with_", mpa_type, "habitat.tif")
     print(paste0("Writing Raster to ", path))
-    writeRaster(r3, path, overwrite = TRUE)
+    raster::writeRaster(r3, path, overwrite = TRUE)
   }
   
 }
 
+stopCluster(cl)
 
