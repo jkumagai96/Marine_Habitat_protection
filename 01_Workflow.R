@@ -31,7 +31,7 @@ behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS
 
 
 ### MPAS February 2021 Protected Planet Public Download
-mpa_files <- list.files("Data_original/mpas/", pattern = "\\.shp$", recursive = T, full.names = T)
+mpa_files <- list.files("Data_original/mpas/", pattern = "\\polygons.shp$", recursive = T, full.names = T)
 
 
 #### Workflow ####
