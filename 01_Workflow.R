@@ -13,6 +13,7 @@ library(stringr) # to easily sort some datasets
 library(janitor) # to clean some datasetes
 
 # packages for parallel processing
+library(doParallel)
 library(parallel)
 library(snow)
 
@@ -25,6 +26,11 @@ library(snow)
 # For the habitats to process correctly in the second script (RaterizingPolygonHabitats) the habitat data needs to be in this file format: 
 # "Data_Original/habitats/"
 # Please add all habitats into that folder that you would like to use 
+
+
+## SELECT NUMBER OF CORES FOR PARALLEL PROCESSING
+
+cores <- 5
 
 ### Regions of interest (Union of EEZ and Land polygons from marineregions.org version 3)
 

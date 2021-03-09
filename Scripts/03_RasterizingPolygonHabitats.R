@@ -14,7 +14,18 @@ library(fasterize)
 r <- raster("Data_processed/ocean_grid.tif")
 shapefiles <- list.files("Data_original/habitats", pattern = "\\.shp$")
 
+<<<<<<< HEAD
 for (i in 1:length(shapefiles)) {
+=======
+shapefiles <- list.files("Data_original/habitats/", pattern = "\\.shp$")
+
+
+cl <- makeCluster(cores) 
+registerDoParallel(cl)
+
+
+foreach(i = 1:length(shapefiles)) %dopar% {
+>>>>>>> 4126495cf57c4b05f027832050b97a403a4bfff1
   path <- paste0("Data_original/habitats/", shapefiles[i])
   habitat_poly <- read_sf(path)
   
