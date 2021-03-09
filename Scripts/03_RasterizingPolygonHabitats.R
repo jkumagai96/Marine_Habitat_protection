@@ -28,34 +28,34 @@ registerDoParallel(cl)
 
 foreach(i = 1:length(shapefiles)) %dopar% {
   path <- paste0("Data_original/habitats/", shapefiles[i])
-  habitat_poly <- read_sf(path)
+  habitat_poly <- sf::read_sf(path)
   
   ##### Project Data #####
-  crs(habitat_poly)
+  raster::crs(habitat_poly)
   
   # Chosen projection: World Eckert Iv (equal area)
   behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
-  habitat_poly <- st_transform(habitat_poly, crs = behrmann)
+  habitat_poly <- sf::st_transform(habitat_poly, crs = behrmann)
   
   #### Rasterize #####
   habitat_poly$constant <- 1 
   
-  if (unique(st_geometry_type(habitat_poly)) == "MULTIPOINT") {
-    habitat_poly <- st_cast(habitat_poly, "POINT")
+  if (unique(sf::st_geometry_type(habitat_poly)) == "MULTIPOINT") {
+    habitat_poly <- sf::st_cast(habitat_poly, "POINT")
     print("Converting Multipoints to points")
     print("Attempting to convert to raster")
-    habitatR <- rasterize(habitat_poly, r, progress = "text", field = "constant")
-  } else if (unique(st_geometry_type(habitat_poly)) == "POINT") {
+    habitatR <- raster::rasterize(habitat_poly, r, progress = "text", field = "constant")
+  } else if (unique(sf::st_geometry_type(habitat_poly)) == "POINT") {
     print("Attempting to convert to raster")
-    habitatR <- rasterize(habitat_poly, r, progress = "text", field = "constant")
+    habitatR <- raster::rasterize(habitat_poly, r, progress = "text", field = "constant")
   } else {
     print("Attempting to convert to raster")
-    habitatR <- fasterize(habitat_poly, r, field = "constant") 
+    habitatR <- fasterize::fasterize(habitat_poly, r, field = "constant") 
   }
   
   #### Export ####
-  exportpath <- paste0("Data_processed/", file_path_sans_ext(shapefiles[i]), "habitat.tif")
-  writeRaster(habitatR, exportpath, overwrite = TRUE)
+  exportpath <- paste0("Data_processed/", tools::file_path_sans_ext(shapefiles[i]), "habitat.tif")
+  raster::writeRaster(habitatR, exportpath, overwrite = TRUE)
   print(paste0("Habitat Raster has been written to ", exportpath))
 }
 
