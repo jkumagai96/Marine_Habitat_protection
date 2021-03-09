@@ -19,10 +19,8 @@ library(snow)
 
 source("Functions/R_custom_functions.R")
 
-
 ## SELECT NUMBER OF CORES FOR PARALLEL PROCESSING
-
-cores <- 5
+cores <- 5 # Please Change 
 
 ### Regions of interest (Union of EEZ and Land polygons from marineregions.org version 3)
 
