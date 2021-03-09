@@ -34,7 +34,7 @@ gc()
 # Checking projection
 
 if(!st_crs(mpas[[1]])$proj4string == st_crs(behrmann.crs)$proj4string) {
-        stop()
+  stop()
 }
 
 
@@ -48,11 +48,10 @@ ntz_mpas <- future_lapply(ntz, FUN = function(ntz) fasterize(ntz, r, field = "co
 
 save_raster(ntz_mpas, "Data_processed/No_take_mpas.tif")
 
-managed_mpas <- future_lapply(managed, FUN = function(managed) fasterize(managed, r, field = "constant"), future.seed = TRUEE)
+managed_mpas <- future_lapply(managed, FUN = function(managed) fasterize(managed, r, field = "constant"), future.seed = TRUE)
 
-save_raster(all_mpas, "Data_processed/Managed_mpas.tif")
+save_raster(managed_mpas, "Data_processed/Managed_mpas.tif")
 
 
 rm(list = ls()[ls() %in% c("all_mpas", "managed", "managed_mpas", "mpas", "ntz")])
-
 
