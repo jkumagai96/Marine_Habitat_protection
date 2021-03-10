@@ -10,7 +10,7 @@ library(graticule) # to create the lat/long lines and labels
 library(tidyverse) # Easily Install and Load the 'Tidyverse'
 
 ##### Load Data ####
-data <- read.csv("Data_final/percent_protected_boundaries.csv")
+data_boundaries <- read.csv("Data_final/percent_protected_boundaries.csv")
 data_world <- read.csv("Data_final/percent_protected_world.csv")
 eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp")
 
@@ -18,7 +18,7 @@ land <- ne_countries(scale = 110, returnclass = "sf")
 
 ##### Formating Data #####
 
-data <- data %>% 
+data <- data_boundaries %>% 
   dplyr::select(UNION, pp_mean_all, pp_mean_notake) %>% 
   unique()
 
@@ -33,7 +33,7 @@ eez_land <- left_join(x = eez_land, y = data, by = "UNION") %>%
   arrange(pp_mean_all)
 
 ## World Data
-habitats <- c("Cold Corals", "Coral Reefs", "Mangroves", "Saltmarsh", "Seagrasses")
+habitats <- c("Cold Corals", "Warm-water Corals", "Mangroves", "Saltmarsh", "Seagrasses")
 
 no_take <- data_world %>% 
   dplyr::select(Name, percent_protected) %>% 
@@ -50,9 +50,17 @@ all <- data_world %>%
 data2 <- rbind(no_take, all) %>% 
   dplyr::select(habitat, percent_protected, type) %>% 
   pivot_wider(names_from = type, values_from = percent_protected) %>% 
-  mutate(difference = All - No_take) %>% 
-  dplyr::select(-All) %>% 
-  pivot_longer(cols = c(No_take, difference), names_to = "type", values_to = "percent_protected") 
+  pivot_longer(cols = c(No_take, All), names_to = "type", values_to = "percent_protected") 
+
+## Add average per habitat per country to add to figure 2
+data3 <- data_boundaries %>% 
+  select(UNION, ISO_TER1, habitat, pp_all_mpas) %>% 
+  group_by(habitat) %>% 
+  summarise(percent_protected = mean(pp_all_mpas, na.rm = T)) %>% # mean per habitat for countries 
+  mutate(habitat = habitats, 
+         type = "countries") %>% 
+  rbind(data2) %>% 
+  filter(type != "No_take")
 
 ##### Figure 1 ######
 # Two maps with average percent protection by country for A) no-take B) all MPAs
@@ -118,10 +126,12 @@ dev.off()
 ##### Figure 2 #####
 # Stacked bar graph of protection for each habitat included 
 
-plot2 <- ggplot(data2, aes(x = habitat, y = percent_protected, fill = type)) +
-  geom_bar(position="stack", stat="identity") +
-  scale_fill_manual(values = c("#BADDF5","#174FB8"), labels = c("All", "No-take")) +
+plot2 <- ggplot(data3, aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = type)) +
+  geom_bar(position="dodge", stat="identity") +
+  scale_fill_manual(values = c("#BADDF5","#174FB8"), labels = c("Global", "Countries Average")) +
   theme_minimal() +
-  labs(x = "Habtiat", y = "Percent Protection Globally", fill = "Type of Protected Areas") 
+  labs(x = "Habtiat", y = "Percent Protection", fill = "") +
+  ylim(c(0, 60))
+plot2
 
 ggsave("figure2.png", plot2, device = "png", width = 7, height = 5, units = "in", dpi = 600)

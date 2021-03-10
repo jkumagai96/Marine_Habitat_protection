@@ -6,58 +6,131 @@
 
 # Loading packages --------------------------------------------------------
 
-
+library(sf)
 library(tidyverse)
 library(raster)
-library(sf)
 library(tools)
 library(fasterize)
-library(foreach)
 library(doParallel)
+library(foreach)
 
 # Loading data ------------------------------------------------------------
 
+shapefiles <- list.files("Data_original/habitats/", pattern = "\\.shp$", full.names = T)
+behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
 r <- raster("Data_processed/ocean_grid.tif")
 
-shapefiles <- list.files("Data_original/habitats/", pattern = "\\.shp$")
-
+# Rasterizing habitats with parallel processing ------------------------------------------------------------
 
 cl <- makeCluster(cores) 
 registerDoParallel(cl)
 
 
 foreach(i = 1:length(shapefiles)) %dopar% {
-  path <- paste0("Data_original/habitats/", shapefiles[i])
-  habitat_poly <- sf::read_sf(path)
+  require(tidyverse)
+  require(sf)
+  require(raster)
+  require(tools)
+  
+  habitat <- st_read(shapefiles[i]) %>% 
+    mutate(constant = 1) # for rasterization 
   
   ##### Project Data #####
-  raster::crs(habitat_poly)
+  # Chosen projection: Behrmann (equal area)
+  habitat <- st_transform(habitat, crs = behrmann)
   
-  # Chosen projection: World Eckert Iv (equal area)
-  behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
-  habitat_poly <- sf::st_transform(habitat_poly, crs = behrmann)
   
-  #### Rasterize #####
-  habitat_poly$constant <- 1 
   
-  if (unique(sf::st_geometry_type(habitat_poly)) == "MULTIPOINT") {
-    habitat_poly <- sf::st_cast(habitat_poly, "POINT")
-    print("Converting Multipoints to points")
-    print("Attempting to convert to raster")
-    habitatR <- raster::rasterize(habitat_poly, r, progress = "text", field = "constant")
-  } else if (unique(sf::st_geometry_type(habitat_poly)) == "POINT") {
-    print("Attempting to convert to raster")
-    habitatR <- raster::rasterize(habitat_poly, r, progress = "text", field = "constant")
+  # Setting Area 
+  if ("REP_AREA_K" %in% colnames(habitat)) {
+    habitat$area = habitat$REP_AREA_K
+    if (class(habitat$area) != "numeric") {
+      habitat$area = 0 
+    }
+  } else { habitat$area = 0 }
+  
+  
+  
+  # Convert multipoints to points 
+  if (unique(st_geometry_type(habitat)) == "MULTIPOINT") { 
+    habitat <- st_cast(habitat, "POINT")
+    print("Converted MULTIPOINT TO POINT")
+  }
+  
+  # Convert Points and Polygons to Raster
+  if (unique(st_geometry_type(habitat)) == "POINT") {
+    if (sum(habitat$area) > 0) { # if there is area reported, buffer 
+      habitat <- habitat %>% 
+        mutate(area = ifelse(REP_AREA_K == 0, 1, REP_AREA_K),
+               radius = (sqrt(area/3.14))/0.01)
+      print("Attempting to Buffer points")
+      habitat <- st_buffer(habitat, dist = habitat$radius)
+      
+      # Rasterize the resulting polygons 
+      print("Attempting to convert buffered points to raster")
+      habitatR <- rasterize(habitat, r, progress = "text", field = "constant")
+      
+    } else {
+      # If there is no area reported, rasterize immediately 
+      print("Attempting to convert points to raster")
+      habitatR <- rasterize(habitat, r, progress = "text", field = "constant")
+    }
   } else {
-    print("Attempting to convert to raster")
-    habitatR <- fasterize::fasterize(habitat_poly, r, field = "constant") 
+    # Rasterize polygons 
+    print("Attempting to convert polygons to raster")
+    habitatR <- fasterize::fasterize(habitat, r, field = "constant") 
   }
   
   #### Export ####
-  exportpath <- paste0("Data_processed/", tools::file_path_sans_ext(shapefiles[i]), "habitat.tif")
-  raster::writeRaster(habitatR, exportpath, overwrite = TRUE)
-  print(paste0("Habitat Raster has been written to ", exportpath))
+  writeRaster(habitatR, 
+              filename = paste0("Data_processed/", 
+                                file_path_sans_ext(basename(shapefiles[i])), 
+                                "_habitat.tif"),
+              overwrite = TRUE)
+  print(paste0("Rasterized and written to ", file_path_sans_ext(basename(shapefiles[i])), "_habitat.tif" ))
+  
 }
 
-#stop cluster
-stopCluster(cl)
+
+
+##### merging points and polygons #####
+
+## Full raster list
+rasters <- list.files("Data_processed/", pattern = "\\.tif$", full.names = T)
+
+## Seagrasses 
+seagrasses <- str_subset(rasters, "Seagrasses")
+
+do.call(merge, list(raster(seagrasses[1]), raster(seagrasses[2]))) %>% 
+  writeRaster(., filename = "Data_processed/Seagrasses_habitat.tif", overwrite = TRUE)
+beepr::beep(2)
+unlink(seagrasses)
+
+
+## Coral Reefs 
+
+coralreefs <- str_subset(rasters, "CoralReef")
+
+do.call(merge, list(raster(coralreefs[1]), raster(coralreefs[2]))) %>% 
+  writeRaster(., filename = "Data_processed/CoralReefs_habitat.tif", overwrite = TRUE)
+beepr::beep(2)
+unlink(coralreefs)
+
+## Satmarshes
+
+salthmarshes <- str_subset(rasters, "Saltmarsh")
+
+do.call(merge, list(raster(salthmarshes[1]), raster(salthmarshes[2]))) %>% 
+  writeRaster(., filename = "Data_processed/Saltmarshes_habitat.tif", overwrite = TRUE)
+beepr::beep(2)
+unlink(salthmarshes)
+
+## Cold Corals 
+
+coldcorals <- str_subset(rasters, "ColdCorals")
+
+do.call(merge, list(raster(coldcorals[1]), raster(coldcorals[2]))) %>% 
+  writeRaster(., filename = "Data_processed/ColdCorals_habitat.tif", overwrite = TRUE)
+beepr::beep(2)
+unlink(coldcorals)
+
