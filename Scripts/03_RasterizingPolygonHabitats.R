@@ -62,7 +62,7 @@ foreach(i = 1:length(shapefiles)) %dopar% {
     if (sum(habitat$area) > 0) { # if there is area reported, buffer 
       habitat <- habitat %>% 
         mutate(area = ifelse(REP_AREA_K == 0, 1, REP_AREA_K),
-               radius = (sqrt(area/3.14))/0.01)
+               radius = (sqrt(area/3.14))/0.001)
       print("Attempting to Buffer points")
       habitat <- st_buffer(habitat, dist = habitat$radius)
       
