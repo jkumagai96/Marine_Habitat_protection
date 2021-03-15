@@ -128,10 +128,11 @@ dev.off()
 
 plot2 <- ggplot(data3, aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = type)) +
   geom_bar(position="dodge", stat="identity") +
-  scale_fill_manual(values = c("#BADDF5","#174FB8"), labels = c("Global", "Countries Average")) +
+  scale_fill_manual(values = c("#174FB8","#69C6AF"), labels = c("Global", "Countries Average")) +
   theme_minimal() +
   labs(x = "Habtiat", y = "Percent Protection", fill = "") +
-  ylim(c(0, 60))
+  ylim(c(0, 50)) +
+  geom_hline(yintercept = 30, linetype = "dashed")
 plot2
 
 ggsave("figure2.png", plot2, device = "png", width = 7, height = 5, units = "in", dpi = 600)
