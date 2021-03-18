@@ -19,10 +19,8 @@ library(snow)
 
 source("Functions/R_custom_functions.R")
 
-
 ## SELECT NUMBER OF CORES FOR PARALLEL PROCESSING
-
-cores <- 5
+cores <- 5 # Please Change 
 
 ### Regions of interest (Union of EEZ and Land polygons from marineregions.org version 3)
 
@@ -37,7 +35,8 @@ mpa_files <- list.files("Data_original/mpas/", pattern = "\\.shp$", recursive = 
 
 
 #### Workflow ####
-# Step 1: Cleaning the protected areas and seperating into three levels, all, managed, and no-take
+# Step 1: Cleaning the protected areas, buffering points, and separating into three levels, all, managed, and no-take
+source("Scripts/01_ChangingProtectedAreasToPolygons.R")
 source("Scripts/02_CleaningProtectedAreas_v1.R")
 
 # Step 2: Rasterizing Polygon Habitats 
@@ -53,4 +52,4 @@ source("Scripts/05_SummaryStatistics.R")
 # Step 5: Summarizing Final Outputs 
 source("Scripts/06_PercentageProtectionWorld.R")
 
-source("Scripts/07_PercentageProtectionBoundary.R") # Please adjust this step with the habitats you are using 
+source("Scripts/07_PercentageProtectionBoundary.R")
