@@ -23,21 +23,27 @@ writeRaster(r, "Data_processed/ocean_grid.tif", overwrite = TRUE)
 
 # MPA layers --------------------------------------------------------------
 
-nworkers <- detectCores() 
-plan(multisession, gc = TRUE, workers = nworkers - 1)
-mpas <- future_lapply(mpa_files, FUN = clean, future.seed = TRUE)
-ntz <- future_lapply(mpa_files, FUN = clean_NTZ, future.seed = TRUE)
-managed <- future_lapply(mpa_files, FUN = clean_managed, future.seed = TRUE)
+
+plan(multisession, gc = TRUE, workers = cores)
+mpas <- future_lapply(mpa_poly_files, FUN = clean, future.seed = TRUE)
+ntz <- future_lapply(mpa_poly_files, FUN = clean_NTZ, future.seed = TRUE)
+managed <- future_lapply(mpa_poly_files, FUN = clean_managed, future.seed = TRUE)
 gc()
 
 
 # Checking projection
 
 if(!st_crs(mpas[[1]])$proj4string == st_crs(behrmann.crs)$proj4string) {
-        stop()
+  stop()
 }
 
+# Checking if there are null features
+v <- c()
+for (i in 1:length(ntz)) {
+  if (length(ntz[[i]]$PA_DEF) == 0) {v <- c(v, i)}
+}
 
+ntz[[v]] <- NULL
 #### Rasterization and Export ####
 
 all_mpas <- future_lapply(mpas, FUN = function(mpas) fasterize(mpas, r, field = "constant"), future.seed = TRUE)
@@ -50,9 +56,7 @@ save_raster(ntz_mpas, "Data_processed/No_take_mpas.tif")
 
 managed_mpas <- future_lapply(managed, FUN = function(managed) fasterize(managed, r, field = "constant"), future.seed = TRUE)
 
-save_raster(all_mpas, "Data_processed/Managed_mpas.tif")
+save_raster(managed_mpas, "Data_processed/Managed_mpas.tif")
 
 
 rm(list = ls()[ls() %in% c("all_mpas", "managed", "managed_mpas", "mpas", "ntz")])
-
-

@@ -18,7 +18,7 @@ clean <- function(x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0",
         if (verbose) 
                 message("removing areas that are not implemented: ", 
                         cli::symbol$continue, "\r", appendLF = FALSE)
-        x <- x[x$STATUS %in% c("Designated", "Inscribed", "Established"), 
+        x <- x[x$STATUS %in% c("Designated", "Inscribed", "Established", "Adopted"), 
         ]
         if (verbose) {
                 utils::flush.console()
@@ -46,9 +46,9 @@ clean <- function(x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0",
 ## filter & clean NTZ
 
 clean_NTZ <- function(x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0", 
-                                 "+y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs"), snap_tolerance = 1, 
-                  simplify_tolerance = 0, geometry_precision = 1500, erase_overlaps = TRUE, 
-                  verbose = interactive()) 
+                                     "+y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs"), snap_tolerance = 1, 
+                      simplify_tolerance = 0, geometry_precision = 1500, erase_overlaps = TRUE, 
+                      verbose = interactive()) 
 {
         x <- st_read(x) 
         assertthat::assert_that(inherits(x, "sf"), nrow(x) > 0, 
@@ -63,7 +63,7 @@ clean_NTZ <- function(x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0",
         if (verbose) 
                 message("removing areas that are not implemented: ", 
                         cli::symbol$continue, "\r", appendLF = FALSE)
-        x <- x[x$STATUS %in% c("Designated", "Inscribed", "Established"), 
+        x <- x[x$STATUS %in% c("Designated", "Inscribed", "Established", "Adopted"), 
         ]
         if (verbose) {
                 utils::flush.console()
@@ -92,9 +92,9 @@ clean_NTZ <- function(x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0",
 
 ## filter & clean and filter managed
 clean_managed <- function(x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0", 
-                                     "+y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs"), snap_tolerance = 1, 
-                      simplify_tolerance = 0, geometry_precision = 1500, erase_overlaps = TRUE, 
-                      verbose = interactive()) 
+                                         "+y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs"), snap_tolerance = 1, 
+                          simplify_tolerance = 0, geometry_precision = 1500, erase_overlaps = TRUE, 
+                          verbose = interactive()) 
 {
         x <- st_read(x) 
         assertthat::assert_that(inherits(x, "sf"), nrow(x) > 0, 
@@ -109,7 +109,7 @@ clean_managed <- function(x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0",
         if (verbose) 
                 message("removing areas that are not implemented: ", 
                         cli::symbol$continue, "\r", appendLF = FALSE)
-        x <- x[x$STATUS %in% c("Designated", "Inscribed", "Established"), 
+        x <- x[x$STATUS %in% c("Designated", "Inscribed", "Established", "Adopted"), 
         ]
         if (verbose) {
                 utils::flush.console()
@@ -155,6 +155,18 @@ clean_managed <- function(x, crs = paste("+proj=cea +lon_0=0 +lat_ts=30 +x_0=0",
                         "Not Reported"
                 )) 
         return(x)
+}
+
+
+
+## Binding and saving
+
+save_raster <- function(x, path){
+        
+        full <- docall(merge, x[1:length(x)])
+        
+        writeRaster(full, path, overwrite = T)
+        
 }
 
 
