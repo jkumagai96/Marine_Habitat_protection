@@ -12,7 +12,7 @@ library(ggthemes)
 library(patchwork)
 
 ##### Load Data ####
-data <- read.csv("Data_final/percent_protected_boundaries.csv")
+data_boundaries <- read.csv("Data_final/percent_protected_boundaries.csv")
 data_world <- read.csv("Data_final/percent_protected_world.csv")
 eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp")
 
@@ -20,7 +20,7 @@ land <- ne_countries(scale = 110, returnclass = "sf")
 
 ##### Formating Data #####
 
-data <- data %>% 
+data <- data_boundaries %>% 
         dplyr::select(UNION, pp_mean_all, pp_mean_notake) %>% 
         unique()
 
@@ -136,4 +136,29 @@ data2 <- rbind(no_take, all) %>%
 p1/p2+
         plot_layout(guides = "collect")+
         plot_annotation(tag_levels = 'A')
-ggsave('figure1.png', dpi = 600, height = 8, width = 8)
+ggsave('figure1_with_notake.png', dpi = 600, height = 8, width = 8)
+
+
+
+
+##### Figure 2 #######
+## Add average per habitat per country to add to figure 2
+data3 <- data_boundaries %>% 
+        select(UNION, ISO_TER1, habitat, pp_all_mpas) %>% 
+        group_by(habitat) %>% 
+        summarise(percent_protected = mean(pp_all_mpas, na.rm = T)) %>% # mean per habitat for countries 
+        mutate(habitat = habitats, 
+               type = "countries") %>% 
+        rbind(data2) %>% 
+        filter(type != "No_take")
+
+plot2 <- ggplot(data3, aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = type)) +
+        geom_bar(position="dodge", stat="identity") +
+        scale_fill_manual(values = c("#174FB8","#69C6AF"), labels = c("Global", "Countries Average")) +
+        theme_minimal() +
+        labs(x = "Habtiat", y = "Percent Protection", fill = "") +
+        ylim(c(0, 50)) +
+        geom_hline(yintercept = 30, linetype = "dashed")
+plot2
+
+ggsave("figure2.png", plot2, device = "png", width = 7, height = 5, units = "in", dpi = 600)
