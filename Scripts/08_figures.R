@@ -1,4 +1,4 @@
-# Joy Kumagai 
+# Joy Kumagai and Fabio 
 # Date: March 2021
 # Figures 
 # Marine Habitat Protection Indicator
@@ -36,7 +36,7 @@ eez_land <- left_join(x = eez_land, y = data, by = "UNION") %>%
         arrange(pp_mean_all)
 
 ## World Data
-habitats <- c("Cold Corals", "Coral Reefs", "Mangroves", "Saltmarsh", "Seagrasses")
+habitats <- c("Cold Corals", "Coral Reefs", "Mangroves", "Saltmarsh", "Seagrasses", "Kelps", "Knolls_Seamounts")
 
 no_take <- data_world %>% 
         dplyr::select(Name, percent_protected) %>% 
@@ -59,79 +59,79 @@ data2 <- rbind(no_take, all) %>%
 
 
 (p1 <- ggplot(eez_land) +
-        geom_sf(aes(fill = pp_mean_all), 
-                col = NA) +
-        geom_sf(data = land, 
-                col = "gray60",
-                fill = "gray90") +
-        coord_sf() +
-        annotate("text", x = -18000000, y = 0, label = "0°") +
-        annotate("text", x = -18000000, y = 2300000, label = "20° N") +
-        annotate("text", x = -17000000, y = 4500000, label = "40° N") +
-        annotate("text", x = -15500000, y = 6500000, label = "60° N") +
-        annotate("text", x = -13500000, y = 8500000, label = "80° N") +
-        annotate("text", x = -18000000, y = -2300000, label = "20° S") +
-        annotate("text", x = -17000000, y = -4500000, label = "40° S") +
-        annotate("text", x = -15500000, y = -6500000, label = "60° S") +
-        annotate("text", x = 0, y = 9500000, label = "0°") +
-        annotate("text", x = -3000000, y = 9500000, label = "50°W") +
-        annotate("text", x = 3000000, y = 9500000, label = "50°E") +
-        annotate("text", x = -8000000, y = 9500000, label = "150°W") +
-        annotate("text", x = 8000000, y = 9500000, label = "150°E") +
-        scale_fill_gradient2(
-                low = "#f0f9e8",
-                mid = "#7bccc4",
-                high = "#0868ac",
-                midpoint = 50,
-                space = "Lab",
-                na.value = "grey50",
-                guide = "colourbar",
-                aesthetics = "fill",
-                n.breaks = 5
-        ) +
-        labs(fill = "% of EEZ") +
-        theme(panel.background = element_blank(), 
-              panel.grid.major = element_line(colour = "gray90", linetype = "dashed"), 
-              axis.text.x = element_text(size = 12),
-              axis.title = element_blank()))
+                geom_sf(aes(fill = pp_mean_all), 
+                        col = NA) +
+                geom_sf(data = land, 
+                        col = "gray60",
+                        fill = "gray90") +
+                coord_sf() +
+                annotate("text", x = -18000000, y = 0, label = "0°") +
+                annotate("text", x = -18000000, y = 2300000, label = "20° N") +
+                annotate("text", x = -17000000, y = 4500000, label = "40° N") +
+                annotate("text", x = -15500000, y = 6500000, label = "60° N") +
+                annotate("text", x = -13500000, y = 8500000, label = "80° N") +
+                annotate("text", x = -18000000, y = -2300000, label = "20° S") +
+                annotate("text", x = -17000000, y = -4500000, label = "40° S") +
+                annotate("text", x = -15500000, y = -6500000, label = "60° S") +
+                annotate("text", x = 0, y = 9500000, label = "0°") +
+                annotate("text", x = -3000000, y = 9500000, label = "50°W") +
+                annotate("text", x = 3000000, y = 9500000, label = "50°E") +
+                annotate("text", x = -8000000, y = 9500000, label = "150°W") +
+                annotate("text", x = 8000000, y = 9500000, label = "150°E") +
+                scale_fill_gradient2(
+                        low = "#f0f9e8",
+                        mid = "#7bccc4",
+                        high = "#0868ac",
+                        midpoint = 50,
+                        space = "Lab",
+                        na.value = "grey50",
+                        guide = "colourbar",
+                        aesthetics = "fill",
+                        n.breaks = 5
+                ) +
+                labs(fill = "% of EEZ") +
+                theme(panel.background = element_blank(), 
+                      panel.grid.major = element_line(colour = "gray90", linetype = "dashed"), 
+                      axis.text.x = element_text(size = 12),
+                      axis.title = element_blank()))
 
 
 
 (p2 <- ggplot(eez_land) +
-        geom_sf(aes(fill = pp_mean_notake), 
-                col = NA) +
-        geom_sf(data = land, 
-                col = "gray60",
-                fill = "gray90") +
-        coord_sf() +
-        annotate("text", x = -18000000, y = 0, label = "0°") +
-        annotate("text", x = -18000000, y = 2300000, label = "20° N") +
-        annotate("text", x = -17000000, y = 4500000, label = "40° N") +
-        annotate("text", x = -15500000, y = 6500000, label = "60° N") +
-        annotate("text", x = -13500000, y = 8500000, label = "80° N") +
-        annotate("text", x = -18000000, y = -2300000, label = "20° S") +
-        annotate("text", x = -17000000, y = -4500000, label = "40° S") +
-        annotate("text", x = -15500000, y = -6500000, label = "60° S") +
-        annotate("text", x = 0, y = 9500000, label = "0°") +
-        annotate("text", x = -3000000, y = 9500000, label = "50°W") +
-        annotate("text", x = 3000000, y = 9500000, label = "50°E") +
-        annotate("text", x = -8000000, y = 9500000, label = "150°W") +
-        annotate("text", x = 8000000, y = 9500000, label = "150°E") +
-        scale_fill_gradient2(
-                low = "#f0f9e8",
-                mid = "#7bccc4",
-                high = "#0868ac",
-                midpoint = 50,
-                space = "Lab",
-                na.value = "grey50",
-                guide = "colourbar",
-                aesthetics = "fill"
-        ) +
-        labs(fill = "% of EEZ") +
-        theme(panel.background = element_blank(), 
-              panel.grid.major = element_line(colour = "gray90", linetype = "dashed"), 
-              axis.text.x = element_text(size = 12),
-              axis.title = element_blank()))
+                geom_sf(aes(fill = pp_mean_notake), 
+                        col = NA) +
+                geom_sf(data = land, 
+                        col = "gray60",
+                        fill = "gray90") +
+                coord_sf() +
+                annotate("text", x = -18000000, y = 0, label = "0°") +
+                annotate("text", x = -18000000, y = 2300000, label = "20° N") +
+                annotate("text", x = -17000000, y = 4500000, label = "40° N") +
+                annotate("text", x = -15500000, y = 6500000, label = "60° N") +
+                annotate("text", x = -13500000, y = 8500000, label = "80° N") +
+                annotate("text", x = -18000000, y = -2300000, label = "20° S") +
+                annotate("text", x = -17000000, y = -4500000, label = "40° S") +
+                annotate("text", x = -15500000, y = -6500000, label = "60° S") +
+                annotate("text", x = 0, y = 9500000, label = "0°") +
+                annotate("text", x = -3000000, y = 9500000, label = "50°W") +
+                annotate("text", x = 3000000, y = 9500000, label = "50°E") +
+                annotate("text", x = -8000000, y = 9500000, label = "150°W") +
+                annotate("text", x = 8000000, y = 9500000, label = "150°E") +
+                scale_fill_gradient2(
+                        low = "#f0f9e8",
+                        mid = "#7bccc4",
+                        high = "#0868ac",
+                        midpoint = 50,
+                        space = "Lab",
+                        na.value = "grey50",
+                        guide = "colourbar",
+                        aesthetics = "fill"
+                ) +
+                labs(fill = "% of EEZ") +
+                theme(panel.background = element_blank(), 
+                      panel.grid.major = element_line(colour = "gray90", linetype = "dashed"), 
+                      axis.text.x = element_text(size = 12),
+                      axis.title = element_blank()))
 
 p1/p2+
         plot_layout(guides = "collect")+

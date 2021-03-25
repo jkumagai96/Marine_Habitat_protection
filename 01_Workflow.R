@@ -1,5 +1,5 @@
 # Joy Kumagai and Fabio Favoretto 
-# Date: Feb 2021
+# Date: March 2021
 # Final Workflow specifying inputs 
 # Marine Habitat Protection Indicator
 
@@ -20,7 +20,7 @@ library(snow)
 source("Functions/R_custom_functions.R")
 
 ## SELECT NUMBER OF CORES FOR PARALLEL PROCESSING
-cores <- 5 # Please Change 
+cores <- 10 # Please Change 
 
 ### Regions of interest (Union of EEZ and Land polygons from marineregions.org version 3)
 
@@ -38,7 +38,7 @@ source("Scripts/01_ChangingProtectedAreasToPolygons.R")
 source("Scripts/02_CleaningProtectedAreas_v1.R")
 
 # Step 2: Rasterizing Polygon Habitats 
-source("Scripts/03_RasterizingPolygonHabitats.R")
+source("Scripts/03_RasterizingPolygonHabitats_v2.R")
 
 # Step 3: Raster intersections with protected areas
 source("Scripts/04_CombiningHabitatsandMPAs.R")

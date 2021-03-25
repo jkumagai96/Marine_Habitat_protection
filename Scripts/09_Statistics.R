@@ -17,7 +17,7 @@ n_hundred <- data %>%
   count()/(length(unique(data$habitat)))
 
 n <- data %>% 
-drop_na(pp_mean_all) %>% 
+  drop_na(pp_mean_all) %>% 
   count()/(length(unique(data$habitat))) 
 
 indicator <- data %>% 
@@ -31,4 +31,5 @@ quantile(indicator$Indicator, na.rm = TRUE)
 data %>% 
   filter(pp_mean_all < 25) %>% 
   count()/(length(unique(data$habitat)))
+
 
