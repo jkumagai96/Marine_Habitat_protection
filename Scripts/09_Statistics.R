@@ -30,7 +30,7 @@ hist(indicator$Indicator)
 quantile(indicator$Indicator, na.rm = TRUE)
 
 data %>% 
-  filter(pp_mean_all < 25) %>% 
+  filter(pp_mean_all > 50) %>% 
   count()/(length(unique(data$habitat)))
 
 

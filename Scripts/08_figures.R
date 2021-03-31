@@ -148,29 +148,17 @@ df4 <- left_join(df1, df2, by = "habitat")
 df5 <- left_join(df4, df3, by = "habitat") %>% 
         dplyr::select(-All_mpas) %>% 
         pivot_longer(cols = ends_with("area"), names_to = "key", values_to = "pixel_counts") %>% 
+        mutate(percent_protected = pixel_counts/world_total)
 
-
-
-
-no_take <- data_world %>% 
-        dplyr::select(Name, percent_protected) %>% 
-        filter(grepl("No_take",Name)) %>% 
-        mutate(type = "No take PAs") %>% 
-        mutate(habitat = habitats)
-
-high_Seas <- data_
-
-data_world %>% 
-        dplyr::select(Name, percent_protected) %>% 
-        filter(grepl("with_All_mpas", Name)) %>% 
-        mutate(habitat = habitats,
-               type = "All PAs") %>%
-        rbind(no_take) %>% 
-        ggplot(aes(x = reorder(habitat, percent_protected), y = percent_protected/100, fill = type)) +
-                geom_bar(position="dodge", stat = "identity") +
-        scale_fill_manual(values = c("#174FB8","#69C6AF")) +
+plot2 <- df5 %>% 
+        ggplot(aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = key)) +
+        geom_bar(stat = "identity") +
+        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("National Jurisdiction", "High Seas")) +
         scale_y_continuous(labels = scales::percent_format()) +
         labs(x = "Habitat", y = "Global Protected Area Coverage") +
-        theme_bw()
+        theme_bw() +
+        theme(legend.title = element_blank()) +
+        geom_hline(yintercept = .3, linetype = "dashed")
+plot2
 
-ggsave("figure2.png", plot2, device = "png", width = 7, height = 5, units = "in", dpi = 600)
+ggsave("figure2.png", plot2, device = "png", width = 8, height = 5, units = "in", dpi = 600)
