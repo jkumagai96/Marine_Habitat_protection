@@ -51,7 +51,7 @@ colnames(knolls_seamounts) <- column_names
 
 
 
-df <- rbind(coldcorals, coralreefs, mangroves, saltmarshes, seagrasses, kelps, knolls_seamounts) %>% 
+df <- rbind(coldcorals, coralreefs, mangroves, saltmarshes, seagrasses, knolls_seamounts) %>% 
   dplyr::select(habitat, total, all_mpas, managed, no_take, ID)
 df <- full_join(area, df, by = "ID")
 
