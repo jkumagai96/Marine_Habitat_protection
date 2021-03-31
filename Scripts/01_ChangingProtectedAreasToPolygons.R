@@ -1,5 +1,5 @@
 # Joy Kumagai  
-# Date: Mar 2021
+# Date: March 2021
 # Converting PAs from points to polygons 
 # Marine Habitat Protection Indicator
 
@@ -51,4 +51,3 @@ for (i in 1:length(mpa_files)) {
     print("ERROR geometry is not polygon, multipolygon, point, or multipoint")
   }
 }
-
