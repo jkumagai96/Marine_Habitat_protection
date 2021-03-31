@@ -14,6 +14,7 @@ library(patchwork)
 ##### Load Data ####
 data_boundaries <- read.csv("Data_final/percent_protected_boundaries.csv")
 data_world <- read.csv("Data_final/percent_protected_world.csv")
+data_highseas <- read.csv("Data_final/percent_protected_highseas.csv")
 eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp")
 
 land <- ne_countries(scale = 110, returnclass = "sf")
@@ -34,28 +35,6 @@ eez_land <- st_transform(eez_land, crs = robin)
 ## Join the indicator data onto the eez_land 
 eez_land <- left_join(x = eez_land, y = data, by = "UNION") %>% 
         arrange(pp_mean_all)
-
-## World Data
-habitats <- c("Cold Corals", "Coral Reefs", "Mangroves", "Saltmarsh", "Seagrasses", "Kelps", "Knolls_Seamounts")
-
-no_take <- data_world %>% 
-        dplyr::select(Name, percent_protected) %>% 
-        filter(grepl("No_take",Name)) %>% 
-        mutate(type = "No_take") %>% 
-        mutate(habitat = habitats)
-
-all <- data_world %>% 
-        dplyr::select(Name, percent_protected) %>% 
-        filter(grepl("All", Name)) %>% 
-        mutate(type = "All") %>% 
-        mutate(habitat = habitats)
-
-data2 <- rbind(no_take, all) %>% 
-        dplyr::select(habitat, percent_protected, type) %>% 
-        pivot_wider(names_from = type, values_from = percent_protected) %>% 
-        mutate(difference = All - No_take) %>% 
-        dplyr::select(-All) %>% 
-        pivot_longer(cols = c(No_take, difference), names_to = "type", values_to = "percent_protected") 
 
 
 (p1 <- ggplot(eez_land) +
@@ -139,26 +118,59 @@ p1/p2+
 ggsave('figure1_with_notake.png', dpi = 600, height = 8, width = 8)
 
 
-
-
 ##### Figure 2 #######
-## Add average per habitat per country to add to figure 2
-data3 <- data_boundaries %>% 
-        select(UNION, ISO_TER1, habitat, pp_all_mpas) %>% 
-        group_by(habitat) %>% 
-        summarise(percent_protected = mean(pp_all_mpas, na.rm = T)) %>% # mean per habitat for countries 
-        mutate(habitat = habitats, 
-               type = "countries") %>% 
-        rbind(data2) %>% 
-        filter(type != "No_take")
+## World Data
+habitats <- c("Cold Corals", "Coral Reefs", "Knolls & Seamounts", "Mangroves", "Saltmarsh", "Seagrasses")
 
-plot2 <- ggplot(data3, aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = type)) +
-        geom_bar(position="dodge", stat="identity") +
-        scale_fill_manual(values = c("#174FB8","#69C6AF"), labels = c("Global", "Countries Average")) +
-        theme_minimal() +
-        labs(x = "Habtiat", y = "Percent Protection", fill = "") +
-        ylim(c(0, 50)) +
-        geom_hline(yintercept = 30, linetype = "dashed")
-plot2
+
+df1 <- data_world %>% 
+        dplyr::select(Name, pixel_counts,) %>% 
+        filter(grepl("with_All_mpas", Name) | !grepl("with", Name)) %>% 
+        mutate(habitat = rep(habitats, each = 2),
+               type = rep(c("All_mpas", "world_total"), length.out = 12)) %>% 
+        dplyr::select(-Name) %>% 
+        pivot_wider(values_from = pixel_counts, names_from = type)
+
+df2 <- data_boundaries %>% 
+        dplyr::select(UNION, habitat, all_mpas) %>% 
+        group_by(habitat) %>% 
+        summarise(eez_pa_area = sum(all_mpas)) %>% 
+        mutate(habitat = habitats)
+
+df3 <- data_highseas %>% 
+        dplyr::select(Name, pixel_counts) %>% 
+        filter(grepl("with_All_mpas", Name)) %>% 
+        mutate(habitat = habitats) %>% 
+        dplyr::select(-Name) %>% 
+        rename(highseas_pa_area = pixel_counts)
+
+df4 <- left_join(df1, df2, by = "habitat")
+df5 <- left_join(df4, df3, by = "habitat") %>% 
+        dplyr::select(-All_mpas) %>% 
+        pivot_longer(cols = ends_with("area"), names_to = "key", values_to = "pixel_counts") %>% 
+
+
+
+
+no_take <- data_world %>% 
+        dplyr::select(Name, percent_protected) %>% 
+        filter(grepl("No_take",Name)) %>% 
+        mutate(type = "No take PAs") %>% 
+        mutate(habitat = habitats)
+
+high_Seas <- data_
+
+data_world %>% 
+        dplyr::select(Name, percent_protected) %>% 
+        filter(grepl("with_All_mpas", Name)) %>% 
+        mutate(habitat = habitats,
+               type = "All PAs") %>%
+        rbind(no_take) %>% 
+        ggplot(aes(x = reorder(habitat, percent_protected), y = percent_protected/100, fill = type)) +
+                geom_bar(position="dodge", stat = "identity") +
+        scale_fill_manual(values = c("#174FB8","#69C6AF")) +
+        scale_y_continuous(labels = scales::percent_format()) +
+        labs(x = "Habitat", y = "Global Protected Area Coverage") +
+        theme_bw()
 
 ggsave("figure2.png", plot2, device = "png", width = 7, height = 5, units = "in", dpi = 600)
