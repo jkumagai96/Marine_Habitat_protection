@@ -6,6 +6,7 @@
 ##### Load Packages #####
 library(tidyverse) # Easily Install and Load the 'Tidyverse'
 
+##### Descriptive Statistics #####
 data <- read.csv("Data_final/percent_protected_boundaries.csv")
 
 n_zero <- data %>% 
@@ -17,7 +18,7 @@ n_hundred <- data %>%
   count()/(length(unique(data$habitat)))
 
 n <- data %>% 
-drop_na(pp_mean_all) %>% 
+  drop_na(pp_mean_all) %>% 
   count()/(length(unique(data$habitat))) 
 
 indicator <- data %>% 
@@ -31,4 +32,5 @@ quantile(indicator$Indicator, na.rm = TRUE)
 data %>% 
   filter(pp_mean_all < 25) %>% 
   count()/(length(unique(data$habitat)))
+
 

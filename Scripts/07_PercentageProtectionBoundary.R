@@ -1,5 +1,5 @@
 # Joy Kumagai 
-# Date: Feb 2021
+# Date: March 2021
 # Calculating Per Boundary (EEZ/Land) Percentage Protection 
 # Marine Habitat Protection Indicator
 
@@ -44,8 +44,14 @@ seagrasses <- data %>%
   mutate(hab = "seagrasses")
 colnames(seagrasses) <- column_names 
 
+knolls_seamounts <- data %>% 
+  dplyr::select(ID, starts_with("Knolls")) %>% 
+  mutate(hab = "knolls_seamounts")
+colnames(knolls_seamounts) <- column_names 
 
-df <- rbind(coldcorals, coralreefs, mangroves, saltmarshes, seagrasses) %>% 
+
+
+df <- rbind(coldcorals, coralreefs, mangroves, saltmarshes, seagrasses, kelps, knolls_seamounts) %>% 
   dplyr::select(habitat, total, all_mpas, managed, no_take, ID)
 df <- full_join(area, df, by = "ID")
 
