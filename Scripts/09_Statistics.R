@@ -6,6 +6,7 @@
 ##### Load Packages #####
 library(tidyverse) # Easily Install and Load the 'Tidyverse'
 
+##### Descriptive Statistics #####
 data <- read.csv("Data_final/percent_protected_boundaries.csv")
 
 n_zero <- data %>% 

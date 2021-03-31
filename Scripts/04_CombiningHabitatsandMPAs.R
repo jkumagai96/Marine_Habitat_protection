@@ -1,5 +1,5 @@
-# Joy Kumagai and Fabio Favoretto 
-# Date: March 2021
+# Joy Kumagai
+# Date: Feb 2021
 # Combining Habitats and MPAs
 # Marine Habitat Protection Indicator or Marine Protection Index (MPI)
 

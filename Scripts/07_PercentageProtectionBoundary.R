@@ -44,11 +44,6 @@ seagrasses <- data %>%
   mutate(hab = "seagrasses")
 colnames(seagrasses) <- column_names 
 
-kelps <- data %>% 
-  dplyr::select(ID, starts_with("Kelp")) %>% 
-  mutate(hab = "kelps")
-colnames(kelps) <- column_names 
-
 knolls_seamounts <- data %>% 
   dplyr::select(ID, starts_with("Knolls")) %>% 
   mutate(hab = "knolls_seamounts")

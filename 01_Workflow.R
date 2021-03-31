@@ -4,18 +4,19 @@
 # Marine Habitat Protection Indicator
 
 ###### All packages used ##### 
-library(tidyverse) # to easily load and use the "tidyverse"
-library(sf) # For handling spatial vector data
+# library(tidyverse) # to easily load and use the "tidyverse"
+# library(sf) # For handling spatial vector data
 library(raster) # For handling spatial raster data
-library(fasterize) # For a faster function to rasterize the habitat data
-library(tools) 
-library(stringr) # to easily sort some datasets 
-library(janitor) # to clean some datasetes
+# library(fasterize) # For a faster function to rasterize the habitat data
+# library(tools) 
+# library(stringr) # to easily sort some datasets 
+# library(janitor) # to clean some datasetes
+# require(future.apply)
 
-# packages for parallel processing
-library(doParallel)
-library(parallel)
-library(snow)
+### packages for parallel processing
+# library(doParallel)
+# library(parallel)
+# library(snow)
 
 source("Functions/R_custom_functions.R")
 

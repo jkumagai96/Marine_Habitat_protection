@@ -1,4 +1,4 @@
-# Fabio
+# Joy Kumagai
 # Date: Feb 2021
 # Cleaning Protected Areas - version 1
 # Marine Habitat Protection Indicator
@@ -60,3 +60,4 @@ save_raster(managed_mpas, "Data_processed/Managed_mpas.tif")
 
 
 rm(list = ls()[ls() %in% c("all_mpas", "managed", "managed_mpas", "mpas", "ntz")])
+
