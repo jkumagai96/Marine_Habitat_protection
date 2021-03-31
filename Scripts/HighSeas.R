@@ -16,7 +16,7 @@ poly <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp") %>%
   mutate(constant = 1)
 
 r <- raster("Data_processed/ocean_grid.tif")
-
+mpas <- raster("Data_processed/All_mpas.tif")
 ##### Create High Seas Raster #####
 eez_land <-  fasterize::fasterize(poly, r, field = "constant") 
 eez_land[is.na(eez_land[])] <- 0 
@@ -46,3 +46,18 @@ df <- df %>%
   ungroup()
 
 write.csv(df, "Data_final/percent_protected_highseas.csv", row.names = F)
+
+##### Calculate High Seas Area and Protected Area ####
+a <- freq(high_seas) # calculate area of high seas 
+
+pa <- high_seas*mpas # Calculate area of protected areas in high seas
+b <- freq(pa)
+
+dat <- data.frame(matrix(ncol = 3, nrow = 0))
+vect <- c("High Seas", a[1,2], b[1,2]) 
+dat <- rbind(dat, vect)
+colnames(dat) <- c("UNION", "EEZ_km2", "Protected_area")
+
+# export
+write.csv(dat, "Data_processed/high_seas_eez_area_and_pa.csv", row.names = F)
+rm(dat)
