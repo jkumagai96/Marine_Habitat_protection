@@ -7,23 +7,19 @@
 "CoralReefs_habitat_with_Managed_mpashabitat",0,2,0,NA
 "CoralReefs_habitat_with_No_take_mpashabitat",0,2,0,NA
 "CoralReefs_habitat",0,2,0,NA
-"Kelp UNEP_habitat_with_All_mpashabitat",0,3,0,NA
-"Kelp UNEP_habitat_with_Managed_mpashabitat",0,3,0,NA
-"Kelp UNEP_habitat_with_No_take_mpashabitat",0,3,0,NA
-"Kelp UNEP_habitat",0,3,0,NA
-"KnollsSeamounts_habitat_with_All_mpashabitat",542072,4,542072,0.611445189313367
-"KnollsSeamounts_habitat_with_Managed_mpashabitat",208373,4,208373,0.23504012093005
-"KnollsSeamounts_habitat_with_No_take_mpashabitat",115201,4,115201,0.129944172091695
-"KnollsSeamounts_habitat",88654226,4,88654226,100
-"Mangroves_v2_habitat_with_All_mpashabitat",0,5,0,NA
-"Mangroves_v2_habitat_with_Managed_mpashabitat",0,5,0,NA
-"Mangroves_v2_habitat_with_No_take_mpashabitat",0,5,0,NA
-"Mangroves_v2_habitat",0,5,0,NA
-"Saltmarshes_habitat_with_All_mpashabitat",0,6,0,NA
-"Saltmarshes_habitat_with_Managed_mpashabitat",0,6,0,NA
-"Saltmarshes_habitat_with_No_take_mpashabitat",0,6,0,NA
-"Saltmarshes_habitat",0,6,0,NA
-"Seagrasses_habitat_with_All_mpashabitat",0,7,0,0
-"Seagrasses_habitat_with_Managed_mpashabitat",0,7,0,0
-"Seagrasses_habitat_with_No_take_mpashabitat",0,7,0,0
-"Seagrasses_habitat",6332,7,6332,100
+"KnollsSeamounts_habitat_with_All_mpashabitat",542072,3,542072,0.611445189313367
+"KnollsSeamounts_habitat_with_Managed_mpashabitat",208373,3,208373,0.23504012093005
+"KnollsSeamounts_habitat_with_No_take_mpashabitat",115201,3,115201,0.129944172091695
+"KnollsSeamounts_habitat",88654226,3,88654226,100
+"Mangroves_v2_habitat_with_All_mpashabitat",0,4,0,NA
+"Mangroves_v2_habitat_with_Managed_mpashabitat",0,4,0,NA
+"Mangroves_v2_habitat_with_No_take_mpashabitat",0,4,0,NA
+"Mangroves_v2_habitat",0,4,0,NA
+"Saltmarshes_habitat_with_All_mpashabitat",0,5,0,NA
+"Saltmarshes_habitat_with_Managed_mpashabitat",0,5,0,NA
+"Saltmarshes_habitat_with_No_take_mpashabitat",0,5,0,NA
+"Saltmarshes_habitat",0,5,0,NA
+"Seagrasses_habitat_with_All_mpashabitat",0,6,0,0
+"Seagrasses_habitat_with_Managed_mpashabitat",0,6,0,0
+"Seagrasses_habitat_with_No_take_mpashabitat",0,6,0,0
+"Seagrasses_habitat",6332,6,6332,100
