@@ -1,7 +1,7 @@
 # Joy Kumagai 
 # Date: April 2021
-# Calculating the Index
-# Marine Habitat Protection Indicator
+# Creating the Index Figures 
+# Habitat Protection Index Project
 
 ##### Load Packages ##### 
 library(tidyverse)
@@ -137,7 +137,7 @@ data %>%
   theme_bw() +
   scale_fill_manual(guide = 'none',
                     values = c("red3", "#0868ac")) +
-  labs(x = "Jurisdictions", y = "Targeted Habitat Protection Index (THPI)")
+  labs(x = "Jurisdictions", y = "Targeted GHPI")
 
 ggsave(last_plot(), filename = "Figures/Bar_plot_average_all.png", dpi = 600, height = 16, width = 8)
 
@@ -158,7 +158,7 @@ data %>%
   theme_bw() +
   scale_fill_manual(guide = 'none',
                     values = c("red3", "#0868ac")) +
-  labs(x = "Jurisdictions", y = "Targeted Habitat Protection Index (THPI)")
+  labs(x = "Jurisdictions", y = "Targeted GHPI")
 
 ggsave(last_plot(), filename = "Figures/Bar_plot_average_truncated_50.png", dpi = 600, height = 10, width = 8)
 
@@ -285,7 +285,7 @@ for (i in 1:length(habitats)) {
     theme_bw() +
     scale_fill_manual(guide = 'none',
                       values = c("red3", "#0868ac")) +
-    labs(x = "Jurisdictions", y = paste0("Targeted Habitat Protection Index (THPI) for ", hab_correct) )
+    labs(x = "Jurisdictions", y = paste0("Targeted GHPI for ", hab_correct) )
   
   ggsave(p4, filename = paste0("Figures/Bar_plot_", hab_correct, ".png"), dpi = 600, height = 12, width = 8)
   
