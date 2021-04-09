@@ -48,7 +48,7 @@ eez <- read_sf("Data_original/eez/eez_v11.shp") %>%
   st_transform(crs = behrmann.crs) 
 
 eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp") %>% # necessary to join data
-  select(UNION, MRGID_EEZ) %>% 
+  dplyr::select(UNION, MRGID_EEZ) %>% 
   st_drop_geometry()
 
 pas <- raster("Data_processed/All_mpas.tif")
@@ -72,7 +72,7 @@ n_pas <- read.csv("Data_processed/protected_area_per_eez.csv")
 # Prepare EEZ Area 
 eez_area <- eez %>% 
   left_join(., n_pas, by = "ID") %>% # Join EEZs and extracted counts of protected areas 
-  select(MRGID, AREA_KM2, Protected_area) %>% 
+  dplyr::select(MRGID, AREA_KM2, Protected_area) %>% 
   rename(MRGID_EEZ = MRGID,
          EEZ_km2 = AREA_KM2) %>% 
   st_drop_geometry()
@@ -83,10 +83,10 @@ highseas <- highseas %>%
   na.omit() %>% 
   filter(!grepl("with_Managed", Name),
          !grepl("with_No_take", Name)) %>% 
-  select(Name, pixel_counts) %>% 
+  dplyr::select(Name, pixel_counts) %>% 
   mutate(habitat = c("coldcorals", "coldcorals", "knolls_seamounts", "knolls_seamounts", "seagrasses", "seagrasses")) %>% 
   mutate(key = c("all_mpas", "total", "all_mpas", "total", "all_mpas", "total")) %>% 
-  select(-Name) %>% 
+  dplyr::select(-Name) %>% 
   pivot_wider(values_from = pixel_counts, names_from = key) %>% 
   mutate(UNION = "High Seas",
          ISO_TER1 = NA,
@@ -107,7 +107,7 @@ coldcorals <- habitat_data %>%
   rbind(highseas) %>% 
   filter(habitat == "coldcorals") %>% # Filter by habitat 
   add_column(world_area = total_areas$ColdCorals_habitat) %>% # Add total world area for that habitat
-  mutate(global_fraction = total/world_area) # calculate global fraction each jurisdiction has 
+  mutate(global_fraction = total/sum(total)) # calculate global fraction each jurisdiction has 
 
 coralreefs <- habitat_data %>% 
   left_join(eez_area, by = "MRGID_EEZ") %>%  # Join EEZ area onto data
@@ -115,7 +115,7 @@ coralreefs <- habitat_data %>%
   rbind(highseas) %>%
   filter(habitat == "coralreefs") %>% # Filter by habitat 
   add_column(world_area = total_areas$CoralReefs_habitat) %>% # Add total world area for that habitat
-  mutate(global_fraction = total/world_area) # calculate global fraction each jurisdiction has 
+  mutate(global_fraction = total/sum(total)) # calculate global fraction each jurisdiction has 
 
 knolls_seamounts <- habitat_data %>% 
   left_join(eez_area, by = "MRGID_EEZ") %>%  # Join EEZ area onto data
@@ -123,7 +123,7 @@ knolls_seamounts <- habitat_data %>%
   rbind(highseas) %>%
   filter(habitat == "knolls_seamounts") %>% # Filter by habitat 
   add_column(world_area = total_areas$KnollsSeamounts_habitat) %>% # Add total world area for that habitat
-  mutate(global_fraction = total/world_area) # calculate global fraction each jurisdiction has 
+  mutate(global_fraction = total/sum(total)) # calculate global fraction each jurisdiction has 
 
 mangroves <- habitat_data %>% 
   left_join(eez_area, by = "MRGID_EEZ") %>%  # Join EEZ area onto data
@@ -131,7 +131,7 @@ mangroves <- habitat_data %>%
   rbind(highseas) %>%
   filter(habitat == "mangroves") %>% # Filter by habitat 
   add_column(world_area = total_areas$Mangroves_v2_habitat) %>% # Add total world area for that habitat
-  mutate(global_fraction = total/world_area) # calculate global fraction each jurisdiction has 
+  mutate(global_fraction = total/sum(total)) # calculate global fraction each jurisdiction has 
 
 saltmarshes <- habitat_data %>% 
   left_join(eez_area, by = "MRGID_EEZ") %>%  # Join EEZ area onto data
@@ -139,7 +139,7 @@ saltmarshes <- habitat_data %>%
   rbind(highseas) %>%
   filter(habitat == "saltmarshes") %>% # Filter by habitat 
   add_column(world_area = total_areas$Saltmarshes_habitat) %>% # Add total world area for that habitat
-  mutate(global_fraction = total/world_area) # calculate global fraction each jurisdiction has 
+  mutate(global_fraction = total/sum(total)) # calculate global fraction each jurisdiction has 
 
 seagrasses <- habitat_data %>% 
   left_join(eez_area, by = "MRGID_EEZ") %>%  # Join EEZ area onto data
@@ -147,7 +147,7 @@ seagrasses <- habitat_data %>%
   rbind(highseas) %>%
   filter(habitat == "seagrasses") %>% # Filter by habitat 
   add_column(world_area = total_areas$Seagrasses_habitat) %>% # Add total world area for that habitat
-  mutate(global_fraction = total/world_area) # calculate global fraction each jurisdiction has 
+  mutate(global_fraction = total/sum(total)) # calculate global fraction each jurisdiction has 
 
 ##### Export ######
 write.csv(coldcorals, "Data_final/habitat/coldcorals.csv", row.names = F)

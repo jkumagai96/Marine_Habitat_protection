@@ -73,7 +73,9 @@ eez_land <- left_join(x = eez_land, y = data, by = "UNION") %>%
                       panel.grid.major = element_line(colour = "gray90", linetype = "dashed"), 
                       axis.text.x = element_text(size = 12),
                       axis.title = element_blank()))
-
+knolls_seamounts <- read_sf("Data_original/habitats/KnollsSeamounts.shp")
+p3 <- ggplot(eez_land) +
+        geom_sf(aes(fill )
 
 
 (p2 <- ggplot(eez_land) +
@@ -118,6 +120,8 @@ p1/p2+
 ggsave('figure1_with_notake.png', dpi = 600, height = 8, width = 8)
 
 
+
+
 ##### Figure 2 #######
 ## World Data
 habitats <- c("Cold Corals", "Coral Reefs", "Knolls & Seamounts", "Mangroves", "Saltmarsh", "Seagrasses")
@@ -153,9 +157,9 @@ df5 <- left_join(df4, df3, by = "habitat") %>%
 plot2 <- df5 %>% 
         ggplot(aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = key)) +
         geom_bar(stat = "identity") +
-        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("National Jurisdiction", "High Seas")) +
+        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("National jurisdiction", "High Seas")) +
         scale_y_continuous(labels = scales::percent_format()) +
-        labs(x = "Habitat", y = "Global Protected Area Coverage") +
+        labs(x = "Habitat", y = "Global protected area coverage") +
         theme_bw() +
         theme(legend.title = element_blank()) +
         geom_hline(yintercept = .3, linetype = "dashed")
