@@ -1,6 +1,6 @@
 # Joy Kumagai 
 # Date: March 2021
-# Calculating the Area and Protected Area for each EEZ
+# Calculating Habitat Protection Indexes Script
 # Marine Habitat Protection Indicator
 
 ##### Load Packages ######

@@ -13,7 +13,7 @@ library(ggpubr)
 
 ##### Load Habitat Protection Indexes ####
 
-df <- read.csv("Data_processed/habitat_protection_indexes.csv")
+df <- read.csv("Data_final/habitat_protection_indexes.csv")
 
 ##### Overal Index Figures ####
 eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp")
@@ -134,7 +134,6 @@ data %>%
   ggplot(aes(x = reorder(UNION, T_Hs_I), y = T_Hs_I)) +
   geom_bar(stat = 'identity', aes(fill = T_Hs_I > 0), position = 'dodge', col = 'transparent') +
   coord_flip() +
-  #geom_hline(yintercept = mean(global_habitat_index$G_H_I), col = "black") +
   theme_bw() +
   scale_fill_manual(guide = 'none',
                     values = c("red3", "#0868ac")) +
@@ -156,7 +155,6 @@ data %>%
   ggplot(aes(x = reorder(UNION, T_Hs_I), y = T_Hs_I)) +
   geom_bar(stat = 'identity', aes(fill = T_Hs_I > 0), position = 'dodge', col = 'transparent') +
   coord_flip() +
-  #geom_hline(yintercept = mean(global_habitat_index$G_H_I), col = "black") +
   theme_bw() +
   scale_fill_manual(guide = 'none',
                     values = c("red3", "#0868ac")) +
@@ -167,9 +165,8 @@ ggsave(last_plot(), filename = "Figures/Bar_plot_average_truncated_50.png", dpi 
 
 
 rm(data)
-
 ###### Habitat Specific Figures #####
-habitats <- global_target_index$habitat
+habitats <- c("coldcorals", "coralreefs", "knolls_seamounts", "mangroves", "saltmarshes", "seagrasses")
 
 for (i in 1:length(habitats)) {
   data <- df %>% filter(habitat == habitats[i])
