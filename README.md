@@ -11,9 +11,9 @@ The code relies on several packages that need to be installed for it to function
 
 ## Data download: 
 | Name | Source/Website | Date accessed | Version |
-| World Database on Protected Areas | 
-UNEP-WCMC and IUCN (2021), Protected Planet: The World Database on Protected Areas (WDPA)/The Global Database on Protected Areas Management Effectiveness (GD-PAME)] [On-line], March 2021, Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net. | March 2021 | March 2021 |
-
+| :---: | :---: | :---: | :---: |
+| World Database on Protected Areas | UNEP-WCMC and IUCN (2021), Protected Planet: The World Database on Protected Areas (WDPA)/The Global Database on Protected Areas Management Effectiveness (GD-PAME)] [On-line], March 2021, Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net. | March 2021 | March 2021 |
+| Union of EEZs and countries | Flanders Marine Institute (2020). Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 3). Available online at https://www.marineregions.org/. https://doi.org/10.14284/403. | December 2020 | Version 3 |
 
 
 
