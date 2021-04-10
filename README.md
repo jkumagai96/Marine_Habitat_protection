@@ -10,12 +10,21 @@ The code relies on several packages that need to be installed for it to function
 
 
 ## Data download: 
+
+Please download the following datasets, and store them in the `Data_original` folder, each within a unique subfolder named as in the table below, except for habitats, which should be all stored within the same subfolder named `Habitats`: 
+
 | Name | Source/Website | Date accessed | Version |
 | :---: | :---: | :---: | :---: |
 | World Database on Protected Areas | UNEP-WCMC and IUCN (2021), Protected Planet: The World Database on Protected Areas (WDPA)/The Global Database on Protected Areas Management Effectiveness (GD-PAME)] [On-line], March 2021, Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net. | March 2021 | March 2021 |
-| Union of EEZs and countries | Flanders Marine Institute (2020). Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 3). Available online at https://www.marineregions.org/. https://doi.org/10.14284/403. | December 2020 | Version 3 |
-
-
+| eez_land (Union of EEZs and countries) | Flanders Marine Institute (2020). Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 3). Available online at https://www.marineregions.org/. https://doi.org/10.14284/403. | December 2020 | Version 3 |
+| EEZs | Flanders Marine Institute (2019). Maritime Boundaries Geodatabase, version 11. Available online at https://www.marineregions.org/. https://doi.org/10.14284/382. | March 2021 | Version 11 |
+| Cold Corals | Freiwald A, Rogers A, Hall-Spencer J, Guinotte JM, Davies AJ, Yesson C, Martin CS, Weatherdon LV (2018). Global distribution of cold-water corals (version 5.0). Fifth update to the dataset in Freiwald et al. (2004) by UNEP-WCMC, in collaboration with Andre Freiwald and John Guinotte. Cambridge (UK): UNEP-WCMC. Data DOI: https://doi.org/10.34892/72×9-rt61 | December 2020 | Version 5 |
+| Warm-water Corals | UNEP-WCMC, WorldFish Centre, WRI, TNC (2018). Global distribution of warm-water coral reefs, compiled from multiple sources including the Millennium Coral Reef Mapping Project. Version 4.0. Includes contributions from IMaRS-USF and IRD (2005), IMaRS-USF (2005) and Spalding et al. (2001). Cambridge (UK): UNEP-WCMC. Data DOI: https://doi.org/10.34892/t2wk-5t34 | December 2020 | Version 4 |
+| Knolls and Seamounts | Yesson C, Clark MR, Taylor M, Rogers AD (2011). The global distribution of seamounts based on 30-second bathymetry data. Deep Sea Research Part I: Oceanographic Research Papers 58: 442-453. doi: 10.1016/j.dsr.2011.02.004. Data URL: http://data.unep-wcmc.org/datasets/41 | March 2021 | Version 1.0 |
+| Mangroves | Bunting P., Rosenqvist A., Lucas R., Rebelo L-M., Hilarides L., Thomas N., Hardy A., Itoh T., Shimada M. and Finlayson C.M. (2018). The Global Mangrove Watch – a New 2010 Global Baseline of Mangrove Extent. Remote Sensing 10(10): 1669. doi: 10.3390/rs1010669. | December 2020 | GMW 2016 |
+| Saltmarshes | Mcowen C, Weatherdon LV, Bochove J, Sullivan E, Blyth S, Zockler C, Stanwell-Smith D, Kingston N, Martin CS, Spalding M, Fletcher S (2017). A global map of saltmarshes. Biodiversity Data Journal 5: e11764. Paper DOI: https://doi.org/10.3897/BDJ.5.e11764; Data DOI: https://doi.org/10.34892/07vk-ws51 | December 2020 | Version 6 |
+| Seagrasses | UNEP-WCMC, Short FT (2020). Global distribution of seagrasses (version 7.0). Seventh update to the data layer used in Green and Short (2003). Cambridge (UK): UNEP-WCMC. Data DOI: https://doi.org/10.34892/x6r3-d211 | December 2020 | Version 7 |
+| Ocean | https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-ocean/ | December 2020 | Version 4.1.0 |
 
 
 ## Workflow 
