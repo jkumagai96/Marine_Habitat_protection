@@ -16,7 +16,7 @@ library(countrycode)
 
 df <- read.csv("Data_final/habitat_protection_indexes.csv")
 
-##### Overal Index Figures ####
+##### Overall Index Figures ####
 eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp")
 land <- ne_countries(scale = 110, returnclass = "sf")
 
@@ -34,98 +34,6 @@ data <- df %>%
 eez_land_global <- left_join(x = eez_land, y = data, by = "UNION") %>%  # Join the indicator data onto the eez_land 
   arrange(G_Hs_P_I)
 
-grid <- st_graticule(lat = seq(-90, 90, by = 30),
-                     lon = seq(-180, 180, by = 60)) %>% 
-  st_transform("+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m") %>% 
-  st_geometry 
-
-plot1 <- ggplot(eez_land_global) +
-  geom_sf(aes(fill = G_Hs_P_I, colour = " ")) +
-  geom_sf(data = grid,
-          colour = "gray80", 
-          linetype = "dashed") +
-  geom_sf(data = land, 
-          col = NA,
-          fill = "gray90") +
-  annotate("text", x = -18000000, y = 0, label = "0°", size = 3) +
-  annotate("text", x = -18000000, y = 3200000, label = "30° N", size = 3) +
-  annotate("text", x = -15500000, y = 6200000, label = "60° N", size = 3) +
-  annotate("text", x = -18000000, y = -3200000, label = "30° S", size = 3) +
-  annotate("text", x = -15500000, y = -6200000, label = "60° S", size = 3) +
-  annotate("text", x = 0, y = 9500000, label = "0°", size = 3) +
-  annotate("text", x = -3000000, y = 9500000, label = "60°W", size = 3) +
-  annotate("text", x = 3000000, y = 9500000, label = "60°E", size = 3) +
-  annotate("text", x = -8000000, y = 9500000, label = "180°W", size = 3) +
-  annotate("text", x = 8000000, y = 9500000, label = "180°E", size = 3) +
-  scale_fill_gradient2(
-    low = "#f0f9e8",
-    mid = "#7bccc4",
-    high = "#0868ac",
-    midpoint = .01,
-    space = "Lab",
-    na.value = "black",
-    aesthetics = "fill",
-    n.breaks = 5, 
-    guide = guide_colorbar(title.position = "top",
-                           title.hjust = .5,
-                           barwidth = 10, 
-                           barheight = 0.5
-    )) +
-  scale_colour_manual(values = NA) +              
-  guides(colour = guide_legend("No data", override.aes = list(colour = "black", fill = "black"))) + 
-  labs(fill = "Global Protection Index (average)") +
-  theme(panel.background = element_blank(), 
-        axis.text.x = element_text(size = 12),
-        axis.title = element_blank(),
-        legend.position = "bottom")
-
-plot2 <- ggplot(eez_land_global) +
-  geom_sf(aes(fill = L_Hs_P_I, colour = " ")) +
-  geom_sf(data = grid,
-          colour = "gray80", 
-          linetype = "dashed") +
-  geom_sf(data = land, 
-          col = NA,
-          fill = "gray90") +
-  annotate("text", x = -18000000, y = 0, label = "0°", size = 3) +
-  annotate("text", x = -18000000, y = 3200000, label = "30° N", size = 3) +
-  annotate("text", x = -15500000, y = 6200000, label = "60° N", size = 3) +
-  annotate("text", x = -18000000, y = -3200000, label = "30° S", size = 3) +
-  annotate("text", x = -15500000, y = -6200000, label = "60° S", size = 3) +
-  annotate("text", x = 0, y = 9500000, label = "0°", size = 3) +
-  annotate("text", x = -3000000, y = 9500000, label = "60°W", size = 3) +
-  annotate("text", x = 3000000, y = 9500000, label = "60°E", size = 3) +
-  annotate("text", x = -8000000, y = 9500000, label = "180°W", size = 3) +
-  annotate("text", x = 8000000, y = 9500000, label = "180°E", size = 3) +
-  scale_fill_gradient2(
-    low = "#f0f9e8",
-    mid = "#7bccc4",
-    high = "#0868ac",
-    midpoint = 0.5,
-    space = "Lab",
-    na.value = "black",
-    aesthetics = "fill",
-    n.breaks = 5, 
-    guide = guide_colorbar(title.position = "top",
-                           title.hjust = .5,
-                           barwidth = 10, 
-                           barheight = 0.5
-    )) +
-  scale_colour_manual(values = NA) +              
-  guides(colour = guide_legend("No data", override.aes = list(colour = "black", fill = "black"))) + 
-  
-  labs(fill = "Local Protection Index (average)") +
-  theme(panel.background = element_blank(), 
-        axis.text.x = element_text(size = 12),
-        axis.title = element_blank(),
-        legend.position = "bottom")
-
-plot1 / plot2 +
-  plot_annotation(tag_levels = 'A')
-
-ggsave(plot = last_plot(), filename = "Figures/Global_and_local_protection_index_average.png", dpi = 600, height = 8, width = 8)
-ggsave(plot = plot1, filename = "Figures/figure3.png", dpi = 600, height = 5, width = 8)
-
 
 # Supplementary Table I
 
@@ -134,38 +42,6 @@ data %>%
   arrange(-T_Hs_I) %>% 
   magrittr::set_colnames(c("Jurisdiction", "GHPI", "LHPI", "THPI")) %>% 
   write.csv(., "Tables/supplementary_tableI.csv", row.names = F)
-
-  
-
-# Bar plot for the top and bottom 10 
-data1 <- data %>% 
-  slice_max(order_by = T_Hs_I, n = 10) 
-
-data2 <- data %>% 
-  slice_min(order_by = T_Hs_I, n = 10)
-
-data <- rbind(data1, data2)
-
-country_iso <- countrycode(sourcevar = data$UNION,
-            origin = "country.name",
-            destination = "iso3c")
-
-country_iso <- replace_na(country_iso, "High Seas")
-
-data$ISO <- country_iso
-
-data %>% 
-  na.omit() %>% 
-  ggplot(aes(x = reorder(ISO, T_Hs_I), y = T_Hs_I)) +
-  geom_bar(stat = 'identity', aes(fill = T_Hs_I > 0), position = 'dodge', col = 'transparent') +
-  theme_bw() +
-  scale_fill_manual(guide = 'none',
-                    values = c("red3", "#0868ac")) +
-  labs(x = "Jurisdictions", y = "Targeted GHPI") +
-  theme(axis.text.x = element_text(angle = 90, vjust = .5))
-
-
-ggsave(last_plot(), filename = "Figures/figure4.png", dpi = 600, height = 6, width = 8)
 
 rm(data)
 
@@ -228,7 +104,7 @@ for (i in 1:length(habitats)) {
     scale_colour_manual(values = NA) +              
     guides(colour = guide_legend("No data", override.aes = list(colour = "black", fill = "black"))) + 
     
-    labs(fill = paste0("Global Protection Index for ", hab_correct)) +
+    labs(fill = paste0("GHPI for ", hab_correct)) +
     theme(panel.background = element_blank(), 
           axis.text.x = element_text(size = 12),
           axis.title = element_blank(),
@@ -269,7 +145,7 @@ for (i in 1:length(habitats)) {
     scale_colour_manual(values = NA) +              
     guides(colour = guide_legend("No data", override.aes = list(colour = "black", fill = "black"))) + 
     
-    labs(fill = paste0("Local Protection Index for ", hab_correct)) +
+    labs(fill = paste0("LHPI for ", hab_correct)) +
     theme(panel.background = element_blank(), 
           axis.text.x = element_text(size = 12),
           axis.title = element_blank(),
