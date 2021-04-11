@@ -28,3 +28,7 @@ df <- df %>%
   ungroup()
 
 write.csv(df, "Data_final/percent_protected_world.csv", row.names = F)
+
+
+#### END OF SCRIPT ####
+

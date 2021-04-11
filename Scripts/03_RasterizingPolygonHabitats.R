@@ -16,7 +16,7 @@ library(foreach)
 
 # Loading data ------------------------------------------------------------
 
-shapefiles <- list.files("Data_original/habitats/", pattern = "\\.shp$", full.names = T)
+shapefiles <- list.files("Data_original/Habitats/", pattern = "\\.shp$", full.names = T)
 behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
 r <- raster("Data_processed/ocean_grid.tif")
 
@@ -47,7 +47,7 @@ foreach(i = 1:length(shapefiles)) %dopar% {
     if (class(habitat$area) != "numeric") {
       habitat$area = 0 
     }
-  } else { habitat$area = 0 }
+  } else {habitat$area = 0 }
   
   
   
@@ -103,6 +103,7 @@ seagrasses <- str_subset(rasters, "Seagrasses")
 
 do.call(merge, list(raster(seagrasses[1]), raster(seagrasses[2]))) %>% 
   writeRaster(., filename = "Data_processed/Seagrasses_habitat.tif", overwrite = TRUE)
+
 beepr::beep(2)
 unlink(seagrasses)
 
@@ -113,6 +114,7 @@ coralreefs <- str_subset(rasters, "CoralReef")
 
 do.call(merge, list(raster(coralreefs[1]), raster(coralreefs[2]))) %>% 
   writeRaster(., filename = "Data_processed/CoralReefs_habitat.tif", overwrite = TRUE)
+
 beepr::beep(2)
 unlink(coralreefs)
 
@@ -122,6 +124,7 @@ salthmarshes <- str_subset(rasters, "Saltmarsh")
 
 do.call(merge, list(raster(salthmarshes[1]), raster(salthmarshes[2]))) %>% 
   writeRaster(., filename = "Data_processed/Saltmarshes_habitat.tif", overwrite = TRUE)
+
 beepr::beep(2)
 unlink(salthmarshes)
 
@@ -131,6 +134,9 @@ coldcorals <- str_subset(rasters, "ColdCorals")
 
 do.call(merge, list(raster(coldcorals[1]), raster(coldcorals[2]))) %>% 
   writeRaster(., filename = "Data_processed/ColdCorals_habitat.tif", overwrite = TRUE)
+
 beepr::beep(2)
 unlink(coldcorals)
 
+
+#### END OF SCRIPT ####

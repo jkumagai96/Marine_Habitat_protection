@@ -81,3 +81,6 @@ df <- df %>%
 
 #### Export ####
 write.csv(df, "Data_final/percent_protected_boundaries.csv", row.names = F)
+
+
+#### END OF SCRIPT ####

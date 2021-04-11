@@ -37,6 +37,58 @@ eez_land <- left_join(x = eez_land, y = data, by = "UNION") %>%
         arrange(pp_mean_all)
 
 
+##### Figure 1 #######
+
+## World Data
+habitats <- c("Cold Corals", "Coral Reefs", "Knolls & Seamounts", "Mangroves", "Saltmarsh", "Seagrasses")
+
+
+df1 <- data_world %>% 
+        dplyr::select(Name, pixel_counts,) %>% 
+        filter(grepl("with_All_mpas", Name) | !grepl("with", Name)) %>% 
+        mutate(habitat = rep(habitats, each = 2),
+               type = rep(c("All_mpas", "world_total"), length.out = 12)) %>% 
+        dplyr::select(-Name) %>% 
+        pivot_wider(values_from = pixel_counts, names_from = type)
+
+df2 <- data_boundaries %>% 
+        dplyr::select(UNION, habitat, all_mpas) %>% 
+        group_by(habitat) %>% 
+        summarise(eez_pa_area = sum(all_mpas)) %>% 
+        mutate(habitat = habitats)
+
+df3 <- data_highseas %>% 
+        dplyr::select(Name, pixel_counts) %>% 
+        filter(grepl("with_All_mpas", Name)) %>% 
+        mutate(habitat = habitats) %>% 
+        dplyr::select(-Name) %>% 
+        rename(highseas_pa_area = pixel_counts)
+
+df4 <- left_join(df1, df2, by = "habitat")
+df5 <- left_join(df4, df3, by = "habitat") %>% 
+        dplyr::select(-All_mpas) %>% 
+        pivot_longer(cols = ends_with("area"), names_to = "key", values_to = "pixel_counts") %>% 
+        mutate(percent_protected = pixel_counts/world_total)
+
+plot2 <- df5 %>% 
+        ggplot(aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = key)) +
+        geom_bar(stat = "identity") +
+        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("Jurisdiction", "High Seas")) +
+        scale_y_continuous(labels = scales::percent_format()) +
+        labs(x = "Habitat", y = "Global protected area coverage") +
+        theme_bw() +
+        theme(legend.title = element_blank()) +
+        geom_hline(yintercept = .3, linetype = "dashed")
+plot2
+
+ggsave("Figures/figure1.png", plot2, device = "png", width = 8, height = 5, units = "in", dpi = 600)
+
+
+
+
+
+#### Figure 1 with other protection levels ####
+
 (p1 <- ggplot(eez_land) +
                 geom_sf(aes(fill = pp_mean_all), 
                         col = NA) +
@@ -73,9 +125,6 @@ eez_land <- left_join(x = eez_land, y = data, by = "UNION") %>%
                       panel.grid.major = element_line(colour = "gray90", linetype = "dashed"), 
                       axis.text.x = element_text(size = 12),
                       axis.title = element_blank()))
-knolls_seamounts <- read_sf("Data_original/habitats/KnollsSeamounts.shp")
-p3 <- ggplot(eez_land) +
-        geom_sf(aes(fill )
 
 
 (p2 <- ggplot(eez_land) +
@@ -114,55 +163,13 @@ p3 <- ggplot(eez_land) +
                       axis.text.x = element_text(size = 12),
                       axis.title = element_blank()))
 
-p1/p2+
-        plot_layout(guides = "collect")+
+p1/p2 +
+        plot_layout(guides = "collect") +
         plot_annotation(tag_levels = 'A')
-ggsave('figure1_with_notake.png', dpi = 600, height = 8, width = 8)
+
+ggsave('Figures/figure2_with_notake.png', dpi = 600, height = 8, width = 8)
 
 
 
 
-##### Figure 2 #######
-## World Data
-habitats <- c("Cold Corals", "Coral Reefs", "Knolls & Seamounts", "Mangroves", "Saltmarsh", "Seagrasses")
 
-
-df1 <- data_world %>% 
-        dplyr::select(Name, pixel_counts,) %>% 
-        filter(grepl("with_All_mpas", Name) | !grepl("with", Name)) %>% 
-        mutate(habitat = rep(habitats, each = 2),
-               type = rep(c("All_mpas", "world_total"), length.out = 12)) %>% 
-        dplyr::select(-Name) %>% 
-        pivot_wider(values_from = pixel_counts, names_from = type)
-
-df2 <- data_boundaries %>% 
-        dplyr::select(UNION, habitat, all_mpas) %>% 
-        group_by(habitat) %>% 
-        summarise(eez_pa_area = sum(all_mpas)) %>% 
-        mutate(habitat = habitats)
-
-df3 <- data_highseas %>% 
-        dplyr::select(Name, pixel_counts) %>% 
-        filter(grepl("with_All_mpas", Name)) %>% 
-        mutate(habitat = habitats) %>% 
-        dplyr::select(-Name) %>% 
-        rename(highseas_pa_area = pixel_counts)
-
-df4 <- left_join(df1, df2, by = "habitat")
-df5 <- left_join(df4, df3, by = "habitat") %>% 
-        dplyr::select(-All_mpas) %>% 
-        pivot_longer(cols = ends_with("area"), names_to = "key", values_to = "pixel_counts") %>% 
-        mutate(percent_protected = pixel_counts/world_total)
-
-plot2 <- df5 %>% 
-        ggplot(aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = key)) +
-        geom_bar(stat = "identity") +
-        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("National jurisdiction", "High Seas")) +
-        scale_y_continuous(labels = scales::percent_format()) +
-        labs(x = "Habitat", y = "Global protected area coverage") +
-        theme_bw() +
-        theme(legend.title = element_blank()) +
-        geom_hline(yintercept = .3, linetype = "dashed")
-plot2
-
-ggsave("figure2.png", plot2, device = "png", width = 8, height = 5, units = "in", dpi = 600)

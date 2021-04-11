@@ -52,5 +52,7 @@ write.csv(ex, file = "Data_processed/habitat_area.csv")
 
 end.time <- Sys.time()
 end.time - start.time
+
+
 #### END OF SCRIPT #####
 

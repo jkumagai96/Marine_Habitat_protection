@@ -1,4 +1,4 @@
-# Joy Kumagai 
+# Joy Kumagai and Fabio Favoretto
 # Date: April 2021
 # Creating the Index Figures 
 # Habitat Protection Index Project
@@ -10,6 +10,7 @@ library(rnaturalearth)
 library(ggthemes)
 library(patchwork)
 library(ggpubr)
+library(countrycode)
 
 ##### Load Habitat Protection Indexes ####
 
@@ -72,7 +73,6 @@ plot1 <- ggplot(eez_land_global) +
     )) +
   scale_colour_manual(values = NA) +              
   guides(colour = guide_legend("No data", override.aes = list(colour = "black", fill = "black"))) + 
-  
   labs(fill = "Global Protection Index (average)") +
   theme(panel.background = element_blank(), 
         axis.text.x = element_text(size = 12),
@@ -120,56 +120,60 @@ plot2 <- ggplot(eez_land_global) +
         axis.title = element_blank(),
         legend.position = "bottom")
 
-ggarrange(plot1, plot2,
-                    labels = c("a", "b"),
-                    nrow = 2)
+plot1 / plot2 +
+  plot_annotation(tag_levels = 'A')
 
 ggsave(plot = last_plot(), filename = "Figures/Global_and_local_protection_index_average.png", dpi = 600, height = 8, width = 8)
-ggsave(plot = plot1, filename = "Figures/Global_protection_index_average.png", dpi = 600, height = 5, width = 8)
+ggsave(plot = plot1, filename = "Figures/figure3.png", dpi = 600, height = 5, width = 8)
 
 
-# Bar plot for all countries 
+# Supplementary Table I
+
 data %>% 
   na.omit() %>% 
-  ggplot(aes(x = reorder(UNION, T_Hs_I), y = T_Hs_I)) +
-  geom_bar(stat = 'identity', aes(fill = T_Hs_I > 0), position = 'dodge', col = 'transparent') +
-  coord_flip() +
-  theme_bw() +
-  scale_fill_manual(guide = 'none',
-                    values = c("red3", "#0868ac")) +
-  labs(x = "Jurisdictions", y = "Targeted GHPI")
+  arrange(-T_Hs_I) %>% 
+  magrittr::set_colnames(c("Jurisdiction", "GHPI", "LHPI", "THPI")) %>% 
+  write.csv(., "Tables/supplementary_tableI.csv", row.names = F)
 
-ggsave(last_plot(), filename = "Figures/Bar_plot_average_all.png", dpi = 600, height = 16, width = 8)
+  
 
-# Bar plot for the top and bottom 25 
+# Bar plot for the top and bottom 10 
 data1 <- data %>% 
-  slice_max(order_by = T_Hs_I, n = 25) 
+  slice_max(order_by = T_Hs_I, n = 10) 
 
 data2 <- data %>% 
-  slice_min(order_by = T_Hs_I, n = 25)
+  slice_min(order_by = T_Hs_I, n = 10)
 
 data <- rbind(data1, data2)
 
+country_iso <- countrycode(sourcevar = data$UNION,
+            origin = "country.name",
+            destination = "iso3c")
+
+country_iso <- replace_na(country_iso, "High Seas")
+
+data$ISO <- country_iso
+
 data %>% 
   na.omit() %>% 
-  ggplot(aes(x = reorder(UNION, T_Hs_I), y = T_Hs_I)) +
+  ggplot(aes(x = reorder(ISO, T_Hs_I), y = T_Hs_I)) +
   geom_bar(stat = 'identity', aes(fill = T_Hs_I > 0), position = 'dodge', col = 'transparent') +
-  coord_flip() +
   theme_bw() +
   scale_fill_manual(guide = 'none',
                     values = c("red3", "#0868ac")) +
-  labs(x = "Jurisdictions", y = "Targeted GHPI")
+  labs(x = "Jurisdictions", y = "Targeted GHPI") +
+  theme(axis.text.x = element_text(angle = 90, vjust = .5))
 
-ggsave(last_plot(), filename = "Figures/Bar_plot_average_truncated_50.png", dpi = 600, height = 10, width = 8)
 
-
+ggsave(last_plot(), filename = "Figures/figure4.png", dpi = 600, height = 6, width = 8)
 
 rm(data)
+
 ###### Habitat Specific Figures #####
 habitats <- c("coldcorals", "coralreefs", "knolls_seamounts", "mangroves", "saltmarshes", "seagrasses")
 
 for (i in 1:length(habitats)) {
-  data <- df %>% filter(habitat == habitats[i])
+  data <- df %>% filter(habitat == habitats[i]) 
   
   hab_correct <- "correct this"
   if (habitats[i] == "coldcorals") {hab_correct <- "Cold Corals"}
@@ -182,6 +186,7 @@ for (i in 1:length(habitats)) {
   
   eez_land_in_loop <- left_join(x = eez_land, y = data, by = "UNION") %>%  # Join the indicator data onto the eez_land 
     arrange(G_H_I)
+  
   
   grid <- st_graticule(lat = seq(-90, 90, by = 30),
                        lon = seq(-180, 180, by = 60)) %>% 
@@ -269,24 +274,31 @@ for (i in 1:length(habitats)) {
           axis.text.x = element_text(size = 12),
           axis.title = element_blank(),
           legend.position = "bottom")
+  p3 <- p1 / p2 +
+    plot_annotation(tag_levels = 'A')
   
-  p3 <- ggarrange(p1, p2,
-            labels = c("a", "b"),
-            nrow = 2)
+  ggsave(plot = p3, filename = paste0("Figures/supplementary_figure_", hab_correct, "global_local.png"), dpi = 600, height = 8, width = 7)
   
-  ggsave(plot = p3, filename = paste0("Figures/figure_", hab_correct, "global_local.png"), dpi = 600, height = 8, width = 8)
+  data1 <- data %>% 
+    slice_max(order_by = T_H_I, n = 10) 
+  
+  data2 <- data %>% 
+    slice_min(order_by = T_H_I, n = 10)
+  
+  data <- rbind(data1, data2)
+  
   
  p4 <-  data %>% 
     na.omit() %>% 
     ggplot(aes(x = reorder(UNION, T_H_I), y = T_H_I)) +
     geom_bar(stat = 'identity', aes(fill = T_H_I > 0), position = 'dodge', col = 'transparent') +
-    coord_flip() +
-    #geom_hline(yintercept = mean(global_habitat_index$G_H_I), col = "black") +
     theme_bw() +
     scale_fill_manual(guide = 'none',
                       values = c("red3", "#0868ac")) +
-    labs(x = "Jurisdictions", y = paste0("Targeted GHPI for ", hab_correct) )
+    labs(x = "Jurisdictions", y = paste0("Targeted GHPI for ", hab_correct) ) +
+    theme(axis.text.x = element_text(angle = 90, vjust = .5))
+ 
   
-  ggsave(p4, filename = paste0("Figures/Bar_plot_", hab_correct, ".png"), dpi = 600, height = 12, width = 8)
+  ggsave(p4, filename = paste0("Figures/supplementary_figure_bar_plot_", hab_correct, ".png"), dpi = 300, height = 8, width = 8)
   
 }

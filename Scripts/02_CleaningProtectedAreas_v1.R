@@ -17,7 +17,7 @@ dir.create(path = "Data_processed", showWarnings = FALSE)
 
 # Ocean rasterizing and saving --------------------------------------------
 
-r <- raster(st_transform(read_sf("Data_original/ocean/ne_110m_ocean.shp"), crs = behrmann), res = 1000)
+r <- raster(st_transform(read_sf("Data_original/Ocean/ne_110m_ocean.shp"), crs = behrmann), res = 1000)
 
 writeRaster(r, "Data_processed/ocean_grid.tif", overwrite = TRUE)
 
@@ -33,7 +33,7 @@ gc()
 
 # Checking projection
 
-if(!st_crs(mpas[[1]])$proj4string == st_crs(behrmann.crs)$proj4string) {
+if (!st_crs(mpas[[1]])$proj4string == st_crs(behrmann.crs)$proj4string) {
   stop()
 }
 
@@ -61,3 +61,5 @@ save_raster(managed_mpas, "Data_processed/Managed_mpas.tif")
 
 rm(list = ls()[ls() %in% c("all_mpas", "managed", "managed_mpas", "mpas", "ntz")])
 
+
+#### END OF SCRIPT ####

@@ -41,3 +41,5 @@ for (i in 1:length(habitat_files)) {
 }
 
 stopCluster(cl)
+
+#### END OF SCRIPT ####
