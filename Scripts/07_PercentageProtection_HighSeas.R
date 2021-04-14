@@ -61,3 +61,6 @@ colnames(dat) <- c("UNION", "EEZ_km2", "Protected_area")
 # export
 write.csv(dat, "Data_processed/high_seas_eez_area_and_pa.csv", row.names = F)
 rm(dat)
+
+
+#### END OF SCRIPT ####

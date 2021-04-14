@@ -47,10 +47,14 @@ source("Scripts/03_RasterizingPolygonHabitats_v2.R")
 source("Scripts/04_CombiningHabitatsandMPAs.R")
 
 # Step 4: Summarizing habitat information per boundary 
-# Be careful! This involves parallel processing
 source("Scripts/05_SummaryStatistics.R")
 
 # Step 5: Summarizing Final Outputs 
 source("Scripts/06_PercentageProtectionWorld.R")
 
 source("Scripts/07_PercentageProtectionBoundary.R")
+
+source("Scripts/07_PercentageProtection_HighSeas.R")
+       
+#### END OF SCRIPT ####
+

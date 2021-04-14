@@ -90,10 +90,11 @@ df <- rbind(coldcorals, coralreefs, knolls_seamounts, mangroves, saltmarshes, se
 df <- df %>%  
   rename(F_G_H = global_fraction) %>% # Fraction of Global Habitat in the EEZ/Land
   mutate(F_H_P = all_mpas/total,  # Fraction of Habitat Protected in the EEZ/land
-         t_F_H_P = F_G_H*0.3,
+         t_F_H_P = F_G_H * 0.3,
          G_H_I = F_H_P * F_G_H, # Global Habitat Index
-         T_H_I = (F_H_P * F_G_H) -t_F_H_P) # Target Habitat Index 
+         T_H_I = (F_H_P * F_G_H) - t_F_H_P) # Target Habitat Index 
 
 ##### Export ######
+
 write.csv(df, "Data_final/habitat_protection_indexes.csv", row.names = F)
 

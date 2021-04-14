@@ -1,4 +1,4 @@
-# Joy Kumagai 
+# Joy Kumagai and Fabio Favoretto 
 # Date: March 2021
 # Figures 
 # Marine Habitat Protection Indicator
@@ -12,7 +12,7 @@ library(ggthemes)
 library(patchwork)
 
 ##### Load Data ####
-data <- read.csv("Data_final/percent_protected_boundaries.csv")
+data_boundaries <- read.csv("Data_final/percent_protected_boundaries.csv")
 data_world <- read.csv("Data_final/percent_protected_world.csv")
 eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp")
 
@@ -20,7 +20,7 @@ land <- ne_countries(scale = 110, returnclass = "sf")
 
 ##### Formating Data #####
 
-data <- data %>% 
+data_boundaries <- data_boundaries %>% 
         dplyr::select(UNION, total, all_mpas, pp_mean_all, pp_mean_notake) %>% 
         unique()
 
@@ -32,7 +32,7 @@ eez_land <- st_transform(eez_land, crs = robin)
 
 
 ## Join the indicator data onto the eez_land 
-eez_land <- left_join(x = eez_land, y = data, by = "UNION") %>% 
+eez_land <- left_join(x = eez_land, y = data_boundaries, by = "UNION") %>% 
         arrange(pp_mean_all)
 
 ## World Data
@@ -97,7 +97,7 @@ grid <- st_graticule(lat = seq(-90, 90, by = 30),
         scale_colour_manual(values = NA) +              
         guides(colour = guide_legend("No data", override.aes = list(colour = "black", fill = "black"))) + 
         
-        labs(fill = "Avg. % of protected habitats") +
+        labs(fill = "Local Habitat Protection Index (Average)") +
         theme(panel.background = element_blank(), 
               axis.text.x = element_text(size = 12),
               axis.title = element_blank(),
@@ -118,14 +118,16 @@ beepr::beep(1)
 lat_graph <- lat_long_graph %>% 
         as.data.frame() %>% 
         select(-geometry) %>% 
-        group_by(Y) %>% 
-        summarise(mpa_area = mean(all_mpas, na.rm = T), pp = mean(pp_mean_all, na.rm = T), h_area = mean(total, na.rm = T))
+        mutate(degree = round(Y/100000, 0)) %>% 
+        group_by(degree) %>% 
+        summarise(mpa_area = mean(all_mpas, na.rm = T), h_area = mean(total, na.rm = T))
 
 long_graph <- lat_long_graph %>% 
         as.data.frame() %>% 
         select(-geometry) %>% 
-        group_by(X) %>% 
-        summarise(mpa_area = mean(all_mpas, na.rm = T), pp = mean(pp_mean_all, na.rm = T), h_area = mean(total, na.rm = T))
+        mutate(degree = round(X/100000, 0)) %>% 
+        group_by(degree) %>% 
+        summarise(mpa_area = mean(all_mpas, na.rm = T), h_area = mean(total, na.rm = T))
 
 
 colors <- c("Protected area" = "blue", "Total area" = "red")
@@ -133,21 +135,22 @@ colors <- c("Protected area" = "blue", "Total area" = "red")
 
 
 (p2 <- lat_graph %>% 
-        mutate(degree = round(Y/100000, 0)) %>% 
-        group_by(degree) %>% 
-        summarise(pp = mean(mpa_area, na.rm = T), h_area = mean(h_area, na.rm = T)) %>% 
         ggplot(aes(x = degree)) +
-        geom_area(aes(y = pp, fill = "Protected area"), alpha = .3) +
+        geom_area(aes(y = mpa_area, fill = "Protected area"), alpha = .3) +
         geom_area(aes(y = h_area, fill = "Total area"), alpha = .3) +
-        labs(y = expression(Area ~ km^2), fill = " ") +
+        labs(y = expression(paste("Average ", Area ~ km^2)), fill = " ") +
         scale_x_continuous(breaks = c(-90, -60, -30, 0, 30, 60, 90)) +
         scale_y_continuous(position = "right") +
         scale_fill_manual(values = colors) + 
         guides(fill = guide_legend(nrow = 2, byrow = TRUE)) +
+        geom_vline(xintercept = 0, linetype = 2, col = "gray90") +
+        geom_vline(xintercept = -90, linetype = 2, col = "gray90") +
+        geom_vline(xintercept = -60, linetype = 2, col = "gray90") +
+        geom_vline(xintercept = 60, linetype = 2, col = "gray90") +
+        geom_vline(xintercept = 90, linetype = 2, col = "gray90") +
         coord_flip() +
                 theme(panel.background = element_rect(fill = "transparent"),
                       plot.background = element_rect(fill = NA, color = NA),
-                      axis.text.y = element_blank(),
                       axis.text.x = element_text(size = 6),
                       axis.title.x = element_text(size = 6),
                       axis.ticks.y = element_blank(),
@@ -156,17 +159,18 @@ colors <- c("Protected area" = "blue", "Total area" = "red")
                       legend.background = element_rect(fill = "transparent", colour = NA)))
 
 (p3 <- long_graph %>% 
-                mutate(degree = round(X/100000, 0)) %>% 
-                group_by(degree) %>% 
-                summarise(pp = mean(mpa_area, na.rm = T), h_area = mean(h_area, na.rm = T)) %>% 
                 ggplot(aes(x = degree)) +
-                geom_area(aes(y = pp), fill = "blue", alpha = .3) +
+                geom_area(aes(y = mpa_area), fill = "blue", alpha = .3) +
                 geom_area(aes(y = h_area), fill = "red", alpha = .3) +
-                labs(y = expression(Area ~ km^2)) +
-                scale_x_continuous(breaks = c(-90, -60, -30, 0, 30, 60, 90)) +
+                labs(y = expression(paste("Average ", Area ~ km^2)), fill = " ") +
+                scale_x_continuous(breaks = c(-180, -60, 0, 60, 180)) +
                 scale_y_continuous(position = "right") +
+                geom_vline(xintercept = 0, linetype = 2, col = "gray90") +
+                geom_vline(xintercept = -180, linetype = 2, col = "gray90") +
+                geom_vline(xintercept = -60, linetype = 2, col = "gray90") +
+                geom_vline(xintercept = 60, linetype = 2, col = "gray90") +
+                geom_vline(xintercept = 180, linetype = 2, col = "gray90") +
                 theme(panel.background = element_rect(fill = "transparent"),
-                      axis.text.x = element_blank(),
                       axis.text.y = element_text(size = 6),
                       axis.title.y = element_text(size = 6),
                       axis.ticks.x = element_blank(),
@@ -180,8 +184,8 @@ ggplot() +
                     expand = FALSE) +
         annotation_custom(
                 grob = ggplotGrob(p3),
-                xmin = 0.08,
-                xmax = 1.55,
+                xmin = 0.09,
+                xmax = 1.58,
                 ymin = 1,
                 ymax = 1.5
         ) +
@@ -196,10 +200,129 @@ ggplot() +
                 grob = ggplotGrob(p2),
                 xmin = 1.5,
                 xmax = 2.0,
-                ymin = 0.24,
-                ymax = 1.3
+                ymin = 0.25,
+                ymax = 1.31
         ) +
         theme_void()
 
-ggsave('figure1b.png', dpi = 600, height = 5, width = 8)
+ggsave('Figures/figure3.png', dpi = 600, height = 5, width = 8)
 
+
+
+### Statistics ####
+
+lat_long_stats <- lat_long_graph %>% 
+        as.data.frame() %>% 
+        select(-geometry) %>% 
+        mutate(x_degree = round(X/100000, 0), y_degree = round(Y/100000, 0)) %>% 
+        group_by(x_degree, y_degree) %>% 
+        summarise(mpa_area = mean(all_mpas, na.rm = T), h_area = mean(total, na.rm = T))
+
+north <- lat_long_stats %>% 
+        filter(y_degree > 0) %>% 
+        mutate(perc = (mpa_area/h_area)*100) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(perc, na.rm = T), ste = sd(perc, na.rm = T)/sqrt(length(perc))) %>% 
+        print()
+
+south <- lat_long_stats %>% 
+        filter(y_degree < 0) %>% 
+        mutate(perc = (mpa_area/h_area)*100) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(perc, na.rm = T), ste = sd(perc, na.rm = T)/sqrt(length(perc))) %>% 
+        print()
+
+west <- lat_long_stats %>% 
+        filter(x_degree < 0) %>% 
+        mutate(perc = (mpa_area/h_area)*100) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(perc, na.rm = T), ste = sd(perc, na.rm = T)/sqrt(length(perc))) %>% 
+        print()
+
+east <- lat_long_stats %>% 
+        filter(x_degree > 0) %>% 
+        mutate(perc = (mpa_area/h_area)*100) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(perc, na.rm = T), ste = sd(perc, na.rm = T)/sqrt(length(perc))) %>% 
+        print()
+
+north_west <- lat_long_stats %>% 
+        filter(x_degree < 0 & y_degree > 0) %>% 
+        mutate(perc = (mpa_area/h_area)*100) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(perc, na.rm = T), ste = sd(perc, na.rm = T)/sqrt(length(perc))) %>% 
+        print()
+
+south_west <- lat_long_stats %>% 
+        filter(x_degree < 0 & y_degree < 0) %>% 
+        mutate(perc = (mpa_area/h_area)*100) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(perc, na.rm = T), ste = sd(perc, na.rm = T)/sqrt(length(perc))) %>% 
+        print()
+
+north_east <- lat_long_stats %>% 
+        filter(x_degree > 0 & y_degree > 0) %>% 
+        mutate(perc = (mpa_area/h_area)*100) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(perc, na.rm = T), ste = sd(perc, na.rm = T)/sqrt(length(perc))) %>% 
+        print()
+
+south_east <- lat_long_stats %>% 
+        filter(x_degree > 0 & y_degree < 0) %>% 
+        mutate(perc = (mpa_area/h_area)*100) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(perc, na.rm = T), ste = sd(perc, na.rm = T)/sqrt(length(perc))) %>% 
+        print()
+
+
+results <- data.frame(
+        world = c("North", 
+                  "South", 
+                  "West", 
+                  "East", 
+                  "North west", 
+                  "South west", 
+                  "North east", 
+                  "South east"),
+        mean = c(north$mean_perc, 
+                   south$mean_perc, 
+                   west$mean_perc, 
+                   east$mean_perc, 
+                   north_west$mean_perc, 
+                   south_west$mean_perc, 
+                   north_east$mean_perc, 
+                   south_east$mean_perc),
+        ste = c(north$ste, 
+                 south$ste, 
+                 west$ste, 
+                 east$ste, 
+                 north_west$ste, 
+                 south_west$ste, 
+                 north_east$ste, 
+                 south_east$ste)) %>% 
+        mutate(ste = round(ste, 2))
+
+(p1 <- results[1:4,] %>% 
+        ggplot(aes(x = reorder(world, mean),  y = mean)) +
+        geom_point() +
+        geom_errorbar(aes(ymin = mean-ste, ymax = mean + ste)) +
+        labs(x = "World section", y = "Average % protected") +
+        ylim(0, 50) +
+        theme_bw()
+        )
+
+(p2 <- results[5:8,] %>% 
+                ggplot(aes(x = reorder(world, mean),  y = mean)) +
+                geom_point() +
+                geom_errorbar(aes(ymin = mean-ste, ymax = mean + ste)) +
+                labs(x = "World section", y = "Average % protected") +
+                ylim(0, 50) +
+                theme_bw() +
+                theme(axis.text.y = element_blank(), 
+                      axis.title.y = element_blank())
+)
+
+p1 + p2 +
+        plot_annotation(tag_levels = 'A')
+
+ggsave("Figures/supplementary_world_section_protected.png", dpi = 300, height = 5, width = 7)

@@ -42,7 +42,7 @@ for (i in 1:length(mpa_files)) {
     
     filepath <- paste0("Data_original/mpas/PointsToPolygons/polypoints_", n, ".shp") 
     st_write(dat_poly, filepath, overwrite = TRUE, append = FALSE, driver = 'ESRI Shapefile',  layer_options = "ENCODING=UTF-8") # write new poly data
-    n <- n+1
+    n <- n + 1
     
     mpa_poly_files <- c(mpa_poly_files, filepath) # save path to be cleaned in next script 
     rm(filepath)
@@ -51,3 +51,6 @@ for (i in 1:length(mpa_files)) {
     print("ERROR geometry is not polygon, multipolygon, point, or multipoint")
   }
 }
+
+
+#### END OF SCRIPT ####
