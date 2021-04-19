@@ -16,8 +16,17 @@ eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp") %>% # neces
 
 # Load other processed datasets 
 highseas <- read.csv("Data_final/percent_protected_highseas.csv")
-world <- read.csv("Data_final/percent_protected_world.csv")
-habitat_data <- read.csv("Data_final/percent_protected_boundaries.csv") %>% 
+world <- read.csv("Data_final/percent_protected_world.csv", fileEncoding = "UTF-8")
+habitat_data <- read.csv("Data_final/percent_protected_boundaries.csv", fileEncoding = "UTF-8") 
+
+na_jurisdictions <- habitat_data %>% # find jurisdictions where they have no habitat 
+  group_by(UNION) %>% 
+  summarise(check_for_na = sum(total)) %>% 
+  filter(check_for_na == 0) 
+na_jurisdictions <- na_jurisdictions$UNION
+
+habitat_data <- habitat_data %>% # remove them from the data 
+  filter(!UNION %in% na_jurisdictions) %>% 
   left_join(., eez_land, by = "UNION")
 
 ##### Joining Data #####
@@ -94,7 +103,17 @@ df <- df %>%
          G_H_I = F_H_P * F_G_H, # Global Habitat Index
          T_H_I = (F_H_P * F_G_H) - t_F_H_P) # Target Habitat Index 
 
+# Calculation of Index on average 
+df2 <- df %>%
+  group_by(UNION) %>% 
+  summarise(G_Hs_P_I = mean(G_H_I, na.rm = T),
+            L_Hs_P_I = mean(F_H_P, na.rm = T),
+            T_Hs_I = mean(T_H_I, na.rm = T),
+            MRGID_EEZ = unique(MRGID_EEZ), 
+            ISO_TER1 = unique(ISO_TER1)) %>% 
+  dplyr::select(UNION, MRGID_EEZ, ISO_TER1, G_Hs_P_I, L_Hs_P_I, T_Hs_I)
+
 ##### Export ######
 
-write.csv(df, "Data_final/habitat_protection_indexes.csv", row.names = F)
-
+write.csv(df, "Data_final/habitat_protection_indexes.csv", row.names = F, fileEncoding = "UTF-8")
+write.csv(df2, "Data_final/habitat_protection_indexes_average.csv", row.names = F, fileEncoding = "UTF-8")

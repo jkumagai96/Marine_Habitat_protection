@@ -40,21 +40,22 @@ eez_land <- left_join(x = eez_land, y = data, by = "UNION") %>%
 ##### Figure 1 #######
 
 ## World Data
-habitats <- c("Cold Corals", "Coral Reefs", "Knolls & Seamounts", "Mangroves", "Saltmarsh", "Seagrasses")
+habitats <- c("Cold Corals", "Warm Water Corals", "Knolls & Seamounts", "Mangroves", "Saltmarsh", "Seagrasses")
 
 
-df1 <- data_world %>% 
-        dplyr::select(Name, pixel_counts,) %>% 
-        filter(grepl("with_All_mpas", Name) | !grepl("with", Name)) %>% 
-        mutate(habitat = rep(habitats, each = 2),
-               type = rep(c("All_mpas", "world_total"), length.out = 12)) %>% 
-        dplyr::select(-Name) %>% 
-        pivot_wider(values_from = pixel_counts, names_from = type)
+#df1 <- data_world %>% 
+#        dplyr::select(Name, pixel_counts) %>% 
+#        filter(grepl("with_All_mpas", Name) | !grepl("with", Name)) %>% 
+#        mutate(habitat = rep(habitats, each = 2),
+#               type = rep(c("All_mpas", "world_total"), length.out = 12)) %>% 
+#        dplyr::select(-Name) %>% 
+#        pivot_wider(values_from = pixel_counts, names_from = type)
 
 df2 <- data_boundaries %>% 
-        dplyr::select(UNION, habitat, all_mpas) %>% 
+        dplyr::select(UNION, habitat, all_mpas, total) %>% 
         group_by(habitat) %>% 
-        summarise(eez_pa_area = sum(all_mpas)) %>% 
+        summarise(eez_pa_area = sum(all_mpas),
+                  eez_total_area = sum(total)) %>% 
         mutate(habitat = habitats)
 
 df3 <- data_highseas %>% 
@@ -64,112 +65,50 @@ df3 <- data_highseas %>%
         dplyr::select(-Name) %>% 
         rename(highseas_pa_area = pixel_counts)
 
-df4 <- left_join(df1, df2, by = "habitat")
+df3b <- data_highseas %>% 
+        dplyr::select(Name, pixel_counts) %>% 
+        filter(!grepl("with_", Name)) %>% 
+        mutate(habitat = habitats) %>% 
+        dplyr::select(-Name) %>% 
+        rename(highseas_total_area = pixel_counts)
+df3 <- left_join(df3, df3b, by = "habitat")
+
+df4 <- df2
 df5 <- left_join(df4, df3, by = "habitat") %>% 
-        dplyr::select(-All_mpas) %>% 
-        pivot_longer(cols = ends_with("area"), names_to = "key", values_to = "pixel_counts") %>% 
-        mutate(percent_protected = pixel_counts/world_total)
+        mutate(world_total = eez_total_area + highseas_total_area) %>% 
+        pivot_longer(cols = ends_with("area"), names_to = "key", values_to = "pixel_counts") 
 
 plot2 <- df5 %>% 
+        filter(key == "eez_pa_area" | key == "highseas_pa_area") %>% 
+        mutate(percent_protected = pixel_counts/world_total) %>% 
         ggplot(aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = key)) +
         geom_bar(stat = "identity") +
         scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("Jurisdiction", "High Seas")) +
         scale_y_continuous(labels = scales::percent_format()) +
         labs(x = "Habitat", y = "Global protected area coverage") +
         theme_bw() +
-        theme(legend.title = element_blank()) +
+        theme(legend.title = element_blank(),
+              legend.position="top",
+              axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+        geom_hline(yintercept = 0.0765, lwd = 1) +   
         geom_hline(yintercept = .3, linetype = "dashed")
-plot2
 
-ggsave("Figures/figure1.png", plot2, device = "png", width = 8, height = 5, units = "in", dpi = 600)
+plot1 <- df5 %>% 
+        filter(key == "eez_total_area" | key == "highseas_total_area") %>% 
+        mutate(percent = pixel_counts/world_total) %>% 
+        mutate(f = c(3,3,4,4,1,1,5,5,6,6,2,2)) %>% 
+        ggplot(aes(x = reorder(habitat, f), y = percent, fill = key)) +
+        geom_bar(stat = "identity") +
+        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("Jurisdiction", "High Seas")) +
+        scale_y_continuous(labels = scales::percent_format()) +
+        labs(x = "Habitat", y = "Proportion of global habitat") +
+        theme_bw() +
+        theme(legend.title = element_blank(),
+              legend.position="top",
+              axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) 
 
+plot1 + plot2 +
+        plot_annotation(tag_levels = 'a')
 
-
-
-
-#### Figure 1 with other protection levels ####
-
-(p1 <- ggplot(eez_land) +
-                geom_sf(aes(fill = pp_mean_all), 
-                        col = NA) +
-                geom_sf(data = land, 
-                        col = "gray60",
-                        fill = "gray90") +
-                coord_sf() +
-                annotate("text", x = -18000000, y = 0, label = "0°") +
-                annotate("text", x = -18000000, y = 2300000, label = "20° N") +
-                annotate("text", x = -17000000, y = 4500000, label = "40° N") +
-                annotate("text", x = -15500000, y = 6500000, label = "60° N") +
-                annotate("text", x = -13500000, y = 8500000, label = "80° N") +
-                annotate("text", x = -18000000, y = -2300000, label = "20° S") +
-                annotate("text", x = -17000000, y = -4500000, label = "40° S") +
-                annotate("text", x = -15500000, y = -6500000, label = "60° S") +
-                annotate("text", x = 0, y = 9500000, label = "0°") +
-                annotate("text", x = -3000000, y = 9500000, label = "50°W") +
-                annotate("text", x = 3000000, y = 9500000, label = "50°E") +
-                annotate("text", x = -8000000, y = 9500000, label = "150°W") +
-                annotate("text", x = 8000000, y = 9500000, label = "150°E") +
-                scale_fill_gradient2(
-                        low = "#f0f9e8",
-                        mid = "#7bccc4",
-                        high = "#0868ac",
-                        midpoint = 50,
-                        space = "Lab",
-                        na.value = "grey50",
-                        guide = "colourbar",
-                        aesthetics = "fill",
-                        n.breaks = 5
-                ) +
-                labs(fill = "% of EEZ") +
-                theme(panel.background = element_blank(), 
-                      panel.grid.major = element_line(colour = "gray90", linetype = "dashed"), 
-                      axis.text.x = element_text(size = 12),
-                      axis.title = element_blank()))
-
-
-(p2 <- ggplot(eez_land) +
-                geom_sf(aes(fill = pp_mean_notake), 
-                        col = NA) +
-                geom_sf(data = land, 
-                        col = "gray60",
-                        fill = "gray90") +
-                coord_sf() +
-                annotate("text", x = -18000000, y = 0, label = "0°") +
-                annotate("text", x = -18000000, y = 2300000, label = "20° N") +
-                annotate("text", x = -17000000, y = 4500000, label = "40° N") +
-                annotate("text", x = -15500000, y = 6500000, label = "60° N") +
-                annotate("text", x = -13500000, y = 8500000, label = "80° N") +
-                annotate("text", x = -18000000, y = -2300000, label = "20° S") +
-                annotate("text", x = -17000000, y = -4500000, label = "40° S") +
-                annotate("text", x = -15500000, y = -6500000, label = "60° S") +
-                annotate("text", x = 0, y = 9500000, label = "0°") +
-                annotate("text", x = -3000000, y = 9500000, label = "50°W") +
-                annotate("text", x = 3000000, y = 9500000, label = "50°E") +
-                annotate("text", x = -8000000, y = 9500000, label = "150°W") +
-                annotate("text", x = 8000000, y = 9500000, label = "150°E") +
-                scale_fill_gradient2(
-                        low = "#f0f9e8",
-                        mid = "#7bccc4",
-                        high = "#0868ac",
-                        midpoint = 50,
-                        space = "Lab",
-                        na.value = "grey50",
-                        guide = "colourbar",
-                        aesthetics = "fill"
-                ) +
-                labs(fill = "% of EEZ") +
-                theme(panel.background = element_blank(), 
-                      panel.grid.major = element_line(colour = "gray90", linetype = "dashed"), 
-                      axis.text.x = element_text(size = 12),
-                      axis.title = element_blank()))
-
-p1/p2 +
-        plot_layout(guides = "collect") +
-        plot_annotation(tag_levels = 'A')
-
-ggsave('Figures/figure2_with_notake.png', dpi = 600, height = 8, width = 8)
-
-
-
-
+ggsave("Figures/figure1.png", device = "png", width = 10, height = 5, units = "in", dpi = 600)
 

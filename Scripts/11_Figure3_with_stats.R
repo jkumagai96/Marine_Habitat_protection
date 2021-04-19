@@ -171,3 +171,115 @@ ggplot() +
         theme_void()
 
 ggsave('Figures/figure3.png', dpi = 600, height = 5, width = 8)
+
+
+
+### Statistics ####
+
+lat_long_stats <- lat_long_graph %>% 
+        as.data.frame() %>% 
+        select(-geometry) %>% 
+        mutate(x_degree = round(X/100000, 0), y_degree = round(Y/100000, 0)) %>% 
+        group_by(x_degree, y_degree) %>% 
+        summarise(index_mean = mean(L_Hs_P_I, na.rm = T))
+
+north <- lat_long_stats %>% 
+        filter(y_degree > 0) %>%
+        ungroup() %>% 
+        summarise(mean_perc = mean(index_mean, na.rm = T), sd = sd(index_mean, na.rm = T)) %>% 
+        print()
+
+south <- lat_long_stats %>% 
+        filter(y_degree < 0) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(index_mean, na.rm = T), sd = sd(index_mean, na.rm = T)) %>% 
+        print()
+
+west <- lat_long_stats %>% 
+        filter(x_degree < 0) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(index_mean, na.rm = T), sd = sd(index_mean, na.rm = T)) %>% 
+        print()
+
+east <- lat_long_stats %>% 
+        filter(x_degree > 0) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(index_mean, na.rm = T), sd = sd(index_mean, na.rm = T)) %>% 
+        print()
+
+north_west <- lat_long_stats %>% 
+        filter(x_degree < 0 & y_degree > 0) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(index_mean, na.rm = T), sd = sd(index_mean, na.rm = T)) %>% 
+        print()
+
+south_west <- lat_long_stats %>% 
+        filter(x_degree < 0 & y_degree < 0) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(index_mean, na.rm = T), sd = sd(index_mean, na.rm = T)) %>% 
+        print()
+
+north_east <- lat_long_stats %>% 
+        filter(x_degree > 0 & y_degree > 0) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(index_mean, na.rm = T), sd = sd(index_mean, na.rm = T)) %>% 
+        print()
+
+south_east <- lat_long_stats %>% 
+        filter(x_degree > 0 & y_degree < 0) %>% 
+        ungroup() %>% 
+        summarise(mean_perc = mean(index_mean, na.rm = T), sd = sd(index_mean, na.rm = T)) %>% 
+        print()
+
+
+results <- data.frame(
+        world = c("North", 
+                  "South", 
+                  "West", 
+                  "East", 
+                  "North west", 
+                  "South west", 
+                  "North east", 
+                  "South east"),
+        mean = c(north$mean_perc, 
+                   south$mean_perc, 
+                   west$mean_perc, 
+                   east$mean_perc, 
+                   north_west$mean_perc, 
+                   south_west$mean_perc, 
+                   north_east$mean_perc, 
+                   south_east$mean_perc),
+        sd = c(north$sd, 
+                 south$sd, 
+                 west$sd, 
+                 east$sd, 
+                 north_west$sd, 
+                 south_west$sd, 
+                 north_east$sd, 
+                 south_east$sd)) %>% 
+        mutate(sd = round(sd, 2))
+
+(p1 <- results[1:4,] %>% 
+        ggplot(aes(x = reorder(world, mean),  y = mean)) +
+        geom_point() +
+        geom_errorbar(aes(ymin = mean-sd, ymax = mean + sd)) +
+        labs(x = "World section", y = "Mean of Local Habitat Protection Index") +
+        ylim(0, 1) +
+        theme_bw()
+        )
+
+(p2 <- results[5:8,] %>% 
+                ggplot(aes(x = reorder(world, mean),  y = mean)) +
+                geom_point() +
+                geom_errorbar(aes(ymin = mean-sd, ymax = mean + sd)) +
+                labs(x = "World section", y = "Mean of Local Habitat Protection Index") +
+                ylim(0, 1) +
+                theme_bw() +
+                theme(axis.text.y = element_blank(), 
+                      axis.title.y = element_blank())
+)
+
+p1 + p2 +
+        plot_annotation(tag_levels = 'a')
+
+ggsave("Figures/supplementary_world_section_protected.png", dpi = 300, height = 5, width = 7)
