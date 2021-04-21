@@ -13,12 +13,17 @@ The code relies on several packages that need to be installed for it to function
 
 Please download the following datasets, and store them in the `Data_original` folder, each within a unique subfolder, except for habitats, where all shapefiles should be stored together within the same subfolder named `habitats`.
 
-`Data_original` Folder Structure: 
---- `habitats`
---- `eez_land`
---- `eez`
---- `mpas`
---- `ocean`
+`Data_original` Folder Structure:   
+  
+--- `habitats`  
+  
+--- `eez_land`  
+  
+--- `eez`  
+  
+--- `mpas`  
+  
+--- `ocean`  
 
 Datasets to be added: 
 
