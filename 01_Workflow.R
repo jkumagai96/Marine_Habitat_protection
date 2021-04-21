@@ -8,7 +8,7 @@ library(raster) # For handling spatial raster data
 
 
 ## renv is used to manage the packages 
-## Please load the packages used in this project by running the following: renv::load()
+## Please load the packages used in this project by running the following: renv::load() or renv::restore()
 
 
 ## FYI: packages for parallel processing
