@@ -1,7 +1,7 @@
 # Joy Kumagai 
-# Date: March 2021
-# Calculating Habitat Protection Indexes Script
-# Marine Habitat Protection Indicator
+# Date: April 2021
+# Calculating Habitat Protection Indexes 
+# Habitat Protection Index Project
 
 ##### Load Packages ######
 library(tidyverse)
@@ -98,16 +98,17 @@ df <- rbind(coldcorals, coralreefs, knolls_seamounts, mangroves, saltmarshes, se
 
 df <- df %>%  
   rename(F_G_H = global_fraction) %>% # Fraction of Global Habitat in the EEZ/Land
-  mutate(F_H_P = all_mpas/total,  # Fraction of Habitat Protected in the EEZ/land
+  mutate(L_H_P_I = all_mpas/total,  # Fraction of Habitat Protected in the EEZ/land
          t_F_H_P = F_G_H * 0.3,
-         G_H_I = F_H_P * F_G_H, # Global Habitat Index
-         T_H_I = (F_H_P * F_G_H) - t_F_H_P) # Target Habitat Index 
+         G_H_P_I = L_H_P_I * F_G_H, # Global Habitat Index
+         T_H_I = (L_H_P_I * F_G_H) - t_F_H_P) %>% # Target Habitat Index 
+  dplyr::select(-t_F_H_P, -F_G_H)
 
 # Calculation of Index on average 
 df2 <- df %>%
   group_by(UNION) %>% 
-  summarise(G_Hs_P_I = mean(G_H_I, na.rm = T),
-            L_Hs_P_I = mean(F_H_P, na.rm = T),
+  summarise(G_Hs_P_I = mean(G_H_P_I, na.rm = T),
+            L_Hs_P_I = mean(L_H_P_I, na.rm = T),
             T_Hs_I = mean(T_H_I, na.rm = T),
             MRGID_EEZ = unique(MRGID_EEZ), 
             ISO_TER1 = unique(ISO_TER1)) %>% 

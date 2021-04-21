@@ -1,7 +1,7 @@
-# Joy Kumagai
+# Joy Kumagai and Fabio Favoretto
 # Date: Feb 2021
 # Combining Habitats and MPAs
-# Marine Habitat Protection Indicator or Marine Protection Index (MPI)
+# Habitat Protection Index Project
 
 # Purpose is to create the files with intersections of each MPA layer and each 
 # habitat, so we can summarize by boundaries in the next script

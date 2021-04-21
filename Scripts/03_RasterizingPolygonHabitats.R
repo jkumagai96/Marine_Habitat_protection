@@ -1,8 +1,7 @@
-# Joy Kumagai and Fabio
+# Joy Kumagai and Fabio Favoretto
 # Date: March 2021
-# Raserizing Multiple Habitat Data
-# Marine Habitat Protection Indicator or Marine Protection Index (MPI)
-
+# Rasterizing Multiple Habitat Data
+# Habitat Protection Index Project
 
 # Loading packages --------------------------------------------------------
 

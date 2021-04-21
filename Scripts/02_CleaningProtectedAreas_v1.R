@@ -1,8 +1,7 @@
-# Joy Kumagai
-# Date: Feb 2021
-# Cleaning Protected Areas - version 1
-# Marine Habitat Protection Indicator
-
+# Joy Kumagai and Fabio Favoretto
+# Date: March 2021
+# Cleaning Protected Areas 
+# Habitat Protection Index Project
 
 ##### Load Packages #####
 library(tidyverse)

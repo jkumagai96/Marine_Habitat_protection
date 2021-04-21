@@ -1,6 +1,6 @@
 # Joy Kumagai and Fabio Favoretto
 # Date: April 2021
-# Creating the Index Figures 
+# Figures - Supplementary Table and Figures 
 # Habitat Protection Index Project
 
 ##### Load Packages ##### 
@@ -15,6 +15,7 @@ library(countrycode)
 ##### Load Data ####
 
 data <- read.csv("Data_final/habitat_protection_indexes_average.csv", fileEncoding = "UTF-8")
+df <- read.csv("Data_final/habitat_protection_indexes.csv", fileEncoding = "UTF-8")
 eez_land <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp")
 land <- ne_countries(scale = 110, returnclass = "sf")
 
@@ -52,7 +53,7 @@ for (i in 1:length(habitats)) {
   
   
   eez_land_in_loop <- left_join(x = eez_land, y = data, by = "UNION") %>%  # Join the indicator data onto the eez_land 
-    arrange(G_H_I)
+    arrange(G_H_P_I)
   
   
   grid <- st_graticule(lat = seq(-90, 90, by = 30),
@@ -61,7 +62,7 @@ for (i in 1:length(habitats)) {
     st_geometry 
   
   p1 <- ggplot(eez_land_in_loop) +
-    geom_sf(aes(fill = G_H_I, colour = " ")) +
+    geom_sf(aes(fill = G_H_P_I, colour = " ")) +
     geom_sf(data = grid,
             colour = "gray50", 
             linetype = "dashed") +
@@ -82,7 +83,7 @@ for (i in 1:length(habitats)) {
       low = "#FDE0DD",
       mid = "#F768A1",
       high = "#900C3F",
-      midpoint = mean(c(min(eez_land_in_loop$G_H_I, na.rm = T), max(eez_land_in_loop$G_H_I, na.rm = T))),
+      midpoint = mean(c(min(eez_land_in_loop$G_H_P_I, na.rm = T), max(eez_land_in_loop$G_H_P_I, na.rm = T))),
       space = "Lab",
       na.value = "grey",
       aesthetics = "fill",
@@ -102,7 +103,7 @@ for (i in 1:length(habitats)) {
           legend.position = "bottom")
   
   p2 <- ggplot(eez_land_in_loop) +
-    geom_sf(aes(fill = F_H_P, colour = " ")) +
+    geom_sf(aes(fill = L_H_P_I, colour = " ")) +
     geom_sf(data = grid,
             colour = "gray60", 
             linetype = "dashed") +

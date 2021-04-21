@@ -1,7 +1,7 @@
 # Joy Kumagai 
-# Date: March 2021
-# Statistics
-# Marine Habitat Protection Indicator
+# Date: April 2021
+# Descriptive Statistics
+# Habitat Protection Index Project
 
 ##### Load Packages #####
 library(tidyverse) # Easily Install and Load the 'Tidyverse'

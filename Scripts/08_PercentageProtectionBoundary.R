@@ -1,7 +1,7 @@
 # Joy Kumagai 
 # Date: March 2021
 # Calculating Per Boundary (EEZ/Land) Percentage Protection 
-# Marine Habitat Protection Indicator
+# Habitat Protection Index Project
 
 #### Load Packages ####
 library(tidyverse)

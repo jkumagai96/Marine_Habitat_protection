@@ -1,7 +1,7 @@
 # Joy Kumagai 
 # Date: March 2021
 # Calculating Percent Protection for High Seas 
-# Marine Habitat Protection Indicator
+# Habitat Protection Index Project
 
 #### Load Packages ####
 library(tidyverse)
@@ -17,6 +17,7 @@ poly <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp") %>%
 
 r <- raster("Data_processed/ocean_grid.tif")
 mpas <- raster("Data_processed/All_mpas.tif")
+
 ##### Create High Seas Raster #####
 eez_land <-  fasterize::fasterize(poly, r, field = "constant") 
 eez_land[is.na(eez_land[])] <- 0 

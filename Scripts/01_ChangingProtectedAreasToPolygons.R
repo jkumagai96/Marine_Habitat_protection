@@ -1,7 +1,7 @@
 # Joy Kumagai  
 # Date: March 2021
 # Converting PAs from points to polygons 
-# Marine Habitat Protection Indicator
+# Habitat Protection Index Project
 
 ##### Load Packages #####
 library(tidyverse)

@@ -1,7 +1,7 @@
 # Joy Kumagai 
 # Date: Feb 2021
 # Calculating World Percentage Protection 
-# Marine Habitat Protection Indicator
+# Habitat Protection Index Project
 
 #### Load Packages ####
 library(tidyverse)

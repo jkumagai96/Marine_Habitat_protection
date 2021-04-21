@@ -1,8 +1,7 @@
 # Fabio Favoretto
 # Date: 15/11/2020
 # Summary statistic of rasterized habitat polygons
-# Marine Habitat Protection Indicator
-
+# Habitat Protection Index Project
 
 # Load Packages -----------------------------------------------------------
 

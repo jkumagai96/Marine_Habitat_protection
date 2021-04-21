@@ -1,7 +1,7 @@
 # Joy Kumagai and Fabio Favoretto 
 # Date: March 2021
-# Figures 
-# Marine Habitat Protection Indicator
+# Figures - GHPI Map with lat/long values + additional stats and figure
+# Habitat Protection Index Project
 
 ##### Load Packages #####
 library(sf) # for handling spatial vector data

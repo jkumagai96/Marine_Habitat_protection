@@ -1,6 +1,6 @@
 # Joy Kumagai and Fabio Favoretto
 # Date: April 2021
-# Creating the Index Figures 
+# Figures - Indexes Maps
 # Habitat Protection Index Project
 
 ##### Load Packages ##### 

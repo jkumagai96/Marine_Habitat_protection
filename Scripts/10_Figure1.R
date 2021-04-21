@@ -1,7 +1,7 @@
-# Joy Kumagai and Fabio 
-# Date: March 2021
-# Figures 
-# Marine Habitat Protection Indicator
+# Joy Kumagai and Fabio Favoretto
+# Date: April 2021
+# Figures - Overview Figure of habitats 
+# Habitat Protection Index Project
 
 ##### Load Packages #####
 library(sf) # for handling spatial vector data
