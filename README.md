@@ -1,17 +1,26 @@
 
-# Habitat Protection Indexes: new monitoring measures for the conservation of threatened marine habitats 
+# Habitat Protection Indexes - new monitoring measures for the conservation of threatened marine habitats 
 
 
 ## Requisites: 
 
-Code is based on R version 4.0.5 (2021-03-31) -- "Shake and Throw", drafted using RStudio Version 1.4.1103. 
+Code is based on R version 4.0.3 (2020-10-10), drafted using RStudio Version 1.4.1103 -- “Wax Begonia” (Windows). 
 
 The code relies on several packages that need to be installed for it to function properly. We are using the package `renv` to ensure compatibility, on first use, please run `renv::restore()` in your machine to ensure you'll install and download all packages in the needed versions. 
 
 
 ## Data download: 
 
-Please download the following datasets, and store them in the `Data_original` folder, each within a unique subfolder named as in the table below, except for habitats, which should be all stored within the same subfolder named `Habitats`: 
+Please download the following datasets, and store them in the `Data_original` folder, each within a unique subfolder, except for habitats, where all shapefiles should be stored together within the same subfolder named `habitats`.
+
+`Data_original` Folder Structure: 
+--- `habitats`
+--- `eez_land`
+--- `eez`
+--- `mpas`
+--- `ocean`
+
+Datasets to be added: 
 
 | Name | Source/Website | Date accessed | Version |
 | :---: | :---: | :---: | :---: |
@@ -26,6 +35,7 @@ Please download the following datasets, and store them in the `Data_original` fo
 | Seagrasses | UNEP-WCMC, Short FT (2020). Global distribution of seagrasses (version 7.0). Seventh update to the data layer used in Green and Short (2003). Cambridge (UK): UNEP-WCMC. Data DOI: https://doi.org/10.34892/x6r3-d211 | December 2020 | Version 7 |
 | Ocean | https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-ocean/ | December 2020 | Version 4.1.0 |
 
+Please note that a folder named `Data_processed` will be added in the workflow. 
 
 ## Workflow 
 
@@ -37,9 +47,9 @@ Results are stored in the `Data_final` folder, as comma separated value tables.
 
 ## Methodology 
 
-For each habitat we calculate the percentage protection of that habitat both globally and per country. 
+For each habitat we calculate the percentage protection of that habitat both globally and per country. Please refer to the paper for the full methodology.
 
 
 ## Contacts 
 
-Code written by Joy Kumagai (joy.kumagai@senckenberg.de) and Fabio Favoretto (favoretto@uabcs.mx)
+Code written by Joy Kumagai (joy.kumagai@senckenberg.de) and Fabio Favoretto (favoretto@uabcs.mx). Please contact us if you have any questions or open an issue on github.
