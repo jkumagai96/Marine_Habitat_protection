@@ -49,6 +49,16 @@ data %>%
 data %>% 
   slice_max(order_by = T_Hs_I, n = 10) # Top 10 
 
+hist(data$T_Hs_I)
+
+data %>% 
+  filter(T_Hs_I > 0) %>% 
+  count()
+
+data %>% 
+  filter(T_Hs_I < 0) %>% 
+  count()
+
 ## Habitat Specific Counts of Jurisdictions
 data2 <- read.csv("Data_final/habitat_protection_indexes.csv")
 data2 %>% 
@@ -80,3 +90,4 @@ data2 %>%
   filter(habitat == "seagrasses") %>% 
   drop_na(T_H_I) %>% 
   count()
+
