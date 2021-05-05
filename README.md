@@ -1,3 +1,9 @@
+---
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
 
 # Habitat Protection Indexes - new monitoring measures for the conservation of threatened marine habitats 
 
