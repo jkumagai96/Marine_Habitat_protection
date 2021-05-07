@@ -1,6 +1,6 @@
 # Joy Kumagai  
-# Date: March 2021
-# Converting PAs from points to polygons 
+# Date: May 2021
+# Converting PAs from points to polygons including OECMs
 # Habitat Protection Index Project
 
 ##### Load Packages #####
@@ -52,5 +52,39 @@ for (i in 1:length(mpa_files)) {
   }
 }
 
+#### Adding OECMs ####
+oecm_files <- oecm_files <- list.files("Data_original/OECMs/", pattern = "\\.shp$", recursive = T, full.names = T)
+
+for (i in 1:length(oecm_files)) {
+  # read data 
+  dat <- st_read(oecm_files[i])
+  
+  # If polygon data, then immediately put file path in variable
+  if (unique(st_geometry_type(dat)) == "POLYGON" | unique(st_geometry_type(dat)) == "MULTIPOLYGON") {
+    mpa_poly_files <- c(mpa_poly_files, oecm_files[i])
+  } else if (unique(st_geometry_type(dat)) == "POINT" | unique(st_geometry_type(dat)) == "MULTIPOINT") {
+    # If point data with area, buffer the point so it is a polygon
+    
+    dat <- dat %>% 
+      filter(REP_AREA > 0) %>% # Filter out Protected Areas with no area 
+      st_transform(crs = behrmann) %>% # Project 
+      mutate(radius = sqrt(REP_AREA/pi)/.001 ) # calculate radius for buffer
+    
+    dat_poly <- st_buffer(dat, dist = dat$radius) %>% # Buffer points 
+      dplyr::select(-WDPAID) # too large of numbers to save, so removed 
+    
+    dat_poly <- st_transform(dat_poly, crs = originalcrs)
+    
+    filepath <- paste0("Data_original/mpas/PointsToPolygons/polypoints_", n, ".shp") 
+    st_write(dat_poly, filepath, overwrite = TRUE, append = FALSE, driver = 'ESRI Shapefile',  layer_options = "ENCODING=UTF-8") # write new poly data
+    n <- n + 1
+    
+    mpa_poly_files <- c(mpa_poly_files, filepath) # save path to be cleaned in next script 
+    rm(filepath)
+    
+  } else {
+    print("ERROR geometry is not polygon, multipolygon, point, or multipoint")
+  }
+}
 
 #### END OF SCRIPT ####

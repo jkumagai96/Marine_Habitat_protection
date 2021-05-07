@@ -32,7 +32,7 @@ behrmann.crs <- CRS('+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +e
 behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
 
 ## ocean is the file we create the reference grid from (Ocean 110m from https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-ocean/)
-ocean <- read_sf("Data_original/ocean/ne_110m_ocean.shp") #  version 4.1.0
+ocean <- sf::read_sf("Data_original/ocean/ne_110m_ocean.shp") #  version 4.1.0
 
 ## MPAS February 2021 Protected Planet Public Download
 mpa_files <- list.files("Data_original/mpas/", pattern = "\\.shp$", recursive = T, full.names = T)
