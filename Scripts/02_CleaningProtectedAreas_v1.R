@@ -30,12 +30,6 @@ managed <- future_lapply(mpa_poly_files, FUN = clean_managed, future.seed = TRUE
 gc()
 
 
-# Checking projection
-
-if (!st_crs(mpas[[1]])$proj4string == st_crs(behrmann.crs)$proj4string) {
-  stop()
-}
-
 # Checking if there are null features for no take mpas
 v <- c()
 for (i in 1:length(ntz)) {
@@ -57,6 +51,7 @@ all_mpas <- future_lapply(mpas, FUN = function(mpas) fasterize(mpas, r, field = 
 
 save_raster(all_mpas, "Data_processed/All_mpas.tif")
 rm(all_mpas)
+gc()
 
 ntz_mpas <- future_lapply(ntz, FUN = function(ntz) fasterize(ntz, r, field = "constant"), future.seed = TRUE)
 

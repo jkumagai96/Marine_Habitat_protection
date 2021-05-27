@@ -1,5 +1,5 @@
 # Joy Kumagai and Fabio Favoretto
-# Date: March 2021
+# Date: May 2021
 # Rasterizing Multiple Habitat Data
 # Habitat Protection Index Project
 
@@ -15,7 +15,7 @@ library(foreach)
 
 # Loading data ------------------------------------------------------------
 
-shapefiles <- list.files("Data_original/Habitats/", pattern = "\\.shp$", full.names = T)
+shapefiles <- list.files("Data_original/habitats/", pattern = "\\.shp$", full.names = T)
 behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
 r <- raster("Data_processed/ocean_grid.tif")
 
@@ -36,6 +36,12 @@ foreach(i = 1:length(shapefiles)) %dopar% {
   
   ##### Project Data #####
   # Chosen projection: Behrmann (equal area)
+  if (shapefiles[i] == "Data_original/habitats//KnollsSeamounts.shp" ) {
+    habitat_cropped <- st_crop(habitat, xmin = -180, ymin = -90, xmax = 180, ymax = 90)
+    test_c <- st_cast(habitat_cropped, "MULTIPOLYGON")
+    habitat <- st_transform(test_c, crs = behrmann)
+  }
+  
   habitat <- st_transform(habitat, crs = behrmann)
   
   

@@ -73,6 +73,9 @@ grid <- st_graticule(lat = seq(-90, 90, by = 30),
               axis.title = element_blank(),
               legend.position = "bottom"))
 
+ggsave(plot = p1, filename = "Figures/figure3.png", dpi = 600, height = 5, width = 8)
+
+
 coords <- eez_land %>% 
         st_coordinates() %>% 
         as.data.frame()
@@ -170,4 +173,4 @@ ggplot() +
         ) +
         theme_void()
 
-ggsave('Figures/figure3.png', dpi = 600, height = 5, width = 8)
+ggsave('Figures/figure3_w_latlong.png', dpi = 600, height = 5, width = 8)
