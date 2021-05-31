@@ -83,7 +83,7 @@ plot2 <- df5 %>%
         mutate(percent_protected = pixel_counts/world_total) %>% 
         ggplot(aes(x = reorder(habitat, percent_protected), y = percent_protected, fill = key)) +
         geom_bar(stat = "identity") +
-        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("Jurisdiction", "High Seas")) +
+        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("Jurisdictions", "ABNJ")) +
         scale_y_continuous(labels = scales::percent_format()) +
         labs(x = "Habitat", y = "Global PA and OECM coverage") +
         theme_bw() +
@@ -99,7 +99,7 @@ plot1 <- df5 %>%
         mutate(f = c(3,3,4,4,1,1,5,5,6,6,2,2)) %>% 
         ggplot(aes(x = reorder(habitat, f), y = percent, fill = key)) +
         geom_bar(stat = "identity") +
-        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("Jurisdiction", "High Seas")) +
+        scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("Jurisdictions", "ABNJ")) +
         scale_y_continuous(labels = scales::percent_format()) +
         labs(x = "Habitat", y = "Proportion of global habitat") +
         theme_bw() +

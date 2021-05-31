@@ -49,9 +49,9 @@ plot1 <- ggplot(eez_land_global) +
         annotate("text", x = -8000000, y = 9500000, label = "180°W", size = 3) +
         annotate("text", x = 8000000, y = 9500000, label = "180°E", size = 3) +
         scale_fill_gradient2(
-                low = "#FDE0DD",
-                mid = "#F768A1",
-                high = "#900C3F",
+                low = "#D9F0A3",
+                mid = "#78C679",
+                high = "#238443",
                 midpoint = .025,
                 space = "Lab",
                 na.value = "grey",

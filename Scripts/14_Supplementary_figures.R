@@ -1,5 +1,5 @@
 # Joy Kumagai and Fabio Favoretto
-# Date: April 2021
+# Date: May 2021
 # Figures - Supplementary Table and Figures 
 # Habitat Protection Index Project
 
@@ -80,9 +80,9 @@ for (i in 1:length(habitats)) {
     annotate("text", x = -8000000, y = 9500000, label = "180°W", size = 3) +
     annotate("text", x = 8000000, y = 9500000, label = "180°E", size = 3) +
     scale_fill_gradient2(
-      low = "#FDE0DD",
-      mid = "#F768A1",
-      high = "#900C3F",
+      low = "#D9F0A3",
+      mid = "#78C679",
+      high = "#238443",
       midpoint = mean(c(min(eez_land_in_loop$G_H_P_I, na.rm = T), max(eez_land_in_loop$G_H_P_I, na.rm = T))),
       space = "Lab",
       na.value = "grey",

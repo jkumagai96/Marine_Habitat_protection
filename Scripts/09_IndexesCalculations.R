@@ -114,6 +114,10 @@ df2 <- df %>%
             ISO_TER1 = unique(ISO_TER1)) %>% 
   dplyr::select(UNION, MRGID_EEZ, ISO_TER1, G_Hs_P_I, L_Hs_P_I, T_Hs_I)
 
+##### Adjust High Seas to ABNJ ####
+df$UNION <- str_replace(df$UNION, "High Seas", "ABNJ")
+df2$UNION <- str_replace(df2$UNION, "High Seas", "ABNJ")
+
 ##### Export ######
 
 write.csv(df, "Data_final/habitat_protection_indexes.csv", row.names = F, fileEncoding = "UTF-8")

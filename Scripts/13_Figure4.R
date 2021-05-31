@@ -31,7 +31,7 @@ data2 <- data %>%
 
 data <- rbind(data1, data2)
 
-data$ISO_TER1 <- replace_na(data$ISO_TER1, "High Seas")
+data$ISO_TER1 <- replace_na(data$ISO_TER1, "ABNJ")
 
 data %>% 
         ggplot(aes(x = reorder(ISO_TER1, T_Hs_I), y = T_Hs_I)) +

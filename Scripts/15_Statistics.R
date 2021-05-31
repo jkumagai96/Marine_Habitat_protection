@@ -7,7 +7,7 @@
 library(tidyverse) # Easily Install and Load the 'Tidyverse'
 
 ##### Descriptive Statistics #####
-data <- read.csv("Data_final/habitat_protection_indexes_average.csv")
+data <- read.csv("Data_final/habitat_protection_indexes_average.csv", encoding = "UTF-8")
 
 ## Global Habitat Protection Index (top jurisdictions)
 top_5 <- data %>% 
@@ -32,6 +32,17 @@ n_hundred <- data %>%
   count() %>% 
   print()
 
+data %>% 
+  filter(L_Hs_P_I < .25) %>% 
+  count()
+
+data %>% 
+  filter(L_Hs_P_I > .50) %>% 
+  count()
+
+data %>% 
+  slice_max(order_by = L_Hs_P_I, n = 20)
+
 ## Histograms 
 # Global Habitat Protection Index 
 hist(data$G_Hs_P_I)
@@ -41,9 +52,6 @@ hist(log(data$G_Hs_P_I))
 hist(data$L_Hs_P_I)
 quantile(data$L_Hs_P_I, na.rm = TRUE)
 
-data %>% 
-  filter(L_Hs_P_I > .50) %>% 
-  count()
 
 ## Targeted Global Habitat Protection Index
 data %>% 
@@ -60,7 +68,7 @@ data %>%
   count()
 
 ## Habitat Specific Counts of Jurisdictions
-data2 <- read.csv("Data_final/habitat_protection_indexes.csv")
+data2 <- read.csv("Data_final/habitat_protection_indexes.csv", encoding = "UTF-8")
 data2 %>% 
   filter(habitat == "coldcorals") %>% 
   drop_na(T_H_I) %>% 
