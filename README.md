@@ -1,7 +1,7 @@
 ---
 output:
-  word_document: default
   html_document: default
+  word_document: default
   pdf_document: default
 ---
 
@@ -35,7 +35,8 @@ Datasets to be added:
 
 | Name | Source/Website | Date accessed | Version |
 | :---: | :---: | :---: | :---: |
-| World Database on Protected Areas | UNEP-WCMC and IUCN (2021), Protected Planet: The World Database on Protected Areas (WDPA)/The Global Database on Protected Areas Management Effectiveness (GD-PAME)] [On-line], March 2021, Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net. | March 2021 | March 2021 |
+| World Database on Protected Areas | UNEP-WCMC and IUCN (2021), Protected Planet: The World Database on Protected Areas (WDPA)/The Global Database on Protected Areas Management Effectiveness (GD-PAME)] [On-line], May 2021, Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net. | May 2021 | May 2021 |
+| World Database on Other Effective Area-Based Conservation Measures | UNEP-WCMC and IUCN (2021), Protected Planet: The World Database on Other Effective Area-Based Conservation Measures (WDOECM] [On-line], May 2021, Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net. | May 2021 | May 2021 |
 | eez_land (Union of EEZs and countries) | Flanders Marine Institute (2020). Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 3). Available online at https://www.marineregions.org/. https://doi.org/10.14284/403. | December 2020 | Version 3 |
 | EEZs | Flanders Marine Institute (2019). Maritime Boundaries Geodatabase, version 11. Available online at https://www.marineregions.org/. https://doi.org/10.14284/382. | March 2021 | Version 11 |
 | Cold Corals | Freiwald A, Rogers A, Hall-Spencer J, Guinotte JM, Davies AJ, Yesson C, Martin CS, Weatherdon LV (2018). Global distribution of cold-water corals (version 5.0). Fifth update to the dataset in Freiwald et al. (2004) by UNEP-WCMC, in collaboration with Andre Freiwald and John Guinotte. Cambridge (UK): UNEP-WCMC. Data DOI: https://doi.org/10.34892/72×9-rt61 | December 2020 | Version 5 |
