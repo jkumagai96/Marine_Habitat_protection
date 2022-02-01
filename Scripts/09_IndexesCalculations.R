@@ -1,5 +1,5 @@
 # Joy Kumagai 
-# Date: April 2021
+# Date: Jan 2022
 # Calculating Habitat Protection Indexes 
 # Habitat Protection Index Project
 
@@ -33,8 +33,6 @@ habitat_data <- habitat_data %>% # remove them from the data
 # Prepare high seas habitat data 
 highseas <- highseas %>% 
   na.omit() %>% 
-  filter(!grepl("with_Managed", Name),
-         !grepl("with_No_take", Name)) %>% 
   dplyr::select(Name, pixel_counts) %>% 
   mutate(habitat = c("coldcorals", "coldcorals", "knolls_seamounts", "knolls_seamounts", "seagrasses", "seagrasses")) %>% 
   mutate(key = c("all_mpas", "total", "all_mpas", "total", "all_mpas", "total")) %>% 
@@ -46,7 +44,7 @@ highseas <- highseas %>%
 
 # Prepare world Habitat Data 
 total_areas <- world %>% # Prepare total area dataset
-  dplyr::filter(!grepl('with', Name)) %>% 
+  dplyr::filter(!grepl('allmpas', Name)) %>% 
   dplyr::select(Name, area_km2) %>% 
   pivot_wider(values_from = area_km2, names_from = Name)
 
@@ -102,7 +100,7 @@ df <- df %>%
          t_F_H_P = F_G_H * 0.3,
          G_H_P_I = L_H_P_I * F_G_H, # Global Habitat Index
          T_H_I = (L_H_P_I * F_G_H) - t_F_H_P) %>% # Target Habitat Index 
-  dplyr::select(-t_F_H_P, -F_G_H)
+  dplyr::select(-t_F_H_P) #, -F_G_H)
 
 # Calculation of Index on average 
 df2 <- df %>%
@@ -113,10 +111,6 @@ df2 <- df %>%
             MRGID_EEZ = unique(MRGID_EEZ), 
             ISO_TER1 = unique(ISO_TER1)) %>% 
   dplyr::select(UNION, MRGID_EEZ, ISO_TER1, G_Hs_P_I, L_Hs_P_I, T_Hs_I)
-
-##### Adjust High Seas to ABNJ ####
-df$UNION <- str_replace(df$UNION, "High Seas", "ABNJ")
-df2$UNION <- str_replace(df2$UNION, "High Seas", "ABNJ")
 
 ##### Export ######
 

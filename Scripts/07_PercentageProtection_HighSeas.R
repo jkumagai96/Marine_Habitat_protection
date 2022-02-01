@@ -1,5 +1,5 @@
 # Joy Kumagai 
-# Date: March 2021
+# Date: January 2022
 # Calculating Percent Protection for High Seas 
 # Habitat Protection Index Project
 
@@ -17,6 +17,9 @@ poly <- read_sf("Data_original/eez_land/EEZ_Land_v3_202030.shp") %>%
 
 r <- raster("Data_processed/ocean_grid.tif")
 mpas <- raster("Data_processed/All_mpas.tif")
+
+##### Put temp files in a place with more space
+rasterOptions(tmpdir = "Temp/")
 
 ##### Create High Seas Raster #####
 eez_land <-  fasterize::fasterize(poly, r, field = "constant") 
@@ -38,7 +41,7 @@ for (i in 1:length(grids)) {
 df
 df[,3] <- NA
 colnames(df) <- c("Name", "pixel_counts", "ID")
-df[,3] <- rep(1:(length(df$ID)/4), each = 4)
+df[,3] <- rep(1:(length(df$ID)/2), each = 2)
 save <- df
 df <- df %>% 
   mutate(area_km2 = pixel_counts) %>% 
@@ -61,7 +64,9 @@ colnames(dat) <- c("UNION", "EEZ_km2", "Protected_area")
 
 # export
 write.csv(dat, "Data_processed/high_seas_eez_area_and_pa.csv", row.names = F)
-rm(dat)
 
+# remove temp files
+to_delete <- list.files("Temp/", pattern = "r_tmp", full.names = T)
+unlink(to_delete, recursive = TRUE)
 
 #### END OF SCRIPT ####
