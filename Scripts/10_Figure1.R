@@ -1,5 +1,5 @@
 # Joy Kumagai and Fabio Favoretto
-# Date: April 2021
+# Date: January 2022
 # Figures - Overview Figure of habitats 
 # Habitat Protection Index Project
 
@@ -22,7 +22,7 @@ land <- ne_countries(scale = 110, returnclass = "sf")
 ##### Formating Data #####
 
 data <- data_boundaries %>% 
-        dplyr::select(UNION, pp_mean_all, pp_mean_notake) %>% 
+        dplyr::select(UNION, pp_mean_all) %>% 
         unique()
 
 
@@ -85,12 +85,12 @@ plot2 <- df5 %>%
         geom_bar(stat = "identity") +
         scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("Jurisdictions", "ABNJ")) +
         scale_y_continuous(labels = scales::percent_format()) +
-        labs(x = "Habitat", y = "Global PA and OECM coverage") +
+        labs(x = "Habitat", y = "Global CAs coverage") +
         theme_bw() +
         theme(legend.title = element_blank(),
               legend.position="top",
               axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
-        geom_hline(yintercept = 0.0774, lwd = 1) +   
+        geom_hline(yintercept = 0.0792, lwd = 1) +   
         geom_hline(yintercept = .3, linetype = "dashed")
 
 plot1 <- df5 %>% 

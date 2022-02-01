@@ -1,12 +1,9 @@
-# Fabio Favoretto
-# Date: 15/11/2020
+# Fabio Favoretto and Joy Kumagai
+# Date: Jan 2022
 # Summary statistic of rasterized habitat polygons
 # Habitat Protection Index Project
 
 # Load Packages -----------------------------------------------------------
-
-library(parallel)
-library(snow)
 library(tidyverse)
 library(raster)
 library(sf)
@@ -23,7 +20,7 @@ poly <- as(poly, "Spatial") # we need this format to speed extract function
 
 poly$ID <- 1:length(poly$UNION)
 
-# poly <- poly[1:10,] Uncomment this if you want to subset the polygon shapefile to less features
+# poly <- poly[1:10,] #Uncomment this if you want to subset the polygon shapefile to less features
 
 start.time <- Sys.time()
 ## create a raster stack (the stack will be formed by all the files in the Temp folders sourced by list.files)
@@ -33,17 +30,15 @@ s <- raster::writeRaster(x = stack(paste0("Data_processed/", grids)),
                          paste0(tempwd, "stacked"), 
                          overwrite = TRUE)
 
+# create vector of column names 
+habitats <- c("ColdCorals", "CoralReefs", "KnollsSeamounts", "Mangroves", "Saltmarsh", "Seagrass")
+habitat_columns <- c(paste0(habitats, "_allmpashabitat"), paste0(habitats, "_habitat")) %>% sort()
+
 # Zonal statistic ---------------------------------------------------------
 
-## Now we will extract in parallel, uncomment below to activate the cluster parallelization
-
-beginCluster(n = cores) 
-
-ex <- raster::extract(s, poly, fun = sum, na.rm = TRUE, df = TRUE)
-
-endCluster() # this ends the cluster use of the cpu
-
-
+ex <- exactextractr::exact_extract(s, poly, fun = "sum")
+colnames(ex) # Check to make sure that the replacement of the column names is correct
+colnames(ex) <- habitat_columns
 
 # Save output -------------------------------------------------------------
 
@@ -54,3 +49,4 @@ end.time - start.time
 
 
 #### END OF SCRIPT #####
+

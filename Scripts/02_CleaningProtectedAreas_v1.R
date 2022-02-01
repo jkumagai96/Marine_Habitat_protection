@@ -1,10 +1,9 @@
 # Joy Kumagai and Fabio Favoretto
-# Date: May 2021
+# Date: Jan 2022
 # Cleaning Protected Areas 
 # Habitat Protection Index Project
 
 ##### Load Packages #####
-library(tidyverse)
 library(raster)
 library(sf)
 library(fasterize)
@@ -25,26 +24,8 @@ writeRaster(r, "Data_processed/ocean_grid.tif", overwrite = TRUE)
 
 plan(multisession, gc = TRUE, workers = cores)
 mpas <- future_lapply(mpa_poly_files, FUN = clean, future.seed = TRUE)
-ntz <- future_lapply(mpa_poly_files, FUN = clean_NTZ, future.seed = TRUE)
-managed <- future_lapply(mpa_poly_files, FUN = clean_managed, future.seed = TRUE)
 gc()
 
-
-# Checking if there are null features for no take mpas
-v <- c()
-for (i in 1:length(ntz)) {
-  if (length(ntz[[i]]$PA_DEF) == 0) {v <- c(v, i)}
-}
-
-ntz[v] <- NULL
-
-# Checking if there are null features for managed mpas
-v <- c()
-for (i in 1:length(managed)) {
-  if (length(managed[[i]]$PA_DEF) == 0) {v <- c(v, i)}
-}
-
-managed[v] <- NULL
 #### Rasterization and Export ####
 
 all_mpas <- future_lapply(mpas, FUN = function(mpas) fasterize(mpas, r, field = "constant"), future.seed = TRUE)
@@ -53,18 +34,8 @@ save_raster(all_mpas, "Data_processed/All_mpas.tif")
 rm(all_mpas)
 gc()
 
-ntz_mpas <- future_lapply(ntz, FUN = function(ntz) fasterize(ntz, r, field = "constant"), future.seed = TRUE)
 
-save_raster(ntz_mpas, "Data_processed/No_take_mpas.tif")
-rm(ntz_mpas)
-gc()
-
-managed_mpas <- future_lapply(managed, FUN = function(managed) fasterize(managed, r, field = "constant"), future.seed = TRUE)
-
-save_raster(managed_mpas, "Data_processed/Managed_mpas.tif")
-
-
-rm(list = ls()[ls() %in% c("all_mpas", "managed", "managed_mpas", "mpas", "ntz")])
+rm(list = ls()[ls() %in% c("all_mpas", "mpas")])
 
 
 #### END OF SCRIPT ####

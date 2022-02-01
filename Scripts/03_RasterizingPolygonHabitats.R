@@ -1,5 +1,5 @@
 # Joy Kumagai and Fabio Favoretto
-# Date: May 2021
+# Date: Jan 2022
 # Rasterizing Multiple Habitat Data
 # Habitat Protection Index Project
 
@@ -17,7 +17,6 @@ library(foreach)
 
 shapefiles <- list.files("Data_original/habitats/", pattern = "\\.shp$", full.names = T)
 behrmann <- '+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs'
-r <- raster("Data_processed/ocean_grid.tif")
 
 # Rasterizing habitats with parallel processing ------------------------------------------------------------
 

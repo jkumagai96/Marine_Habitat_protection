@@ -1,5 +1,5 @@
 # Joy Kumagai 
-# Date: Feb 2021
+# Date: Jan 2022
 # Calculating World Percentage Protection 
 # Habitat Protection Index Project
 
@@ -19,7 +19,7 @@ for (i in 1:length(grids)) {
 }
 
 colnames(df) <- c("Name", "pixel_counts", "ID")
-df[,3] <- rep(1:(length(df$ID)/4), each = 4)
+df[,3] <- rep(1:(length(df$ID)/2), each = 2)
 
 df <- df %>% 
   mutate(area_km2 = pixel_counts) %>% 
