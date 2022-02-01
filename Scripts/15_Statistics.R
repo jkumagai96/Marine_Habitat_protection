@@ -33,7 +33,7 @@ n_hundred <- data %>%
   print()
 
 data %>% 
-  filter(L_Hs_P_I < .25) %>% 
+  filter(L_Hs_P_I < .27) %>% 
   count()
 
 data %>% 
@@ -71,31 +71,37 @@ data %>%
 data2 <- read.csv("Data_final/habitat_protection_indexes.csv", encoding = "UTF-8")
 data2 %>% 
   filter(habitat == "coldcorals") %>% 
-  drop_na(T_H_I) %>% 
+  drop_na(T_H_I) %>%
+  #filter(T_H_I > 0) %>% 
   count()
 
 data2 %>% 
   filter(habitat == "coralreefs") %>% 
   drop_na(T_H_I) %>% 
+  #filter(T_H_I > 0) %>% 
   count()
 
 data2 %>% 
   filter(habitat == "knolls_seamounts") %>% 
   drop_na(T_H_I) %>% 
+  #filter(T_H_I > 0) %>% 
   count()
 
 data2 %>% 
   filter(habitat == "mangroves") %>% 
   drop_na(T_H_I) %>% 
+  #filter(T_H_I > 0) %>% 
   count()
 
 data2 %>% 
   filter(habitat == "saltmarshes") %>% 
   drop_na(T_H_I) %>% 
+  #filter(T_H_I > 0) %>% 
   count()
 
 data2 %>% 
   filter(habitat == "seagrasses") %>% 
   drop_na(T_H_I) %>% 
+  #filter(T_H_I > 0) %>% 
   count()
 
