@@ -32,7 +32,7 @@ eez_land_global <- left_join(x = eez_land, y = data, by = "UNION") %>%  # Join t
 
 data %>% 
   dplyr::select(UNION, G_Hs_P_I, L_Hs_P_I, T_Hs_I) %>% 
-  magrittr::set_colnames(c("Jurisdiction", "GHPI", "LHPI", "Targeted GHPI")) %>% 
+  magrittr::set_colnames(c("Jurisdiction", "GPHPI", "LPHPI", "Targeted GPHPI")) %>% 
   write.csv(., "Tables/supplementary_tableII.csv", row.names = F, fileEncoding = "UTF-8")
 
 rm(data)
@@ -96,7 +96,7 @@ for (i in 1:length(habitats)) {
     scale_colour_manual(values = NA) +              
     guides(colour = guide_legend("No data", override.aes = list(colour = "grey", fill = "grey"))) + 
     
-    labs(fill = paste0("GHPI for ", hab_correct)) +
+    labs(fill = paste0("GPHPI for ", hab_correct)) +
     theme(panel.background = element_blank(), 
           axis.text.x = element_text(size = 12),
           axis.title = element_blank(),
@@ -137,7 +137,7 @@ for (i in 1:length(habitats)) {
     scale_colour_manual(values = NA) +              
     guides(colour = guide_legend("No data", override.aes = list(colour = "grey", fill = "grey"))) + 
     
-    labs(fill = paste0("LHPI for ", hab_correct)) +
+    labs(fill = paste0("LPHPI for ", hab_correct)) +
     theme(panel.background = element_blank(), 
           axis.text.x = element_text(size = 12),
           axis.title = element_blank(),
@@ -163,7 +163,7 @@ for (i in 1:length(habitats)) {
     scale_fill_manual(guide = 'none',
                       values = c("red3", "#0868ac")) +
    ylim(-max(abs(data$T_H_I)), max(abs(data$T_H_I))) +
-   labs(x = "Jurisdictions", y = paste0("Targeted GHPI for ", hab_correct) ) +
+   labs(x = "Jurisdictions", y = paste0("Targeted GPHPI for ", hab_correct) ) +
     theme(axis.text.x = element_text(angle = 90, vjust = .5))
  
   

@@ -64,7 +64,7 @@ plot1 <- ggplot(eez_land_global) +
                 )) +
         scale_colour_manual(values = NA) +              
         guides(colour = guide_legend("No data", override.aes = list(colour = "grey", fill = "grey"))) + 
-        labs(fill = "Global Habitat Protection Index") +
+        labs(fill = "Global Proportion of Habitats Protected Index") +
         theme(panel.background = element_blank(), 
               axis.text.x = element_text(size = 12),
               axis.title = element_blank(),

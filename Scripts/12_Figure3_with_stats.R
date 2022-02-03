@@ -67,7 +67,7 @@ grid <- st_graticule(lat = seq(-90, 90, by = 30),
         scale_colour_manual(values = NA) +              
         guides(colour = guide_legend("No data", override.aes = list(colour = "grey", fill = "grey"))) + 
         
-        labs(fill = "Local Habitat Protection Index") +
+        labs(fill = "Local Proportion of Habitats Protected Index") +
         theme(panel.background = element_blank(), 
               axis.text.x = element_text(size = 12),
               axis.title = element_blank(),
@@ -102,7 +102,7 @@ long_graph <- lat_long_graph %>%
 p2 <- lat_graph %>% 
         ggplot(aes(x = degree)) +
         geom_area(aes(y = index_mean, fill = "#59b300")) +
-        labs(y = "Local Habitat Protection Index") +
+        labs(y = "Local Proportion of Habitats Protected Index") +
         scale_x_continuous(breaks = c(-90, -60, -30, 0, 30, 60, 90)) +
         scale_y_continuous(position = "right") +
         scale_fill_manual(values = "#59b300") + 
@@ -125,7 +125,7 @@ p2 <- lat_graph %>%
 p3 <- long_graph %>% 
                 ggplot(aes(x = degree)) +
                 geom_area(aes(y = index_mean, fill = "#59b300")) +
-                labs(y = "Local Habitat Protection Index") +
+                labs(y = "Local Proportion of Habitats Protected Index") +
                 scale_x_continuous(breaks = c(-180, -60, 0, 60, 180)) +
                 scale_y_continuous(position = "right") +
                 scale_fill_manual(values = "#59b300") + 
@@ -263,7 +263,7 @@ results <- data.frame(
         ggplot(aes(x = reorder(world, mean),  y = mean)) +
         geom_point() +
         geom_errorbar(aes(ymin = mean-sd, ymax = mean + sd)) +
-        labs(x = "World section", y = "Mean of Local Habitat Protection Index") +
+        labs(x = "World section", y = "Mean of LPHPI") +
         ylim(0, 1) +
         theme_bw()
         )
@@ -272,7 +272,7 @@ results <- data.frame(
                 ggplot(aes(x = reorder(world, mean),  y = mean)) +
                 geom_point() +
                 geom_errorbar(aes(ymin = mean-sd, ymax = mean + sd)) +
-                labs(x = "World section", y = "Mean of Local Habitat Protection Index") +
+                labs(x = "World section", y = "Mean of LPHPI") +
                 ylim(0, 1) +
                 theme_bw() +
                 theme(axis.text.y = element_blank(), 

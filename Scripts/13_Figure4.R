@@ -39,7 +39,7 @@ data %>%
         theme_bw() +
         scale_fill_manual(guide = 'none',
                           values = c("red3", "#0868ac")) +
-        labs(x = "Jurisdictions", y = "Targeted Global Habitat Protection Index") +
+        labs(x = "Jurisdictions", y = "Targeted Global Proportion of Habitats Protected") +
         ylim(-max(abs(data$T_Hs_I)), max(abs(data$T_Hs_I))) +
         theme(axis.text.x = element_text(angle = 90, vjust = .5))
 
