@@ -1,5 +1,5 @@
 # Joy Kumagai and Fabio Favoretto
-# Date: January 2022
+# Date: February 2022
 # Figures - Overview Figure of habitats 
 # Habitat Protection Index Project
 
@@ -40,7 +40,7 @@ eez_land <- left_join(x = eez_land, y = data, by = "UNION") %>%
 ##### Figure 1 #######
 
 ## World Data
-habitats <- c("Cold Corals", "Warm Water Corals", "Knolls & Seamounts", "Mangroves", "Saltmarsh", "Seagrasses")
+habitats <- c("Cold-water Corals", "Warm-water Corals", "Knolls & Seamounts", "Mangroves", "Saltmarsh", "Seagrasses")
 
 
 #df1 <- data_world %>% 

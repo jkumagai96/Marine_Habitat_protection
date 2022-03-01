@@ -1,4 +1,4 @@
-"UNION","ISO_TER1","MRGID_EEZ","habitat","total","all_mpas","world_area","F_G_H","L_H_P_I","G_H_P_I","T_H_I"
+"UNION","ISO_TER1","MRGID_EEZ","habitat","total","all_mpas","world_area","global_fraction","LPHPI","GPHPI","Target_analysis"
 "Estonia","EST",5675,"coldcorals",0,0,15343,0,NA,NA,NA
 "Mayotte","MYT",48944,"coldcorals",2,2,15343,0.00013037558374627,1,0.00013037558374627,9.12629086223892e-05
 "Cameroon","CMR",8475,"coldcorals",0,0,15343,0,NA,NA,NA

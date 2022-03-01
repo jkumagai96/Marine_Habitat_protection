@@ -1,5 +1,5 @@
 # Joy Kumagai 
-# Date: Jan 2022
+# Date: Feb 2022
 # Calculating Habitat Protection Indexes 
 # Habitat Protection Index Project
 
@@ -100,7 +100,7 @@ df <- df %>%
          t_F_H_P = F_G_H * 0.3,
          G_H_P_I = L_H_P_I * F_G_H, # Global Habitat Index
          T_H_I = (L_H_P_I * F_G_H) - t_F_H_P) %>% # Target Habitat Index 
-  dplyr::select(-t_F_H_P) #, -F_G_H)
+  dplyr::select(-t_F_H_P) 
 
 # Calculation of Index on average 
 df2 <- df %>%
@@ -113,6 +113,16 @@ df2 <- df %>%
   dplyr::select(UNION, MRGID_EEZ, ISO_TER1, G_Hs_P_I, L_Hs_P_I, T_Hs_I)
 
 ##### Export ######
+df <- df %>% 
+  rename(global_fraction = F_G_H, 
+         LPHPI = L_H_P_I,
+         GPHPI = G_H_P_I,
+         Target_analysis = T_H_I)
+
+df2 <- df2 %>% 
+  rename(GPHPI_average = G_Hs_P_I,
+         LPHPI_average = L_Hs_P_I,
+         Target_analysis_average = T_Hs_I)
 
 write.csv(df, "Data_final/habitat_protection_indexes.csv", row.names = F, fileEncoding = "UTF-8")
 write.csv(df2, "Data_final/habitat_protection_indexes_average.csv", row.names = F, fileEncoding = "UTF-8")

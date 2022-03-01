@@ -1,5 +1,5 @@
 # Joy Kumagai and Fabio Favoretto
-# Date: May 2021
+# Date: Feb 2022
 # Figures - Supplementary Table and Figures 
 # Habitat Protection Index Project
 
@@ -32,7 +32,7 @@ eez_land_global <- left_join(x = eez_land, y = data, by = "UNION") %>%  # Join t
 
 data %>% 
   dplyr::select(UNION, G_Hs_P_I, L_Hs_P_I, T_Hs_I) %>% 
-  magrittr::set_colnames(c("Jurisdiction", "GPHPI", "LPHPI", "Targeted GPHPI")) %>% 
+  magrittr::set_colnames(c("Jurisdiction", "GPHPI", "LPHPI", "Targeted GPHP")) %>% 
   write.csv(., "Tables/supplementary_tableII.csv", row.names = F, fileEncoding = "UTF-8")
 
 rm(data)
@@ -40,12 +40,14 @@ rm(data)
 ###### Habitat Specific Figures #####
 habitats <- c("coldcorals", "coralreefs", "knolls_seamounts", "mangroves", "saltmarshes", "seagrasses")
 
+df <- df %>% mutate(UNION = replace(UNION, UNION == "High Seas", "ABNJ"))
+
 for (i in 1:length(habitats)) {
   data <- df %>% filter(habitat == habitats[i]) 
   
   hab_correct <- "correct this"
-  if (habitats[i] == "coldcorals") {hab_correct <- "Cold Corals"}
-  if (habitats[i] == "coralreefs") {hab_correct <- "Warm Water Corals"}
+  if (habitats[i] == "coldcorals") {hab_correct <- "Cold-water Corals"}
+  if (habitats[i] == "coralreefs") {hab_correct <- "Warm-water Corals"}
   if (habitats[i] == "knolls_seamounts") {hab_correct <- "Knolls & Seamounts"}
   if (habitats[i] == "mangroves") {hab_correct <- "Mangroves"}
   if (habitats[i] == "saltmarshes") {hab_correct <- "Saltmarsh"}
@@ -163,7 +165,7 @@ for (i in 1:length(habitats)) {
     scale_fill_manual(guide = 'none',
                       values = c("red3", "#0868ac")) +
    ylim(-max(abs(data$T_H_I)), max(abs(data$T_H_I))) +
-   labs(x = "Jurisdictions", y = paste0("Targeted GPHPI for ", hab_correct) ) +
+   labs(x = "Jurisdictions", y = paste0("Targeted Global Proportion of Habitats Protected for ", hab_correct) ) +
     theme(axis.text.x = element_text(angle = 90, vjust = .5))
  
   
