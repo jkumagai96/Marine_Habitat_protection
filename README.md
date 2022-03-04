@@ -7,7 +7,7 @@ output:
 
 ## Requisites:
 
-Code is based on R version 3.6.0, drafted using RStudio Version 1.3.1073 -- "Giant Goldenrod" (Windows).
+Code is based on R version 3.6.0, drafted using RStudio Version 1.3.1073 -- "Giant Goldenrod" (Linux).
 
 The code relies on several packages that need to be installed for it to function properly. We are using the package `renv` to ensure compatibility, on first use, please run `renv::restore()` in your machine to ensure you'll install and download all packages in the needed versions.
 
