@@ -31,7 +31,7 @@ grid <- st_graticule(lat = seq(-90, 90, by = 30),
         st_geometry 
 
 plot1 <- ggplot(eez_land_global) +
-        geom_sf(aes(fill = G_Hs_P_I, colour = " ")) +
+        geom_sf(aes(fill = GPHPI_average, colour = " ")) +
         geom_sf(data = grid,
                 colour = "gray60", 
                 linetype = "dashed") +
@@ -71,7 +71,7 @@ plot1 <- ggplot(eez_land_global) +
               legend.position = "bottom")
 
 plot2 <- ggplot(eez_land_global) +
-        geom_sf(aes(fill = L_Hs_P_I, colour = " ")) +
+        geom_sf(aes(fill = LPHPI_average, colour = " ")) +
         geom_sf(data = grid,
                 colour = "gray60", 
                 linetype = "dashed") +
@@ -116,5 +116,5 @@ plot1 / plot2 +
 
 ggsave(plot = last_plot(), filename = "Figures/Global_and_local_protection_index_average.png", dpi = 600, height = 8, width = 8)
 ggsave(plot = plot1, filename = "Figures/figure2.png", dpi = 600, height = 5, width = 8)
-
+ggsave(plot = plot1, filename = "Figures/figure2.pdf", device = "pdf", height = 5, width = 8)
 

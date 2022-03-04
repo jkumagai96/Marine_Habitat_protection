@@ -111,4 +111,4 @@ plot1 + plot2 +
         plot_annotation(tag_levels = 'a')
 
 ggsave("Figures/figure1.png", device = "png", width = 10, height = 5, units = "in", dpi = 600)
-
+ggsave("Figures/figure1.pdf", device = "pdf", width = 10, height = 5, units = "in")
