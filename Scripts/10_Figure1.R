@@ -1,5 +1,5 @@
 # Joy Kumagai and Fabio Favoretto
-# Date: February 2022
+# Date: March 2022
 # Figures - Overview Figure of habitats 
 # Habitat Protection Index Project
 
@@ -85,7 +85,7 @@ plot2 <- df5 %>%
         geom_bar(stat = "identity") +
         scale_fill_manual(values = c("#69C6AF", "#174FB8"), labels = c("Jurisdictions", "ABNJ")) +
         scale_y_continuous(labels = scales::percent_format()) +
-        labs(x = "Habitat", y = "Global CAs coverage") +
+        labs(x = "Habitat", y = "Global PCAs coverage") +
         theme_bw() +
         theme(legend.title = element_blank(),
               legend.position="top",
