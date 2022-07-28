@@ -1,9 +1,7 @@
----
-output:
-  html_document: default
----
-
 # Habitat Protection Indexes - new monitoring measures for the conservation of threatened marine habitats
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6325199.svg)](https://doi.org/10.5281/zenodo.6325199)
+
+License:  [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 ## Requisites:
 
@@ -47,14 +45,18 @@ Please note that folders named `Data_processed` and `Data_final` will be added i
 
 ## Workflow
 
-The full workflow can be reproduced by sourcing the `01_Workflow.R` script in the main folder. The script sources the several steps to calculate the indexes. If wanted, one can run each step separately using the scripts in the `Scripts` folder, beware that these are dependent on each other and are built to be run sequentially.
+The full workflow can be reproduced by sourcing the `01_Workflow.R` script in the main folder. The script sources the several steps to calculate the indexes. If wanted, one can run each step separately using the scripts in the `Scripts` folder, beware that these are dependent on each other and are built to be run sequentially. 
 
 We also use parallel processing to increase speed of computational demanding spatial calculations. Use with caution on your own machine. We strongly suggest to run the workflow on a smaller subset of data for testing. Results are stored in the `Data_final` folder, as comma separated value tables.
 
+Each script accomplishes a specific purpose explained here in the workflow diagram: 
+<center>  
+![ ](Figures/figure_5_aidin.png){ height=800px }
+
 ## Methodology
 
-For each habitat we calculate the percentage protection of that habitat both globally and per country. Please refer to the paper for the full methodology.
+For each habitat we calculate the percentage protection of that habitat both globally and per country. Please refer to the peer-reviewed publication in the journal Scientific Data for the full methodology (https://doi.org/10.1038/s41597-022-01296-4).
 
 ## Contacts
 
-Code written by Joy Kumagai ([joy.kumagai\@senckenberg.de](mailto:joy.kumagai@senckenberg.de)) and Fabio Favoretto ([favoretto\@uabcs.mx](mailto:favoretto@uabcs.mx)). Please contact us if you have any questions or open an issue on github.
+Code was written by Joy Kumagai ([joy.kumagai\@senckenberg.de](mailto:joy.kumagai@senckenberg.de)) and Fabio Favoretto ([favoretto\@uabcs.mx](mailto:favoretto@uabcs.mx)). Please contact us if you have any questions or open an issue on github.
